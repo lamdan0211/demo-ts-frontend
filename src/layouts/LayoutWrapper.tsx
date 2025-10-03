@@ -181,7 +181,10 @@ export default function LayoutWrapper({
           await loadScript(`/themes/${siteId}/custom/js_custom.js`);
         };
 
-        loadSequentially();
+        loadSequentially().then(() => {
+          // Load initialization script after all scripts are loaded
+          loadInitScript();
+        });
       };
 
       // Load jQuery first, then other scripts
@@ -256,7 +259,6 @@ export default function LayoutWrapper({
     loadCSS();
     loadScripts();
     loadGlobalVariables();
-    loadInitScript();
   }, [siteId, owner, tempName, controller, action]);
 
   // Render layout based on layoutType
