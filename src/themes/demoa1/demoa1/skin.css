@@ -1,0 +1,75 @@
+.header_employer { background: #fff }
+.header_employer #logo { width: 176px; height: 59px }
+.banner_employer { width: 974px; margin: 15px auto 0; height: 402px; background: url('images/banner_employer.png') no-repeat; position: relative }
+.welcome_em { position: absolute; top: 25px; left: 40px; width: 500px; line-height: 20px; text-align: justify }
+.welcome_em h3 { color: #006e73; font-size: 18px; padding-bottom: 10px }
+.contact_em { position: absolute; left: 40px; top: 250px; width: 410px; line-height: 20px; color: #fff }
+.step_em { width: 250px; float: left; background: url('images/bgstep.png') no-repeat; height: 100px; padding: 20px; color: #fff; margin-left: -9px }
+.step_em h4 { text-align: center; font-size: 13px; padding-bottom: 15px }
+.row_next { background: url('images/row_right.png') no-repeat; height: 43px; width: 33px; float: left; margin: 47px 18px 0 }
+.search250 .btnSmall { border-radius: 0; text-shadow: none; font-weight: normal; background-image: none }
+.logina .jobs_emp { text-transform: uppercase }
+.banner_hr { height: 290px; background: url('images/outsourcing.jpg') no-repeat center center; clear: both }
+.Source_Screen { background: url('images/source_screen.png') no-repeat center center #e4f2f7 }
+.banner_hr .bodyContainer { position: relative }
+.banner_hr .text_banner { position: absolute; top: 40px; left: 0; width: 420px; font-size: 14px }
+.banner_hr h2 { color: #006e73; font-size: 36px; text-transform: uppercase; padding-bottom: 10px }
+.banner_hr h4 { color: #000; font-size: 18px; padding-bottom: 15px; font-weight: normal }
+.Source_Screen .banner_hr h4 { padding-bottom: 5px }
+.executive { background: url('images/executive.jpg') no-repeat center center }
+.executive h2 { font-size: 20px }
+.ContactHR .info { background-color: #cfe0e0; border: 1px solid #6ea5a7; margin-top: 10px }
+.ContactHR .info p { height: 45px; color: #5f6166; line-height: 45px; text-align: left; padding-left: 30px }
+.ContactHR .info p.hotline { border-bottom: 1px solid #77abad; background: url('images/call.png') no-repeat 5px center; font-size: 13px }
+.ContactHR .info p.email { background: url('images/mail.png') no-repeat 5px center; font-size: 11px }
+.content_fck { text-align: justify }
+@media only screen and (max-width: 973px) {	
+	#mainslide, .JobByLocation, .mapcontact, .NhapKepOpen, .NhapKepClose { display: none }
+	#logo img { width: 171px !important; height: auto }
+	#header, #JobAppropriateListing, .ListNewsTalent li, .RightContact .row div.fl_left, .RightContact .row { width: 100% }	
+	.logina { right: 3%; bottom: 0 }
+	.SearchJobBy, .frmContact { width: 94%; padding: 3% }
+	.JobByIndustry { float: left; width: 100%; margin-left: 0 }
+	.JobByIndustry ul li { margin-bottom: 12px }
+	#header-container #logo { float: left; width: 171px }
+	#header-container #header-join-container { width: 54%; padding-right: 0; float: right }
+	.headerfront #lang { width: auto }
+	.LeftContact, .RightContact { width: 100%; padding: 0; border: 0; float: none }
+	.RightContact .row input.width_238, .RightContact .row textarea { width: 96% }
+	#JobAppropriateListing .groupJob ul li { width: 96%; padding: 0 2% }
+	.TestimoLogo { width: 30% }
+	.TestimoView { width: 65%; padding: 2% }
+	#JobAppropriateListing .groupJob ul li { width: 46% }
+	.OtherNewsTalent ul li { width: 98%; padding-left: 2% }
+	.headerfront .logined #lang { margin-left: 0 }
+	.logined #lang .userjoin { float: left }
+	.JobByIndustry .viewmore { clear: both; padding-left: 0 }
+}
+@media only screen and (max-width: 750px) {
+	#header-container #header-join-container { width: 44% }
+	.headerfront #lang { padding-top: 10px }
+}
+@media only screen and (max-width: 480px) {
+	#header-container #logo { float: none; text-align: center; width: 100%; height: 70px; margin-left: 0 }
+	#header-container #header-join-container { width: 100%; float: none }
+	.joinarea { float: left; width: 100% }
+	#header-join { float: none; width: 225px; margin: 0 auto; height: 28px }
+	.headerfront #lang { float: none; text-align: center; margin-left: 0 }
+	.headerfront #lang .language_all { float: none; display: inline-block; position: relative; top: 2px }
+	.TestimoLine { border-bottom: 1px dotted #7c7c7c; margin-bottom: 20px; padding-bottom: 20px }
+	.TestimoLogo { width: 100%; margin-bottom: 15px }
+	.TestimoView { width: 95%; padding: 2% }
+	.TestimoView .RowTestimo { background: url("images/row_testimo_top.png") no-repeat; left: 28px; top: -16px }
+	.NhapKepOpen, .NhapKepClose { display: none }
+	#JobAppropriateListing .groupJob ul li { width: 98%; padding-left: 2% }
+	.ListNewsTalent .leftimg { width: 40%; height: auto }
+	.ListNewsTalent .leftimg img{ width: 100% }
+	.logined .language_top, .logined #lang ul.nav { float: left; padding-left: 3% }
+	.logined #lang .userjoin { padding-left: 0 }	
+}
+@media screen and (min-width: 481px) and (max-width: 973px) {
+	.logined #lang { margin-top: 0 }
+}
+@media screen and (min-width: 600px) and (max-width: 973px) {
+	.JobByIndustry ul li { padding: 0 2%; width: 46%; float: left }
+}

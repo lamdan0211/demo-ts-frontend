@@ -1,0 +1,14 @@
+.cb-container, #sub-container { width: 1080px; padding: 0 }
+#header-itviec .logo { float: left; width: 16.6667%; padding: 0 }
+#header-itviec .nav-top { float: left; width: 83.3333%; padding: 0 }
+#JobHotList .job-item { float: left; width: 50% }
+.job-tools .col-sm-4, .right-info-company { float: left; width: 33.3333% }
+.job-tools .alert-tool .col-xs-12, .job-tools .register-tool .col-xs-12, .job-tools .cv-tool .col-xs-12 { float: left; width: 100% }
+#AdvicesList .item, .searh-job-page .col-filter, .item-job-result .logo-company, .job-details-page .top-job .apply-options, #tabJobList .tab-content .col-sm-3 { float: left; width: 25% }
+.searh-job-page .col-results, .item-job-result .details, .job-details-page .top-job .job-header { float: left; width: 75% }
+.description-container { float: left; width: 66.6667% }
+.LeftJobThanks .LoginNewForm { line-height: 30px }
+#NewSearchJob3 .chosen-container-multi .chosen-choices li.search-field input[type="text"], #NewSearchJob3 #location2_chosen .chosen-choices, #NewSearchJob3 #keyword2, #NewSearchJob3 #keywordJA2, #NewSearchJob3 .search-horizontal .BtnButton { line-height: 50px }
+.employer-info { border: 1px solid #e2e2e2 }
+.SignUpIn .box-shadow, .SignUpIn .form-horizontal .form-group { width: 66.6667%; margin: 0 auto }
+.SignUpIn .form-horizontal .form-group { margin-bottom: 15px }

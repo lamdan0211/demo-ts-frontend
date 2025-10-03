@@ -1,0 +1,61 @@
+* { margin: 0; padding: 0 }
+ul, li { list-style: none }
+body { font: normal 12px/16px Verdana; color: #000 }
+input, select { padding: 2px; float: left }
+div.row { clear: both; float: left; margin-bottom: 10px; width: 100% }
+a { color: #0078c9; text-decoration: none }
+a:hover { text-decoration: underline }
+label.label_1 { width: 130px; float: left; margin-right: 10px }
+.fl_left { float: left }
+.fl_right { float: right }
+.align_right { text-align: right }
+.width_212 { width: 212px }
+.mar_right10 { margin-right: 10px }
+.pad_right10 { padding-right: 10px }
+.pad_left20 { padding-left: 20px }
+.mar_top3 { margin-top: 3px }
+.red { color: red }
+.s_radio { float: left }
+.input_margin { margin: 2px 5px 0 0; *margin: -2px 2px 0 0; margin: -1px 2px 0 0\0/ }
+.input_medium { width: 180px }
+.select_medium { width: 180px }
+.select_short { width: 90px }
+.containerBox { padding: 15px 15px 10px; width: 220px; float: left }
+.result { margin: 3px 0 0 5px; float: left }
+.result a { font-size: 11px }
+#AdvancedCalculator, #SalaryResult { clear: both; float: left; width: 600px; background: #fff; padding-bottom: 20px }
+#AdvancedCalculator h1, #SalaryResult h1 { border-bottom: 1px solid #000; font-size: 16px; margin-bottom: 15px; padding: 20px 0 10px 20px }
+#AdvancedCalculator h2 { margin-bottom: 10px; font-size: 12px; clear: both }
+#SalaryResult { width: 450px }
+#SalaryResult h1 { margin-bottom: 5px; padding-left: 25px }
+.container { padding: 0 25px }
+.listsalary { margin-top: 10px }
+.listsalary .s_radio { width: 60px }
+.currency { float: left; width: 150px; height: 38px; line-height: 38px; padding-left: 20px; background: url('images/currency.png') no-repeat }
+.currency input { width: 60px; margin-top: 7px; text-align: right; margin-left: 3px }
+a.refesh { display: block; float: left; width: 16px; height: 13px; margin: 12px 0 0 5px; background: url('images/refesh.png') no-repeat }
+.st_gird { float: left; padding-top: 10px; width: 100% }
+.tblJob tr.header { height: 26px; font-weight: bold }
+.tblJob tr.record td { padding-bottom: 8px; padding-top: 8px }
+.tblJob tr.bg { background-color: #F2F2F2 }
+.ActionCtrl { clear: both; float: left; margin-top: 15px; width: 100% }
+.ActionCtrl li { float: left; padding-right: 20px; padding-left: 20px; font-size: 11px }
+.ActionCtrl li.download { background: url('images/download.png') no-repeat left center }
+.ActionCtrl li.print { background: url('images/print.png') no-repeat left center }
+
+.BoxHolder { width: 248px; background: #fff; border: 1px solid #d3d3d3; float: left }
+.ui_btnCb {
+	background-color: #ff5b00;
+    background: -moz-linear-gradient(top, #F88C2E 0%, #ff5b00 100%);
+    background: -webkit-linear-gradient(top, #F88C2E 0%, #ff5b00 100%);
+    background: -o-linear-gradient(top, #F88C2E 0%, #ff5b00 100%);
+	color: #fff; border: 1px solid #FF5B00; cursor: pointer;
+}
+.ui_btnCb:hover {
+    background-color: #ff5b00;
+    background: -moz-linear-gradient(top, #ff5b00 0%, #F88C2E 100%);
+    background: -webkit-linear-gradient(top, #ff5b00 0%, #F88C2E 100%);
+    background: -o-linear-gradient(top, #ff5b00 0%, #F88C2E 100%);
+    text-decoration: none;
+}
+.headerBox { text-transform: capitalize; font-size: 15px; padding: 10px 0 0 15px; font-weight: bold; color: #0078c9 }

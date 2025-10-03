@@ -1,0 +1,15 @@
+---
+alwaysApply: false
+---
+Rule for resolving include file="*.tpl" in Smarty templates:
+
+
+Rule for resolving include file="*.tpl" in Smarty templates:
+When an include file="*.tpl" statement is found (e.g., include file="index/custommer_em_index_product.tpl"), it means:
+
+Start from the directory of the current template file.
+
+Inside this index folder, look for the referenced template file (in this case, custommer_em_index_product.tpl).
+
+In short:
+include file="index/XXX.tpl" → "Go to the index folder located at the same level as the current template , and load XXX.tpl from there."

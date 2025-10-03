@@ -1,0 +1,126 @@
+body { font: normal 12px/16px Verdana; color: #000 }
+.bodyContainer, #header, #photo-area { width: 974px; margin: 0 auto; clear: both }
+.social_home { width: 175px!important }
+.social_home li, .social_shinhan li { float: left; padding-right: 12px }
+.social_home li a, .social_shinhan li a { display: block; float: left; text-indent: -9999em; background: url('images/social.png') no-repeat; width: 25px; height: 25px }
+.social_home li.linkin a, .social_shinhan li.linkedin a, .social_shinhan li.linkin a { background-position: -25px 0 }
+.social_home li.twitter a, .social_shinhan li.twitter a { background-position: -50px 0 }
+.social_home li.youtube a, .social_shinhan li.youtube a { background-position: -75px 0 }
+.social_home li.instagram a { background-position: -100px 0 }
+.social_home li.tiktok a { background-position: -150px 0 }
+.social_home li.zalo a { background-position: -125px 0 }
+.social_home li:last-child { padding-right: 0 }
+#box_media .BoxHolder, #box_media.BoxColl { border: none; background: none; width: 100%; float: left }
+#box_media .BoxHolder { padding: 0; margin: 0 0 15px; width: 100%!important }
+#box_media.BoxColl { padding: 0 0 20px; margin: 0 }
+#header { padding: 18px 0 0 }
+#logo { width: 189px; height: 49px; float: left }
+#header-join-container { float: right; width: 225px }
+#header-join { display: block; height: 100%; float: right }
+#header-join a.buttonJoin, .loginJoinTalentNetwork a { display: block; background: url("images/cb_join.png") no-repeat; width: 225px; height: 29px }
+#header-join .stayconnect { font-size: 11px; font-weight: bold; text-align: center; padding-top: 4px }
+#lang { font-weight: bold; text-align: right }
+#lang ul.nav { font-size: 12px; font-weight: bold }
+#lang ul.nav li { padding: 0 10px; display: inline }
+#nav-bar { margin-top: 18px }
+#nav-bar ul { width: 974px; margin: 0 auto }
+#nav-bar ul li, #footer ul li { float: left; border-right: 1px solid #fff }
+#nav-bar ul li.last, #footer ul li.last { border-right: 0 }
+#nav-bar ul li { position: relative }
+#nav-bar a { display: block; vertical-align: middle; font-weight: bold; font-size: 14px; padding: 9px 25px 5px; border-bottom: 4px solid #15487c; white-space: nowrap }
+#nav-bar ul.navCompany a { font-size: 13px; padding: 9px 21px 5px }
+#nav-bar a:hover, #nav-bar .focus { border-bottom: 4px solid #ff5b00; text-decoration: none }
+#nav-bar ul.submenu { min-width: 200px; width: auto }
+#nav-bar ul.submenu li, .survey_content ul li { clear: both; float: left; width: 100% }
+#nav-bar ul.submenu a { background-position: 10px 12px; background-color: #226fb0; border-top: 1px solid #fff; border-bottom: 0; font-size: 12px; padding: 6px 0 6px 20px }
+@media screen and (min-width:0\0) {
+    #nav-bar ul.submenu a { font-size: 11px }
+}
+#nav-bar ul.submenu a:hover { border-top: 1px solid #fff; background-color: #15487c; border-bottom: 0 }
+#nav-bar ul.navCompany ul.submenu { width: 200px }
+.headerfront { background: #e9f1f7 url("images/bg-header.png") top center no-repeat }
+.headerfront #header-join-container { float: right; width: 400px }
+.headerfront #lang { float: left; padding-top: 5px }
+.headerfront .logined { width: 70%!important; padding-top: 15px }
+.logined #lang { float: right }
+.BoxHolder .headerBox { padding-left: 10px; font-size: 13px }
+.BoxHolder .containerBox { padding: 8px 12px; float: left; width: 224px }
+#search-container .headerBox { padding-left: 20px; font-size: 15px }
+#col669 #search-container .containerBox { width: 627px }
+#col709 #search-container .containerBox { width: 667px }
+ul.ListCareer li, .containerListMy a, .BoxMemberSearch h2, .SeachMember .label_1 { background-image: url("images/arr_black.gif"); background-repeat: no-repeat }
+ul.ListCareer li { background-position: left 6px; padding: 0 0 5px 10px }
+.allJobBtn { padding: 5px 0; text-align: center }
+.followus, .InfoCompany-Container { float: left; width: 100% }
+.followus ul.signin_social { border: 0; padding: 0; margin: 0 }
+.followus ul.signin_social li { float: left; width: 49%; padding-bottom: 10px }
+.followus ul.signin_social li.last { padding-bottom: 0 }
+.survey_content p, .survey_content ul li { padding-bottom: 8px }
+.survey_content .voteBtn { clear: both; padding-top: 6px; text-align: center }
+.survey_content span.result { margin: 3px 0 0 5px }
+#search-container div.row, #footer .fCompany .fcolumn li { width: 100% }
+#search-container .searchBtn input { float: left; width: 100px; margin-left: 10px; height: 25px }
+#search-container .last { margin-bottom: 0 }
+.search-full .containerBox { width: 932px }
+.search-full input.width_545 { width: 330px }
+.search-full select.width_251 { margin-left: 10px; width: 230px }
+.tblJob .header td { color: #fff; font-weight: bold }
+.headerBoxCore { background: url("images/bg_title_home.gif") repeat-x; height: 28px; line-height: 28px; color: #fff }
+.containerListMy a:hover, .containerListMy a.focus { background-color: #d6e8ff }
+.containerListMy a.focus { background-image: url("images/arr_blue.gif"); color: #0078c9 }
+.JobTitleCB h1 { font-size: 16px; font-weight: bold }
+.joinRight { clear: both; text-align: center }
+.joinRight p { padding-top: 5px }
+.logoJobs { border: 1px solid #d3d3d3; text-align: center; width: 112px; height: 57px; background-color: #fff; margin-bottom: 10px }
+.logoJobs td { padding: 0!important; vertical-align: inherit!important }
+.logoJobs img { max-width: 110px; max-height: 55px; float: none!important; margin: 0!important; border: 0!important }
+.tblJob p { margin-bottom: 5px }
+.tblJob p.name_job { font-size: 14px }
+.tblJob p.name_com, .tblJob p.name_com a { color: #9a9a9a }
+.InfoCompany-Container { clear: both }
+.InfoCompany-Container .logoJobs { margin-right: 20px; float: left }
+.InfoCompany-Container .title { float: left; width: 543px }
+.InfoCompany-Container .title h2 { font-size: 16px; font-weight: bold; margin-bottom: 5px }
+.InfoCompany-Container .title p { font-size: 11px; color: #666; margin-bottom: 5px }
+.download_tl a { background: url("images/save.png") no-repeat; color: #0079C2; font-weight: bold; padding: 0 0 0 20px; text-transform: none; display: block }
+.ads-full { margin-bottom: 15px }
+.txt_expired { float: left; width: 100%; font-size: 14px; color: #ff0000; padding-bottom: 30px; line-height: 22px }
+#mainslide #slidehr.wfull { width: 100%; height: 354px }
+#banner-video { position: relative }
+.texton { color: #fff; left: 50%; position: absolute; top: 50%; z-index: 9; width: calc(100% - 120px); -webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%) }
+.texton .btn-onvideo { display: inline-block; padding: 15px 30px; background-color: #f79d25; color: #fff; text-decoration: none; font-size: 18px; font-weight: bold; text-transform: uppercase; border-radius: 3px }
+.texton .btn-onvideo:hover, .showConfirm .btnConfirm a:hover { text-decoration: none }
+#bgvid { position: absolute; top: 0; left: 0; z-index: -100 }
+.filter-video { background-color: rgba(0, 0, 0, 0.4); width: 100%; height: 100% }
+.showConfirm { width: 600px; line-height: 22px }
+.showConfirm .container { padding: 30px }
+.showConfirm .content h3 { font-size: 20px; padding-bottom: 20px; text-align: center; line-height: 26px }
+.showConfirm .content p { font-size: 16px; margin-bottom: 10px }
+.showConfirm .btnConfirm { text-align: center }
+.showConfirm .btnConfirm a { display: inline-block; color: #fff; font-size: 14px; padding: 5px 15px }
+
+#footer { padding: 20px 0; margin-top: 30px }
+.linkofClient { color: #fff; text-align: center }
+.developed-by-CB { text-align: center; color: #fff; padding-top: 5px }
+.developed-by-CB p { padding-bottom: 2px }
+.linkofClient a, .developed-by-CB a { font-weight: bold }
+#footer .fCompany a { color: #CED4DF }
+#footer .fCompany p { color: #fff }
+#footer .fCompany .fcolumn { width: 222px; float: left; padding-left: 20px }
+#footer .fCompany .helpcol { padding-left: 44px }
+#footer .builtby { color: #fff }
+.link_theme, .col_theme { color: #15487c }
+.bgcolor_theme, .showConfirm .btnConfirm a { background-color: #15487c }
+.link_menu { color: #fff }
+.ui_btnCb, .search250 .btnSmall {
+	background-color: #ff5b00;
+	color: #fff;
+	border: 1px solid #FF5B00
+}
+.ui_btnCb:hover, .search250  .btnSmall:hover {
+    background-color: #ff5b00;
+    background: -moz-linear-gradient(top, #ff5b00 0%, #F88C2E 100%);
+    background: -webkit-linear-gradient(top, #ff5b00 0%, #F88C2E 100%);
+    background: -o-linear-gradient(top, #ff5b00 0%, #F88C2E 100%);
+    text-decoration: none;
+}

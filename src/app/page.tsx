@@ -1,13 +1,5 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import Features from '@/components/Features';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <div className="min-h-screen">
-      <Header />
-      <Hero />
-      <Features />
-    </div>
-  );
+export default function RootPage() {
+  redirect('/demoa1');
 }

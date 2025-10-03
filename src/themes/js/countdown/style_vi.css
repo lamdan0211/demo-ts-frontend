@@ -1,0 +1,112 @@
+@font-face {font-family: 'Myriad Pro'; src: url('font/MyriadPro-Cond.eot');}
+@font-face {font-family: 'Adobe Garamond Pro'; src: url('font/agaramondpro-regular-webfont.eot');}
+@font-face {font-family: 'Myriad Pro'; src: url('font/MyriadPro-Cond.otf');}
+@font-face {font-family: 'Adobe Garamond Pro'; src: url('font/AGaramondPro-Regular.otf');}
+
+/* -------------- BEGIN COUNTER ---------------------*/
+
+#countbox{
+	color: #fff;
+	font-family: Myriad Pro,Helvetica,sans-serif;
+	font-size: 42px;
+	float: right;
+}
+
+#days{
+	float: left;
+	text-align: center;	
+	background-image:url('img/flip.png');
+	background-repeat:no-repeat;
+	margin: 0 2px;
+	height: 55px;
+	width: 58px;
+	z-index:1;
+	line-height: 55px
+}
+
+		#days_text{
+			background-image:url('img/days_text.jpg');
+			background-position: center;
+			background-repeat:no-repeat;
+			position: absolute;
+			margin-left: 4px;
+			height: 24px;
+			width: 50px;
+		}
+	
+#hours{	
+	float: left;
+	text-align: center;
+	background-image:url('img/flip.png');
+	background-repeat:no-repeat;
+	margin: 0 2px;
+	height: 55px;
+	width: 58px;
+	z-index:1;
+	line-height: 55px
+}
+
+		#hours_text{
+			background-image:url('img/hours_text.jpg');
+			background-position: center;
+			background-repeat:no-repeat;
+			position: absolute;
+			margin-left: 4px;
+			height: 24px;
+			width: 50px;
+		}
+
+#mins{
+	float: left;
+	text-align: center;
+	background-image:url('img/flip.png');
+	background-repeat:no-repeat;
+	margin: 0 2px;
+	height: 55px;
+	width: 58px;
+    z-index:1;
+	line-height: 55px
+}
+
+		#mins_text{
+			background-image:url('img/mins_text.jpg');
+			background-position: center;
+			background-repeat:no-repeat;
+			position: absolute;
+			margin-left: 4px;
+			height: 24px;
+			width: 50px;
+		}
+
+#secs{
+	float: left;
+	text-align: center;
+	background-image:url('img/flip.png');
+	background-repeat:no-repeat;
+	margin: 0 2px;
+	height: 55px;
+	width: 58px;
+    z-index:1;
+	line-height: 55px
+}
+
+		#secs_text{
+			background-image:url('img/secs_text.jpg');
+			background-position: center;
+			background-repeat:no-repeat;
+			position: absolute;
+			margin-left: 4px;
+			height: 24px;
+			width: 50px;
+		}
+
+#days span, #hours span, #mins span , #secs span {
+	background: url(img/flip_gradient.png);
+	background-repeat:no-repeat;
+	position: absolute;
+	display: block;
+	height: 35px;
+	width: 58px;
+}
+
+/* -------------- END COUNTER ---------------------*/

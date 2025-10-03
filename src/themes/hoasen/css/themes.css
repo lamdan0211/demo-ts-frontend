@@ -1,0 +1,133 @@
+body, .page-content-pre, .page-contact-pre, .page-forgot-pre, .JoinNow div.row label, .JoinNow h1, .JoinNow h2, .loginJoinTalentNetwork p, #WhyJoin h3, .content_fck { color: #333 }
+/* text color theme */ a:hover, #header-pre a:hover, #header-pre .menu a:hover, #header-pre ul.submenu a:hover, #header-pre .menu li.focus ul.submenu li a:hover, #header-pre .navbar-right a:hover, #header-pre .menu li.focus a, .section-jobs .table td, .news-three-items-s2 p.link-box a, .result-job-search .bottom-more a:hover, h2 a.text-right, .containerListMy a.focus, .blurb-item--link:hover .blurb-item--title, .blurb-item--link:hover h2, .blurb-item--link:hover h3, .blurb-item--link:hover h4, .blurb-item--link:hover h5, .blurb-item--meta, .all-jobs-pre .browser-job a:hover, .all-jobs-pre .browser-job a.active, .all-jobs-pre .browser-job span, .all-jobs-pre ul li a span, .all-jobs-pre ul li a:hover, .sidebar-content .favorite-box-container a, .job-individual .job-side-section .favorite-box-container .favorite:hover, .cb-applyjob .titcolor, header h2.section-title, #section-header.posFixed #header-pre .menu a:hover, #section-header.posFixed #header-pre .navbar-right a:hover, #section-header.posFixed #header-pre .menu li.focus a, .no-bootstrap #section-header #header-pre .menu a:hover, .no-bootstrap #section-header #header-pre .navbar-right a:hover, .no-bootstrap #section-header #header-pre .menu li.focus a, .jobsclass_all-jobs #section-header #header-pre .menu a:hover, .jobsclass_all-jobs #section-header #header-pre .navbar-right a:hover, .jobsclass_all-jobs #section-header #header-pre .menu li.focus a, #footer .column h6, #footer .column a:hover, #footer .info-hoasen i.fa, #footer .info-hoasen .head-title, #footer .info-hoasen .text__ { color: #8b1409 }
+/* background color theme */ .join-talent-onclip a, .btn-primary, .search-jobs-main button.searchvt1, .search-jobs-main .chosen-container .chosen-results li.highlighted, #jb_pagination .active, .EditRecommendJob button, #header-menu-links .btn:hover, #pager li a.activeSlide, #pagerTopMain li a.activeSlide, #pagerTopMain_2 li a.activeSlide, #bpager li a.activeSlide, #mpager li a.activeSlide, .scroll_thongke li .scroll_color .bg_center_scroll, .btnContinute a, #my-download, .docked-nav.job .docked-ctas .favorite-container a, .job-individual .job-post .favorite-box-container a, .job-individual .job-side-section .favorite-box-container .favorite i, .social_col a, .social_col a:hover, .cb-banner-home .main-page .swiper-pagination-bullet.swiper-pagination-bullet-active { background-color: #8b1409 }
+.btn-primary:hover, #banner-video .join-talent-onclip a:hover, .slidebg .join-talent-onclip a:hover, .search-jobs-main button.searchvt1:hover, #container input.ui_btnCb:hover, #btnLogin:hover, .JoinNow .joinnowBtn input:hover, .JoinNow .loginJoinTalentNetwork a:hover, .btnContinute a:hover, #container .cb-applyjob .ui_btnCb:hover, .social_col a:hover, #back-top a:hover, .docked-nav.job .docked-ctas .favorite-container a:hover:not([disabled]), .job-individual .job-post .favorite-box-container a:hover:not([disabled]), .job-individual .job-side-section .favorite-box-container .favorite:hover i { background-color: #a81507 }
+.btn-primary:hover { border-color: #a81507 }
+.btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:hover, .btn-primary.active:hover, .btn-primary:active:focus, .btn-primary.active:focus, .btn-primary:active.focus, .btn-primary.active.focus, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus { background-color: #a81507; border-color: #a81507 }
+.section-page { padding: 50px 0 }
+header h2.section-title { font-size: 35px; margin-bottom: 50px; text-transform: uppercase }
+#section-header { background: #fff }
+#section-header.posFixed, .no-bootstrap #section-header, .jobsclass_all-jobs #section-header { box-shadow: 0 2px 2px rgba(0,0,0,.1) }
+#section-header.posFixed, .jobsclass_all-jobs #section-header, .no-bootstrap #section-header { background-color: #fff; background-image: none }
+#header-pre .menu a, #header-pre .navbar-right a, #my-career-pre, #my-career-pre a, #footer .column a, #footer .creatby, .date-posted { color: #666 }
+#header-pre .menu { padding-left: 30px }
+#header-pre .menu li { padding: 0 12px }
+#header-pre .logo img { max-height: 65px }
+#header-pre .fa-bars { color: #666!important }
+.texton, .filter-video, .join-talent-onclip { display: none!important }
+.container-search { float: left; position: static; background-color: #f7f7f9!important; bottom: 60px }
+.search-jobs-main { width: 1210px; padding: 30px 20px }
+.search-jobs-main input.width_545 { width: 345px; color: #494646 }
+.search-jobs-main input.width_545, .search-jobs-main .chosen-container-single .chosen-single, .search-jobs-main select.slc-mb { border-color: #494646 }
+.search-jobs-main .chosen-container-single .chosen-single, .search-jobs-main select.slc-mb { color: #494646!important }
+.search-jobs-main .chosen-container-single .chosen-single div b { background-image: url("../images/arrow-down.png") }
+.search-jobs-main .chosen-container { width: 320px!important }
+#photo-area { padding-top: 106px }
+#sliderTopMain { top: 106px }
+#sliderTopMain, #sliderTopMain .bgimage, #bslidehr, #bslidehr .bgimage, .ads-pre.slidebg.sliderSetheight, .newsclass_index #banner-video, .newsclass_detail #banner-video { height: 750px }
+#pagerTopMain, #bpager { bottom: -50px }
+#pagerTopMain_2 { bottom: 10px; position: absolute; z-index: 0; display: none } 
+#pagerTopMain_2 li { float: left; margin-right: 10px }
+#pagerTopMain_2 li a { display: block; height: 20px; width: 20px; border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; background: rgba(0, 0, 0, 0.5) }
+#pagerTopMain_2 li:last-child { margin-right: 0 }
+#slidehr_custom { float: left; width: 100%; left: 0; position: absolute; top: 0; z-index: 0; overflow: hidden }
+#slidehr_custom, #slidehr_custom .bgimage { height: 500px }
+#slidehr_custom .bgimage { width: 100%!important; background-size: cover; background-repeat: no-repeat; background-position: center center; text-align: center }
+#slidehr_custom .bgimage img { max-width: 1210px; max-height: 500px }
+#btnLogin, .JoinNow .loginJoinTalentNetwork a, .JoinNow .joinnowBtn input, #container .ui_btnCb, #container .search250 .btnSmall, #container .fontCore .btnSmall { background: #8b1409 }
+#jb_pagination a:hover, #jb_pagination .previous a:hover, #jb_pagination .next a:hover, #jb_pagination .active, #header-menu-links .btn:hover { border-color: #8b1409 }
+#container #header-pre .logo { padding-top: 10px; padding-left: 20px }
+#my-download a { color: #fff }
+.social_col a { vertical-align: middle; margin-top: 0; width: 35px; height: 35px; line-height: normal; border-radius: 100%; -moz-border-radius: 100%; -webkit-border-radius: 100%; background-image: none }
+.social_col a:hover i { color: #fff000 }
+.social_col i { font-size: 22px; line-height: 35px; color: #fff000 }
+.social_col .zalo img { width: 85% }
+.all-jobs-pre .browser-job a.active { background-image: url('../images/arrow-down2.png') }
+.section-jobs .table td { padding: 20px 40px 20px 0 }
+.section-jobs .table th.table-header-3 { width: 15% }
+.social-vertical { top: calc(50% - 144px); height: auto }
+.social-vertical a { background-color: inherit }
+.social-vertical a:hover { background-color: #fff;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+.social-vertical a:hover i.fa, .news-five-items .box p.viewmore a, .docked-nav.job .docked-ctas .favorite-container i, .sidebar-content .favorite-box-container i, .job-individual .job-side-section .favorite-box-container .favorite:hover i { color: #ff0 }
+.docked-nav.job .docked-ctas .favorite-container a, .job-individual .job-post .favorite-box-container a, .sidebar-content .favorite-box-container i { border: 0 }
+.blurb-item { margin-bottom: 0 }
+.categories-locations .blurb-item--link { padding: 30px 10px; height: 100%;
+	box-shadow: 4px 5px 10px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 4px 5px 10px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 4px 5px 10px 3px rgba(0,0,0,0.2);
+}
+.categories-locations .blurb-item--meta { margin-bottom: 0; color: #0b59a1 }
+.news-five-items { padding-bottom: 40px }
+.news-five-items .blurb p { max-height: 50px }
+.news-five-items .excerpt, .news-five-items .blurb { background-color: rgba(168, 21, 7, 0.7) }
+.job-post-description .list-benefits { background-color: #ececec; padding: 15px 20px!important; margin-bottom: 30px }
+.content_fck a { color: #076db6!important; text-decoration: underline!important }
+.date-posted { font-style: italic; font-size: 16px; padding-bottom: 20px }
+.docked-nav.job { padding: 0 15px }
+.docked-nav.job .docked-title { height: 135px}
+.docked-nav.job h3 { margin: 0; height: 100%; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center }
+.docked-nav.job .docked-ctas { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: end; justify-content: flex-end; height: 135px; margin: 0 }
+#back-top { visibility: hidden }
+#footer { background-color: inherit; padding: 0 }
+#footer .container { position: relative }
+#footer .column h6 { font-weight: bold; margin-top: 20px }
+#footer .container:before { position: absolute; top: 0; left: 0; width: 100%; height: 2px; background-color: #666 }
+#footer .col-xs-12 { padding: 0 }
+#footer .info-hoasen { background: url('../images/bg-ft.png') top center no-repeat; min-height: 180px }
+#footer .info-hoasen .head-title { font-size: 20px; font-weight: bold; line-height: normal; padding-bottom: 20px!important; margin-bottom: 0!important }
+#footer .info-hoasen .text--info { padding-left: 250px; padding-bottom: 10px; font-size: 13px }
+#footer .info-hoasen .text--info p { margin-bottom: 10px }
+#footer .info-hoasen .text__ { font-weight: bold }
+#footer .info-hoasen span { margin-right: 50px }
+#footer .info-hoasen span.dsk { margin-right: 0 }
+#footer .info-hoasen span.mbl { display: none }
+#footer .creatby { text-align: center; font-size: 13px; padding: 5px 0 15px!important }
+.no-bootstrap #footer .col-xs-12 { float: left; width: 100%; padding: 0 20px; box-sizing: border-box }
+.no-bootstrap #footer .col-md-4 { float: left; width: 33.333333%; padding: 0 20px; box-sizing: border-box }
+.no-bootstrap #footer .container { border-bottom: 2px solid #666 }
+.no-bootstrap #footer .info-hoasen .text--info { padding-left: 270px; box-sizing: border-box }
+
+@media (max-width: 1209px){
+	.search-jobs-main { width: 96% }
+	.search-jobs-main input.width_545, .search-jobs-main .chosen-container, .search-jobs-main select.chosen { width: 27%!important; margin-right: 2% }
+	.search-jobs-main select.slc-mb { width: 26%!important; margin-right: 2% }
+}
+@media (max-width: 991px){
+	#bslidehr { top: 106px }
+	.blurb-item h3 { font-size: 22px }
+	#footer .info-hoasen { background-position: bottom left; margin-top: 30px }
+	#footer .info-hoasen .text--info, .no-bootstrap #footer .info-hoasen .text--info { padding-left: 25%; box-sizing: border-box }
+	#footer .info-hoasen span.dsk { display: none }
+	#footer .info-hoasen span.mbl { display: block }
+}
+@media only screen and (max-width: 979px) {
+	#footer .internal-link { text-align: center }
+	.no-bootstrap #footer .col-md-4 { width: 100% }
+}
+@media only screen and (max-width: 846px) {
+	.search-jobs-main { width: 85% }
+	.search-jobs-main input.width_545, .search-jobs-main .chosen-container, .search-jobs-main select.chosen, .search-jobs-main select.slc-mb { width: 100%!important; margin-right: 0; margin-bottom: 20px; text-align: left }
+	.search-jobs-main button.searchvt1 { width: 100%; max-width: 300px }
+}
+@media only screen and (max-width: 767px) {
+	.categories-locations .blurb-item { margin-bottom: 50px }
+	.blurb-item h3 { font-size: 28px }
+	.blurb-item--meta { font-size: 18px }
+	.section-jobs .table > tbody > tr > td:nth-child(3) { border-bottom: 1px solid #eaeaea; padding-bottom: 20px; margin-bottom: 20px }
+}
+@media only screen and (max-width: 640px) {
+	.search-jobs-main input.width_545, .search-jobs-main button.searchvt1 { width: 100%; margin-right: 0 }
+	.search-jobs-main .chosen-container { width: 100%!important; margin-right: 0 }
+	.search-jobs-main input.width_545, .search-jobs-main .chosen-container { margin-bottom: 15px }
+	#footer .info-hoasen { background: none }
+	#footer .info-hoasen .text--info, .no-bootstrap #footer .info-hoasen .text--info { padding-left: 0; text-align: center }
+	#footer .info-hoasen span { margin-right: 5% }
+}
+@media (max-width: 375px){
+	.search-jobs-main { width: 85% }
+}
+

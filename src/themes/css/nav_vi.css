@@ -1,0 +1,11 @@
+#nav-bar ul.navCompany a { padding: 9px 20px 5px }
+.MenuAction  { right: 176px }
+.DropListAction .fieMenu { *right: 167px; right: 179px\0/ }
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   .DropListAction .fieMenu { right: 176px }
+}
+/* saf3+, chrome1+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.DropListAction .fieMenu { right: 184px }
+}

@@ -1,0 +1,107 @@
+#countbox{
+	padding-top: 20px;
+	color: #fff;
+	font-family: Myriad Pro,Helvetica,sans-serif;
+	font-size: 42px;
+	float: right;
+	margin-right: 65px;
+	margin-top: 200px
+}
+
+#days{
+	float: left;
+	text-align: center;	
+	background-image:url('img/IE_6/flip.jpg');
+	background-repeat:no-repeat;
+	margin: 0 2px;
+	height: 47px;
+	width: 50px;
+	z-index:1;
+}
+
+		#days_text{
+			background-image:url('img/days_text_en.jpg');
+			background-position: center;
+			background-repeat:no-repeat;
+			position: absolute;
+			padding-top: 70px;
+			margin-left: -33px;
+			height: 24px;
+			width: 50px;
+		}
+	
+#hours{	
+	float: left;
+	text-align: center;
+	background-image:url('img/IE_6/flip.jpg');
+	background-repeat:no-repeat;
+	margin: 0 2px;
+	height: 47px;
+	width: 50px;
+	z-index:1;
+}
+
+		#hours_text{
+			background-image:url('img/hours_text_en.jpg');
+			background-position: center;
+			background-repeat:no-repeat;
+			position: absolute;
+			padding-top: 70px;
+			margin-left: -41px;
+			height: 24px;
+			width: 50px;
+		}
+
+#mins{
+	float: left;
+	text-align: center;
+	background-image:url('img/IE_6/flip.jpg');
+	background-repeat:no-repeat;
+	margin: 0 2px;
+	height: 47px;
+	width: 50px;
+    z-index:1;
+}
+
+		#mins_text{
+			background-image:url('img/mins_text_en.jpg');
+			background-position: center;
+			background-repeat:no-repeat;
+			position: absolute;
+			padding-top: 70px;
+			margin-left: -41px;
+			height: 24px;
+			width: 50px;
+		}
+
+#secs{
+	float: left;
+	text-align: center;
+	background-image:url('img/IE_6/flip.jpg');
+	background-repeat:no-repeat;
+	margin: 0 2px;
+	height: 47px;
+	width: 50px;
+    z-index:1;
+}
+
+		#secs_text{
+			background-image:url('img/secs_text_en.jpg');
+			background-position: center;
+			background-repeat:no-repeat;
+			position: absolute;
+			padding-top: 70px;
+			margin-left: -41px;
+			height: 24px;
+			width: 50px;
+		}
+		
+#days span, #hours span, #mins span , #secs span {
+	background: url(img/IE_6/fixed.jpg);
+	background-repeat:no-repeat;
+	position: absolute;
+	display: block;
+	height: 47px;
+	width: 50px;
+	line-height: 47px
+}

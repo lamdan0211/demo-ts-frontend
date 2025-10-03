@@ -1,0 +1,141 @@
+#jPanelMenu-menu { display: none }
+#jPanelMenu-menu .close-jPanelMenu-menu { background: url('images/icon_close_b.gif') no-repeat; width: 13px; height: 13px; display: block; position: absolute; right: 15px; top: 10px; z-index: 1 }
+@media only screen and (max-width: 973px) {
+	.headerfront, #Join_Success, .apply_success_nonmember { background: none }
+	.headerfront #lang, .logined #lang li:last-child, #nav-bar, #search-container .last, #search-container .chosen-container, #col250, #photo-area, #search-container .headerBox, #google_map, #map, .stayconnect, .JoinNow .leftCol, .boxmsg-error, .JoinNow .rightCol .salarymobile label, .loginJoinTalentNetwork, .topDetailJob .ApplyBottom .SaveMyJob, .search-full .containerBox select , .topDetailJob .share, .CareerNetwork, .all_job .detail_w_tab #bylocation img, .cb-applyjob .IncludeCover>label, .download_form, .ads-full { display: none }
+	#logo { margin-left: 60px }
+	.headerfront #header-join-container { float: right; text-align: center; width: 97%; margin-right: 3% }
+	.logined #lang { float: left!important; margin-top: -10px; text-align: left!important; width: 100%!important; padding-top: 0!important }
+	.logined #lang .userjoin { display: block; padding-bottom: 5px }
+	.frontmobile .headerfront .logined { width: 97%!important }
+	#header-join { float: right }
+	#header { padding: 12px 0; float: left; width: 100% }
+	#container, #footer .bodyContainer, .JoinNow .rightCol, .JoinNow .rightCol .fontCore .row, .JoinNow .rightCol .row > div, .frmContact .row, .frmChangePass .row, .frmContact div.pd55 > div, .cb-applyjob, .commoncb p, .cb-applyjob .titcolor, .Left-ListNews, .ListNewsTalent li .topDetailJob, .topDetailJob .DetailJob-Container .JobTitleCB, .all_job #tabs .borderJobseek, .cb-applyjob .ShowData .containerData .width_580, .CoverLetter .fl_left, .cb-applyjob .yourResumeApply div label, #JobAppropriateListing, #Join_Success { width: 100% }
+	#header-join a { display: inline-block }
+	#main-content { width: 94%!important; padding: 20px 0!important; float: none }
+	#col709 { float: none; width: 100%; clear: both }
+	#col709 #search-container .containerBox { width: 100%; border: 0; padding: 15px 0 }
+	#search-container .row input.width_545 { width: 74%; height: 20px; line-height: 20px; font-size: 13px }
+	#search-container div.row { margin: 0 }
+	#search-container .containerBox div.width_555 { width: 78% }
+	#search-container .containerBox div.width_555 input.width_545 { width: 97% }
+	#search-container .containerBox .searchBtn { float: right; width: 22% }
+	#search-container .searchBtn input { margin-left: 0; width: 95%; float: right; border: 0; height: 28px }
+	.bg_logo_chung { margin-right: 15px!important; margin-bottom: 15px }
+	.JoinNow .rightCol { border: 0; padding: 0 }
+	.JoinNow .rightCol .row > div > input[type=text], .JoinNow .rightCol .row > div > input[type=password], .frmContact .row textarea { width: 95% }
+	.JoinNow .rightCol .row > div > select { width: 97% }
+	.joinnowBtn, .loginBtn { padding: 0; width: 100%; text-align: center; margin-bottom: 10px }
+	.JoinNow .rightCol .gendermobile > div { width: 50% }
+	.JoinNow .rightCol .gendermobile > label { width: 30% }
+	.JoinNow .forgetpass, .topDetailJob .ApplyBottom .ApplyNow { padding-left: 0 }
+	.loginBtn { text-align: left }
+	.loginBtn input { height: 28px }
+	.search-full .last { display: block!important }
+	.search-full .containerBox { width: 100%; border: 0; padding: 0 0 10px!important }
+	.search-full .row .searchBtn { width: 22% }
+	.JobTitleCB { padding-bottom: 15px }
+	.JobTitleCB ul.basic li .value { width: 60%; padding-left: 5% }
+	.topDetailJob .DetailJob-Container .ApplyNow, .ApplyBottom .ApplyNow { float: none; margin: 0 auto }
+	.topDetailJob .JobTitleCB ul.basic li label { width: 35% }
+	.topDetailJob .ApplyBottom { float: left; width: 100% }
+	.Left-ListNews .content_fck img, .indexclass_index #col709 .content_fck img { max-width: 100%!important; height: auto!important; text-align: center; clear: both }
+	.Left-ListNews, .topDetailJob { border: 0 }
+	.all_job #tabs { width: 100%!important }
+	.all_job .detail_w_tab .ui-tabs .ui-tabs-nav { width: 100%!important; padding: 0; margin: 0 }
+	.all_job .detail_w_tab #bylocation, .all_job .detail_w_tab #bycategory { padding: 10px!important }
+	.all_job .detail_w_tab .Jobcategory ul, .frmChangePass div.pd55 #security_code { width: 32% }
+	.frmContact div.pd55, .frmChangePass div.pd55, .frmChangePass .forgotpassBtn { padding-left: 0 }
+	.frmContact div.pd55 > div > input, .frmChangePass div.pd55 > div > input { width: 95% }
+	.frmContact div.pd55 #security_code { width: 40% }
+	.cb-applyjob .ShowData { width: 99% }
+	.cb-applyjob .ShowData .containerData, .mainFilter { width: 97%; padding-left: 3% }
+	.cb-applyjob .ShowData .containerData div.row label { padding: 10px 0  }
+	.cb-applyjob .kindresume .noteupload { width: 90% }
+	.cb-applyjob .ShowData .containerData textarea { width: 93%!important }
+	.cb-applyjob .sumcharacter { border: 0; background: none; width: 100%; padding-left: 0 }
+	.cb-applyjob .ApplyBtn { padding-left: 0 }
+	.frmChangePass div.pd55 .width_202 { width: 100%; text-align: left; padding-bottom: 5px }
+	.frmChangePass div.pd55 > div { width: 100%; clear: both }
+	.signin_social { padding-top: 0; height: 60px }
+	.signin_social ul { clear: both }
+	.signin_social span { padding: 5px 0 }	
+	.cb-applyjobSuccess { background: none; border: 1px solid #D3D3D3; float: left; height: auto; padding: 5%; width: 90%;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
+		-ms-border-radius: 5px;
+	}
+	#lang, .linkofClient { font-size: 14px }
+	.content_fck { line-height: 22px!important }
+	.linkofClient { line-height: 24px }
+	.cb-applyjob .yourResumeApply input[type=radio] { width: 10% }
+	.cb-applyjob .yourResumeApply div span { width: 85% } 
+ 	.cb-applyjob .boxmsg-error { display: block!important }
+	.ShowData .containerData div.row label { text-align: left }
+	#JobAppropriateListing .groupJob ul li { width: 98%; padding: 0 0 0 2% }
+	#Join_Success .container { width: 80% }
+	.JoinCollegeNw .leftCol { width: 65%; padding-left: 0 }
+	.JoinCollegeNw .rightCol { width: 30% }
+	.JoinCollegeNw .JoinFrm .txt_required { clear: both; padding-right: 0; margin: 10px 0 }
+	.JoinCollegeNw .JobCollTop { background-size: cover }
+	
+	/* Font size 14 */
+	.content_fck { font-size: 14px }
+	.Left-ListNews h2.titleArticle, .OtherNewsTalent, .OtherNewsTalent .title, .frmChangePass p.text, .frmContact p.text, #trynewcode, .groupJob ul li a, .commoncb p, .forgetpass, .signin_social a, .note2, .sumcharacter { font-size: 14px!important }
+	.txt_required { font-size: 12px!important }
+	
+	/* Navigation */
+	#menu-trigger { position: absolute; top: 15px; left: 3%; z-index: 999; background: url('images/menu_icon.gif') no-repeat; width: 32px; height: 32px; display: block; cursor: pointer }
+	#jPanelMenu-menu { width: 86%; height: 100%; left: -100%; overflow-x: hidden; overflow-y: scroll; position: fixed; top: 0; z-index: 9999; background: #3b3b3b }
+	#jPanelMenu-menu ul { border-bottom: 1px solid #484848 }
+	#jPanelMenu-menu ul li { font-size: 11px; float: left; width: 100% }
+	#jPanelMenu-menu li a { background: #333; border-bottom: 1px solid #484848; color: #F7F7F7; display: block; font-size: 12px; padding: 0.8em 5%; text-decoration: none; text-transform: capitalize; font-weight: bold }
+	#jPanelMenu-menu li span { background: #4e4949; display: block; padding: 0.3em 5%; text-transform: uppercase; color: #b0b0b0; font-weight: bold }
+	#jPanelMenu-menu li a:hover, #jPanelMenu-menu li a:focus { background: #635d5d }
+	#jPanelMenu-menu ul.submenu li a{ padding: 0.8em 10%; font-weight: normal }
+	.expandMenu { display: block!important; left: 0!important }
+	.collapseContainer { margin-left: 86% }
+		
+@media screen and (min-width: 768px) and (max-width: 973px) {
+	.headerfront #lang { width: auto; float: left; padding-top: 5px }
+	.headerfront #header-join-container { width: 50% }
+}
+@media only screen and (max-width: 640px) {
+	#header-container.headerfront #logo { width: 100%; text-align: center; margin-left: 0 }
+	.headerfront .logined { display: none }
+	.JoinCollegeNw .leftCol { width: 100% }
+	.JoinCollegeNw .rightCol { float: none; width: 250px; clear: both; margin: 0 auto }
+	.JoinCollegeNw .joinnowBtn { padding-left: 0 }
+}
+@media screen and (min-width: 481px) and (max-width: 973px) {
+	.headerfront #header-join-container { width: 225px; margin-bottom: 10px }
+	.headerfront #lang  { float: none; padding: 0 0 2px; text-align: center; width: 225px }
+	.frontmobile .headerfront .logined { width: 45%!important }
+	#logo { margin-left: 70px; width: 40% }
+	.JoinNow .rightCol .salarymobile > div > input.salaryfrom[type=text] { width: 32% }
+	.JoinNow .rightCol .salarymobile > div > input.salaryto[type=text] { width: 38% }
+	.JoinNow .rightCol .salarymobile > div span { width: 10% }
+}
+@media only screen and (max-width: 480px) {
+	.headerfront #header-join-container { clear: both }
+	#logo { float: none; width: 100%; text-align: center; height: 74px }
+	#logo a { display: block }
+	#header-join { float: none; text-align: center }
+	#header-join a { display: inline-block }
+	#header-join a.buttonJoin { margin: 0 auto; padding-top: 20px; background-position: 0 20px }
+	.JoinNow .rightCol .txt_required { position: relative; display: block; text-align: right }
+	.JoinNow .rightCol .salarymobile > div > input.salaryfrom[type=text] { width: 32% }
+	.JoinNow .rightCol .salarymobile > div > input.salaryto[type=text] { width: 30% }
+	.JoinNow .rightCol .salarymobile > div span { width:10% }
+	.JobTitleCB ul.basic li label { width: 45% }
+	.all_job .detail_w_tab .Jobcategory ul { width: 98% }
+	.frmContact div.pd55 #security_code { width: 30% }
+	.cb-applyjob label.width_110 { width: 100%; display: block }
+}
+@media only screen and (max-width: 320px) {
+	.frmChangePass div.pd55 #security_code { width: 26% }
+	.JoinCollegeNw .JoinFrm .input_long { width: 290px }
+	.JoinCollegeNw .JoinFrm select { width: 300px }
+}

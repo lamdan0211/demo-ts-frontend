@@ -1,0 +1,2155 @@
+#fancybox-content { border-color: #fff!important }
+.cuttext, .ChooseEmail label div.fl_left, .workflow-item .item p  { text-overflow: ellipsis; white-space: nowrap; overflow: hidden }
+.box_multiSelect button.ui-multiselect span { text-overflow: ellipsis; white-space: nowrap; line-height: 17px }
+.radius3, .excel, #ForgotPass .bodyContainer, #div_file .fileContainer, #div_google_file .fileContainer, #div_dropbox_file .fileContainer, .area_file .fileContainer, .search_facet, .AddNewUser #avatar_img img, #tabs-Score .gird_standard dl dd .tag-bor, .ats-homepage .ds-highlight, .tagskilldetail a, .MemberSearch2 .skill span, .ResumeInfo span.btn_submit input, .ResumeFlip .tabsTC a, .ResumeDetailonCB .tabsTC a, .prepare-download-button button { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px }
+.psWait { position: fixed; display: none; height: 100%; width: 100%; top: 0; left: 0; z-index: 90000; background: rgba(0,0,0,.4) url('images/ajax-loader.gif') no-repeat 50% 50% }
+.ac_results { background-color: window; border: 1px solid windowframe; overflow: hidden; padding: 0; z-index: 500; font-size: 12px }
+.ac_results li { cursor: pointer; display: block; font-size: 12px; margin: 0; overflow: hidden; padding: 2px 5px; width: 100% }
+.ac_results li.ac_over { background-color: highlight; color: highlighttext }
+.hidden_resume { position: fixed; top: 35%; z-index: 90001; left: 0; width: 100%; display: none }
+.hidden_resume span { font-weight: bold; display: block; width: 40%; margin: 0 auto; background: url('images/attached.png') no-repeat 10px center #fff; color: green; padding: 15px 18px 15px 28px }
+.bold-red td, .bold-red a { font-weight: bold!important; color: red!important }
+.coreCompany, #tabs-History .record, #tab_Notes .tblJob tr.header, #tab_Application .tblJob tr.header, #tab_InterviewActions .tblJob tr.header, #tab_Resumes .tblJob tr.header, .cb-createresume .tblJob tr.header, .HomeCoreCompany .CoreGeneral .header, .MytodoList .tblJob tr.bg, .TooltipSetting .CoreGeneral .header { background-color: #fff }
+.coreCompany input { height: 28px; line-height: normal }
+.coreCompany input[type="radio"], .coreCompany input[type="checkbox"] { height: auto; margin: 3px 5px 0 0!important }
+.coreCompany select, .coreCompany .ui-multiselect, .coreCompany .chosen-container-single .chosen-single { height: 28px }
+.coreCompany .chosen-container-multi .chosen-choices { height: 28px!important }
+.coreCompany .bodyContainer { width: 96%; padding: 0 2% }
+.coreCompany #footer { margin-top: 0; background-color: #287ab9 }
+.mtop10, .bgcolorbody #footer, #tabs-getbutton .form { margin-top: 10px }
+.coreCompany #footer .builtby { width: 100%; font-size: 11px; line-height: 20px }
+.coreCompany #main-content { width: 100%; clear: both; padding: 0 2%; float: left; position: relative }
+.frontmobile  #main-content { width: 974px; padding: 20px 0 0; float: none; margin: 0 auto }
+.coreCompany #jb_pagination .active, .coreCompany #jb_pagination a:link, .coreCompany #jb_pagination a:visited { padding: 5px 9px }
+.coreCompany #jb_pagination .previous a:link, .coreCompany #jb_pagination .previous a:visited, .coreCompany #jb_pagination .previous a:active, .coreCompany #jb_pagination .next a:link, .coreCompany #jb_pagination .next a:visited, .coreCompany #jb_pagination .next a:active { padding: 5px 10px 5px 11px }
+.coreCompany, .coreCompany input, .coreCompany select, .coreCompany textarea, .coreCompany .ui-datepicker td span, .coreCompany .ui-datepicker td a, .coreCompany .ui-datepicker .ui-datepicker-title, .coreCompany .ui-datepicker table, .MyPicture li div, #jb_pagination li, #JobsLetter, .coreCompany .msgbox .title_msgbox, .coreCompany .ShowData .containerData div.row label, .coreCompany .mainFilter label.page_current, .coreCompany .detail_w_tab .ui-tabs .ui-tabs-nav li, .coreCompany .detail_w_tab .ui-tabs .ui-tabs-nav li a, .coreCompany .tabstyle2 .invisible-step, .coreCompany .detail_w_tab .ui-widget, .coreCompany .detail_w_tab .content_fck { font-family: Roboto, Arial, Tahoma!important }
+.coreCompany #fancybox-content { border: 0!important }
+.coreCompany #fancybox-close { right: -15px!important; top: 6px!important }
+.bgcolorbody { background-color: #f1f1f1 }
+.fixGetLink { z-index: 100; position: relative }
+.fixboxAction { z-index: 1000 }
+.brd { padding-bottom: 20px!important; background: url("images/bghomecore.gif") repeat-x left bottom; border: 1px solid #d3d3d3; border-top: 0; -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px }
+.input_long { width: 232px }
+.select_long, #tab_PostJob .input_medium, .JobLibraryMana .input_long { width: 244px }
+.width_110, .rc_col_110px, .label_1, .create_import_candidate .s_label, .cb-createRequisition fieldset .label_1 { width: 110px }
+.label_2, .SeachMember .degree select.select_long, .AddFolder .label_1, #ConfirmPostJob .AddonComfirm ul.block_info li label { width: 130px }
+.sublink, .sublink a { font-weight: bold; font-size: 11px; color: #808080 }
+textarea.required { white-space: pre-wrap!important }
+.required, .kgh, p.tit_posting, .tthn label span, .namkn span, label.hienthi, ul.listlang label span, .emailforapp .optemail span, span.kichhoat, .AddNewUser #div_email, #currentDay { white-space: nowrap }
+.emailforapp .optemail, ul.listfolder li, #ConfirmPostJob .noteCon, .AccessCB, .clearall { clear: both; float: left; width: 100% }
+.themetips { padding: 10px; border: 2px solid #474747; background: #fff }
+.themetips .arr_tips { width: 8px; height: 4px; background: url("images/arr_tips_up.png") no-repeat; position: absolute; top: -6px; left: 48px }
+.themetips .closepopbox { background: url("images/i-close.gif") no-repeat; width: 15px; height: 15px; display: block; overflow: hidden; position: absolute; right: 5px; top: 5px; cursor: pointer }
+.action_bar ul li, .contentResume #actions li a { background: url("images/iconasset.png") no-repeat }
+.date_month { background: #fff url("images/i-calendar.gif") no-repeat; border: 1px solid #7F9DB9; height: 15px; line-height: 15px }
+.ic_add, .ic_remove { margin: 2px 5px 0 10px; float: left; width: 13px }
+.ic_add a, .ic_remove a { display: inline-block }
+.ic_add a { background: url("images/i-add.gif") no-repeat; width: 13px; height: 13px }
+.ic_remove a { background: url("images/i-delete.gif") no-repeat; width: 13px; height: 16px }
+.insicon { height: 24px; line-height: normal; padding-left: 22px; display: inline-block }
+.print { background: url("images/i-print.png") no-repeat }
+.edit { background: url("images/i-edit.png") no-repeat }
+.setfolder, .setfolder2, .setfolder3, .setfolder4 { padding-left: 20px; display: inline-block }
+.setfolder { background: url("images/folder_expand_14x14.gif") left 2px no-repeat }
+.setfolder2 { background: url("images/folder_15x12.gif") left 2px no-repeat }
+.setfolder3 { background: url("images/folder_16x14.png") left 2px no-repeat }
+.setfolder4 { background: url("images/folderlock_17x14.png") left 2px no-repeat }
+.excel { background: #f0f0f0 url("images/i-excel-new.png") no-repeat 4px 4px; border: 1px solid #c5c5c5; padding: 2px 5px 4px 22px; color: #333; font-size: 11px; font-weight: bold; }
+.excel:hover, .TNmainmenu li a:hover, h2.labelBox a:hover, .BoxFolder a:hover, .btnContinute a:hover, .slc_jobtemplate:hover, #ChooseJobTemplate .ListTemp ul li a:hover, .MyPicture .select a:hover, ul.listfolder span a, .btnstep:hover, .MyCandidates ul li a, #tab_CreateJob a.addtag:hover, .resume_tag a.node:hover { text-decoration: none }
+.excel.import { background-image:url('images/import.png'); float: left; position: relative }
+.excel.import .file { opacity: 0; position: absolute; top: 0; left: 0; width: 65px; cursor: pointer }
+.download-all-resume { font-size: 11px; margin-top: 2px }
+.btn_showExtra { color: #287ab9; margin-top: 7px; background: url("images/expand_9x9.gif") left 5px no-repeat; padding-left: 14px }
+.symbol_collapse { background: url("images/collapse_9x9.gif") left 5px no-repeat }
+.note2 { color: #9c9c9c; font-size: 11px }
+.colorCr, .cb-viewresume .status, #tab_PostJob .DaysExpired, .resultToolbar .option_cookie a, .MemberSearch2 .lbl_detail i.fa-clock-o { color: #ff5b00 }
+.bgHeader, .coreCompany .tipsIcon .CoreGeneral .header { background-color: #B9C7D4 }
+.sumcharacter { background: #f0f0ee; border-left: 1px solid #ccc; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; padding-left: 5px; margin-bottom: 5px; *margin-top: -2px; font-size: 11px }
+.textNotLink, .blue_bold, .funcAction .ListActive ul li a:hover, #tabs-chitietcongviec .cdanh span, .WorkflowStage ul li span.value a:hover, .AccountActive p a:hover, ul.LiWorkflow li span.focus, .profile_CV .cdanh span, .col_link { color: #287ab9 }
+.fixdropMenu { *position: relative; *z-index: -1 }
+.styled-select { background: #fff url("images/arr-slc.png") no-repeat; overflow: hidden; border: 1px solid #aaa }
+.styled-select select { background: transparent; -webkit-appearance: none; border: none }
+.styled-select select:focus { border: none; outline: none }
+.styled-select select option { padding: 2px 5px; color: #505050 }
+.irs { width: 170px; height: 40px; margin: 0 auto }
+.irs .irs-slider { width: 12px; height: 12px; top: 20px; background: #287ab9; border: 0; box-shadow: none }
+.irs .irs-line, .irs .irs-bar { height: 5px; top: 24px; border: 0 }
+.irs .irs-min, .irs .irs-max, .AdvSearch { display: none }
+.irs .irs-line { background: #0054a6 }
+.irs .irs-line-left, .irs .irs-line-mid, .irs .irs-line-right { height: 5px }
+.irs .irs-bar, .irs .irs-slider.state_hover, .irs .irs-slider:hover { background: #287ab9 }
+.irs .irs-from, .irs .irs-to, .irs .irs-single { font-size: 11px }
+.flip_view { background: url('images/flip_view.png') no-repeat; padding-left: 18px }
+.save_folder, .ResumeDetailonCB .action_bar ul li.save_folder { background: url('images/save_folder.png') no-repeat; padding-left: 22px }
+.similar_resume, .ResumeDetailonCB .action_bar ul li.similar_resume { background: url('images/view_similar.png') no-repeat; padding: 1px 10px 1px 22px }
+.panel_disabled .similar_resume { background-position: 0 -18px }
+.resume_hidden, .ResumeDetailonCB .action_bar ul li.resume_hidden { background: url('images/hide.png') no-repeat; padding-left: 22px }
+.panel_disabled .flip_view, .panel_disabled .save_folder, .panel_disabled .resume_hidden { background-position: 0 -16px }
+.resume_tag { background-color:#e3e3e3; margin-right: 5px; margin-bottom: 2px; padding-left: 2px; float:none !important; display:inline-block }
+.resume_tag a { display: inline-block }
+.resume_tag a.node { color: #cecece!important; width: 12px; text-align: center; display: inline-block }
+.tag_shared .node { background-color: #009900 }
+.tag_private .node { background-color: #CC3300 }
+.tag_coworker .node { background-color: #666 }
+.panel_disabled .node { background-color: #ccc }
+.panel_disabled a { color: #c8ced2 }
+.resultToolbar { float: left; width: 100%; background: #eff3f5; border: 1px solid #96c8ea; padding: 9px 18px }
+.resultToolbar p { float: left; color: #287AB9; margin-bottom: 0 }
+.resultToolbar .option_cookie { clear: both; margin-top: 7px; float: left; width: 936px }
+#lang ul.nav { font-size: 12px; font-weight: bold }
+#lang ul.nav li { padding: 0 10px; display: inline }
+#lang ul.nav li.end, #CommingSoon .container ul.last, .action_bar ul li.end, #tabs-ApplyForm ul.drag-field li .chk-require, #tabs-ApplyForm .save-template .d1 label { padding-right: 0 }
+ul.MyAcc { display: none; position: absolute; top: -6px; left: 0; border: 1px solid #ccc; border-bottom: 0; text-align: left; -moz-box-shadow: 3px 3px 3px #333; -webkit-box-shadow: 3px 3px 3px #333; box-shadow: 3px 3px 3px #333 }
+ul.MyAcc, #tab_Additional .ChooseAfter { width: 180px }
+ul.MyAcc li { float: left; background: #fff; border-bottom: 1px solid #bbb; padding: 0!important; width: 100% }
+ul.MyAcc li:hover { background: #eef3f9 }
+ul.MyAcc li a { font-weight: bold; font-size: 11px; background: url("images/ar_job_4x7.gif") no-repeat 6px 9px; line-height: normal; padding: 6px 15px; display: block }
+.sym_social { margin: 0 5px 2px 0 }
+#EmpTopLink { background: url("../css/images/bgtoplink.gif") repeat-x; font-size: 11px; height: 25px }
+.empLink, .siteSwitch { position: absolute; right: 0; top: 0 }
+.swapkind { background: #FF5B00; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; color: #FFF; float: right; font-weight: bold; height: 30px; line-height: 30px; padding: 0 15px }
+.swapkind span { margin-left: 5px; text-transform: uppercase }
+.swapkind span a { background: url("images/arr_white_4x7.gif") no-repeat scroll left 4px; color: #FFF; padding-left: 8px; text-decoration: underline }
+.empLink .lg_reg_lang, .postOnline .phead p.job_status, #ChooseJobTemplate .ChooseNext, #TNlogo { float: right }
+.empLink .lg_reg_lang .btn_language { color: #287ab9; display: block; font-weight: bold; margin: 3px 12px 0 0 }
+.comingSoon { position: absolute; right: 0; top: 10px }
+.comingSoon a { color: #FF0000; font-weight: bold; text-decoration: underline }
+#CommingSoon { float: left; width: 700px; background-color: #fff; padding-bottom: 10px; color: #000 }
+#CommingSoon h1 { color: #172542; font-size: 28px; text-align: center; padding-bottom: 10px }
+#CommingSoon .container { position: relative; width: 700px; padding: 30px 0 0 }
+#CommingSoon .container .content { width: 630px; margin: 0 auto }
+#CommingSoon .col { float: left; width: 300px; padding: 0 25px 20px 0 }
+#CommingSoon p, #Forward .CenterPanel, #SendEmail .CenterPanel, .upload_image .row.last, .page_type .row.last, .SelectActive li label, .filter_k ul, .moreinfor p, .AdvSearch .end, #tabs-ApplyForm ul.drag-field li:last-child { margin-bottom: 0 }
+#logoheader, .workflow-in-grid, .workflow-item, .workflow-item .sum-data p { float: left; width: 100%; clear: both }
+#logoheader .logo { padding: 15px 0; width: 30%; float: left }
+#TopMenu { border-bottom: 5px solid #2C4FA3; height: 30px }
+#TopMenu ul.TNTopMenu li { float: left; padding-right: 5px }
+#TopMenu ul.TNTopMenu li a { background-color: #D0D7E5; color: #333333; display: block; float: left; font-weight: bold; padding: 7px 25px; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px }
+#TopMenu ul.TNTopMenu li a:hover, #TopMenu ul li.focus a { background: #2C4FA3; color: #FFF; text-decoration: none }
+#TopMenu ul.TNTopMenu li a.icon { background: url("images/arr_down_white.gif") no-repeat 135px 13px #2C4FA3 }
+.empLogin { position: absolute; right: 2%; top: 7px; font-size: 11px }
+.empLogin .Notlogin a { color: #000066 }
+ul.HelloUser li a, .form .required, .frmChangePass .required, .HomeCoreCompany .tblJob .header td, #tab_Notes .tblJob tr.header td, #tab_Application .tblJob tr.header td , #tab_InterviewActions .tblJob tr.header td, #tab_Resumes .tblJob tr.header td, .cb-createresume .tblJob tr.header td, .tipsIcon .tblJob tr td { color: #333 }
+ul.HelloUser li { padding: 0 10px; display: inline; float: left  }
+.empLogin a.userlogin { background: url("images/arr_tips.gif") no-repeat right 5px; padding-right: 12px; font-weight: normal; text-decoration: none }
+.TNMenuTop { height: 35px; background: url("images/bg_menuTN.gif") repeat-x; padding-top: 7px; clear: both; border-top: 5px solid #2c4fa3 }
+.MenuTopCtr { float: right; width: 70%; padding-top: 40px; position: relative }
+.MenuTopCtr ul li { float: right; padding-left: 40px }
+.HiAccount span { display: inline-block; vertical-align: middle }
+.HiAccount img { margin-left: 6px; border: solid 1px #dadada; padding: 1px }
+.HiAccount a { text-decoration: underline; padding-left: 6px }
+.TalentMenu a { background: url('images/talentmenu.png') no-repeat left center; padding: 4px 0 4px 28px }
+.MenuTopCtr #lang, .containerListMy ul li span, .tipstext span, .DashboardN .headerStats span, .SelectActive li label, .dataSource label, .search_option span, .search_option label { font-weight: normal }
+.TNmainmenu li a.TNlogo, .TNmainmenu li a.TNhome { display: block; float: left; background: none; padding: 0 10px 0 0 }
+.TNmainmenu li { float: left; padding-right: 5px; position: relative }
+.TNmainmenu li a { padding: 5px 10px 5px 27px; background: #287ab9; float: left; color: #fff; font-weight: bold; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;  background-position:6px 5px; background-repeat: no-repeat; white-space: nowrap }
+.TNmainmenu li a:hover { background-color: #02568e }
+.TNmainmenu li a.focus { background-color: #ff5b00 }
+.TNmainmenu li a.TNlogo:hover, .TNmainmenu li a.TNhome:hover, .MenuAction ul li.end, .LoginCompany, .cb-viewresume .action_bar, .BoxMemberSearch a.help_search:hover, .workflow-item .item:last-child { background: none }
+.TNmainmenu li.JobManage a  { background-image: url("images/job_manage.png") }
+.TNmainmenu li.CanManage a  { background-image: url("images/can_manage.png") }
+.TNmainmenu li.Import a  { background-image: url("images/import2.png") }
+.TNmainmenu li.Dashboard a  { background-image: url("images/dashboard.png") }
+.TNmainmenu li.AccTool a  { background-image: url("images/acc_tool.png") }
+.TNmainmenu li.CalendarEmail a, .table-skill td, .note-alert #clickMore1  { padding-left: 10px }
+.TNmainmenu li.CalendarEmail a img, #resume-folder-wrapper ul li, .TNmainmenu li.LinktoCB a img { padding-bottom: 0 }
+.TNmainmenu li.LinktoCB a  { padding-left: 8px; padding-bottom: 4px }
+.TNmainmenu li.MemSearch a  { background-image: url("images/mem_search.png") }
+.TNmainmenu li a img { padding-bottom: 2px }
+.JobManage ul.TNsubmenu, .CanManage ul.TNsubmenu, .Dashboard ul.TNsubmenu, .ftalentsolution .chk_filter .sideadv { width: 220px }
+ul.TNsubmenu { position: absolute; left: 0; display: none; top: 28px; z-index: 666; padding: 5px 0 0; -webkit-border-radius: 5px; -webkit-border-top-left-radius: 0; -moz-border-radius: 5px; -moz-border-radius-topleft: 0; border-radius: 5px; border-top-left-radius: 0 }
+.TNmainmenu .over a, ul.TNsubmenu { background-color: #02568e }
+.TNmainmenu .over ul.TNsubmenu, .cont_post .note2 { display: block }
+ul.TNmainmenu .over a { padding-bottom: 12px }
+ul.TNsubmenu li { clear: both; float: left; border-bottom: 1px solid #0065a8; width: 100%; padding: 0 }
+ul.TNsubmenu li.end, .CalenderInterView .detail_w_tab .ui-tabs { border: 0 }
+ul.TNsubmenu li a { background: none!important; font-weight: normal; padding-bottom: 5px!important; width: 183px }
+ul.TNsubmenu li:hover { background: #287ab9!important }
+.highZIndex { z-index: 100000 }
+label.error { clear: both; color: #FF0000; font-size: 11px; padding: 2px 0!important; width: 100%!important; text-align: left!important }
+.bsub, .MyCareerPanel { float: left; width: 100%; margin-bottom: 10px }
+div.row { clear: both; float: left; margin-bottom: 10px; margin-left: 0; margin-right: 0 }
+div.row label { float: left; padding-right: 5px; font-size: 12px; font-weight: normal; margin-bottom: 0 }
+.ShowData .containerData div.row label { padding-right: 30px; text-align: right; margin-bottom: 0 }
+.FrameForm div.row label, .form-mutilfile div.row label { text-align: left; padding-right: 10px; margin-bottom: 0 }
+.txt_required { font-size: 10px; color: #808080 }
+.forgetpass, .JoinNow .otherlink, #trynewcode, .addlangauge, .BoxApplyHistory a, .WorkflowStage ul li span, .LiWorkflow span, .LiRating span, #tabs-getconnected textarea, .postOnline, .sel_temp p strong, .moreinfor, .PostingFB .row a, .PostingFB p, .cont_post, .currentStatus ul li, .cb-applyjob div.row label.fileContainer, #minicalendar .ui-state-default { font-size: 11px }
+.ui_btnCb { padding: 0 10px 3px; *padding: 0; height: 23px; cursor: pointer; border: 0; font-weight: bold; font-size: 13px; font-family: Roboto }
+.btnSmall { font-size: 12px; font-weight: normal; height: 20px }
+.btnBigger { font-size: 16px; font-weight: bold; height: 30px }
+.btnTextLink { float: left; margin: 3px 0 0 10px; text-decoration: underline }
+.setpage input.btnSmall, .CreateLetter .note2, .CreateSubcate .help_post { margin-top: 2px }
+.pageinfo2 { float: left; width: 100%; padding-bottom: 15px }
+.pageinfo2 h1, .pageinfo2 h2 { float: left; width: 100%; background: url("images/dotted.gif") left bottom repeat-x; padding-bottom: 5px; font-size: 18px; text-transform: capitalize }
+#captchaim img { width: 100px!important; height: 40px!important; border: 1px solid #d3d3d3 }
+ul.block_info, ul.block_info li, ul.block_info li label, ul.block_info li div, .ChangePosition .RightPanel, .containerListMy .BoxMemberSearch li, .gird_standard dl span, .WorkflowStage ul li span, .cmdbig_horizontal ul li, ul.listfolder span, .BoxMemberSearch ul li, .listlang li, #tab_Resumes .info_personal, .SelectActive li input, .BoxMemberSearch .filter_k input.input_margin { float: left }
+ul.block_info li, .DateRange p, .tipscontent p, .tipscontent .tblJob, .SetPermission p, #ViewTemplateLetter p, #WhyJoin h4, #WhyJoin p, .all_job .link_tit, .all_job .content_fck, .all_job .content_fck p, .Jobcategory ul li, .cb-applyjob .kindresume, .PostLinkedin p, .Mutiple_Address .box_apply, .apply_success_nonmember p { padding-bottom: 10px }
+ul.block_info label, .containerListMy ul.treemenu a.focus, .cb-jobdetail .naviAction label, .dataSource label.active  { font-weight: bold }
+ul.block_info { padding: 10px 0 }
+ul.block_info li { clear: both; *width: 100% }
+ul.block01 li div, ul.block02 li div { padding-left: 5px }
+.width_25 { width: 25px }
+.width_36 { width: 36px }
+.width_40 { width: 40px }
+.width_46 { width: 46px }
+.width_50 { width: 50px }
+.width_70 { width: 70px }
+.width_75 { width: 75px; display: block }
+.width_78 { width: 78px; display: block }
+.width_80 { width: 80px }
+.width_85, .cb-viewresume .profile_CV ul.block02 li div { width: 85px }
+.width_95 { width: 95px }
+.width_90 { width: 90px }
+.width_100 { width: 100px }
+.width_112 { width: 112px }
+.width_115 { width: 115px }
+.width_125 { width: 125px }
+.width_135, .JoinNow .loginBtn input, .JoinNow .rightCol label { width: 135px }
+.width_160 { width: 160px; display: block }
+.width_170 { width: 170px }
+.width_172 { width: 172px; display: block }
+.width_190 { width: 190px }
+.width_202, #ForgotPass .input_long { width: 202px }
+.width_212 { width: 212px }
+.width_224, .JoinNow .rightCol select { width: 224px }
+.width_238, #FilterCandidate .select_long, .cb-creatjob .input_medium { width: 238px }
+.width_251 { width: 251px }
+.width_255 { width: 255px }
+.width_260, .AddInterview #tab_Notification .label_1  { width: 260px }
+.width_272 { width: 272px }
+.width_275 { width: 275px }
+.width_278 { width: 278px }
+.width_285 { width: 285px }
+.width_290, .ftalentsolution .select_long, .ftalentsolution .slc_single select, .ftalentsolution .slc_single input.input_short, .ftalentsolution .slc_single input.input_long { width: 290px }
+.width_297 { width: 297px }
+.width_330 { width: 330px }
+.width_383 { width: 383px }
+.width_430, .SetupMail .mailtemp { width: 430px }
+.width_450, .ResultSurvey .container, #NoticePost, #ErrorPostJob, #NoticePostJob, .Candidates .TooltipSetting .lockResumeInfo .tipsIcon { width: 450px }
+.width_470, .ResultSurvey, #CreateNoteWfs .input_long, #CreateNoteWfs .textarea_long { width: 470px }
+.width_485 { width: 485px }
+.width_500, #LeavePage { width: 500px }
+.width_502 { width: 502px }
+.width_512 { width: 512px }
+.width_540, .LetterAbout { width: 540px }
+.width_545 { width: 545px }
+.width_555 { width: 555px }
+.width_570 { width: 570px }
+.width_580, #ViewTemplateLetter .container { width: 580px }
+.width_640 { width: 640px }
+.width_660 { width: 660px }
+
+.rc_col_20px { width: 20px }
+.rc_col_30px { width: 30px }
+.rc_col_40px { width: 40px }
+.rc_col_44px { width: 24px; padding: 0 10px }
+.rc_col_50px { width: 50px }
+.rc_col_52px { width: 32px; padding: 0 10px }
+.rc_col_56px { width: 56px }
+.rc_col_60px { width: 60px; padding: 0 10px }
+.rc_col_66px { width: 66px }
+.rc_col_70px { width: 50px; padding: 0 10px }
+.rc_col_79px { width: 79px }
+.rc_col_80px { width: 80px }
+.rc_col_85px { width: 65px; padding: 0 10px }
+.rc_col_90px { width: 70px; padding: 0 10px }
+.rc_col_92px { width: 92px }
+.rc_col_94px { width: 94px }
+.rc_col_96px { width: 96px }
+.rc_col_100px { width: 80px; padding: 0 10px }
+.rc_col_105px { width: 105px; padding: 0 10px }
+.rc_col_107px { width: 107px }
+.rc_col_108px { width: 108px }
+.rc_col_114px { width: 114px }
+.rc_col_115px { width: 115px; padding-right: 10px }
+.rc_col_120px { width: 120px }
+.rc_col_125px { width: 125px }
+.rc_col_130px { width: 120px; padding-right: 10px }
+.rc_col_140px { width: 120px; padding: 0 10px }
+.rc_col_150px { width: 130px; padding: 0 10px }
+.rc_col_155px { width: 145px; padding-right: 10px }
+.rc_col_160px { width: 160px }
+.rc_col_165px { width: 165px }
+.rc_col_170px { width: 170px }
+.rc_col_180px { width: 170px; padding-right: 10px; overflow: hidden }
+.rc_col_200px { width: 180px; padding: 0 10px }
+.rc_col_225px { width: 205px; padding: 0 10px }
+.rc_col_235px { width: 215px; padding: 0 10px }
+.rc_col_250px { width: 240px; padding-right: 10px; overflow: hidden }
+.rc_col_260px { width: 250px; padding-right: 10px; overflow: hidden }
+.rc_col_265px { width: 245px; padding: 0 10px }
+.rc_col_320px { width: 300px; padding: 0 10px }
+.rc_col_330px { width: 320px; padding-right: 10px }
+.rc_col_345px { width: 325px; padding-right: 20px }
+.rc_col_350px { width: 340px; padding-right: 10px }
+.rc_col_352px { width: 352px; display: block }
+.rc_col_380px { width: 360px; padding: 0 10px }
+.rc_col_285px { width: 285px }
+.rc_col_703px { width: 703px }
+
+.buyService { float: right; width: 48%; padding: 10px; margin-left: 15px; background-color: #e4e6ea; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -o-border-radius: 8px }
+.buyService .top { padding-bottom: 6px; clear: both; float: left }
+.ResumeInfo span.btn_submit input { color: #fff; text-align: center; padding: 0 10px; font-weight: bold; font-size: 12px; display: block; height: 27px; background-color: #f79d25; border: 0 }
+.ResumeLock { float: right; width: 48%; background: #f5f6f7 url("images/resumelock.png") 0 15px no-repeat; padding: 15px 15px 5px 90px; border: 1px solid #d3d3d3; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px }
+.filter_k { float: left; width: 100%; font-size: 11px }
+.filter_k .sby, .filter_k ul { float: left }
+.filter_k .sby { padding-right: 5px; padding-bottom: 5px }
+.filter_k ul li { padding-bottom: 3px; overflow: hidden }
+.tipscontent .row, .AddNews .vtmm, #JobsLetter .bsub { padding-top: 10px }
+.JoinNow { float: left; width: 100%; margin-top: 50px }
+.JoinNow h1, .JoinNow h2 { font-size: 16px; font-weight: bold }
+.JoinNow h1, .JoinNow h2, .JoinNow .leftCol ul, .LoginSucess p, .AccountActive p { padding-bottom: 15px }
+.JoinNow .leftCol { float: left; width: 437px; padding-right: 30px }
+.JoinNow .leftCol p { padding-bottom: 15px; text-align: justify }
+.JoinNow .leftCol .logo { padding-bottom: 20px }
+.JoinNow .leftCol .logo img { max-width: 200px }
+.AssignJob p, .JoinNow .otherlink ul li, .WorkflowStage p, .AccountInformation p, .BoxMemberSearch li, .Recently p, #table_language, #ConfirmPostJob .AddonComfirm ul.block_info li, #tab-InsertImage .browsephoto p, .AddtoFolder p, .JobLibrary  p { padding-bottom: 5px }
+.AccountInformation p, .BoxFolder .row, .BoxReviewCandidate .bsub { width: 100%; float: left; overflow: hidden }
+.JoinNow .rightCol { border-left: 1px solid #d3d3d3; padding-left: 30px; width: 436px; float: left; position: relative }
+.JoinNow .row, .containerListMy ul li, .cb-applyjob .row, .MenuAction ul li, .Recently .UserJoin, .Recently .UserJoin div, #CreateFolder .row, .ChangePosition .RightPanel .ShowData, .cb-jobdetail .Gotopage, .AccessCB ul, .SetPermission .AccessCB ul li, .cb-viewresume .Gotopage, .cb-viewresume .action_bar, .BoxFolder .row, #CreateFolder .RightPanel .ShowData, .AddtoFolder .row, .PostingFB .row, .FeatureCareer .FrameForm .row, .EmailHistory .FrameForm .row, .cb-viewresume .profile_CV ul.block01 li, #tab_profile .block_info li, .FrameForm .row, .ResumeSearch .row, .MemberSearch .row, .DashboardN .row, .cb-viewresume .profile_CV ul.block01, #tabs-chitietcongviec ul.block_info li, .Candidates #FilterCandidate .row, #AddInterview .container, .AddInterview, #embededCode .container, .JoinCollegeNw .row { width: 100% }
+.JoinNow .rightCol .txt_required { position: absolute; right: 0; top: 5px; font-weight: normal }
+.JoinNow .optional { clear: both; padding-top: 15px }
+.joinnowBtn, .loginBtn { clear: both; padding: 5px 0 0 140px }
+.JoinNow .forgetpass  { clear: both; padding: 0 0 10px 140px }
+.JoinNow .salarymobile input { width: 67px }
+.JoinNow div.row > div label { width: auto!important; margin-right: 10px }
+.prefer_other { float: left; clear: both }
+.prefer_other input.input_long { width: 182px }
+#JoinOurTalentNetwork .JoinNow, #LoginTalentNetwork .JoinNow { margin-top: 0 }
+#JoinOurTalentNetwork .leftCol, #LoginTalentNetwork .leftCol { width: 300px }
+#JoinOurTalentNetwork .container, #LoginTalentNetwork .container, #WhyJoin .container { padding: 30px }
+#JoinOurTalentNetwork .JoinNow h1, #LoginTalentNetwork .JoinNow h1, #ConfirmPostJob .noteCon { padding-top: 15px }
+#JoinOurTalentNetwork .datebirthday, .JoinNow .datebirthday { width: 92px }
+.signin_social, .loginJoinTalentNetwork { float: left; width: 100%; padding-top: 20px; border-top: 1px solid #d3d3d3; margin-top: 20px }
+.signin_social span { float: left; width: 140px; line-height: 24px }
+.signin_social ul { float: left; width: 296px; position: relative }
+.signin_social ul li.st1 { position: absolute; left: 0; top: 0 }
+.signin_social ul li.st2 { position: absolute; left: 105px; top: 0 }
+.signin_social ul li.st3 { position: absolute; left: 195px; top: 0 }
+a.facebook { background: url("images/i-facebook.png") no-repeat }
+a.google { background: url("images/i-google.png") no-repeat }
+a.linkedin { background: url("images/i-linkedin.png") no-repeat }
+a.youtube { background: url("images/i-youtube.png") no-repeat }
+a.twitter { background: url("images/i-twitter.png") no-repeat }
+a.instagram { background: url("images/i-instagram.png") no-repeat }
+a.tiktok { background: url("images/i-tiktok.png") no-repeat }
+a.zalo { background: url("images/i-zalo.png") no-repeat }
+.signin_social a { padding-left: 30px; display: block; line-height: 24px; height: 24px; color: #000; font-size: 11px }
+.loginJoinTalentNetwork p { text-align: center; font-size: 11px; font-weight: bold }
+.loginJoinTalentNetwork a { margin: 10px 0 0 95px }
+.frmChangePass p.text, .frmContact p.text { padding-bottom: 15px } 
+.frmChangePass div.row { clear: both; width: 100%; padding-left: 100px }
+.frmChangePass div.pd55, .frmContact div.pd55 { padding-left: 55px }
+.frmChangePass span.btn_submit { padding-left: 150px; display: block }
+.frmContact .row { width: 879px }
+.frmContact .row label { display: block; width: 100%; padding: 0 0 5px 0 }
+.frmContact .row textarea { width: 400px; height: 150px }
+.forgotpassBtn { clear: both; padding-left: 262px }
+.headerBoxCore { font-size: 14px; font-weight: bold; padding-left: 10px; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px; position: relative }
+.headerBoxCore a.help_search { color: #fff; font-size: 11px; font-weight: normal; padding-left: 10px }
+.headerBoxCore .sub_title { font-size: 12px; font-weight: normal }
+.rightheader { font-size: 11px; text-align: right }
+.headerBoxCore .rightheader { position: absolute; right: 10px; top: 0; font-size: 11px; font-weight: normal }
+.headerBoxCore .rightheader span { margin-left: 15px }
+.wcommon { float: left; width: 100%; margin-bottom: 10px }
+.navHeader { color: #000066; font-size: 14px; font-weight: bold; padding-bottom: 10px }
+.coreCompany .navHeader { color: #000066; font-size: 14px; font-weight: bold; padding: 15px 10px 10px }
+.MyCareerPanel .containerListMy, .wcommon .containerListMy, .SetupMail, .postOnline .page_focus, .postOnline .gird_standard, .smartfield .tit-header, .coreCompany .RightPanel .ShowData, .naviAction .function_list ul, .funcAction .ListActive ul, .funcAction .ListActive ul li, .AccountActive > p, .ChooseEmail ul li, .TooltipSetting .tipsIcon .txt, .Candidates .lockResumeInfo .tipsIcon .txt, .ResumeDetailonCB .ResumeInfo, .ResumeDetailonCB .profile_CV { float: left; width: 100% }
+.containerListMy a, .BoxMemberSearch h2, .SeachMember .label_1 { font-size: 12px; color: #333; display: block; padding: 4px 0 4px 20px; text-decoration: none; width: 180px }
+.coreCompany .containerListMy a { width: 203px }
+.containerListMy a { background-position: 10px 10px }
+.searchboxTS { position: relative; margin-bottom: 10px; z-index: 2; clear: both }
+.searchboxTS input.s_folder { width: 178px; background: url('images/search_16x16.png') no-repeat 3px 5px; border: 1px solid #B5B5B5; padding: 3px 15px 3px 18px }
+.searchboxTS input.s_folder:focus { border-color: #7f9db9 }
+.searchboxTS .close { position: absolute; top: 3px; right: 10px; width: 14px!important; height: 14px; background: url('images/close.gif') no-repeat; padding: 0 }
+.searchboxTS .close:hover { background: url('images/close.gif') no-repeat }
+.searchboxTS .NotesHelp { position: absolute; top: 28px; left: 0; z-index: 1000; width: 190px }
+.NotesHelp { display: none; background: #fff9c9; border: 1px solid #c7bf93; padding: 5px 10px; width: 360px; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; font-size: 10px }
+.row_note { position: absolute; top: -7px; left: 20px ; background: url('images/row_note.png') no-repeat; width: 11px; height: 7px }
+.NotesHelp .close-tips { position: absolute; top: 7px; right: 7px; background: url('images/close_note.png') no-repeat; width: 7px!important; height: 7px }
+.NotesHelp .close-tips:hover { background: url('images/close_note.png') no-repeat }
+.mutipleLevel a, .SetupMail .row { width: 100%; padding-left: 0 }
+.mutipleLevel li.hassub, .mutipleLevel ul.noscroll .linkopen a { background-image: url("images/tree_plus_hr.gif"); background-position: 0 9px; background-repeat: no-repeat }
+.mutipleLevel li.hassub, .mutipleLevel li.nosub { padding-left: 15px; width: 203px; cursor: pointer; float: left }
+.mutipleLevel li.nosub a, .mutipleLevel .linkopen a, .mutipleLevel .linkopen a:hover, .mutipleLevel li.nosub a:hover, .action_bar ul li.lockresume { background: none }
+.mutipleLevel li.collapse, .mutipleLevel ul.noscroll .linkopen a.collapse, .mutipleLevel li.collapse-ats, .mutipleLevel ul.noscroll .linkopen a.collapse-ats { background-image: url("images/tree_minus_hr.gif") }
+.mcs_container .customScrollBox .content ul.treemenu li { border-bottom: 1px solid #DADADA }
+.mutipleLevel ul.treemenu a { background-image: none; font-weight: normal }
+.mutipleLevel ul.folder_sys a, .mutipleLevel ul.folder_user a  { background-position: left 6px; background-repeat: no-repeat; padding-left: 20px; display: inline-block }
+.mutipleLevel ul.folder_sys a { background-image: url("images/folder_expand_14x14.gif") }
+.mutipleLevel ul.folder_user a { background-image: url("images/folder_15x12.gif"); width: 100% }
+.mutipleLevel ul.folder_user a.style2 { background-image: url("images/folder_16x14.png") }
+.mutipleLevel ul.folder_user a.style3 { background-image: url("images/folderlock_17x14.png") }
+.mutipleLevel ul.noscroll li.hassub { padding-left: 0; width: 100%; background: none }
+.mutipleLevel ul.noscroll .linkopen a, .mutipleLevel ul.noscroll ul.treemenu a, #tab-InsertImage .browsephoto, .HireFirst .agency, .HireFirst .internal, .HireCenter .jobs, .HireLast .no { padding-left: 15px }
+.mutipleLevel ul.noscroll li.nochild .linkopen a { background-image: none }
+.mutipleLevel ul.noscroll li .linkopen a:hover, .mutipleLevel li.marked, .mutipleLevel li.nosub:hover { background-color: #D6E8FF }
+.mutipleLevel .folderlist .mcs_container, .mutipleLevel .folderlist ul.treemenu a { width: 100%; padding-right: 0 }
+.mutipleLevel .folderlist .linkopen { float: left; width: 100% }
+.mutipleLevel .folderlist .linkopen a.parent { float: left; width: auto }
+.mutipleLevel .folderlist .linkopen a.viewall { float: right; width: auto; font-size: 11px; color: #287ab9; font-weight: normal; padding-right: 8px }
+.mutipleLevel .folderlist .linkopen a.viewall:hover, .SeachMember a.help_search:hover { text-decoration: underline }
+.LeftPanel { float: left; width: 200px; padding-top: 10px }
+.RightPanel { float: left; width: 773px; border-left: 1px solid #B5B5B5; padding-top: 10px; min-height: 490px }
+.RightPanel .ShowData { float: left; width: 773px }
+.mainFilter { float: left; width: 758px; padding: 0 0 10px 15px; border-bottom: 1px solid #B5B5B5 }
+.mainFilter label.page_current { color: #000; font-size: 14px; font-weight: bold }
+.ShowData .containerData { float: left; width: 758px; padding: 10px 0 0 15px; position: relative }
+.coreCompany .LeftPanel { width: 210px; height: 100%; left: -100%; position: absolute; z-index: 19; top: 0; background: url('images/bg_menu_left.png') repeat-y right top #fff; padding: 0 }
+.coreCompany .RightPanel { float: left; width: 100%; padding-top: 15px; min-height: 490px; padding-bottom: 30px; border: 0 }
+.coreCompany .mainFilter { float: left; width: 100%; padding: 0; border-bottom: 0 }
+.coreCompany .mainFilter label.page_current span { font-weight: normal; font-size: 12px }
+.coreCompany .mainFilter ul.item { float: right; position: relative; z-index: 2; top: -5px; margin-bottom: 0 }
+.coreCompany .mainFilter ul.item li { float: left; background: #fff }
+.coreCompany .mainFilter ul.item li a { display: block; padding: 5px 10px; color: #9c9b9b }
+.coreCompany .mainFilter ul.item li.b_filter { border-right: 1px solid #fff; border-top: 1px solid #fff; border-left: 1px solid #d3d3d3 }
+.coreCompany .mainFilter ul.item li.b_filter a { background: url("images/plus-filter.gif") 10px 7px no-repeat; padding-left: 30px; color: #333; text-decoration: none }
+.coreCompany .mainFilter ul.item li.expand { border: 0 }
+.coreCompany .mainFilter ul.item li.expand a { background-image: url("images/minus-filter.gif"); background-color: #d6e8ff }
+.ListRequisitions .mainFilter ul.item li.b_filter, .InActiveJob .mainFilter ul.item li.b_filter { background-color: #d6e8ff; border: 0 }
+.coreCompany .mainFilter .rightheader { font-size: 11px; font-weight: normal; float: right; color: #15487C }
+.coreCompany .ShowData .containerData { float: left; width: 100%; padding: 20px 0 0 0; position: relative }
+.share, .contenttab .maps { padding: 15px 0 }
+.share span { float: left; font-size: 11px; margin: 2px 5px 0 0 }
+.share a { display: inline-block; height: 19px; width: 19px; margin: 0 2px; background: url("images/social_icon.png") no-repeat }
+.share a.facebook, .action_bar ul li.downloadCV { background-position: 0 0 }
+.share a.twitter { background-position: -19px 0 }
+.share a.linkedin { background-position: -38px 0 }
+.share a.google { background-position: -57px 0 }
+.hr-color-bg-trimdark { background: url('images/bg-dottedline-horizontal.png') repeat-x top left; height: 2px; margin-bottom: 15px; width: 100% }
+.current-title { float: left; text-transform: uppercase; font-weight: bold; padding: 5px 0 10px }
+.st_gird, .gird_standard, .moreSubject { float: left; width: 100%; padding-top: 10px }
+.gird_standard dl dt { _height: 1% }
+.gird_standard table tr td { padding: 5px 10px; vertical-align: top }
+.gird_standard table tr.header_table, .gird_standard dl dt { background-color: #5d5c5c }
+.gird_standard table tr.header_table td, .gird_standard dl dt { color: #fff; font-weight: bold }
+.gird_standard table tr.header_table td img { margin: -2px 0 0 2px; vertical-align: middle; *margin-top: 2px }
+.gird_standard table tr.bgrecord_even, .gird_standard dl dd.bgrecord_even { background: #f2f2f2 }
+.gird_standard dl dt { padding: 5px 0; float: left; width: 100%; _height: 1% }
+.gird_standard dl dt img { vertical-align: middle; *margin-top: 3px }
+.gird_standard dl dd { float: left; width: 100%; position: relative; padding: 10px 0 }
+.gird_standard dl dd.borange { border-left: 1px solid #f7630a; border-right: 1px solid #f7630a; border-bottom: 1px solid #f7630a; padding: 0 }
+.gird_standard dl dd.end { border-bottom: 1px solid #D0D3D4 }
+.naviAction, .funcAction { position: absolute; top: 4px; overflow: hidden; clear: both; right: 5px }
+.cb-jobdetail .funcAction { top: 50px; right: 0px }
+.cb-jobdetail .funcAction label { padding: 0 0 5px 0 }
+.naviAction label, .funcAction label { float: right; color: #287ab9; position: relative; padding: 3px 5px; cursor: pointer; margin-bottom: 0 }
+.naviAction .hParent { background: #fff; border-left: 1px solid #006699!important; border-top: 1px solid #006699!important; border-right: 1px solid #006699!important; border-bottom: 0!important; z-index: 11 }
+.naviAction .function_list { border: 1px solid #006699; background: #fff; overflow: hidden; clear: both; float: right; position: relative; margin-top: -1px; z-index: 10; display: none; width: 150px }
+*+html .naviAction .function_list, *+html .funcAction .ListActive { margin-left: -5px }
+.naviAction .function_list ul li a { display: block; padding: 3px 6px; border-bottom: 1px solid #ddd; width: 138px }
+.naviAction .function_list ul li a:hover { text-decoration: none; background: #ff5b00; color: #fff }
+.funcAction label, .SeachMember .filter_k, .Candidates .filter_k { padding-top: 5px }
+.funcAction .hParent { z-index: 11 }
+.funcAction .ListActive { padding: 5px 10px; border: 1px solid #006699; background: #fff; overflow: hidden; clear: both; float: right; position: relative; z-index: 10; display: none; width: 165px }
+.funcAction .ListActive ul li.title { font-weight: bold; padding: 5px 0; color: #666 }
+.funcAction .ListActive ul li a { display: inline-block; padding: 5px 6px; width: 140px; text-decoration: underline; padding-left: 25px; background-repeat: no-repeat; background-position: left 6px; color: #333 }
+.funcAction .ListActive ul li a.i-active, .txt-importfile a { background-image: url('images/icon_publish_16x16.png') }
+.funcAction .ListActive ul li a.i-inactive { background-image: url('images/icon_inpublish_16x16.png') }
+.funcAction .ListActive ul li a.i-pending { background-image: url('images/icon_pending_16x16.png') }
+.funcAction .ListActive ul li a.i-copy { background-image: url('images/i-copy.png') }
+.funcAction .ListActive ul li a.i-edit { background-image: url('images/i-edit.png') }
+.funcAction .ListActive ul li a.i-delete { background-image: url('images/i-delete.gif') }
+.funcAction .ListActive ul li a.i-facebook { background-image: url('images/i-facebook16x16.png') }
+.funcAction .ListActive ul li a.i-linkin { background-image: url('images/i-linkin16x16.png') }
+.funcAction .ListActive ul li a.i-cb { background-image: url('images/i-cb16x16.png') }
+.funcAction .ListActive ul li a.i-approve { background-image: url('images/i-has.png') }
+.funcAction .ListActive ul li a.i-denied { background-image: url('images/delete2.png'); width: auto }
+.funcAction .ListActive ul li a.i-cancel { background-image: url('images/i-cancel.png') }
+.funcAction .ListActive ul li a.i-onhold { background-image: url('images/i-onhold.png') }
+.funcAction .ListActive ul li a.i-filled { background-image: url('images/i-filled.png') }
+.funcAction .ListActive ul li a.i-reopen { background-image: url('images/i-reopen.png') }
+.funcAction .ListActive ul li a.note { width: 16px; padding-left: 0 }
+.table-skill th { text-align: left }
+.CoreGeneral, .HomeCoreCompany .TooltipSetting .tblJob tr td { border: none }
+.CoreGeneral .header { background-color: #639ec8 }
+.coreCompany .CoreGeneral .header { background-color: #5d5c5c }
+.label_gr { background: #f3f3f3; border-bottom: 1px solid #ccc; font-weight: bold; line-height: 30px; padding-left: 15px; display: block; margin-bottom: 10px; text-transform: capitalize; clear: both; position: relative; height: 30px; font-size: 12px }
+.box_mygroup { background-color: #FFFAF2; border: 1px dashed #96C8EA; margin: 15px auto 20px; padding: 10px; width: 705px; position: relative }
+.box_mygroup h3 { color: #555; font-size: 14px; padding-bottom: 10px }
+.box_mygroup .nav_mygroup { color: #287ab9; position: absolute; right: 10px; font-size: 11px; top: 10px }
+a.add_product {  background: url("images/add_product.gif") no-repeat left center; color: #287ab9; font-weight: bold; padding: 4px 0 4px 22px; font-size: 11px; display: block; margin-bottom: 10px }
+.my_avatar { position: absolute; font-size: 11px; text-align: center; z-index: 1; width: 120px }
+.cb-myprofile .my_avatar, .cb-createresume .my_avatar { top: 50px; right: 0 }
+.cb-viewresume .my_avatar { top: 15; left: 45px }
+.CreateNoteRequisition { width: 400px }
+.CreateNoteRequisition h2 { padding-bottom: 10px; font-size: 16px }
+.CreateNoteRequisition textarea { width: 366px; height: 90px }
+.coreCompany .cb-viewresume .my_avatar { top: 0; left: 15px }
+.cb-viewresume #tab_Resumes .my_avatar { top: 10px; left:20px }
+.ChangePosition .cb-viewresume .my_avatar { top: 90px }
+.LeftAvatar { float: left; width: 180px }
+.my_avatar>div { text-align: center; padding-bottom: 5px }
+.cont_post .row { width: 100%!important; padding: 0!important }
+.cont_post .link_under { font-size: 12px; text-decoration: underline; padding-left: 10px }
+.cont_post p.tit_posting { background: url(images/row_tit.png) no-repeat left 10px; padding: 5px 0 10px 15px; font-weight: bold; color: #000066; font-size: 12px; clear: both }
+.help_post { background: url("images/help_post.png") no-repeat; width: 14px; height: 14px; display: block; float: left; margin-left: 5px }
+.tipsHelp { display: none; position: absolute; top: 20px; left: 0px; background: #474747; width: 250px; padding: 5px 10px; color: #fff; font-weight: normal; font-size: 11px; z-index: 100; text-align: left }
+.CreateLetter .tipsHelp, #SendEmail .tipsHelp { right: 0; left: auto }
+fieldset { border: 1px solid #7f9db9; padding: 15px 10px; margin-bottom: 15px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px }
+fieldset legend { font-size: 14px; color: #000066; font-weight: bold; padding: 0 5px; margin-bottom: 0; border: 0; width: auto  }
+.sel_temp { float: left; padding: 0 30px }
+.ShowData .containerData div.row .sel_temp label { padding-bottom: 8px; text-align: left; padding-right: 0 }
+.sel_temp.last { padding-right: 0; width: 190px }
+.sel_temp.last a, .BodyText .tit-header { text-align: left }
+.sel_temp.last .preview { text-align: left; padding-left: 45px }
+.header-images, .footer-images { width: 490px; padding-left: 100px }
+.tit-header { text-align: center; padding-bottom: 10px; font-weight: bold }
+.upload_image { position: absolute; top: 22px; *top: 24px; left: 0px; width: 300px; font-size: 11px }
+.upload_image .row { width: 300px!important }
+.upload_image input[type=file] { padding: 3px 0; width: 175px }
+#LibraryImage { width: 706px }
+#tab-MyImage, #tab-InsertImage { float: left; width: 100%; border: 1px solid #d3d3d3; border-top: 0; padding: 15px 0 15px 15px!important }
+#tab-MyImage #jb_pagination { padding: 5px 12px 0 0 }
+#tab-InsertImage .row { padding-left: 15px; width: 653px }
+#tab-InsertImage .disabled { opacity: .4 }
+#tabs-History .row { width: 100%; background: #f3f3f3; border: 1px solid #b5b5b5; padding: 1%; margin-bottom: 20px }
+#tabs-History .row h3 { font-size: 1.2em; padding-bottom: 10px }
+#tabs-History .row>p { font-weight: bold; padding-bottom: 10px }
+#tabs-History .record.bg { background-color: #f3f3f3 }
+#tab_PostSources .st_gird { font-size: 12px }
+#tab_PostSources .tp-source img { margin-right: 5px }
+#LibraryImage .detail_w_tab .ui-tabs .ui-tabs-nav { width: 100%!important }
+ul.MyPicture { float: left; width: 100%; height: 310px }
+ul.MyPicture li { border: 1px solid #c9c7c7; width: 120px; padding: 10px 20px; float: left; margin: 0 10px 10px 0 }
+ul.MyPicture li div.img { height: 84px; position: relative }
+ul.MyPicture li div.img img { position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto }
+.MyPicture .select { margin: 5px 0 }
+.MyPicture .select a { background: #ff5b00; padding: 2px 5px; color: #fff }
+.BodyText { margin: 20px 0; padding-left: 100px }
+.BodyText .contentfck_left { float: left; width: 492px }
+.BodyText .smartfield { padding-left: 15px; float: left; width: 225px }
+.BodyText .smartfield a.smart_fields, #tabs-getconnected input.btnSmall, #tabs-logophoto input.btnSmall, #tabs-getbutton input.ui_btnCb, #NoticePost .cp a.btnTextLink, #WhyJoin h4, .HomeCoreCompany div.row label, .cb-viewresume #tabs label, .cb-viewresume #tabs .f_size11, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .cb-applyjob div.row label, .fb_field legend, #tabs-Score .cont_post, #tabs-Score .row label, .EditRecommendJob .whyjoin p { font-size: 12px }
+.select-images { border: 1px solid #d3d3d3; padding: 5px 5px 10px; text-align: center }
+.select-bg { background: #c0c0c0; width: 400px; height: 65px; line-height: 65px; margin: 0 auto 5px }
+.select-bg a { font-size: 11px; color: #333; text-decoration: underline }
+.select-control a { font-size: 11px; text-decoration: underline; margin-right: 25px }
+.select-control a.last, .ImportEmail td.circle-info b { margin-right: 0 }
+.select-control a.btnTextLink { text-decoration: none; font-size: 12px }
+.submit-letter, .sel_temp .preview, .MyPicture li div, #NoticePost h2 { text-align: center }
+.submit-letter input { margin-right: 10px }
+.creResume { float: left; width: 681px }
+.creResume .bystep { float: left; background: url("images/resume-art.png") 15px 20px no-repeat; width: 495px; padding: 15px 0 0 200px }
+.creResume .bystep h3 { font-size: 15px; font-weight: bold; color: #287ab9 }
+.creResume .bystep p { padding: 8px 0 10px; line-height: 18px }
+.creResume .line { background: url("images/dotted.gif") repeat-x }
+.creResume .line { clear: both; height: 30px; line-height: 0; background-position: center center }
+.form .row { width: 100% }
+.JoinNow .date_month, #customize_form_experience .datemonth, .cb-createresume .datemonth, .cb-myprofile .datemonth, .JoinNow .datemonth, #JoinOurTalentNetwork .datemonth { background-position: 82px 3px }
+.cb-creatjob .date_month { background-position: 142px 3px; width: 154px }
+.cb-creatjob .sumcharacter { width: 483px!important }
+.vtmm { border-top: 1px solid #000; padding-top: 15px }
+.vtmm p { float: left; margin-top: 5px; padding-top: 0; width: 100% }
+.EditCompanyProfile .sumcharacter { width: 485px!important }
+.cb-createresume .sumcharacter { width: 751px }
+.cb-createresume .saveBtn { padding: 5px 0 0 215px }
+.cb-createresume .chosen-container { font-size: 12px }
+.cb-createresume select, .cb-myprofile select { min-width: 202px }
+.cb-createresume select.width_115 { min-width: auto }
+.create_import_candidate .label_gr .link { float: right; padding-right: 10px }
+.create_import_candidate input[type=file] { height: auto; padding: 3px 0 }
+.create_import_candidate .date_from input.datemonth, .create_import_candidate .date_to input.datemonth { background-position: 70px 6px }
+.cb-createresume fieldset, .cb-createRequisition fieldset { border: 1px solid #b5b5b5; border-radius: 0; margin-bottom: 0; padding: 15px 10px; width: 80% }
+.cb-createresume fieldset legend, .cb-createRequisition fieldset legend { font-size: 12px; font-weight: normal; color: #000; margin-left: 5px }
+.cb-createresume fieldset .label_1  { width: 140px }
+.CenterPanel { width: 715px; margin: 0 auto 20px; overflow: hidden }
+.CenterPanel .ShowData { float: left; width: 715px }
+.cb-applyjob { width: 810px }
+.cb-applyjob .ShowData, .cb-applyjob .mainFilter, .cb-applyjob .containerData { width: 100% }
+.cb-applyjob .ShowData, .LoginSucess, .workflow-item .item p:first-child { padding-top: 20px }
+.cb-applyjob p.txt_invite { float: right; clear: both; padding-bottom: 10px }
+.cb-applyjob .width_580 { width: 540px }
+.cb-applyjob label.width_110 { width: 240px }
+.cb-applyjob input.width_190 { height: 26px; line-height: 26px; padding: 0 4px; font-size: 12px }
+.cb-applyjob select { height: 26px; font-size: 12px }
+.cb-applyjob .colorJob { color: #ff5b00; font-size: 16px }
+.cb-applyjob .sumcharacter { background: none; border: 0; padding: 0 }
+.cb-applyjob .date_month { width: 94px!important; background-position: 85px 4px!important }
+.cb-applyjob.customize-pre .mainFilter label.page_current { font-size: 18px }
+.cb-applyjob.customize-pre .titcolor, .cb-applyjob.customize-pre label.width_110, .cb-applyjob.customize-pre #div_file .fileContainer { font-size: 14px }
+.cb-applyjob.customize-pre .sumcharacter { font-size: 13px }
+#sel_othersource { display: block; background: url('images/i_source.gif') no-repeat; height: 16px; line-height: 16px; color: #6E6E6E; padding-left: 25px; margin-left: 12px; font-size: 11px }
+.othersource .row { display: none; padding: 0 }
+.othersource p, #upload_text1 { padding-bottom: 0!important }
+.cb-applyjob .ResumeNonMember { padding-left: 12px }
+.ApplyBtn { padding-left: 270px }
+.successWrapper { width: 600px; margin: 40px auto; height: 150px; padding: 50px 0 0 31px }
+.cb-applyjobSuccess { background: url("images/apply-job.jpg") no-repeat }
+.commoncb p { padding-bottom: 5px; font-size: 11px; width: 370px; line-height: 18px }
+.commoncb p.important { font-size: 18px; font-weight: bold; color: #ff5b00; line-height: 22px; padding-bottom: 15px }
+.cb-myprofile .saveProfileBtn { padding: 5px 15px 0 180px; width: 485px }
+.cb-viewresume .profile_CV { width: 553px; margin: 0 0 10px; overflow: hidden; font-size: 11px; padding-left: 205px }
+.cb-viewresume .profile_CV ul.block_info, #ManageNote .tipscontent .row, .workflow-item .sum-data p:first-child { padding-top: 0 }
+.coreCompany .cb-viewresume .profile_CV ul.block01 { width: 50% }
+.coreCompany .cb-viewresume .profile_CV ul.block01 .currentStatus fieldset { margin-top: 5px }
+.coreCompany .cb-viewresume .profile_CV ul.block01 li.savetofolder, .coreCompany .MemberSearch2 .containerData, .coreCompany .MapLocation .containerData { padding-top: 10px }
+.coreCompany .cb-viewresume .References ul.block01 { width: 45% }
+.coreCompany .cb-viewresume .profile_CV { width: 83%; font-size: 12px; padding-left: 15%; float: left; min-height: 200px }
+.coreCompany .cb-viewresume #tab_Resumes .profile_CV { padding-left: 0; min-height: 0; width: 100% }
+.coreCompany .cb-viewresume #tab_Resumes .profile_CV ul.block01 { width: 45%; padding-left: 4% }
+.coreCompany .cb-viewresume #tab_Resumes .profile_CV ul.block01 li label { text-align: right; font-weight: normal }
+.sel_temp p img, #SendEmail .smartfield { width: 140px }
+.cb-viewresume .profile_CV ul.block01 li label { width: 25% }
+.cb-viewresume .profile_CV ul.block01 li>div { width: 68%; padding-left: 6% }
+.cb-viewresume .select_trafic { float: left; margin-left: 10px }
+.cb-viewresume .select_trafic li { width: auto!important; float: left; clear: none; padding-bottom: 0; padding-right: 5px; position: relative }
+.cb-viewresume .select_trafic .tipsIcon { bottom: 27px; padding: 0!important; width: 345px!important; left: -155px }
+.cb-viewresume .select_trafic .tipsIcon span.arr_tips { bottom: -4px }
+.cb-viewresume .select_short { width: 175px }
+.cb-viewresume .borderJobseek, .AddInterview .borderJobseek { border-top: 0; width: 100%; padding: 20px; float: left }
+.cb-viewresume .detail_w_tab .ui-tabs .ui-tabs-nav, .AddInterview .detail_w_tab .ui-tabs .ui-tabs-nav { width: 100%!important; padding: 0 }
+.cb-viewresume .browse { font-size: 11px; float: right; padding-right: 10px }
+.cb-viewresume .review-history { float: left; padding: 5px 5px 5px 15px; font-size: 11px }
+.cb-viewresume .mainFilter { border-color: #000 }
+.cb-viewresume .action_bar h3 { font-size: 14px; color: #287ab9; float: left }
+.cb-viewresume .action_bar ul { float: right; padding: 5px 0 }
+.cb-viewresume .action_bar ul li { padding-right: 20px }
+.cb-viewresume .action_bar ul li a, .ListJobAS tr td a, .TooltipSetting .tipsIcon .tblJob tr td a:hover, span.Statistic a:hover, .AccountActive p span.Statistic a:hover, ul.listfolder span a:hover { text-decoration: underline }
+.currentStatus fieldset { width: 270px; margin: 5px 0; padding: 10px }
+.currentStatus legend, fieldset.info-applied legend { color: #333; font-size: 12px }
+ul.block_info li .currentStatus ul li { clear: none; padding-bottom: 0; width: 32%!important }
+.currentStatus ul li span { background: url(images/iconasset.png) no-repeat; width: 20px; height: 14px; float: left; margin-top: 2px; padding-right: 5px }
+.currentStatus ul li span.reject { background-position: 0 -80px }
+.currentStatus ul li span.accept { background-position: 0 -94px }
+.currentStatus ul li span.delete { background-position: 0 -108px }
+.currentStatus ul li span.pending { background-position: 0 -122px }
+.currentStatus .change a { background: url(images/arr_tips.gif) no-repeat right 5px; padding-right: 13px }
+fieldset.info-applied { width: 310px; margin: 5px 0; padding: 10px }
+fieldset.info-applied p { font-size: 11px }
+fieldset.info-applied p:last-child { padding-bottom: 0 }
+.hStatusCandidate { padding-left: 0!important; margin-top: 5px; display: none; clear: both; width: 100% }
+#tab_profile .block_info { width: 50%; float: left; padding: 0 }
+#tab_profile .block_info li label { width: 25%; padding-left: 15px }
+#tab_profile .block_info li label.full { width: 90%; font-weight: normal }
+#tab_profile .block_info li label.title { font-weight: bold; color: #287ab9 }
+#tab_Notes .tblJob tr.bg td, #tab_Application .tblJob tr.bg td, #tab_ReviewHistory .tblJob tr.bg td { border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5 }
+#tab_Notes .containerData, #tab_Attachment .containerData, #tab_Application .containerData, #tab_Notes .st_gird, #tab_Application .st_gird, #tab_ReviewHistory .containerData, #tab_ReviewHistory .st_gird, #tab_InterviewActions .containerData, #tab_InterviewActions .st_gird { padding-top: 0 }
+#tab_ReviewHistory h2 { font-size: 13px; padding-bottom: 10px; clear: both }
+#tab_ReviewHistory .st_gird { margin-bottom: 20px }
+#tab_ReviewHistory .st_gird>p { padding-bottom: 3px; font-weight: bold }
+.export_pdf { text-align: center; padding: 20px 0; clear: both }
+.create_import_candidate .my_avatar { right: 15px; top: 43px }
+.create_import_candidate .my_avatar a { text-align: center; display: block }
+.JobLibraryMana .date_month { background-position: 90px 6px; width: 109px }
+.JobLibraryMana .rc_col_title { width: 24%; padding-left: 1% }
+.ActiveJob .rc_col_3, .ActiveJob .rc_col_4, .ActiveJob .rc_col_5, .InActiveJob .rc_col_3 { width: 10% }
+.ListRequisitions .rc_col_title { width: 17%; padding-left: 1% }
+.ListRequisitions .rc_col_2, .JobLibraryMana .rc_col_2 { width: 15%; padding-left: 1% }
+.ListRequisitions .rc_col_3 { width: 12%; padding: 0 1%; text-align: right }
+.JobLibraryMana .rc_col_3 { width: 14%; padding: 0 1% }
+.ListRequisitions .rc_col_4, .JobLibraryMana .rc_col_4 { width: 2%; padding-left: 1% }
+.ListRequisitions .rc_col_5, .ActiveJob .rc_col_5, .MyPostingHome .rc_col_2, .JobLibraryMana .rc_col_5, .InActiveJob .rc_col_6 { width: 12% }
+.ListRequisitions .rc_col_6  { width: 15%; text-align: right; padding-right: 2% } 
+.ListRequisitions .rc_col_7 { width: 12%; padding-right: 1% }
+.ListRequisitions .rc_col_8, .JobLibraryMana .rc_col_8 { width: 6%; text-align: center }
+.ListRequisitions .rc_col_9 { width: 9%; padding-right: 2%; text-align: center }
+.ListRequisitions .jpost_summary a, .InActiveJob .jpost_summary a, .TooltipSetting .tipsIcon .tblJob tr td a { color: #287ab9; text-decoration: none }
+.ListRequisitions .TooltipSetting .tipsIcon { left: auto; right: -200px; z-index: 99 }
+.ListRequisitions .TooltipSetting .tipsIcon span.arr_tips { left: auto; right: 240px }
+.ListRequisitions .excel, .cmdbig_horizontal ul li.mar_right5 { margin-right: 5px }
+.ListRequisitions .jpost_summary .tipsIcon, .InActiveJob .jpost_summary .tipsIcon { border: 2px solid #5D5C5C; background-color: #fff; width: 500px; padding: 10px; line-height: 18px; color: #333; left: 15px; bottom: auto; top: 0; font-size: 12px; opacity: 1; -khtml-opacity: 1; -moz-opacity: 1; filter: alpha(opacity=100); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" }
+.ListRequisitions .jpost_summary .tipsIcon .text, .InActiveJob .jpost_summary .tipsIcon .text { font-weight: bold; background-color: #757575; color: #fff; padding: 3px }
+.ListRequisitions .jpost_summary .tipsIcon .text.active, .InActiveJob .jpost_summary .tipsIcon .text.active { background-color: #2e7924 }
+.ListRequisitions .jpost_summary .tipsIcon p, .InActiveJob .jpost_summary .tipsIcon p { padding-left: 3px; margin-bottom: 5px }
+.ListRequisitions .jpost_summary .tipsIcon .text span, .InActiveJob .jpost_summary .tipsIcon .text span { float: none; font-weight: normal }
+.ListDepartment .FrameForm .date_month, .listUser .FrameForm .date_month { width: 104px; background-position: 85px 6px }
+.matchingscore-tk a { width: 17px; height: 17px; line-height: 17px; color: #fff; display: inline-block; font-size: 10px; text-align: center; border-radius: 9px; -webkit-border-radius: 9px; -moz-border-radius: 9px }
+.matchingscore-tk a:hover { text-decoration: none }
+.matchingscore-tk .st-red { background-color: #ff0000 }
+.matchingscore-tk .st-organge { background-color: #f79d25 }
+.matchingscore-tk .st-green { background-color: #009b74 }
+.matchingscore-tk .st-blue { background-color: #287ab9 }
+.matchingscore-tk .st-gray { background-color: #c3c3c3 }
+h3.title_popup { font-size: 13px; text-align: left; color: #333 }
+.ActiveJob .rc_col_6 { width: 12%; padding-right: 40px; text-align: right } 
+.LoginSucess p.txtSuccess { color: #ff5b00; font-size: 14px; font-weight: bold }
+.successWrapper-CP { height: 160px; margin: 21px auto 0; padding: 70px 0 0 35px; width: 596px }
+.changePass { background: url("images/new-password.jpg") no-repeat }
+.changePass p.important { color: #FF5B00; font-size: 17px; font-weight: bold; line-height: 22px }
+.FrameForm { float: right; width: 100%; padding: 15px; position: relative; z-index: 1; top: -5px; display: none; clear: both; background-color: #d6e8ff }
+.FrameForm > form, .FrameForm .bframe, .form-mutilfile > form { width: 94%; margin: 0 auto; overflow: hidden; padding: 15px 2%; background-color: #fff; border: 1px solid #b5b5b5 }
+.import_candidate .date_month, .edit_candidate .date_month, .birth .date_month, .DraftJob .date_month, .ContentManagerCate .date_month, .InActiveJob .date_month, .EmailHistory .date_month, .ResumeApply .date_month, .Candidates .date_month, .ImportEmail .date_month, .ListRequisitions .date_month, #tab_CreateJob #requiredate, #tab_PostJob #job_expiredate, #start_requiredate, .create_import_candidate .datemonth, .DashboardN .date_month, .TaskLogs .date_month, .ListNews .date_month, .ActiveJob .date_month, .import_candidate .saveddate .date_month, .AddInterview .date_month, .DateRange .date_month, .Summary .flt-date .date_month { width: 94px; background-position: 75px 6px }
+.ResumeSearch .date_month, .MemberSearch .date_month { width: 91px; background-position: 82px 3px; *width: 86px; *background-position: 78px 3px }
+.ChangePosition .rightCol200 { float: right; width: 18%; padding-top: 10px }
+.ChangePosition .RightPanel { width: 80% }
+.containerBox2 { padding: 10px 5px; float: left; border: 4px solid #a1c0dc; border-bottom-width: 10px; border-top: 0 }
+h2.labelBox { font-size: 12px; font-weight: bold; padding-bottom: 8px; position: relative }
+h2.labelBox a { position: absolute; right: 0; top: 0; font-weight: normal; text-decoration: underline }
+.BoxFolder .containerBox2 { padding: 10px 5px }
+.BoxFolder input.btnSmall { margin-left: 10px; *margin-top: 0 }
+.BoxFolder a, .back { font-size: 11px; text-decoration: underline }
+ul.listfolder, ul.listfolder li, .recordhis .notes, .moreinfor p, .BoxFolder p, #TNlogo img { padding-top: 5px }
+ul.listfolder span.icon-remove { background: url("images/delete2.png") no-repeat; margin-top: 2px; margin-right: 5px }
+ul.listfolder span.icon-remove a {  display: inline-block; width: 16px; height: 16px }
+ul.listfolder span.name { width: 160px }
+.BoxReviewCandidate .row { width: 178px }
+.BoxReviewCandidate .cur_status { color: #ff5b00; padding: 5px 0 }
+.BoxNotes textarea { width: 93%; padding: 0 2% }
+.BoxNotes .noteBtn { text-align: center; padding-top: 5px }
+.txtHistory { border: 1px solid #7f9db9; padding: 2%; font-size: 11px; max-height: 230px; overflow-y: scroll; width: 95% }
+.recordhis { float: left; width: 148px; border-bottom: 1px solid #bacbda; padding-bottom: 5px; margin-bottom: 5px }
+.BoxReviewCandidate ul li { float: left; width: 100%; padding-bottom: 8px; clear: both }
+.Boxworkflow ul.LiWorkflow span.value { float: left; width: 160px }
+.Gotopage { float: right; width: 695px; margin-bottom: 10px }
+.setpage { float: right; margin-left: 20px }
+.setpage span { padding-top: 3px; font-size: 11px; font-weight: bold }
+.action_bar { background: #f1f5fa; float: left; width: 695px; margin-bottom: 15px }
+.action_bar ul { background-position: right bottom; height: 16px; padding: 5px 15px 4px 0 }
+.action_bar ul li { display: inline-block; float: right; font-size: 11px; height: 16px; line-height: 16px; padding: 0 15px 0 22px }
+.action_bar ul li.editCV { background-position: 0 -140px }
+.action_bar ul li.printCV { background-position: 0 -48px }
+.action_bar ul li.forwardCV { background-position: 0 -16px }
+.action_bar ul li.sendmainCV { background-position: 0 -32px }
+.action_bar ul li.addnewInterview { background-position: 0 -64px }
+.action_bar ul li.warningCV { background-position: 0 -123px }
+.action_bar ul li.lockresume i.fa { margin-right: 5px; vertical-align: middle; color: #666; font-size: 14px  }
+.action_bar ul li.savetoFolder, .contentResume #actions li.savetoFolder a { background-position: 0 -265px }
+.action_bar ul li.downloadPDF { background-position: 0 -170px }
+.emailforapp .optemail input.input_margin { margin-left: -4px\9 }
+.stepCreateJob { padding: 5px 10px; border-top: 1px solid #DADADA }
+.stepCreateJob h2 { font-weight: bold; font-size: 12px; color: #000; padding: 5px 0 }
+.stepCreateJob p { font-size: 11px; padding-bottom: 5px }
+.MyAccount .form .row, .ChangePassword .form .row, .CreateFolder .form .row, .SeachMember .row, .CreateDepartment .row, .CreateLetter .row, .ForwardMember .row, .AddNewUser .row, .AddSubject .row, .AddNewSurvey .row, .EditCompanyProfile .row, .EditSurvey .row, .AddNews .row, .AddMedia .row, .CreateCategory .row, .CreateSMTP .row, #SendEmail .ShowData .row { width: 100%; padding: 0 }
+.ico-showTips, .showNote { margin-left: 5px; position: relative }
+.viewletter img { margin-left: 5px; margin-top: 2px }
+.DraftJob .rc_col_title { width: 945px; padding-left: 10px }
+.tipsIcon { position: absolute; z-index: 555; left: -130px; bottom: 19px; *bottom: 8px; display: none; width: 150px; opacity: 0.9; -khtml-opacity: 0.9; -moz-opacity: 0.9; filter: alpha(opacity=90); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)" }
+.tipsIcon a { color: #fff; text-decoration: underline }
+.tipsIcon .colorCr { color: #ff5b00; float: none }
+.tipsIcon .txt, .Candidates .candidate-history .tipsIcon .txt, .Candidates .lockResumeInfo .tipsIcon .txt, .SearchResults .lockResumeInfo .tipsIcon .txt { color: #fff; background: #fff; font-size: 12px; padding: 10px; border: 5px solid #474747 }
+.tipsIcon span.arr_tips { background: url("images/arr_tips.gif") no-repeat; width: 8px; height: 4px; display: block; position: absolute; left: 47% }
+.ManageTestimonial .ico-showTips, .CandidateStep .HireCenter:first-child, .Candidates .ico-showTips { margin-left: 0 }
+.ManageTestimonial .tipsIcon { left: 0; width: 320px; opacity: 1; z-index: 1; -khtml-opacity: 1; -moz-opacity: 1; filter: alpha(opacity=100); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" }
+.ManageTestimonial .tipsIcon span.arr_tips { left: 5% }
+.ManageTestimonial .tipimage { width: 120px; border: 2px solid #474747; background-color: #fff }
+.border2 { background: #D6E8FF; border: 1px solid #89A5C0 }
+.mailtemp { float: left; padding: 6px; width: 448px }
+.mailtemp label { font-size: 11px; margin-top: 1px }
+.sizereply { height: 160px; width: 436px }
+.textareaborder { border: 1px solid #D7D8D8 }
+.textBlue { background: #a1c0dc!important; color: #000066!important }
+.WorkflowStage ul li { float: left; width: 100%; margin-bottom: 10px; overflow: hidden }
+.WorkflowStage ul li span.Statistic { font-size: 13px; color: #ff5b00; width: 47px; display: block; font-weight: bold; text-align: right; padding-right: 9px }
+span.Statistic a, .AccountActive p span.Statistic a { color: #ff5b00; text-decoration: none }
+.WorkflowStage ul li span.value { width: 126px }
+.WorkflowStage ul li span.value a, .AccountActive p a { color: #333; text-decoration: underline }
+.AccountActive { float: right; padding: 10px 0; width: 37%; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background-color: #F7DDB7; -webkit-box-shadow: 0 0 10px #c8c8c8; -moz-box-shadow: 0 0 10px #c8c8c8; box-shadow: 0 0 10px #c8c8c8; background-image: -webkit-linear-gradient(bottom, #f7deb6, #fff 21%, #f7ddb5); background-image: -moz-linear-gradient(bottom, #f7deb6, #fff 21%, #f7ddb5); background-image: -o-linear-gradient(bottom, #f7deb6, #fff 21%, #f7ddb5); background-image: linear-gradient(to top, #f7deb6, #fff 21%, #f7ddb5) }
+.AccountActive p span.Statistic { display: block; width: 30%; padding: 0 2%; font-weight: bold; font-size: 16px; color: #ff5b00; float: left; text-align: center }
+.AccountActive p span.cont { width: 66%; float: left }
+.AccountActive .TitAccount { color: #000066; font-weight: bold; text-align: center }
+.DateRange { width: 290px; float: left; padding: 10px; background: #fff; border: 1px solid #686868 }
+.ShowData .containerData .DateRange div.row label { padding-right: 5px; text-align: left }
+.DateRange .row, .JobLibrary { width: 280px }
+.LeftActivity { float: left; width: 445px; margin-top: 20px }
+.Counter { width: 190px; float: left; padding: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; border: solid 1px #d2d2d2; position: relative; margin-right: 7px; background-color: #f1f1f1; background-image: -webkit-linear-gradient(bottom, #e6e6e6, #fff); background-image: -moz-linear-gradient(bottom, #e6e6e6, #fff);	background-image: -o-linear-gradient(bottom, #e6e6e6, #fff); background-image: -ms-linear-gradient(bottom, #e6e6e6, #fff); background-image: linear-gradient(to top, #e6e6e6, #fff) }
+.Counter .tipsIcon { left: 10%; top: -30px; width: 170px }
+.Counter .tipsIcon .txt, .cb-viewresume .tipsIcon .txt, .SearchResults .tipsIcon .txt { background-color: #474747; padding: 2px 5px; font-size: 11px }
+.TitStatic { font-weight: bold; text-align:center; margin-bottom: 20px; font-size: 15px }
+.ContStatic { font-weight: bold; text-align: center; font-size: 30px; color: #ff5b00; }
+.Box1Activity { float: left; width: 100%; margin-bottom: 20px; margin-top: 10px }
+.Box2Activity { clear: both; margin-bottom: 15px }
+.Box3Activity { width: 49%; margin-bottom: 15px }
+.tbl-hasscroll { overflow: scroll; max-height: 700px; font-size: 11px }
+.headerStats { color: #fff; font-weight: bold; height: 27px; line-height: 27px; padding-left: 10px; margin-bottom: 10px }
+.BoxMemberSearch h2, .SeachMember .label_1 { background-position: 10px 10px; padding-bottom: 6px }
+.BoxMemberSearch p, .SeachMember .value { float: left; width: 100%; margin: 0; padding-left: 20px; padding-bottom: 5px; font-size: 11px }
+.BoxMemberSearch .date_month, .SeachMember .date_month, .MyCalendar .date_month { width: 120px; background-position: 100px 6px }
+.BoxMemberSearch .row { width: 200px }
+.BoxMemberSearch  .field_input { display: none }
+.BoxMemberSearch .field_input .row { padding-left: 20px }
+.BoxMemberSearch a.btnTextLink, .SeachMember a.btnTextLink, .SeachMember a.ShowHideOption, .SeachMember a.lockuser { background: none; color: #287ab9; display: inline; font-weight: 400; padding:0; width: auto; font-size: 12px; margin-top: 2px }
+.BoxMemberSearch h2 { cursor: pointer; position: relative }
+.BoxMemberSearch h2.down { background-image: url("../css/images/arr_down.gif"); background-position: 10px 10px  }
+.BoxMemberSearch .filter_k { padding-left: 20px; width: 190px }
+.BoxMemberSearch .filter_k ul li { width: auto; clear: both }
+.SeachMember a.ShowHideOption, .SeachMember a.lockuser { float: left; padding-left: 20px; margin-bottom: 5px; text-decoration: underline; font-size: 11px }
+.SeachMember a:hover { background: none!important }
+.BoxMemberSearch a.btnTextLink:hover, .SeachMember a.btnTextLink:hover { background: none; text-decoration: underline }
+.SeachMember .form { float: left; width: 200px }
+.SeachMember div.row, .prefer_other input.input_long, .prefer_position_cate select { margin-bottom: 5px }
+.SeachMember .tl-network, .BoxMemberSearch .tl-network { background: url('images/i-tn.png') no-repeat left center; margin-left: 10px; padding-left: 22px; margin-bottom: 5px }
+.SeachMember .college-network, .BoxMemberSearch .college-network { background: url('images/i-cl.png') no-repeat left center; margin-left: 10px; padding-left: 22px }
+.SeachMember select, .BoxMemberSearch select { min-width: 170px; max-width: 170px }
+.SeachMember span.popbox, .BoxMemberSearch span.popbox { position: absolute; top: 0; right: 0 }
+.SeachMember a.help_search, .BoxMemberSearch a.help_search { background: none; font-size: 11px; font-weight: normal; color: #287ab9; width: auto; padding-left: 0; position: relative }
+.HelpSearchContainer { width: 610px; z-index: 1; cursor: text; color: #333 }
+.HelpSearchContainer .content { font-weight: normal; font-size: 12px; width: 560px }
+.HelpSearchContainer .content p { padding-left: 0; clear: none; font-size: 12px }
+.HelpSearchContainer h2 { padding: 0 0 15px 0; background: none!important; font-size: 16px; width: 100%; cursor: text }
+.HelpSearchContainer div.content_fck { max-height: 382px; overflow-y: scroll; margin-top: 10px }
+.ForwardMember .row { width: 690px }
+.Recently { width: 280px; float: left; padding: 7px 10px; background: #fff; border: 1px solid #686868; position: relative }
+.Recently h4 { font-size: 14px; font-weight: bold; color: #287ab9; padding-bottom: 5px }
+#next-pre-day { position: absolute; right: 0; top: 0; z-index: 9999 }
+.Scroll-Y { overflow-y: scroll; max-height: 320px; margin-bottom: 10px; width: 100% }
+.Jobs .Box3Activity { margin-top: 15px }
+.Box3Activity .headerStats, .cb-jobdetail .row, .postOnline .phead .bsub, .Charts .headerStats { margin-bottom: 5px }
+.Box3Activity .tblJob { width: 100%; *width: 320px }
+.Members .Counter { margin-top: 20px; margin-bottom: 15px; width: 220px }
+.Members .Counter .tipsIcon { left: 19% }
+.SearchResults .tipsHistory { width: 115px; left: -45px }
+.tipsNote { position: absolute; left: 26px; top: 0; border: 3px solid #fa841b; background: #fff; width: 510px; z-index: 12; display: none }
+.tipsrow { position: absolute; left: -9px; top: -4px; width: 7px; height: 14px; background: url("../css/images/rowtip.png") no-repeat }
+.tipsNote h3 { height: 28px; line-height: 28px; padding-left: 10px; background: #fbfbfb; border-bottom: 1px solid #dadada; font-size: 14px; color: #000066; position: relative }
+.close { position: absolute; right: 5px; top: 5px; width: 15px; height: 15px; background: url("../css/images/icon_close.gif") no-repeat }
+.close:hover { background-position: 0 -15px }
+.tipscontent { padding: 10px }
+.tipscontent p.tipstext { color: #ff5b00; font-weight: bold; padding-bottom: 5px }
+.tipscontent textarea { width: 476px; height: 50px }
+.listlang li label { padding-right: 20px!important; white-space: nowrap }
+.VoteSurvey { float: left; font-size: 11px; width: 90px; padding-left: 5px }
+.SetPermission ul { margin-top: 10px; width: 45%; float: left }
+.SetPermission ul li { width: 340px; padding-bottom: 8px; clear: both; float: left }
+.SetPermission span { font-size: 11px; float: left } 
+.SetPermission2 .GroupCheck { background-color: #d0d0d0 } 
+.LinkMedia { width: 220px; height: 30px; font-size: 11px; color: #287ab9; padding: 2px }
+.SetupMail .sizereply { width: 418px }
+.SetupMail .note2, #ChooseJobTemplate .ListTemp ul li, #ChooseJobTemplate .TempReview, .LetterAbout ul.standard li.end, #tabs-ApplyForm .save-template, #tabs-ApplyForm .save-template .d1 { margin-bottom: 10px }
+.popbox, #workflow, #CreateNote, #LoginFrmCompany .bodyContainer, .RightPanel, .SeachMember .label_1 { position: relative }
+.popbox img.showNote, #txt_examples { cursor: pointer }
+#ViewTemplateLetter { width: 600px }
+.cb-jobdetail, .ShowData .SocialNetwork { padding: 10px 0; width: 715px; position: relative }
+.editjob { position: absolute; right: 0; top: 8px }
+.bullet li { background: url("images/icon_arr_gray_5x9.gif") no-repeat left 4px; padding-left: 10px; clear: both }
+.cb-jobdetail .naviAction { top: 85px }
+#tabs .topdetail { padding: 16px 16px 0; position: relative; overflow: hidden }
+#tabs-chitietcongviec .cdanh { font-weight: bold }
+#tabs-chitietcongviec ul.block01, #tabs-chitietcongviec ul.block02 { width: 48%; padding-right: 2% }
+#tabs-chitietcongviec ul.block_info li label { font-weight: bold; width: 30% }
+#tabs-chitietcongviec ul.block_info li div { width: 68%; padding-left: 2% }
+#tabs-chitietcongviec .job_content h2 { font-size: 12px; text-transform: uppercase; margin: 12px 0 6px }
+#tabs-chitietcongviec .job_content p { padding: 0 0 5px 10px }
+#tabs-thutraloitudong ul li { float: left; margin-bottom: 5px; width: 100%; clear: both }
+.LoginCompany { background: #deeaf8 url('images/bg_login.png') no-repeat top center }
+.BgForSg { background-image: url('images/shutterstock_624013343.png') }
+.JoinTalentHome { float: right; background-color: #fff }
+.JoinTalentHome img { border: 1px solid #cfcfcf; max-height: 76px; max-width: 160px; padding: 10px }
+.ForgotChangePass { background: #deeaf8;
+background: -moz-linear-gradient(top,  #deeaf8 0%, #deeaf8 35%, #deeaf8 35%, #f6f9fd 76%, #ffffff 100%);
+background: -webkit-linear-gradient(top,  #deeaf8 0%,#deeaf8 35%,#deeaf8 35%,#f6f9fd 76%,#ffffff 100%);
+background: linear-gradient(to bottom,  #deeaf8 0%,#deeaf8 35%,#deeaf8 35%,#f6f9fd 76%,#ffffff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#deeaf8', endColorstr='#ffffff',GradientType=0 );
+background-repeat: no-repeat }
+.LoginCompany .Logo, .ForgotChangePass .Logo { width: 974px; margin: 40px auto 0 }
+.ForgotChangePass .Logo h2 { font-size: 22px; color: #000066; padding-top: 5px; font-weight: normal; float: right }
+#LoginFrmCompany { position: absolute; bottom: 0; padding-bottom: 5%; background: #deeaf8 url('images/form_login.png') no-repeat top center; height: 180px; float: left; width: 100% }
+#LoginFrmCompany .form { width: 310px; position: absolute; right: 85px; top: 32px }
+#LoginFrmCompany .form p.error_login { color: yellow; font-size: 11px; position: absolute; left: 74px; top: -23px }
+#LoginFrmCompany .form .row { padding: 0; width: 100%; margin-bottom: 5px }
+#LoginFrmCompany .form .row label { width: 60px; padding-right: 15px; text-align: right; color: #fff; font-family: Roboto }
+#LoginFrmCompany .form .input_short { height: 13px; width: 170px }
+#LoginFrmCompany .form .btn2, #ForgotPass .form .btn2 { color: #fff; font-weight: bold; background-color: #287ab9; border: none; height: 26px; padding: 0 15px 3px; font-size: 12px; cursor: pointer; font-family: Roboto }
+#LoginFrmCompany { background: url("images/form_login.png") no-repeat scroll center top #DEEAF8; bottom: 0; float: left; height: 160px; padding-bottom: 4%; position: absolute; width: 100% }
+#LoginFrmCompany .lg_kv { float: left; padding-left: 72px; *padding-left: 68px }
+#LoginFrmCompany a.link { color: #182641; font-size: 11px; float: left; padding: 5px 0 0 5px; text-decoration: underline; font-family: Roboto }
+#ForgotPass .bodyContainer { width: 930px; margin: 50px auto 0; border: 1px solid #ccc; overflow: hidden; padding: 20px; background-color: #fff }
+#ForgotPass h1 { padding-bottom: 15px; font-size: 16px }
+#ForgotPass p { padding-bottom: 30px }
+#ForgotPass label { width: 202px; text-align: right; padding-right: 15px }
+#ForgotPass .ui_btnCb { background: #287ab9; border: none }
+#ForgotPass .value { float: left; width: 400px }
+@media \0screen { #LoginFrmCompany .lg_kv { padding-left: 78px } }
+.Frm_Login .row { width: 436px }
+#tabs-getconnected .LinkSocial a { width: 220px; display: block; overflow: hidden }
+#tabs-getbutton textarea { width: 498px; font-size: 11px; height: 100px }
+.JoinTalent { position: absolute; top: 0 ; right: 130px }
+.JoinTalent p { padding-top: 5px; font-size: 11px }
+.all_job, #tab_PostJob .note2, #tab_Approve .note2 { clear: both }
+.all_job #tabs { width: 970px!important }
+.all_job .detail_w_tab .ui-tabs .ui-tabs-nav { width: 964px!important }
+#bylocation, #bycategory { padding: 20px!important }
+.Jobcategory h3 { font-size: 14px; font-weight: bold; padding: 10px 0 }
+.Jobcategory ul { float: left; width: 217px; margin-left: 5px }
+.Jobcategory ul li a { color: #333; font-size: 12px }
+.Jobcategory ul li a span { font-size: 11px; color: #ff5b00; padding-left: 3px }
+.CreateSMTP p { padding-bottom: 10px; font-size: 11px }
+.link_create { font-size: 11px; text-decoration: underline; margin-top: 5px; display: block }
+#ManageNote .tipscontent, #WhyJoin .container, #CreateFolder .RightPanel, #JobsLetter .tipscontent, #ReviewHistory .container { width: 510px }
+#NoticePost .msg_content, #NoticePostJob .msg_content { padding: 20px; font-size: 15px; background: #fff; width: 410px }
+#NoticePost .i_alert { height: 32px; margin: 0 auto; width: 35px; background: url("images/ic-warning.png") no-repeat }
+#NoticePost h2, #NoticePostJob h2 { font-size: 15px; font-weight: bold; padding: 10px 0 }
+#NoticePost p, #NoticePostJob p { font-size: 13px; line-height: 20px; padding: 5px 0 10px }
+#NoticePost .cp { padding-left: 150px; padding-top: 10px }
+#NoticePostJob .cp { padding-left: 180px; padding-top: 10px }
+.box_maincontent { float: right; width: 729px; float: left; padding: 20px }
+.postOnline .gird_standard { padding-top: 5px; font-size: 11px; margin-bottom: 10px }
+.page_focus { border-bottom: 2px solid #195daf; margin: 5px 0 10px }
+.page_focus h1 { color: #07213f; padding-bottom: 5px; float: left; font-weight: bold; font-size: 14px }
+.postOnline .phead { clear: both; width: 100%; padding: 5px 0 15px }
+.postOnline .gird_standard dl dt { background: #287ab9; color: #fff }
+.postOnline .rc_col_110px { padding: 0 10px; width: 100px }
+.postOnline .rc_col_165px { padding-right: 10px; width: 180px }
+.postOnline .rc_col_150px { padding: 0 10px 0 0; width: 116px }
+.postOnline .rc_col_315px { padding: 0 10px 0 0; width: 305px }
+.postOnline .rc_col_60px, #PreviewImages .container, .page_type .row, .Requisitions .funcAction label, #tabs-History .topdetail, #tabs-chitietcongviec .topdetail, .JobLibrary .row, .coreCompany .ResumeDetailonCB .containerData { padding: 0 }
+.postOnline .s_radio {  margin: 3px 0 0; margin-top: -1px\0/ }
+.postOnline .gird_standard dl dd { border-left: 1px solid #D0D3D4; border-right: 1px solid #D0D3D4; width: 727px; _position: static }
+ul.job_package_description li, .postOnline ul.job_package_description li label { background: url("images/ar_job_4x7.gif") no-repeat left 5px; padding-left: 10px; float: left; margin-bottom: 4px; width: 157px }
+.postOnline ul.job_package_description li label { width: 173px; margin-bottom: 0 }
+.postOnline ul.job_package_description li { background: none; padding-left: 0; width: 100% }
+.postOnline .s_industry { margin: 3px 5px 0 0; float: left }
+.postOnline ul.subIndustry li label span { width: 123px }
+.postOnline ul.subIndustry li { margin-bottom: 0; padding: 5px 0 0; width: 305px }
+.postOnline .date_month, .postOnline .date_month_industry { background-position: 71px 3px; width: 80px }
+.gird_standard table tr.record_checked, .record_checked { background: #e6f1ff!important }
+.addOn { padding: 10px 8px 2px; width: 711px; float: left; clear: both }
+.addOn .btn_showExtra { background-position: left 4px; font-weight: bold; margin-top: 0 }
+.addOn .listAddon { background: #fff; padding: 5px 8px 0; float: left; width: 695px; margin-top: 5px; font-size: 11px; display: none }
+.addOn h2 { border-bottom: 1px solid #d2d5d5; font-size: 11px; padding-bottom: 3px; text-transform: none; font-weight: normal; margin-bottom: 10px }
+.addOn .listCheck { float: left; padding-bottom: 5px }
+.addOn .listCheck dl dd { border: none; width: 695px; padding: 0 0 10px }
+.addOn .listCheck dl dd input { margin-top: 3px }
+.addOn .width711 dl dd { width: 711px }
+.postOnline .addOn_used dl dd { padding: 4px 0 0 }
+.postOnline .addOn_used dl dd.end, .listJobseeker p { padding-bottom: 7px }
+.postOnline .SMTpostOnline { padding-left: 236px }
+.postOnline .addOn .listCheck dl dd input.ckpack_id { margin-top: 0\0/ }
+#ConfirmPostJob { width: 759px }
+#ConfirmPostJob .box_maincontent { padding: 15px 15px 0 }
+#ConfirmPostJob .AddonComfirm { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; float: left; width: 100% }
+#ConfirmPostJob .AddonComfirm ul.block_info { padding-left: 0; padding-bottom: 0 }
+#ConfirmPostJob .noteCon p { clear: both; padding-bottom: 15px; color: red; font-weight: bold }
+.cmdbig_horizontal { background: #edf1f2; float: left; padding: 10px 0; width: 100% }
+.cmdbig_horizontal ul { margin: 0 auto; overflow: hidden; width: 32% }
+.slc_jobtemplate { background: url("images/slc_jobtemplate.gif") no-repeat; width: 85px; height: 21px; display: block; color: #333; padding: 2px 0 0 5px }
+#ChooseJobTemplate { width: 677px }
+#ChooseJobTemplate .msg_content { padding: 20px; background: #fff }
+#ChooseJobTemplate .LeftTemp { float: left; width: 185px }
+#ChooseJobTemplate .LeftTemp select { width: 172px }
+#ChooseJobTemplate .ListTemp { box-shadow: 0 0 4px #a3a3a3; -moz-box-shadow: 0 0 4px #a3a3a3; -webkit-box-shadow: 0 0 4px #a3a3a3; border: 1px solid #000066; width: 140px; margin-top: 10px; padding: 10px 15px }
+#ChooseJobTemplate .ListTemp ul { overflow-y: scroll; height: 550px }
+#ChooseJobTemplate .ListTemp ul li a img { width: 113px; border: 1px solid #ccc }
+#ChooseJobTemplate .ListTemp ul li a:hover img, #ChooseJobTemplate .ListTemp ul li a img.focus { border: 1px solid #ff5b00 }
+#ChooseJobTemplate .ListTemp ul li a span { display: block; padding: 5px 0 0 15px; color: #000; font-weight: bold; font-size: 11px }
+#ChooseJobTemplate .RightTemp { float: right; width: 452px }
+#ChooseJobTemplate .TempReview img { border: 1px solid #ccc }
+#ChooseJobTemplate .ChooseNext a { background: url(images/pre-next.gif) no-repeat right center; width: 23px; height: 22px; text-indent: -9999em; display: block; float: left }
+#ChooseJobTemplate .ChooseNext .Prev { background-position: right center; margin-left: 5px }
+#ChooseJobTemplate .ChooseNext .Next { background-position: left center }
+#ManageNote, #CreateFolder, #ReviewHistory, #idConfirmDownload { width: 530px }
+#SendEmail { width: 800px }
+#SendEmail .mainFilter { width: 748px; padding-right: 17px }
+#SendEmail .ShowData .containerData { width: 765px }
+#Forward { width: 737px }
+#Forward .ShowData { width: 717px }
+#Forward .mainFilter { width: 685px; padding-right: 17px }
+#Forward .ShowData .containerData { width: 702px }
+#Forward .ShowData .row { width: 672px }
+#WhyJoin h3 { font-size: 18px; font-weight: bold; padding-bottom: 20px }
+#WhyJoin .content_why_join { background: #ddd; border: 1px solid #CDCDCD; font-size: 12px; padding: 1em }
+#WhyJoin ul { padding-left: 2em; margin-bottom: 1em }
+.btnContinute { background: url("images/btn-continute.png") no-repeat; width: 119px; height: 23px; float: right; text-align: center }
+.btnContinute a { color: #fff; font-weight: bold; line-height: 19px }
+#ForgetPassword { width: 620px }
+#ForgetPassword  .container { padding: 20px; width: 580px }
+#ForgetPassword .frmChangePass div.row, .workflow-item .item:first-child { padding-left: 0 }
+#CreateFolder .RightPanel { padding-top: 0; border-left: 0; min-height: 0; width: 100% }
+#CreateFolder .RightPanel .ShowData .containerData { width: 493px }
+#CreateFolder .RightPanel .ShowData .containerData .row { width: 465px }
+#CreateFolder .row .width_500 { width: 370px }
+.star1, .star2, .star3, .star4, .star5 { background: url("images/star-on.png") no-repeat; width: 16px; display: block; height: 16px }
+.star2 { width: 32px }
+.star3 { width: 48px }
+.star4 { width: 64px }
+.star5 { width: 80px }
+#LeavePage h2 { font-size: 16px; border-bottom: 1px solid #000; padding: 10px 0 10px 20px; margin-bottom: 15px }
+#LeavePage p { padding: 0 0 20px 20px }
+#LeavePage div { padding-bottom: 20px }
+#LeavePage .btn_stayon { margin-left: 10px }
+.btn_stayon { border: 1px solid #333; cursor: pointer; font-weight: bold; font-size: 13px; height: 23px; padding: 0 10px 3px; background-color: #ececec; background: -moz-linear-gradient(top, #f5f5f6 0%, #e0e0df 100%); background: -webkit-linear-gradient(top, #f5f5f6 0%, #e0e0df 100%); background: -o-linear-gradient(top, #f5f5f6 0%, #e0e0df 100%) }
+.AccessCB p { float: left; width: 100%; padding-top: 10px }
+.AddtoFolder { width: 250px; z-index: 1 }
+.AddtoFolder, .JobLibrary, .AssignJob, .HelpSearchContainer { position: absolute; top: 22px; *top: 24px; left: 0px; font-size: 12px }
+.CreateSubcate .tipsHelp { left: 25px; top: 0 }
+.CreateSubcate .page_type .help_post { margin-top: 5px }
+.page_type { background-color:#d6e8ff; padding: 15px; clear: both; margin-bottom: 10px; float: left; width: 728px }
+.page_type .notes { font-size: 11px; clear: both; padding-top: 5px }
+#conlinkac { clear: both; float: left; width: 515px }
+#conlinkac p { float: left; padding-right: 30px; width: auto }
+#conlinkac p a { background: url("images/iconinsphoto16x16.gif") no-repeat left center; padding: 3px 0 3px 20px; font-size: 11px; font-weight: bold }
+#conlinkac p a.pic { background: url("images/iconinsphoto16x16.gif") no-repeat left center }
+#conlinkac p a.cod { background: url("images/iconinscode13x7.gif") no-repeat left center }
+#embededCode { width: 400px }
+#embededCode .row label { float: left; width: 70px }
+#embededCode textarea { width: 310px }
+.LetterAbout .wrapper_content { width: 500px; float: left; padding: 10px 20px; clear: both }
+.LetterAbout ul.standard li { clear: both; width: 100%; float: left; margin-bottom: 5px }
+hr.break { background: #D0D3D4; clear: both; margin-bottom: 10px; border: 0; height: 1px }
+.blockposting { float: left; width: 100%; padding: 0 0 20px }
+.Autoposting .label { color: #000; font-size: 12px; font-weight: bold; padding-left: 30px; display: inline-block; height: 24px; line-height: 24px  }
+.Autoposting .facebook { background: url('images/i-facebook.png') no-repeat }
+.Autoposting .linkin { background: url('images/i-linkedin.png') no-repeat }
+.Autoposting .configured { background: url('images/chk_green.gif') no-repeat right center; padding: 0 15px 0 5px; font-weight: normal; font-size: 11px; color: #666 }
+.Autoposting .unconfigured { background: url('images/close_red.png') no-repeat right center }
+.Listposting p { padding: 5px 0 15px 30px; font-size: 11px }
+.Listposting .Stepsocial { font-size: 11px; color: #666; padding-left: 30px }
+.Listposting .btnstep { color: #fff; font-weight: bold; padding: 3px 12px; display: inline-block; margin-right: 5px }
+.Career_App .containerData p { font-size: 11px; padding-bottom: 10px }
+.btnstep.btnfacebook { background: #4e6fa7; border: 1px solid #2e5593 }
+.btnstep.btnlinkin { background: #3f8cb5; border: 1px solid #206e98 }
+.fb_field { margin-top: 15px }
+.PostingFB .tipsHelp { left: 25px; top: 0px }
+.PostLinkedin { font-size: 11px; padding-left: 30px; padding-top: 10px }
+.PostLinkedin .lk_key { background: #ffffcc; border: 1px solid #d7d76b; padding: 5px; width: 400px; margin-bottom: 10px }
+.PostLinkedin .lk_key label { width: 158px; text-align: right; padding-right: 5px; float: left }
+.Mutiple_Address h4 { padding-bottom: 10px; cursor: pointer; font-size: 12px }
+#reviewFeatureCareer { float: left; padding: 10px }
+.DashboardN .MemberStats { margin: 15px 0; float: left; width: 100% }
+.Charts tr.bg { background-color: #639EC8 }
+.Charts th, .Charts td { padding: 5px }
+.Charts th { color: #fff; text-align: right }
+.Charts td { border-bottom: 1px solid #bcbcbc }
+.cb-applyjob .titcolor { color: #ff5b00; font-weight: bold }
+#div_file .fileContainer, #div_google_file .fileContainer, #div_dropbox_file .fileContainer, .area_file .fileContainer { background-color: #D4D0C8; border: 1px solid #aaa; color: #000000; cursor: pointer; float: left; font-size: 11px; overflow: hidden; padding: 4px 10px 4px 35px!important; position: relative; text-align: left!important; width: 150px!important }
+.fromcomputer, .fromgoogledriver, .fromdropbox, .fromCB, .fromLinkedin { background-color: #D4D0C8; background-position: 10px center; background-repeat: no-repeat; padding-left: 35px }
+.fromcomputer { background-image: url("images/folder_15x12.gif") }
+.fromgoogledriver { background-image: url("images/fromgoogle.gif") }
+.fromdropbox { background-image: url("images/fromdropbox.png") }
+.fromCB { background-image: url("images/i-cb16x16.png") }
+.fromLinkedin { background-image: url("images/i-linkin16x16.png") }
+.fileContainer [type="file"], .fileContainer [type="button"] { cursor: inherit; display: block; height: auto; opacity: 0; position: absolute; right: 0; text-align: right; top: 0 }
+.apply_success_nonmember { background: url(images/apply_success.png) no-repeat right top; min-height: 202px; margin-top: 50px }
+.Requisitions .containerData div.row label { text-align: left }
+.OtherJobAS { float: left; clear: both; width: 715px; margin-top: 20px }
+.OtherJobAS .title { background: #287ab9; font-size: 14px; padding: 10px; color: #fff; font-weight: bold }
+.ListJobAS .BtnButton { height: 27px; padding: 0 15px }
+.ListJobAS { border: 1px solid #d0d3d4 }
+.ListJobAS tr.bg { background-color: #f2f2f2 }
+.ListJobAS tr td { padding: 8px }
+.BtnButton { background: #FF5B00; border: 0; color: #FFFFFF; cursor: pointer; font-size: 12px; font-weight: bold }
+.cb-applyjob .download_form { float: left; margin-left: 10px; margin-top: 4px }
+.cb-applyjob .download_form a { background: url("images/save.png") no-repeat left center; color: #0D4195; font-weight: bold; padding: 1px 0 1px 20px; text-transform: none }
+.line_dotted { border-bottom: 1px dotted #7e7e7e; padding-bottom: 10px }
+.NameSite { padding: 20px 0 20px 10px!important; color: #fff; font-weight: bold; background-color: #287ab9; background-image: -webkit-linear-gradient(top, #0098ff, #005d9b); background-image: -moz-linear-gradient(top, #0098ff, #005d9b); background-image: -o-linear-gradient(top, #0098ff, #005d9b); background-image: linear-gradient(to bottom, #0098ff, #005d9b); border-top: 1px solid #fff }
+.Candidate .linkopen {  background: url('images/image_open.png') no-repeat right 2px; padding-right: 17px }
+.Candidate .linkopen:hover { background-position: right -12px }
+.Candidate .padright { padding-right: 100px }
+.Candidate .padSite { padding-left: 50px }
+.HomeCoreCompany { padding: 15px 0; float: left; width: 100% }
+.coreCompany .HomeCoreCompany .containerData { padding: 10px; float: none; width: auto }
+.coreCompany .HomeCoreCompany .ShowData { margin-bottom: 15px; float: left; width: 100%; clear: both }
+.HomeCoreCompany .tblJob tr.record td { padding-top: 5px; padding-bottom: 5px }
+.HomeCoreCompany .tblJob tr.bg td { border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5 }
+.MytodoList { width: 36%; float: left; margin-right: 1% }
+.MytodoList .headerBoxCore { background-image: url('images/bg_title_red.png') }
+.MytodoList .Scroll-Y { height: 145px }
+.MyCandidates { width: 18%; float: left; margin-right: 1% }
+.MyCandidates ul li, .CandidateStatus ul li, .MyActivityStream ul li { float: left; width: 100%; border-bottom: 1px solid #e5e5e5; padding-bottom: 9px; margin-bottom: 7px }
+.MyCandidates ul li.first, .CandidateStatus ul li.first { border-bottom: 0 }
+.MyCandidates .containerData, .HomeCalendar .containerData, .AccountInformation .containerData, .MytodoList .containerData{ height: 193px; overflow: hidden }
+.HomeCalendar { float: left; width: 25%; margin-right: 1% }
+.AccountInformation { float: left; width: 18% }
+.ActiveJobHome { float: left; width: 60%; margin-right: 1% }
+.ActiveJobHome .location, .MyPostingHome .location { clear: both; padding-top: 5px; font-size: 11px }
+.ActiveJobHome .jobtxt, .MyPostingHome .jobtxt { height: 16px; overflow: hidden }
+.ActiveJobHome .Scroll-Y { height: 224px }
+.TooltipSetting .tipsIcon { width: 466px; color: #333; left: -210px; opacity: 1; -khtml-opacity: 1; -moz-opacity: 1; filter: alpha(opacity=100); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" }
+.TooltipSetting .tipsIcon .tblJob { background: #fff }
+.TooltipSetting .tipsIcon span.arr_tips { bottom: -4px }
+.MyPostingHome { float: left; width: 39% }
+.MyPostingHome .containerData, .ActiveJobHome .containerData { height: 285px }
+.MyPostingHome .gird_standard { padding-top: 0 }
+.MyPostingHome .gird_standard dl dt { background: #fff; color: #333 }
+.MyPostingHome .gird_standard dl dd { padding: 8px 0 }
+.MyPostingHome .rc_col_1 { width: 48%; padding-left: 2% }
+.MyPostingHome .rc_col_3 { width: 24% }
+.MyPostingHome .rc_col_4 { width: 10%; padding-right: 2% }
+.MyPostingHome .bgrecord_even { border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5 }
+.ResumeSearch, .MemberSearch { width: 60%; margin-right: 1%; float: left }
+.ResumeSearch .form, .MemberSearch .form { float: left; width: 425px }
+.ResumeSearch .containerData, .MemberSearch .containerData { padding-top: 20px; height: 325px }
+.ResumeSearch .filter_k, .MemberSearch .filter_k { width: auto; clear: both; overflow: hidden; padding-top: 5px }
+.ResumeSearch .filter_k ul li label, .MemberSearch .filter_k ul li label { font-size: 11px!important }
+.MemberSearch .containerData, .MyActivityStream .containerData { height: 190px }
+.CandidateStatus, .MyActivityStream { width: 39%; float: left }
+.CandidateStatus .containerData { height: 325px }
+.CandidateStatus .wCandidate, .MytodoList .wCandidate { width: 100%; *width: 96% }
+.CandidateStatus .headerBoxCore { background-image:url('images/bg_title_green.gif') }
+.CandidateStatus .Scroll-Y { height: 270px }
+.MyActivityStream ul { overflow-y: scroll; height: 160px }
+.MyActivityStream ul li { border-bottom: none; border-top: 1px dashed #d3d3d3; padding: 8px 0; margin: 0; width: 95% }
+.MyActivityStream ul li span.fl_left { line-height: 20px }
+.MyActivityStream .timer { font-size: 11px; float: right }
+.CandidateStep { position: relative; margin: 15px auto; overflow: hidden; width: 960px; float: left }
+.hasscroll { padding: 0 40px }
+.hasscroll .prev, .hasscroll .next { position: absolute; top: 37px; background: url('images/left.png') no-repeat; width: 19px; height: 27px }
+.hasscroll .prev { left: 10px } 
+.hasscroll .next { right: 10px; background-image: url('images/right.png') }
+#ShowHideOption { position: absolute; right: 50px; bottom: 0; font-size: 11px }
+.StepFirst { float: left; width: 194px; height: 110px; background: url('images/hire1_normal.png') no-repeat; position: relative; z-index: 99 }
+.StepFirst.active { background-image: url('images/hire1_hover.png') }
+.StepFirst .no, .HireFirst .no { color: #fff; font-size: 22px; padding-top: 12px; text-align: center }
+.StepFirst .jobs, .HireFirst .jobs { color: #b5ecff; font-size: 12px; padding-top: 10px; text-align: center; padding-left: 11px }
+.StepFirst .agency, .StepFirst .internal, .HireFirst .agency, .HireFirst .internal { color: #fff; font-size: 12px; text-align: center; padding-top: 7px; padding-left: 20px; float: left }
+#workflow .viewport { float: left; height: 110px; overflow: hidden; position: relative; width: 1052px; margin-left: 20px }
+#workflow .overview { position: absolute }
+.StepOther { /*background: url('images/step-candidate.png') no-repeat;*/ height: 110px; float: left; width: 1062px }
+.flow2 { background-position: 0 0 }
+.flow2 { background-position: 0 -110px }
+.flow3 { background-position: 0 -220px }
+.flow4 { background-position: 0 -330px }
+.flow5 { background-position: 0 -440px }
+.flow6 { background-position: 0 -550px }
+.flow9 { background-position: 0 -660px }
+.flow10 { background-position: 0 -770px }
+.StepOther ul li { float: left; width: 135px; position: relative }
+.StepOther ul li.last { width: 85px }
+.StepOther .no, .HireCenter .no, .HireLast .no { color: #fff; font-size: 22px; padding-top: 12px; text-align: center }
+.StepOther .jobs, .HireCenter .jobs, .HireLast .jobs { font-weight: normal; font-size: 12px; color: #b5ecff; padding-top: 10px; text-align: center; height: 27px; overflow: hidden }
+.StepOther .clred, .StepOther .clyellow, .StepOther .clgreen, .HireCenter .clred, .HireCenter .clyellow, .HireCenter .clgreen { color: #fff; font-size: 12px; position: absolute; top: 64px; padding-top: 13px; text-align: center; min-width: 13px }
+.StepOther .clred, .HireCenter .clred { left: 17px; background: url('images/red_icon.png') no-repeat top center }
+.StepOther .clyellow, .HireCenter .clyellow { left: 52px; background: url('images/yellow_icon.png') no-repeat top center }
+.StepOther .clgreen, .HireCenter .clgreen { left: 87px; background: url('images/green_icon.png') no-repeat top center }
+.StepFirst .text { color: #fff; padding-left: 8px; padding-top: 6px }
+.StepFirst .text .tit { float: left; width: 120px }
+.StepFirst .text .tit a { color: #fff }
+.StepOther .avg, .HireCenter .avg { color: #fff; font-size: 13px; padding-top: 10px; text-align: center }
+.StepNote { width: 530px; margin: 0 auto; clear: both }
+.StepNote ul li { margin-right: 20px; float: left; padding-top: 3px }
+.StepNote ul li.focus { background-color: #0173C0; padding: 3px 6px }
+.StepNote ul li.focus div a { color: #fff }
+.StepNote ul li span { float: left; width: 17px; height: 17px; background: url('images/red.png') no-repeat; display: block }
+.StepNote ul li.yellow span { background-image: url('images/yellow.png') }
+.StepNote ul li.green span { background-image: url('images/green.png') }
+.StepNote ul li div.fl_left { font-size: 14px; color: #454545; padding-left: 5px }
+.CandidateStep .list { position: relative; overflow: hidden; float: left; margin-left: -22px }
+.HireFirst { width: 160px; height: 103px; background: url('images/hire1_normal.png') no-repeat; float: left; position: relative; z-index: 1 }
+.HireFirst.active { background-image: url('images/hire1_hover.png') }
+.HireFirst .no, .HireFirst .jobs { padding-left: 0; text-align: center; width: 145px }
+.HireFirst a { color: #fff; cursor: default; text-decoration: none }
+.HireCenter { width: 159px; height: 103px; background: url('images/hire2_normal.png') no-repeat; float: left; position: relative; margin-left: -20px }
+.HireCenter.active { background-image: url('images/hire2_hover.png') }
+.HireLast .jobs { padding-left: 30px }
+.HireCenter .clred { left: 40px }
+.HireCenter .clyellow { left: 70px }
+.HireCenter .clgreen { left: 102px }
+.HireLast { width: 111px; height: 103px; background: url('images/hire3_normal.png') no-repeat; float: left; margin-left: -4px }
+.HireLast.active { background-image: url('images/hire3_hover.png') }
+.Candidates .applyfor { clear: both; font-size: 11px }
+.Candidates .tipsIcon span.arr_tips { left: 45% }
+.Candidates .tipsIcon .txt { background-color: #999; width: 520px; border: none }
+.Candidates .tipsIcon .txt .st_gird>p { padding-left: 8px }
+.Candidates .tipsIcon span.arr_tips { background-image: url('images/arr_tips2.gif') }
+.Candidates .TooltipSetting .tipsIcon { left: -215px; bottom: 18px; width: 530px }
+.Candidates .TooltipSetting .lockResumeInfo .tipsIcon { left: -200px }
+.Candidates .Scroll-Y { height: 200px; margin-bottom: 0 }
+#FilterCandidate { width: 750px; margin: 0 auto; display: none; padding: 15px 2% 0; width: 94%; clear: both }
+#FilterCandidate .input_long { width: 616px }
+#FilterCandidate .date_month { width: 99px }
+.Candidates.ShowData .containerData div.row label { text-align: left; padding-right: 10px }
+.Candidates .filter_k { width: auto; clear: both }
+.Candidates .filter_k ul li { float: left; padding-right: 10px }
+.Candidates a.help_search { float: left; padding-left: 10px; font-size: 11px; position: relative }
+.Candidates .HelpSearchContainer { left: auto; right: 0; top: 18px }
+.Candidates .HelpSearchContainer .arr_tips { right: 45px; left: auto }
+.Candidates .HelpSearchContainer div.content_fck { max-height: 215px }
+.Candidates .TooltipSetting .candidate-history .tipsIcon { width: 645px; bottom: 20px }
+.Candidates .candidate-history .tipsIcon span.arr_tips { background-image: url('images/arr_tips.gif'); left: 34% }
+.candidate-history .set-level { display: block; background: url('images/i-level.png') left 5px no-repeat; padding: 5px 0 0 20px; font-size: 11px }
+.lockResumeInfo .set-level i.fa { margin-right: 8px; font-size: 16px; vertical-align: middle }
+.Requisitions .funcAction { top: 50px; right: 0 }
+#AddInterview { width: 910px }
+.AddInterview .select_short { width: 78px; margin-right: 5px }
+.AddInterview textarea { width: 498px; height: 70px }
+.AddInterview .s_radio { width: 80px }
+.AddInterview .label_1, .CreateEmail .label_1, .CreateCrawlResume .label_1 { width: 150px }
+.CalenderInterView .title { font-size: 14px; font-weight: bold; padding-bottom: 10px; font-family: Roboto }
+.CalenderInterView { padding: 0!important }
+.CalenderInterView .input_medium { width: 337px }
+.CalenderInterView #tab_Description .date_month { width: 90px; background-position: 72px 6px; margin-right: 5px }
+#AddInterview .CalenderInterView { margin-right: 0 }
+#CreateNote h2 { border-bottom: 1px solid #000000; font-size: 16px; margin-bottom: 10px; padding: 5px 0 5px }
+#CreateNote textarea { width: 300px; height: 100px }
+#CreateNote .ManageNote { position: absolute; top: 15px; right: 30px; font-size: 11px }
+#tab_Participant .list_attendee { width: 365px }
+#tab_Participant .list_attendee .ChooseEmail { width: 349px }
+#tab_Participant .select_long, .CalenderInterView #tab_Participant .input_medium { width: 349px }
+.list_attendee { width: 337px; float: left }
+.ChooseEmail { float: left; width: 337px; border: 1px solid #91AAC2; padding: 5px; height: 90px; overflow-y: scroll; font-family: Roboto }
+.ChooseEmail ul li span { float: left; width: 20px }
+.ChooseEmail label { padding-right: 0!important; padding-bottom: 5px }
+.ChooseEmail label div.fl_left { width: 285px; text-align: left }
+.ChooseAfter { float: left; margin-left: 30px; width: 250px }
+.search_facet { background: #ECEFF5; border: 1px solid #C5CDE1; display: inline-block; margin: 0 5px 5px 0; position: relative  }
+.search_facet .search_facet_value { color: #3B5999; float: left; font-size: 11px; padding: 2px 15px 2px 5px }
+.search_facet .search_facet_remove_area { cursor: pointer; padding: 4px 3px 2px; position: absolute; right: 0; top: -4px }
+.w4l_fb_button_close_small { background: url("images/fb_button_close_small.png") no-repeat; cursor: pointer; display: inline-block; height: 11px; margin-top: 5px; width: 11px }
+.w4l_fb_button_close_small:hover { background-position: 0 -24px }
+.ui-multiselect-menu .ui-corner-all { padding-right: 5px!important; text-align: left!important }
+.LinkCalendar { color: #444 }
+.LinkCalendar:hover { color: #777; text-decoration: none }
+#currentDay { font-size: 13px; font-weight: bold; padding: 34px 0 10px; text-align: center }
+#currentDate { font-size: 70px; font-weight: bold; text-align: center; line-height: 70px }
+#minicalendar .ui-widget-content { border: none!important }
+#minicalendar .ui-widget-header { background: none!important; color: #333!important }
+#minicalendar .ui-widget-header .ui-icon.ui-icon-circle-triangle-e { background: url(images/icon_arr_gray_5x9.gif) no-repeat 0 0!important; margin-left: 0; margin-top: -4px }
+#minicalendar .ui-widget-header .ui-icon.ui-icon-circle-triangle-w { background: url(images/icon_arr_gray_5x9_2.gif) no-repeat 0 0!important; margin-left: 0; margin-top: -4px }
+#minicalendar .ui-state-default, ul.ui-widget-content li.ui-state-default, ul.ui-widget-header li.ui-state-default { border: none!important; color: #8c8c8c!important }
+#minicalendar .ui-state-highlight, #minicalendar_home .ui-widget-content .ui-state-highlight, #minicalendar_home .ui-widget-header .ui-state-highlight { background: none!important; color: red!important }
+#minicalendar .fc-state-highlight { background: #ffdecc!important }
+#minicalendar .fc-border-separate tr.fc-last th { background-color: #eee; padding: 6px 0 }
+#minicalendar .fc-event { background-color: #ff5b00!important; border: none!important }
+.MiniCarlendar { float: left; width: 18%; margin: 10px 0 }
+.MiniCarlendar .link { padding: 15px 0; text-align: center; display: block; width: 200px }
+.FullCarlendar { float: right; width: 82%; margin: 20px 0 }
+#calendar_nav { float: right; margin-left: 20px }
+#calendar_nav li { float: left; padding: 2px 5px }
+#calendar_nav li i.fa { font-size: 16px; color: #666 }
+.SelectActive { width: 100%; position: absolute; top: 21px; *top: 31px; right: 0; z-index: 10; background-color: #d6e8ff; padding: 15px }
+.SelectActive ul { width: 94%; margin: 0 auto }
+.SelectActive li { float: left; width: auto; max-width: 220px; padding-right: 15px }
+.ActiveJob .rc_col_title { width: 50%; padding-left: 10px }
+.ActiveJob .rc_col_2, .InActiveJob .rc_col_2 { width: 5% }
+.ActiveJob .FrameForm, .ListRequisitions .FrameForm, .InActiveJob .FrameForm, .MyCalendar .FrameForm { margin-top: 46px }
+.InActiveJob .rc_col_title { width: 30%; padding-left: 10px }
+.InActiveJob .rc_col_4, .InActiveJob .rc_col_5, .InActiveJob .rc_col_matched, .ListRequisitions .rc_col_matched { width: 9% }
+.InActiveJob .rc_col_8 { width: 10%; text-align: center }
+.InActiveJob .rc_col_9, #tab_Approve .rc_col_4 { width: 8% }
+.InActiveJob .jobonlineCB .tipsIcon .txt { width: 100% }
+.InActiveJob .TooltipSetting .tipsIcon { width: 300px; right: -20px; left: auto }
+.InActiveJob .TooltipSetting .tipsIcon span.arr_tips { right: 20px; left: auto }
+.InActiveJob .matchingscore-tk { padding-top: 5px }
+.InActiveJob .rc_col_matched { padding-left: 1% }
+.InActiveJob .rc_col_matched table, .ListRequisitions .rc_col_matched table { width: 100%; margin: 0; padding: 0 }
+.InActiveJob .rc_col_matched table td, .ListRequisitions .rc_col_matched table td { padding: 5px 0; width: 50%; text-align: center }
+.InActiveJob .rc_col_matched table.fld td, .ListRequisitions .rc_col_matched table.fld td { padding: 0 }
+.ListRequisitions .rc_col_matched { padding-right: 1% }
+.jpost_summary img { margin-left: 0 }
+.linkTab, #table_language td { padding-bottom: 10px }
+.linkTab .active { font-weight: bold; display: inline-block; padding: 4px 10px; background-color: #d8e0eb }
+#panel-startcol { position:absolute; left:-247px; display: block }
+.gird_standard.nodata  { padding-top: 30px }
+.Candidates .ca_folders { width: 630px }
+.ca_folders label { float: left; margin-right: 15px; white-space: nowrap }
+.ResumeSearch .ca_folders label { float: left; margin: 0 0 5px 0; padding-right: 0!important; clear: both }
+.logo_login { padding-bottom: 20px }
+.outshadow { -webkit-box-shadow: 0 0 12px rgba(0,0,0,.2); -moz-box-shadow: 0 0 12px rgba(0,0,0,.2); box-shadow: 0 0 12px rgba(0, 0, 0, .2) }
+.Login_box { float: left; width: 300px; padding: 30px; border: solid 1px #006; font-size: 12px }
+.Login_box h1 { font-size: 18px; padding-bottom: 20px; text-transform: capitalize }
+.LoginF_form { float: left; width: 300px; padding-bottom: 20px }
+.LoginF_form .row { float: left; width: 100%; margin-bottom: 10px }
+.LoginF_form .checkme { margin: 2px 5px 0 0!important; margin: 0 5px 0 0\0/!important }
+.LoginF_form .i-help { float: left; padding: 5px 0 0 2px }
+.LoginF_form .SubLine { padding: 10px 0 35px; border-bottom: 1px dotted #d3d3d3 }
+.LoginF_form .SubLine a { float: left; margin: 7px 0 0 8px }
+.LoginWithSocial { float: left; width: 100%; padding-bottom: 40px }
+.LoginWithSocial p { padding-bottom: 8px }
+.LoginWithSocial a { display: inline-block; padding-right: 10px; width: 65px; height: 22px; background: url("images/social_login.png") no-repeat; float: left }
+.LoginWithSocial a.LoginGoogle { background-position: 0 -22px }
+.LoginWithSocial a.LoginLinkIn { background-position: 0 -44px }
+.LoginWithSocial a.LoginYahoo { background-position: 0 -66px }
+.LoginNewForm { width: 288px; height: 30px; font-size: 12px; padding: 0 0 0 10px; border: 1px solid #bababa; line-height: 30px\9 }
+.LoginNewForm:hover, .LoginF_form input[type=text]:focus, .LoginF_form input[type=password]:focus { border: 1px solid #ff5b00; box-shadow: 0 0 4px #ffad80 }
+.SubmitSize2 { width: 108px; background-image: url("images/btn_login.png")!important; background-position: 0 0; background-repeat: no-repeat; background-color: transparent; height: 32px; border: none; color: #fff; font-weight: bold; font-size: 13px; cursor: pointer; text-transform: capitalize }
+.SubmitSize2:hover { background-position: 0 -33px }
+.SubmitSize2:active { background-position: 0 0; padding-bottom: 6px }
+#Join_Success { width: 800px; height: 225px; background: url('images/apply_success.png') no-repeat right bottom #fff }
+#Join_Success .container { width: 550px; padding-left: 30px; padding-top: 60px }
+#Join_Success h2 { font-size: 18px; padding-bottom: 10px }
+#Join_Success p { font-weight: bold; padding-bottom: 5px }
+#idConfirmDownload .containerData { width: 510px }
+#idConfirmDownload .text { background: url("images/ic-warning.png") 0 20px no-repeat; width: 350px; min-height: 36px; clear: both; margin: 0 auto; padding: 20px 0 20px 60px; text-align: justify }
+#idConfirmDownload .cp { width: 155px; margin: 0 auto }
+.cb-createRequisition .containerTab { float: left; width: 100%; padding: 20px 0 }
+.coreCompany .cb-createRequisition .containerData { padding: 0; width: 100%!important }
+.cb-createRequisition input.ui_btnCb { font-size: 13px }
+.cb-createRequisition .detail_w_tab, .MemberSearch2 .detail_w_tab { position: relative; float: left; width: 100%; clear: both; padding-top: 20px }
+.cb-createRequisition .detail_w_tab .ui-tabs .ui-tabs-panel { float: left; width: 100% }
+.cb-createRequisition .funcAction { z-index: 1; right: -5px; top: -5px }
+.cb-createRequisition fieldset { width: 712px; margin-left: 26px; display: inline }
+.listResumeTags { float: left; width: 545px; clear: both; padding-top: 10px }
+.listResumeTags span { background-color: #ececec; float: left; margin: 0 5px 5px 0; padding: 5px 20px 5px 10px; position: relative; white-space: nowrap; color: #505050 }
+.listResumeTags span a { background: url("images/close_tag.png") no-repeat; position: absolute; right: 3px; top: 3px; width: 6px; height: 6px }
+.tagskilldetail a { background-color: #f0f0f0; box-shadow: 1px 1px 0 #ddd; color: #333; display: inline-block; font-size: 12px; margin-bottom: 5px; margin-right: 5px; padding: 4px 10px; line-height: normal }
+.manage-benefits, .list-benefits { float: left; width: 100%; margin-bottom: 10px; padding-left: 0!important }
+.manage-benefits .item label, .list-benefits li { float: left; width: 45%; padding-right: 5%; text-align: left!important; line-height: 18px; padding-bottom: 10px; list-style: none!important  }
+.manage-benefits .checkmore { clear: both; padding: 5px 0; text-align: center }
+.manage-benefits .checkmore i.fa { color: #287ab9; font-size: 15px; margin-right: 3px }
+.circle-info b { display: inline-block; padding-left: 22px; min-height: 17px; float: left; margin-right: 25px; font-weight: normal }
+.circle-red { background: url('images/red.png') left top no-repeat }
+.circle-yellow { background: url('images/yellow.png') left top no-repeat }
+.circle-green { background: url('images/green.png') left top no-repeat }
+.circle-orange i, .circle-blue i { border-radius:9px; background-color: #f79d25; display: inline-block; height: 14px; width: 14px; float: left; margin-right: 4px; margin-left: -18px }
+.circle-blue i { background-color: #09a0db }
+.arrow-blue { background: url('../images/publi_inactive.png') left top no-repeat }
+.arrow-grey { background: url('../images/private_confident.png') left top no-repeat }
+.arrow-orrange { background: url('../images/private_internal.png') left top no-repeat }
+.arrow-green { background: url('../images/publi_active.png') left top no-repeat }
+.ListRequisitions .bsub .circle-info { float: left; margin-left: 10%; font-weight: bold }
+.ListRequisitions .gird_standard dl dd .circle-info b { width: 100%; margin-right: 0 }
+#tab_Approve .cont_post .txt_posting { padding-left: 16px }
+#tab_Approve .gird_standard { margin-bottom: 20px }
+#tab_Approve .gird_standard dl span{ font-size: 12px; vertical-align: middle }
+#tab_Approve .rc_col_1 { padding-left: 2%; width: 15% }
+#tab_Approve .rc_col_3 { padding-left: 1%; width: 15% }
+#tab_Approve .rc_col_5 { width: 15% }
+#tab_Approve .rc_col_2, #tab_Approve .rc_col_6 { padding-left: 1%; width: 23% }
+#tab_Approve .select_long { width: 90% }
+#tab_Approve .rc_col_4 a.fl_link { text-decoration: underline }
+#tab_Approve .list_attendee { margin-left: 18%; width: 35% }
+#tab_Approve .ChooseAfter { margin-left: 1%; width: 46% }
+#tab_CreateJob .sumcharacter, .CreateDepartment .sumcharacter { width: 570px!important }
+#tab_CreateJob a.link_create { background: url('images/icon_mycb.png') left top no-repeat; padding-left: 20px }
+#tab_CreateJob a.addtag { background-color: #d4d0c8; border: 1px solid #aaa; border-radius: 3px; color: #000; cursor: pointer; float: left; font-size: 12px; overflow: hidden; position: relative; height: 28px; line-height: 28px; margin-left: -3px; text-align: center; width: 85px }
+#tab_PostJob .post-by-source label.label_1 { text-align: left; font-weight: bold; padding-left: 15px; width: 185px }
+.CreateDepartment .rightfield { width: 515px }
+.CreateLetter .rightfield { width: 460px }
+.CreateFolder .rightfield { float: left; width: 617px }
+#AddInterview .rightfield_date, #AddFolder { float: left; width: 630px }
+.grtpen label { text-align: left!important }
+.customfield { float: left; width: 550px }
+.customfield .field, .customfield .field, .customfield .field { float: left; width: 300px }
+.customfield div.row:last-child { margin: 0 }
+.AddFolder { width: 610px }
+#CreateNoteWfs .rightfield { float: left; width: 380px }
+#CreateNoteWfs h2 { font-size: 16px; padding-bottom: 10px }
+#CreateNoteWfs textarea { width: 337px; height: 120px }
+#CreateNoteWfs .label_1 { text-align: right; padding-right: 30px; width: 165px }
+#CreateNoteWfs .ChooseAfter { clear: both; margin: 10px 0 0 0; width: 355px }
+#CreateNoteWfs .ChooseEmail ul li { padding-bottom: 5px }
+#CreateNoteWfs .ChooseEmail ul li div { width: 285px }
+#CreateNoteWfs .date_month { width: 202px; background-position: 180px 6px }
+#CreateNoteWfs .offerletter { font-weight: bold }
+#CreateNoteWfs .offerletter span { font-weight: normal }
+#CreateNoteWfs .offerletter span input { float: none; margin: 0 0 0 10px!important }
+.DashboardN .row { padding: 5px 0 0 10px }
+.DashboardN .row input.ui_btnCb, #tabs-ApplyForm span.help-applyform { margin-left: 5px }
+.DashboardN .rc_col_1 { padding-left: 10px; width: 40px }
+.DashboardN .rc_col_2 { padding-right: 2%; width: 80px }
+.DashboardN .rc_col_3 { padding-right: 1.5%; width: 50px; text-align: right }
+.DashboardN .rc_col_4 { padding-right: 10px; width: 60px; text-align: right }
+.DashboardN .rc_col_5 { padding-right: 2%; width: 130px; text-align: right }
+.DashboardN form span { float: left; margin: 0 8px; font-size: 11px }
+.JoinCollegeNw { float: left; width: 100%; background-color: #fff }
+.JoinCollegeNw .leftCol { float: left; width: 634px; padding: 10px 0 20px 15px }
+.JoinCollegeNw .leftCol ul, .JoinCollegeNw .leftCol p { padding-bottom: 15px }
+.JoinCollegeNw .rightCol { float: right; width: 250px }
+.JoinCollegeNw .logo { padding-bottom: 10px }
+.JoinCollegeNw h1, .JoinCollegeNw h2 { padding-bottom: 15px; font-size: 17px; font-weight: bold }
+.JoinCollegeNw .JoinFrm { position: relative; margin-top: 20px; padding-top: 20px; border-top: solid 1px #d3d3d3 }
+.JoinCollegeNw .JoinFrm .txt_required { font-weight: normal; float: right; padding-right: 30px }
+.JoinCollegeNw .optional { clear: both; padding-top: 15px }
+.JoinCollegeNw .JoinFrm .label1 { width: 140px }
+.JoinCollegeNw .datemonth { background-position: 82px 3px; width: 90px!important }
+.JoinCollegeNw .JoinFrm .frm_college { float: left; width: 315px }
+.JoinCollegeNw .JoinFrm .input_long { float: left; width: 304px; height: 18px; line-height: 18px }
+.JoinCollegeNw .JoinFrm .input_short { float: left; width: 195px; height: 18px; line-height: 18px }
+.JoinCollegeNw .JoinFrm select { float: left; width: 315px; height: 30px }
+.JoinCollegeNw .joinnowBtn { clear: both; padding: 5px 0 0 145px }
+.JoinCollegeNw .leftCol .ui_btnCb { height: 32px!important; font-size: 14px }
+.JoinCollegeNw .BoxColl h2 { padding: 20px 0 15px; border-top: solid 1px #d3d3d3 }
+.JoinCollegeNw .JobCollTop { background: url('images/bg-coll-search.png') no-repeat top center }
+.JoinCollegeNw .JobCollTop h2 { width: 155px; padding: 10px 0 0 10px; border-top: 0 }
+.JoinCollegeNw .BoxColl { float: left; width: 100%; padding-bottom: 20px }
+.JoinCollegeNw .JobCollTop .ContBox { padding-left: 10px; padding-right: 10px; padding-top: 25px !important }
+.JoinCollegeNw .JobCollTop .ContBox ul { padding-bottom: 5px }
+.JoinCollegeNw .JobCollTop .ContBox ul li { background: url('images/i-dot.png') no-repeat left 6px; padding: 0 0 10px 15px }
+.JoinCollegeNw .JobCollTop .ContBox ul li a { color: #000; background: none; padding-left: 0 }
+.JoinCollegeNw .JobCollTop .allJobBtn { text-align: left }
+.JoinCollegeNw #div_file .fileContainer, .JoinCollegeNw #div_google_file .fileContainer, .JoinCollegeNw #div_dropbox_file .fileContainer { width: 160px !important }
+.follus ul.signin_social { border: 0; margin: 0; padding: 0 }
+.follus ul.signin_social li { float: left; padding-bottom: 10px; width: 49% }
+.MapLocation p { padding-bottom: 5px }
+.MapLocation p.NumMem { font-size: 16px; color: #000066; padding: 0 0 25px; margin-bottom: 0 }
+.MapLocation .LeftMap { float: left; width: 63% }
+.MapLocation .RightContent { float: left; width: 35%; margin-left: 2% }
+.MapLocation .map-area { border-top: solid 2px #666 }
+.MapLocation .RightContent .rc_col_3 strong { float: left; text-align: right; width: 40%; padding-right: 10% }
+.MapLocation .RightContent .rc_col_3 span { float: left; text-align: left }
+.MapLocation .linkfooter { float: left; width: 100%; margin-top: 15px }
+.MapLocation .linkfooter span { margin: 0 5px }
+.dataSource { float: left; width: 100%; padding-bottom: 10px }
+.dataSource strong, .dataSource label, .search_option span, .search_option label { float: left; padding-right: 20px; margin-bottom: 0 }
+.dataSource label input, .search_option label input { float: left; margin-top: 1px }
+#box_search_resume { float: left; width: 100%; background-color: #287ab9; padding: 15px; color: #fff }
+#box_search_resume .search_keyword { position: relative }
+#box_search_resume .search-jobs-main input.width_545, #NewSearchJob .search-jobs-main .chosen-container { float: left; width: 29%!important; margin-right: 1% }
+#box_search_resume .search-jobs-main input.width_545 { border: 0; padding: 0; height: 40px; text-indent: 10px; font-size: 12px }
+#box_search_resume .search-jobs-main button.searchvt1 { width: 10%; height: 40px; background-color: #ff5b00; border: 0 }
+#box_search_resume .chosen-container .chosen-results li { color: #000; font-size: 12px }
+#box_search_resume .chosen-container .chosen-results li.highlighted { color: #fff }
+#box_search_resume .chosen-container-multi .chosen-choices { background: #fff url("images/row_submenu.png") 95% center no-repeat; height: 40px!important; border: 0 }
+#box_search_resume .chosen-container-multi .chosen-choices li.search-field { margin-left: 5px }
+#box_search_resume .chosen-container-multi .chosen-choices li.search-field input[type="text"] { height: 40px; font-size: 12px }
+#box_search_resume .chosen-container-multi .chosen-choices li.search-choice { height: 40px; line-height: 40px; margin-top: 0; margin-bottom: 0 }
+#box_search_resume div.chosen-container .shortags .search-choice span { font-size: 12px }
+#tip_search_exp { position: absolute; width: 80%; height: 400px; overflow-y: scroll; padding: 20px; color: #333; z-index: 100; background-color: #fff; left: 1px; top: 18px; box-shadow: 0 3px 3px #999; border: 1px solid #ddd; display: none }
+#tip_search_exp h2 { font-size: 16px; padding-bottom: 10px }
+#tip_search_exp h3 { font-size: 14px; padding: 0 30px 5px 0; margin-bottom: 20px; border-bottom: 3px solid #F58B15 }
+#tip_search_exp .content p { line-height: 18px; padding-bottom: 5px; font-size: 13px }
+#tip_search_exp .xclose { position: absolute; top: 20px; right: 20px }
+.search_option { float: left; width: 100%; clear: both; font-weight: bold; padding-top: 5px; color: #fff }
+.expand_search { float: left; width: 100%; padding: 5px 15px }
+.expand_search .arrow { padding-right: 15px }
+.expand_search .collapse { background: url('images/expand_top.png') no-repeat right center }
+.expand_search .expand { background: url('images/collapse_top.png') no-repeat right center }
+.AdvSearch .row { width: 100% }
+.AdvSearch { float: left; width: 100%; padding: 15px; background: #f2f8fc; position: relative; border: 1px solid #287ab9 }
+.AdvSearch .sideadv { width: 220px; margin-right: 10px; display: inline }
+.AdvSearch .sideadv label { float: left; padding-bottom: 5px; padding-right: 5px; font-weight: bold }
+.AdvSearch .width_220 { display: block; width: 220px }
+.AdvSearch select, .AdvSearch input { font-size: 12px }
+.AdvSearch .close-adv { position: absolute; right: 8px; top: 8px; background: url('images/close_grey.png') no-repeat; width: 9px; height: 9px }
+.AdvSearch .textadvs { float: left; width: 41px; margin: 0 5px 0 10px }
+.AdvSearch button.searchvt1 { width: 100%; height: 40px; background-color: #ff5b00; color: #fff; border: 0 }
+.ResumeFreshness { float: left; margin-top: 5px; clear: both; width: 100% }
+.ResumeFreshness label { font-weight: normal; padding-right: 10px; float: right }
+.ResumeFreshness span { float: left; margin-top: 1px }
+.BtnSearchAdv { float: right; width: 107px; text-align: right; padding-top: 12px } 
+.BtnSearchAdv .BtnButton { float: right; width: 107px; height: 42px; font-size: 14px }
+.indexclass_joincollegethanks .changePass, .indexclass_isjoincollegethanks .changePass { background-image: url('images/join-college.jpg') }
+.AddNewUser #avatar_img { float: left; padding: 15px 0 }
+.AddNewUser #avatar_img img { width: 50px; height: 50px; border: 1px solid #ddd; float: left; padding: 3px }
+.AddNewUser #avatar_img a { background: url('images/recycle.png') left center no-repeat; padding-left: 18px; float: left; margin-left: 15px; margin-top: 16px ; color: #c91818 }
+.AssignJob { width: 310px; z-index: 1 }
+.AssignJob .label_1 { width: 110px; padding-right: 15px!important; padding-top: 5px }
+.jobonlineCB .tipsIcon, .candidate-history .tipsIcon { width: 560px; line-height: 18px; left: -255px }
+.jobonlineCB .tipsIcon .txt { width: 530px }
+.candidate-history .tipsIcon .txt { width: 615px }
+#tabs-Score .cont_post p { padding-bottom: 5px }
+#tabs-Score .gird_standard dl dt {background-color: #d6e8ff; color: #333; border: solid 1px #d6e8ff }
+#tabs-Score .gird_standard dl dd { border-bottom: solid 1px #d5d5d5; border-left: solid 1px #d5d5d5; border-right: solid 1px #d5d5d5 }
+#tabs-Score .gird_standard dl dd.hide_block .rc_col_1 { color: #999 }
+#tabs-Score .gird_standard dl .rc_col_1 { padding-left: 10px; padding-right: 10px; width: 220px }
+#tabs-Score .gird_standard dl .rc_col_2, #tabs-Score .gird_standard dl .rc_col_3, #tabs-Score .gird_standard dl .rc_col_4 { padding-right: 10px; width: 100px }
+#tabs-Score .gird_standard dl .rc_col_5 { padding-right: 10px; color: #999 }
+#tabs-Score .gird_standard dl dd .tag-bor { background: #f0f0f0; color: #999; float: left; padding: 4px 10px; margin-right: 5px; margin-bottom: 5px; box-shadow: 1px 1px 0 #ddd; -moz-box-shadow: 1px 1px 0 #ddd; -webkit-box-shadow: 1px 1px 0 #ddd }
+#tabs-Score .row { padding-top: 15px !important }
+#tabs-Score .row .label_1 { font-weight: bold; text-align: left; float: left; width: 205px }
+#tabs-Score .row ul { width: 490px; float: left }
+#tabs-Score .row ul li { float: left; margin-bottom: 10px; width: 100% }
+#tabs-Score .row ul li label { text-align: left }
+#tabs-Score .row ul li p { margin-left: 18px; padding-bottom: 0; text-align: left }
+#tabs-Score .row div, .ImportEmail div.circle-info span { float: left } 
+#tabs-Score .SMTpostjob { padding-left: 205px; padding-top: 10px }
+#tabs-Score .btn_submit input { background-color: #f79d25; border: none; color: #fff; cursor: pointer; display: block; float: left; font-weight: bold; height: 40px; padding: 0 20px; text-align: center; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; }
+#tabs-ApplyForm ul.drag-field { max-width: 360px }
+#tabs-ApplyForm ul.drag-field li { float: left; width: 100%; padding: 10px; margin-bottom: 5px; position: relative; background-color: #efefef; border: 1px solid #ccc; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px }
+#tabs-ApplyForm ul.drag-field li .field-name { font-size: 15px; margin-bottom: 15px }
+#tabs-ApplyForm ul.drag-field li .cls-field { position: absolute; right: 5px; top: 5px; background: url('images/close_16x16.png') no-repeat; width: 16px; height: 16px; display: block }
+.blue_green { color: #009b74 }
+.blue_yellow { color: #f79d25 }
+.blue_red, .lockResumeInfo .set-level { color: #ff0000 }
+.blue_bold, .blue_green, .blue_yellow, .blue_red { font-weight: bold }
+.machingcorejob { text-align: right }
+.machingcorejob .matchingscore-tk, .tblJob .machingcorejob p { padding-top: 5px; margin-bottom: 0 }
+.machingcorejob .matchingscore-tk a { cursor: default; height: 10px; text-indent: -9999px; width: 10px }
+.relevance { font-size: 11px; float: left; padding-left: 15px; padding-top: 2px }
+.relevance span, .relevance .matchingscore-tk { float: left; padding-right: 5px }
+.machingcorerank .matchingscore-tk { padding-left: 0; padding-top: 3px }
+.machingcorerank .matchingscore-tk a { cursor: default; height: 10px; text-indent: -9999px; width: 10px }
+.machingcorerank span { padding-left: 5px }
+.maintenance { width: 744px; margin: 30px auto; text-align: center }
+.maintenance .content { margin-top: 35px; border: solid 1px #e5e5e5; padding: 35px 65px }
+.maintenance .content.pad-60 { padding-top: 60px; padding-bottom: 60px; margin-top: 0 }
+.maintenance .content .large-text p { font-size: 19px; margin-bottom: 15px }
+.maintenance .content .small-text p { font-style: italic; font-size: 12px; margin-bottom: 5px }
+.ImportEmail p.note { padding-bottom: 10px; color: red }
+.ImportEmail div.circle-info { font-size: 11px; float: left; padding: 2px 0 0 20px }
+.ImportEmail div.circle-info b { margin-right: 15px }
+.txt-importfile { clear: both }
+.txt-importfile a { display: inline-block; padding: 5px 6px; padding-left: 20px; background-repeat: no-repeat; background-position: left 6px }
+.form-mutilfile { float: left; width: 100%; padding: 0 15px; border: 1px solid #e3e3e3 }
+.form-mutilfile > form { border: 0 }
+.form-mutilfile div.row { width: 100% }
+.form-mutilfile .smra label { padding-right: 20px }
+.drapdrop { float: left; width: 100%; position: relative }
+.drapdrop .upload-area { width: 100%; padding: 50px 0; border: 2px dashed #cfdbdf; font-family: "Roboto-Light" }
+.drapdrop .upload-area p { width: 100%; text-align: center; margin-bottom: 0; color: #999; font-size: 14px }
+.drapdrop .upload-area input { position: absolute; margin: 0; padding: 0; width: 100%; height: 100%; outline: none; border: 0; opacity: 0; left: 0; top: 0 }
+.drapdrop #upload_text1 { float: left; width: 100%; margin-top: 5px }
+.file_name { background: url("images/i-attach.png") no-repeat left center; padding: 5px 0 5px 30px }
+.note-alert { color: #F00; line-height: 20px }
+.note-alert a { text-decoration: underline }
+.EditRecommendJob { width: 680px; margin: 0 auto; clear: both; overflow: hidden; padding-top: 25px; color: #333 }
+.EditRecommendJob h2 { text-align: center; font-size: 20px; font-weight: bold; padding-bottom: 25px }
+.EditRecommendJob p { font-size: 14px; padding-bottom: 10px }
+.EditRecommendJob .form { padding: 20px 0 }
+.EditRecommendJob .form .row { width: 100%; padding: 0; margin-bottom: 20px }
+.EditRecommendJob .row label { width: 100%; font-weight: bold; font-size: 14px; padding-bottom: 5px; padding-right: 0 }
+.EditRecommendJob .jobtitle { font-size: 14px; padding: 0; text-indent: 15px; width: 678px; border: 1px solid #aaa }
+.EditRecommendJob .col { float: left; width: 330px }
+.EditRecommendJob .chosen-container-single .chosen-single, .EditRecommendJob .jobtitle { height: 40px; line-height: 40px }
+.EditRecommendJob .chosen-container-single .chosen-single div { top: 10px; right: 2px }
+.EditRecommendJob .chosen-container, .tabstyle2.MemberSearch2 .detail_w_tab ul.ui-widget-header .ui-state-default a { font-size: 14px }
+.EditRecommendJob .chosen-container-multi .chosen-choices { background: url("../js/chosen/chosen-sprite.png") no-repeat 308px 11px; display: block; width: 100%; height: 40px!important }
+.EditRecommendJob .chosen-container-multi .chosen-choices li.search-choice { line-height: 34px }
+.EditRecommendJob .chosen-container-multi .chosen-choices li.search-field input[type="text"] { height: 34px; line-height: 34px }
+.EditRecommendJob button { background-color: #009b74; border: none; height: 50px; color: #fff; font-size: 18px; width: 130px; text-transform: uppercase }
+.EditRecommendJob .whyjoin { float: left; width: 100%; border-top: 1px solid #d4d4d4; color: #5c5c5c; margin: 25px 0; padding-top: 35px; font-size: 12px }
+.EditRecommendJob .whyjoin h3 { font-size: 14px; padding-bottom: 20px }
+.EditRecommendJob .styled-select { background-position: right 18px; height: 40px }
+.EditRecommendJob .styled-select select { width: 695px; height: 40px; font-size: 15px }
+.tabstyle2.MemberSearch2 .detail_w_tab .ui-tabs .ui-tabs-nav { margin-bottom: 15px }
+.tabstyle2.MemberSearch2 .detail_w_tab ul.ui-widget-header li.ui-state-default { padding-left: 15px }
+.tabstyle2.MemberSearch2 .detail_w_tab ul.ui-widget-header li.ui-state-default:first-child { padding-left: 0 }
+.tabstyle2.MemberSearch2 .detail_w_tab ul.ui-widget-header .ui-state-default a { padding-left: 20px }
+.tabstyle2.MemberSearch2 .detail_w_tab ul.ui-widget-header .ui-state-default a.mtab_tn { background: url("images/i-tn.png") no-repeat }
+.tabstyle2.MemberSearch2 .detail_w_tab ul.ui-widget-header .ui-state-default a.mtab_cb { background: url("images/i-cb16x16.png") no-repeat }
+.MemberSearch2 .detail_w_tab { padding-top: 0 }
+.MemberSearch2 .detail_w_tab .containerTab .bsub p { margin-bottom: 0; text-align: right }
+.MemberSearch2 .ui-widget-content { border: 0 }
+.MemberSearch2 .ui-widget-content .count { position: absolute; right: 0; top: 0 }
+.coreCompany .MemberSearch2 .CoreGeneral .header { background-color: #287ab9 }
+.MemberSearch2 .tblJob tr.record:hover { box-shadow: 0 0 8px #999 }
+.MemberSearch2 table.tblM tr td { padding-top: 0; padding-bottom: 0 }
+.MemberSearch2 .top-lbl-name { padding-left: 15% }
+.MemberSearch2 .top-lbl-skill { float: right; width: 25%; text-align: left }
+.MemberSearch2 .name p { margin: 0 15px 8px }
+.MemberSearch2 .name p:first-child, .MemberSearch2 .lbl_detail p:first-child, .MemberSearch2 .txt_detail p:first-child { padding-top: 5px }
+.MemberSearch2 .name p.lnk { font-weight: bold; font-size: 14px }
+.MemberSearch2 .name p.lnk span.viewed { color: #287ab9; font-size: 11px; font-weight: normal; margin-left: 10px }
+.MemberSearch2 .name p.lnk span.viewed i.fa { font-size: 12px }
+.MemberSearch2 .name p.titleResume { font-weight: bold }
+.MemberSearch2 .name img { margin-right: 5px }
+.MemberSearch2 .name i.fa-birthday-cake { color: #999 }
+.MemberSearch2 .lbl_detail p { font-weight: bold; margin-bottom: 8px }
+.MemberSearch2 .lbl_detail i.fa { width: 16px; text-align: center; margin-right: 5px }
+.MemberSearch2 .lbl_detail i.fa-tasks { color: #cc3300 }
+.MemberSearch2 .lbl_detail i.fa-usd { color: #0174c3 }
+.MemberSearch2 .lbl_detail i.fa-map-marker { color: #009900 }
+.MemberSearch2 .lbl_detail i.fa-eye { color: #4b5c74 }
+.MemberSearch2 .txt_detail p { margin-right: 15px; margin-bottom: 8px }
+.MemberSearch2 .skill span { display: inline-block; border: 1px solid #d2d3d3; padding: 0 5px; margin-right: 5px; margin-top: 5px }
+.MemberSearch2 .tags, .MemberSearch2 .act { font-size: 11px; padding-top: 15px!important }
+.MemberSearch2 .act { text-align: right }
+.MemberSearch2 .act a { display: inline-block; padding-right: 10px }
+.workflow-in-grid { padding: 10px 10px 0 }
+.workflow-in-grid p.txt span { float: none; margin-left: 10px }
+.workflow-in-grid p.txt { font-size: 11px; padding-bottom: 10px; margin-bottom: 0 }
+.workflow-item { border-top: 1px solid #e5e5e5; padding-top: 10px }
+.workflow-item .item { float: left; padding: 0 25px 0 15px; background: url("images/arrow-workflow.png") right center no-repeat; height: 80px }
+.workflow-item .item p { margin-bottom: 0; max-width: 80px }
+.workflow-item .item a { font-size: 16px }
+.workflow-item .sum-data { float: left; width: 150px; border: 1px solid #287ab9; padding: 3px 6px 6px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px }
+.workflow-item .sum-data p { max-width: none }
+.workflow-item .sum-data .lbl { float: left; padding-top: 3px }
+.workflow-item .sum-data .value { float: right }
+.ResumeInfo .vieworder { float: left; margin: 5px 0 0 10px }
+.ftalentsolution .chosen-container { background: #fff url("images/row_submenu.png") 275px center no-repeat }
+.ftalentsolution .sideadv { width: 290px; margin-right: 20px }
+.ftalentsolution .chk_filter .sideadv p { margin-bottom: 5px; font-weight: bold }
+.ftalentsolution .chk_filter .sideadv label { font-weight: normal; clear: both }
+.ftalentsolution .chk_filter .sideadv .date_joined label { clear: none }
+.ftalentsolution .date_month { background-position: 6px 6px; width: 117px; text-indent: 20px }
+.ftalentsolution .select_short { width: 117px }
+.ftalentsolution .age_from input.input_short { width: 57px }
+.prepare-download { float: left; width: 500px; padding: 20px 30px }
+.prepare-download h2 { text-align: center; font-size: 26px; margin-bottom: 10px }
+.prepare-download p { font-size: 14px; line-height: 20px; margin-bottom: 20px }
+.prepare-download-icon { text-align: center }
+.prepare-download-icon span { display: inline-block; width: 120px; height: 120px;  background: url("images/download-cv.png") no-repeat; margin-bottom: 20px }
+.prepare-download-button { text-align: center }
+.prepare-download-button button { border: 0; color: #fff; font-size: 14px; padding: 8px 25px }
+.prepare-download-button button:hover { box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.25) inset; -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.25) inset; -moz-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.25) inset}
+.prepare-download-button .bt1 { background-color: #ff5b00 }
+.prepare-download-button .bt2 { background-color: #aaa; margin-left: 5px }
+.AddNews .sumcharacter { width: 515px!important }
+.AddNews textarea { width: 515px; height: 50px }
+.AddNews .select_long, .AddMedia .select_long { width: 270px }
+.AddNews .input_long { width: 515px }
+.AddNews .s_radio, .AddMedia .label_1 { width: 150px }
+.AddNews .label_1, .cb-createresume .input_long, .cb-myprofile .input_long { width: 190px }
+.AddMedia textarea { width: 498px; font-size: 11px }
+.AddMedia .input_long, .ListNews .input_long, .NetworkGetButton .input_long { width: 500px }
+.AddMedia .s_radio { width: 70px }
+.AddTestimonial textarea { width: 498px; height: 100px }
+.AddTestimonial label_1 { width: 160px }
+.AddSource .input_long, .AddSubject .input_long, .PostingFB .input_long, .CreateSourceType .input_long { width: 300px }
+.AddSource .select_long { width: 312px }
+.AddSource textarea { width: 298px }
+.AddSource .s_radio { width: 70px }
+.AddNewUser .input_long, .cb-creatjob .select_long, .EditSurvey .select_long { width: 250px }
+.AddNewUser .select_long { width: 262px }
+.AddNewUser .label_1, .CreateSubcate .label_1, .edit_candidate .label_1, .ChangePassword .label_1, .create_import_candidate .label_1, .ListNews .label_1, .HomeCoreCompany .select_medium, .cb-createRequisition .label_1 { width: 160px }
+.AddNewSurvey .s_radio, .AddSubject .s_radio, .cb-creatjob .label_1, .EditFeature .label_1, .FeatureCareer .select_long, .cb-applyjob .select_long { width: 200px }
+.AddNewSurvey .label_1, .DashboardN .select_long, .ManageListSource .select_long, .ManageTestimonial .select_long, .MyFolder .select_long, .MyLetter .select_long, .Candidate .select_long { width: 230px }
+.AddNewSurvey .input_long { width: 320px }
+.AddNewSurvey .input_short, .EditSurvey .input_short, #tab_PostJob .input_short { width: 40px }
+.CreateDepartment .label_1, .AddSubject .label_1, .JoinNow .input_long { width: 212px }
+.CreateDepartment .input_long { width: 285px }
+.PostingLinkedin .input_long, .InActiveJob .select_medium, .ResumeApply .select_long, .Candidates .select_long, .ImportEmail .select_long { width: 224px }
+.EditCompanyProfile .label_1, .create_import_candidate .select_long, .create_import_candidate .input_medium, .create_import_candidate .input_long, .prefer_position_cate select, .prefer_position_level select, .create_import_candidate .recordlang select.width_202, .create_import_candidate .slc_single select { width: 210px }
+.EditCompanyProfile .input_long, .CreateFolder .input_long, .CreateLetter .input_long { width: 275px }
+.cb-creatjob .input_long { width: 485px }
+.cb-creatjob .input_short { width: 70px }
+.CreateLetter .select_long, #tab_CreateJob .select_long, #tab_CreateJob .input_medium, #CreateNoteWfs .select_short, #CreateNoteWfs .input_short { width: 202px }
+.CreateSMTP .label_1 { width: 150px }
+.CreateSMTP .input_long { width: 220px }
+.DraftJob .input_long, .AddFolder .select_short { width: 248px }
+.DraftJob .select_medium { width: 260px }
+.DraftJob .select_long { width: 266px }
+.edit_candidate .input_long { width: 290px }
+.EditFeature .input_long, .EditSurvey .label_1 { width: 240px }
+.EditSurvey .input_long, #tabs-ApplyForm .select_long { width: 340px }
+.EmailHistory .label_1 { width: 85px }
+.EmailHistory .input_long, #tab_PostJob .input_long, #tab_Approve .input_long { width: 380px }
+.FeatureCareer .input_long { width: 270px }
+.create_import_candidate .select_short { width: 125px }
+.create_import_candidate .input_short, .cb-createRequisition .input_short { width: 90px }
+.create_import_candidate select { min-width: 100px }
+.ttk textarea { width: 450px }
+.customfield .input_long { width: 256px }
+.InActiveJob .input_long { width: 613px }
+.ListNews .select_long { width: 251px }
+.ManageListSource .input_long, .ManageTestimonial .input_long { width: 288px }
+.SeachMember .input_short, .BoxMemberSearch .input_short { min-width: 158px }
+.SeachMember .input_long { width: 160px }
+.SeachMember .select_long { width: 170px }
+.MyFolder .input_long, .MyLetter .input_long { width: 278px }
+.ProfileInfo .label_1 { width: 180px }
+.ProfileInfo .input_medium { width: 400px }
+.ResumeApply .input_long, .Candidates .input_long, .ImportEmail .input_long { width: 586px }
+.ResumeApply .input_short, .Candidates .input_short { width: 59px }
+.SetPermission .select_long { width: 330px }
+.NetworkGetButton .label_1 { width: 135px }
+.HomeCoreCompany .select_long { width: 278px }
+.HomeCoreCompany .input_long { width: 266px }
+.select_user .label_1 { width: 50px; padding-left: 10px }
+.select_user .select_long { width: 135px }
+.ListRequisitions .input_long, .ListRequisitions .select_long, .InActiveJob .input_long, .InActiveJob .select_long { width: 226px }
+.JoinNow .date_month, .cb-myprofile .input_short, .customfield .input_short, .ttk .input_short, .cb-createresume .input_short, #JoinOurTalentNetwork .input_short, .JoinNow  .input_short, #ForgotPass .input_short { width: 90px }
+.cb-createresume .input_medium  { width: 100px }
+.cb-createresume .prefer_other .input_long { width: 209px }
+.AddFolder .select_long { width: 360px }
+.customfield textarea { width: 254px }
+#tab_CreateJob .input_long { width: 558px }
+#customize_form_education select, #customize_form_experience select { width: 268px }
+.BoxMemberSearch .input_long { max-width: 160px }
+.CreateCrawlResume .item-crawl { float: left; width: 100%; margin-bottom: 15px }
+.CreateCrawlResume .item-crawl span, .CreateCrawlResume .item-crawl a { display: inline-block; min-width: 150px; text-align: center; line-height: 28px; margin-right: 5px; background-color: #f2f2f2; border-width: 1px; border-style: solid; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px }
+.CreateCrawlResume .item-crawl a { color: #333; border-color: #ebebeb }
+.CreateCrawlResume .item-crawl a:hover, .CreateCrawlResume .item-crawl span { text-decoration: none; border-color: #00b9f2; color: #00b9f2 }
+.CreateCrawlResume p { font-size: 11px; margin-bottom: 30px; clear: both }
+
+/* result survey */
+.box_width_common { float: left; width: 100% }
+.title_danhgia_core { border-bottom: 1px dotted #DDDFE0; color: #9A1F44; font-weight: bold; font-size: 12px; margin: 2px 0 0; padding: 0 0 15px }
+.scroll_thongke { float: left; margin: 15px 0 0; width: 100% }
+.scroll_thongke li { border-bottom: 1px dotted #CCCCCC; margin-bottom: 8px; overflow: hidden; padding-bottom: 15px }
+.scroll_thongke li .scroll_color { background: url("images/cols.gif") no-repeat left top; float: left; height: 7px; margin: 3px 0 0; width: 200px }
+.scroll_thongke li .scroll_color .bg_center_scroll { float: left; height: 7px; position: relative }
+.scroll_thongke .vote_result { float: right; font-size: 11px }
+.label_result { float: left; font-size: 11px; width: 190px; padding-right: 10px }
+.txt_number_ketqua { bottom: -15px; color: #999; display: inline-block; font-weight: 400; font-size: 10px; padding: 5px 0 0; position: absolute; right: -10px }
+
+/* Search Jobs */
+#JobAppropriateListing { float: left; width: 974px }
+.HeaderLine h1 { border-bottom: 3px solid #E8E8E8; margin-bottom: 8px; padding-bottom: 5px; font-size: 14px }
+#JobAppropriateListing .groupJob ul li { clear: none; float: left; padding-right: 15px; width: 298px }
+.groupJob ul li{ background: url("images/icon_arr_gray_5x9.gif") no-repeat left 4px; clear: both; margin-bottom: 4px; padding-left: 10px }
+.groupJob ul li a { font-weight: bold; color:#333; font-size: 11px }
+
+/*customized tabs*/
+#tabs { width: 100%!important; clear: both }
+.detail_w_tab .ui-widget, .detail_w_tab .content_fck { font-size: 12px!important }
+.detail_w_tab #tabs.ui-widget-content { border: 0 }
+.detail_w_tab .ui-tabs { padding: 0 }
+.detail_w_tab .ui-tabs .ui-tabs-nav { width: 99%!important; padding-top: 0 }
+.detail_w_tab ul.ui-widget-header { background: url("images/ui-bg_highlight_1x32.gif") 0 0 repeat-x; border: 1px solid #7aa6db }
+.detail_w_tab .ui-tabs .ui-tabs-nav li, .detail_w_tab .ui-tabs .ui-tabs-nav li a, .tabstyle2 .invisible-step { color: #333 }
+.detail_w_tab .ui-tabs .ui-tabs-nav li.ui-tabs-selected { font-weight: bold }
+.detail_w_tab .ui-tabs .ui-tabs-nav li.ui-tabs-selected a { color: #287ab9 }
+.detail_w_tab li.ui-state-default, .detail_w_tab ul.ui-widget-content li.ui-state-default, .detail_w_tab ul.ui-widget-header li.ui-state-default { border: 1px solid #bad1ec; background: url("images/ui-bg_glass_1x26.gif") 0 0 repeat-x; font-weight: normal }
+.detail_w_tab li.ui-state-active, .detail_w_tab ul.ui-widget-content li.ui-state-active, .detail_w_tab ul.ui-widget-header li.ui-state-active { border: 1px solid #7aa6db; background: url("images/ui-bg_glass_65_ffffff_1x400.png") repeat-x 50% 50% #FFFFFF; }
+.detail_w_tab .ui-tabs .ui-tabs-nav li.ui-tabs-selected { *padding-bottom: 2px }
+.detail_w_tab ul.ui-corner-all { border-radius: 4px }
+.detail_w_tab .ui-corner-top { border-top-left-radius: 4px; border-top-right-radius: 4px }
+.detail_w_tab .ui-tabs .ui-tabs-nav li.ui-state-default { *top: 2px }
+.detail_w_tab .ui-tabs .ui-tabs-nav li.ui-state-active { *top: 1px }
+.detail_w_tab .ui-tabs .ui-tabs-panel { padding: 0!important }
+
+.tabstyle2 .detail_w_tab .ui-tabs .ui-tabs-nav { padding: 0; width: 100%!important }
+.tabstyle2 .detail_w_tab  ul.ui-corner-all { border-radius: 0!important }
+.tabstyle2 .detail_w_tab ul.ui-widget-header{ background: none; border: 0; border-bottom: solid 1px #8c8c8c }
+.tabstyle2 .ui-tabs .ui-tabs-nav li.ui-tabs-selected { border-bottom: 2px solid #287ab9!important }
+.tabstyle2 .detail_w_tab .ui-tabs .ui-tabs-nav li.ui-tabs-selected a { color: #333 ; font-weight: bold }
+.tabstyle2 .detail_w_tab ul.ui-widget-header .ui-state-default { background: none; padding: 0 0 .5em }
+.tabstyle2 .detail_w_tab ul.ui-widget-header .ui-state-default a, .cb-createRequisition .invisible-step { border-right: solid 1px #333; padding: 0 1em; font-size: 13px }
+.tabstyle2 ul.ui-widget-header .ui-state-default:last-child a, .tabstyle2 ul.ui-widget-header .ui-state-default:last-child .invisible-step { border-right: 0 }
+.tabstyle2 ul.ui-widget-header .ui-state-default:first-child a { padding-left: 0 }
+.tabstyle2 .invisible-step { float: left }
+
+.ui-tabs-min, .ui-tabs-min ul { float: left; width: 100% }
+.ui-tabs-min { margin-top: 10px }
+.ui-tabs-min ul { margin-bottom: 0 }
+.ui-tabs-min ul li { float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; white-space: nowrap; padding: 0 0 .5em }
+.ui-tabs-min ul li a { border-right: 1px solid #333; font-size: 13px; padding: 0 1em; color: #333 }
+.ui-tabs-min ul li:first-child a { padding-left: 0 }
+.ui-tabs-min ul li:last-child a { border-right: 0 }
+.ui-tabs-min ul li.item-selected { border-bottom: 2px solid #287ab9 }
+.ui-tabs-min ul li.item-selected a { font-weight: bold }
+.ui-tabs-min ul li.item-selected a:hover { text-decoration: none }
+
+/*Show Fancybox*/
+.wrapDialog .container  { background: #fff; padding: 10px; float: left }
+.coreCompany  .wrapDialog .container { width: 100% }
+.dialog2 .container { padding: 30px }
+.dialog2 .container .row { padding: 0; width: 100% }
+
+/* Scrollbar */
+.mcs_container { position: relative; top: 0; width: 188px; max-height: 220px; clear: both; z-index: 1; padding-right: 11px }
+.mcs_container .customScrollBox { position: relative; max-height: 220px; overflow: hidden }
+.mcs_container .customScrollBox .container { position: relative; width: 98%; top: 0; float: left; padding: 0 }
+.mcs_container .customScrollBox .content { clear: both }
+.mcs_container .dragger_container { position: relative; width: 3px; float: right; background: #dddcd6; cursor: s-resize; left: -3px }
+.mcs_container .dragger { position: absolute; width: 10px; background: #b7cdfc; text-align: center; line-height: 60px; color: #666; overflow: hidden; cursor: pointer; left: -4px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px }
+.mcs_container .dragger_pressed { height: 60px; cursor: s-resize }
+.resumescroll .mcs_container { width: 204px }
+.resumescroll .mcs_container .customScrollBox .container { width: 200px }
+
+#jPanelMenu-menu, .mutipleLevel .ShowHideData { display: none }
+.fontCore .btnSmall, .action_control {
+	color:#ff5b00; font-weight: bold; height: 20px; line-height: normal;
+	text-shadow:0 1px 1px rgba(255,255,255,0.75);
+	background-color:#f5f5f5;
+	background-image:-moz-linear-gradient(top,#fff,#e6e6e6);
+	background-image:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+	background-image:-webkit-linear-gradient(top,#fff,#e6e6e6);
+	background-image:-o-linear-gradient(top,#fff,#e6e6e6);
+	background-image:linear-gradient(to bottom,#fff,#e6e6e6);
+	background-repeat:repeat-x;
+	border:1px solid #c5c5c5;
+	border-bottom-color:#a3a3a3;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05)
+}
+.action_control { padding: 0; width: 100px; height: 20px; line-height: 20px; text-align: center; display: block; background: #287ab9; color: #fff; border: 0; text-shadow: none }
+.fontCore .btnSmall:hover {
+	background: none;
+	background-color:#e6e6e6;
+	*background-color:#d9d9d9;
+	background-position:0 -15px;
+	-webkit-transition:background-position .1s linear;
+	-moz-transition:background-position .1s linear;
+	-o-transition:background-position .1s linear;
+	transition:background-position .1s linear
+}
+.fontCore .btnSmall:active {
+	background-image:none;
+	outline:0;
+	-webkit-box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05)
+}
+#panel-arrow { position: absolute; top: 0; left: 0; width: 20px; height: 21px; background: url('images/menu_left_icon.gif') no-repeat; cursor: pointer; z-index: 20 } 
+#panel-arrow:hover { background-image: url('images/menu_left_icon_hover.gif')}
+#arr-hidecol { position: absolute; top: 0; right: 6px; width: 20px; height: 21px; background: url('images/menu_left_icon2.gif') no-repeat; cursor: pointer; z-index: 20 }
+#arr-hidecol:hover { background-image: url('images/menu_left_icon_hover2.gif')}
+
+/* Flipview Resume */
+.ResumeFlip { background-color:rgba(0, 0, 0, 0.8); background: url('images/bg_transparent_60.png')\9; position: fixed; top: 0; width: 100%; height: 100%; display: none; z-index: 20 }
+.wrapperResumeFlip, .contentResume { float: left; width: 100% }
+.hcwrapper { width: 974px; margin: 0 auto }
+.topResume { height: 47px; background: url('images/ffheader.gif') repeat-x; margin-bottom: 1px }
+.topResume .FFLogo { float: left; padding-top: 7px }
+.topResume .resumefliptopbanner { width: 662px; padding: 7px 15px; text-align: center; float: left; color: #fff }
+.topResume .fflitYourSearch { font-size: 11px }
+.topResume .resumeFlipLnkBack { float: left; padding-top: 12px }
+.topResume .resumeFlipLnkBack a, .ResumeFlip .mytag a  { color: #fff }
+.topResume .resumeFlipLnkBack a img { padding-left: 3px; vertical-align: middle }
+.contentResume { position: relative }
+.contentResume .FFResume, .MassEmail .FFResume { width: 700px; float: left; background-color: #fff }
+.contentResume .titleBar, .MassEmail .titleBar { background: url("images/topbarbgwsh.png") repeat-x 0 0; height: 70px; float: left; width: 100% }
+.contentResume .titleBar #jb_pagination { float: right; clear: both; margin: 10px 15px 0 0 }
+.contentResume .resumeFlipCandidateName { float: left; padding-left: 15px; height: 40px; padding-top: 6px }
+.contentResume .resumeFlipCandidateName .status_view em { margin: 0 5px 0 0 }
+.contentResume .resumeFlipCandidateName #resumeFlipCandidateName { font-size: 16px; font-weight: bold }
+.contentResume .resumeFlipCandidateName span { color: #666; display: block; font-size: 11px; font-weight: normal; padding: 0 0 3px }
+.contentResume .infoBar { float: right; width: 275px }
+.contentResume .backToIndex { float: left; padding-top: 12px; font-weight: bold; color: #f79d25; font-size: 11px }
+.contentResume .FastFlipPages { float: right; color: #656565; font-weight: bold; font-size: 14px; padding-top: 5px; padding-right: 15px }
+.contentResume .resumeContainer { float: left; width: 689px; padding: 5px; position: relative }
+.flip_next, .flip_prev { position: absolute; width: 69px; height: 213px; cursor: pointer; top: 20%; background: url('images/arrow_right.png') no-repeat 0 0 }
+.flip_next { right: -70px }
+.flip_prev { left: -69px; background-position: 0 -228px }
+.contentResume .indexheader { padding-bottom: 15px; font-weight: bold; font-size: 16px }
+.contentResume .fastflipindex1 { font-weight: bold; border-bottom: 2px solid #666 }
+.contentResume .fastflipindex1 tr td { padding: 5px }
+.contentResume .bulkactions a { border-left: 1px solid #ccc; padding-left: 20px }
+.contentResume.ListResumeFlip .bulkactions a { border: none; padding-left: 10px }
+.contentResume .fastflipindex2 { border-bottom: 2px solid #666 }
+.contentResume .fastflipindex2 tr td { padding: 8px 5px; border-bottom: 1px solid #c0c0c0 }
+.contentResume .actionPanel, .ResumeFlip .mytag, .ResumeFlip .exclude { background-color: #1c315a }
+.contentResume .actionPanel { float: right; width: 140px }
+.contentResume .likePanel { background-color: #4a7547 }
+.contentResume .likePanel #like { text-transform: capitalize; font-weight: bold; color: #fff; padding: 10px 0 10px 20px; margin-left: 10px; background: url('images/ffthumbsup_on.gif') no-repeat left 7px }
+.contentResume .likePanel a { color: #fff; font-weight: bold; text-decoration: underline; display: block; text-align: right; padding-right: 10px; padding-bottom: 5px }
+.contentResume #actions { padding: 5px }
+.contentResume #actions li { padding: 4px }
+.contentResume #actions li a { color: #fff; padding-left: 20px }
+.contentResume #actions li.email a { background-position: 0 -77px }
+.contentResume #actions li.forward a { background-position: 0 -16px }
+.contentResume #actions li.save_to_folder a { background-position: 0 0 }
+.contentResume #actions li.rating a { background: url('images/icon_vlph_16x16.png') no-repeat left center }
+.contentResume #actions li.download a, .contentResume #actions li.addnewInterview a { background-position: 0 -63px }
+.contentResume #actions li.print a { background-position: 0 -31px }
+.contentResume #actions li.hide a { background-position: 0 -91px }
+.contentResume #actions li.report a { background-position: 0 -107px }
+.contentResume #actions li.profile a { background-position: 0 -91px }
+.contentResume #actions li.hide a { background-position: 0 -110px }
+.contentResume #actions li.letter a { background-position: 0 -140px }
+.contentResume #actions li.report a { background-position: 0 -157px }
+.ResumeInfo .profile_CV ul.block_info { width: 37%; margin-left: 2%; padding: 0 }
+.ResumeInfo .profile_CV ul.block_info li { width: 100%; margin-bottom: 7px; padding-bottom: 0 }
+.ResumeInfo .profile_CV ul.block_info label { width: 35%; margin-bottom: 0 }
+.ResumeInfo .profile_CV ul.block_info div { width: 65% }
+.ResumeFlip .buyService { width: 70% }
+.ResumeFlip .mytag { position: absolute; bottom: 20px; right: -141px; width: 130px; padding: 10px 10px 30px }
+.ResumeFlip .mytag a.add_tag { display: block }
+.ResumeFlip .mytag span a { color: #333 }
+.ResumeFlip .mytag h2, .ResumeFlip .exclude h2 { font-size: 14px; padding-bottom: 10px; color: #fff }
+.ResumeFlip .mytag ul { float: left; width: 100%; margin: 10px 0 5px }
+.ResumeFlip .mytag ul li { box-shadow: none; padding: 2px 15px 2px 25px; margin-bottom: 8px; position: relative; background-repeat: no-repeat; background-position: 5px 3px }
+.ResumeFlip .mytag ul li.tag_color1 { background-image: url('images/status_tags1.png') }
+.ResumeFlip .mytag ul li.tag_color2 { background-image: url('images/status_tags2.png') }
+.ResumeFlip .mytag ul li.tag_color3 { background-image: url('images/status_tags3.png') }
+.ResumeFlip .mytag ul li span { font-size: 10px }
+.ResumeFlip .mytag ul li a.close { background-position: -270px -85px; display: block; height: 5px; position: absolute; right: 3px; top: 4px; width: 5px }
+.ResumeFlip .mytag ul li a.close:hover { background-position: -270px -90px }
+.ResumeFlip .exclude { float: left; width: 134px; padding: 10px 5px; color: #fff }
+.ResumeFlip .exclude .list_status li { padding-bottom: 8px; float: left; width: 100% }
+.ResumeFlip .exclude .list_status li label { padding-bottom: 3px }
+.ResumeFlip .exclude .list_status li span, .ResumeFlip .ResumeInfo .CV_area { width: 100% }
+.ResumeFlip .exclude input { float: left }
+.ResumeFlip .exclude span { float: left; width: 105px; *padding-top: 5px; width: 100px\9 }
+.ResumeFlip .exclude label { clear: both; float: left; width: 100%; padding-bottom: 8px }
+.ResumeFlip .ResumeInfo, .ListResumeFlip .fastflipindex2 { overflow-y: scroll }
+.ResumeFlip .ResumeInfo .profile_CV { position: relative; float: left; width: 100%; margin-top: 0 }
+.ResumeFlip .ResumeInfo .profile_CV .cdanh { font-size: 13px; font-weight: bold }
+.ResumeFlip .ResumeInfo .profile_CV .avatar { float: left; height: 160px; width: 120px; overflow: hidden }
+.ResumeFlip .ResumeInfo .borframe { float: left; width: 100%; padding: 10px 0 20px }
+.ResumeFlip .CV_area ul.block_info { width: 100%; padding: 0 0 0 15px; margin: 0 }
+.ResumeFlip .bullet li { margin-bottom: 8px; padding-bottom: 0 }
+.ResumeFlip .CV_area ul.block02 li label { width: 150px }
+.ResumeFlip .label_gr { margin-top: 10px; padding-left: 2%; background-color: #287AB9; color: #fff; border-bottom: 0 }
+.ResumeFlip ul.data_experience li { float: left; width: 100%; margin-bottom: 10px }
+.ResumeFlip ul.data_experience div.col_left { float: left; width: 26%; margin-left: 2% }
+.ResumeFlip ul.data_experience div.col_right { float: left; width: 70%; margin-left: 2% }
+.ResumeFlip .address { clear: both; border-top: 1px solid #B6B8BB; padding-top: 6px }
+.ResumeFlip .address .area { float: left; width: 50% }
+.ResumeFlip .address .area h2 { font-size: 12px; font-weight: bold; padding-bottom: 5px }
+.ResumeFlip .address ul li { float: left; width: 100%; margin-bottom: 5px }
+.ResumeFlip .address ul li label { float: left; width: 70px; margin-bottom: 0; font-weight: normal }
+.ResumeFlip .address ul li span { float: left; width: 130px }
+.ResumeFlip .ResumeInfo .ResumeLock { float: left; width: 60%; margin-left: 15px }
+.ResumeFlip .CV_area ul.block_info li label { width: 170px; margin-bottom: 0 }
+.ResumeFlip .CV_area ul.block_info li div { width: 400px }
+.ResumeFlip .tabsTC { float: left; padding-left: 15px }
+.ResumeFlip .tabsTC a { color: #333; background-color: #f0f0f0; box-shadow: 1px 1px 0 #ddd; -moz-box-shadow: 1px 1px 0 #ddd; -webkit-box-shadow: 1px 1px 0 #ddd; display: inline-block; font-size: 12px; margin-bottom: 5px; margin-right: 5px; padding: 5px 10px }
+#contentResumeFlip .expiration_alert  { width: 575px!important }
+.ResumeFlip .content_fck { padding-left: 15px }
+.ListResumeFlip .FFResume { margin-left: 134px }
+.ListResumeFlip div.row { margin-bottom: 5px; width: 100% }
+.ListResumeFlip div.row label { display: inline-block; width: 85px }
+.ListResumeFlip .resume_info h4, .ListResumeFlip .resume_info p { padding-bottom: 5px }
+.ListResumeFlip .resume_info h4 a { float: left; padding-right: 5px }
+.ListResumeFlip .check_td { padding-left: 7px!important }
+.ListResumeFlip.contentResume .fastflipindex2 tr td { border-bottom: none }
+.ListResumeFlip .bulkactions strong { border-right: 1px solid #ddd; padding-right: 5px }
+.ListResumeFlip .fastflipindex2 { border-bottom: 0 }
+.ResumeDetailonCB .action_bar { float: left; width: 100%; padding: 5px 0; background-color: #fff }
+.ResumeDetailonCB .action_bar ul { padding: 0; margin: 0 }
+.ResumeDetailonCB .action_bar.up { border-bottom: 1px solid #ccc }
+.ResumeDetailonCB .avatar { float: left; height: 160px; overflow: hidden; width: 120px }
+.ResumeDetailonCB .profile_CV .cdanh { font-size: 13px; font-weight: bold; margin-bottom: 15px }
+.ResumeDetailonCB .buyService .top { padding-bottom: 0 }
+.ResumeDetailonCB .ResumeInfo .borframe { float: left; width: 100%; padding: 20px; background-color: #fff; margin: 20px 0 15px; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); box-shadow: 0 1px 2px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2) }
+.ResumeDetailonCB .CV_area ul.block_info { padding: 0 0 10px; margin-left: 2%; width: 48% }
+.ResumeDetailonCB .CV_area ul.block_info li { padding-bottom: 5px }
+.ResumeDetailonCB .CV_area ul.block_info li label { width: 150px; margin-bottom: 0 }
+.ResumeDetailonCB .CV_area ul.block_info li div { width: 300px }
+.ResumeDetailonCB ul.data_experience li { float: left; width: 100%; margin-bottom: 10px }
+.ResumeDetailonCB ul.data_experience div.col_left { float: left; width: 18%; margin-left: 2% }
+.ResumeDetailonCB ul.data_experience div.col_right { float: left; width: 78%; margin-left: 2% }
+.ResumeDetailonCB ul.data_experience div.col_right p { margin-top: 5px; line-height: normal }
+.ResumeDetailonCB .tabsTC { float: left; width: 100%; margin-bottom: 15px; padding-left: 2% }
+.ResumeDetailonCB .tabsTC span { float: left; padding-right: 10px; margin-top: 4px; font-size: 18px }
+.ResumeDetailonCB .tabsTC span.highlight { display: inline; float: none; font-size: 12px; padding: 0 } 
+.ResumeDetailonCB .tabsTC a { font-size: 12px; background-color: #f0f0f0; color: #333; float: left; padding: 5px 10px; margin: 0 5px 5px 0; box-shadow: 1px 1px 0 #ddd;	-moz-box-shadow: 1px 1px 0 #ddd; -webkit-box-shadow: 1px 1px 0 #ddd }
+.ResumeDetailonCB .tabsTC a:hover { text-decoration: none; color: #287AB9 }
+.ResumeDetailonCB p.objective { padding: 0 2% }
+ul.references li { float: left; width: 45%; padding-bottom: 12px; margin-left: 2% }
+
+/* Begin Bootstrap version */
+.breadcrumb { padding: 0 15px }
+.breadcrumb > li { font-size: 12px }
+.breadcrumb > li a { display: inline-block; line-height: 24px }
+#ats-header { height: 65px; background-color: #fff; font-family: Roboto }
+#ats-header .ats-container { width: 100%!important }
+#ats-header .columns { float: left; padding: 0 20px; position: relative; height: 65px; line-height: 65px }
+#ats-header #show-menu .fa { font-size: 14px; line-height: 65px }
+#ats-header .page-logo { float: left; padding: 0 0 0 15px; text-align: left }
+#ats-header .page-logo a { display: block; height: 65px }
+#ats-header .page-logo img { max-width: 200px; max-height: 50px; padding-top: 15px }
+#ats-header .page-top { float: right; padding-top: 15px }
+#ats-header .top-menu { padding: 15px 15px 0 0 }
+#ats-header .top-menu, .notifi-userinfo-area { float: right }
+#ats-header .top-menu .search-bar { float: right; width: 372px }
+#ats-header .top-menu .search-bar input.form-control { height: 34px }
+#ats-header .top-menu .search-bar .dropdown-menu > li > a { padding: 10px }
+#ats-header .top-menu .btn { border-width: 1px; border-style: solid }
+#ats-header .top-menu .search-panel ul.dropdown-menu { margin-top: -2px; border-radius: 0 }
+#ats-header .top-menu .search-panel ul li { font-size: 12px }
+#ats-header .top-menu .search-panel i.fa { font-size: 15px; color: #aaa }
+#ats-header .top-menu .search-panel .btn { padding: 7px 12px; background-color: #e6e6e6 }
+#ats-header .top-menu .search-panel .btn .caret { color: #aaa }
+#ats-header .top-menu .search-go .btn { padding: 10px 12px }
+#ats-header .top-menu .whatsnew { float: right; padding-top: 8px; margin-left: 10px }
+nav.ats-nav { clear: both; background-color: #287ab9; min-height: 45px; border-radius: 0; border: none 0; margin-bottom: 0; font-family: Roboto }
+nav.ats-nav .container-fluid { width: 100%!important; padding: 0 15px }
+nav.ats-nav .navbar-collapse { padding: 0 }
+nav.ats-nav .fa { min-width: 20px; font-size: 14px }
+nav.ats-nav .icon a .fa { min-width: auto; line-height: 45px; font-size: 15px }
+nav.ats-nav img.u-bu { margin: -2px 5px 0 0 }
+nav.ats-nav .hrcb a { background: url('images/i-cb-white.png') center center no-repeat; width: 40px; display: block }
+nav.ats-nav .ts-logo { float: right }
+nav.ats-nav .ts-logo a { background: url('../images/logoTS_white.png') 0 15px no-repeat; min-width: 163px; line-height: 45px; display: block; text-indent: -9999em }
+nav.ats-nav a { font-size: 13px }
+nav.ats-nav .navbar-nav > li > a { color: #fff; padding: 0 12px; line-height: 45px; display: inline-block }
+nav.ats-nav .navbar-nav > li > a:hover, nav.ats-nav .navbar-nav > li > a:focus, nav.ats-nav .navbar-nav > .active > a, nav.ats-nav .navbar-nav > .active > a:hover, nav.ats-nav .navbar-nav > .active > a:focus { color: #fff; background-color: #1e5c8b; font-weight: normal }
+nav.ats-nav .navbar-nav > .open > a, nav.ats-nav .navbar-nav > .open > a:hover, nav.ats-nav .navbar-nav > .open > a:focus { color: #fff; background-color: #1e5c8b; font-weight: normal }
+nav.ats-nav .navbar-nav > li > .dropdown-menu { background-color: #1e5c8b; border: 0; min-width: 215px }
+nav.ats-nav .dropdown-menu > li > a { display: block; color: rgba(255, 255, 255, 0.8); padding: 8px 15px }
+nav.ats-nav .dropdown-menu > li > a:hover, nav.ats-nav .dropdown-menu > li > a:focus { text-decoration: none; background: none; color: rgba(255, 255, 255, 1) }
+.notifi-userinfo-area { margin-left: 10px }
+.notifi-userinfo-area .user-info { float: right; margin-bottom: 0; margin-left: 20px }
+.notifi-userinfo-area .s1 { margin-top: -5px }
+.user-info .notifications { float: left; position: relative }
+.notifications a.dropdown-toggle i { font-size: 18px }
+.notifications a.dropdown-toggle { color: #737881; display: block; padding: 10px; position: relative }
+.notifications a.dropdown-toggle:hover, .profile-info.open a.dropdown-toggle, #header-menu-mobile .profile-info.open a.dropdown-toggle { background-color: #287ab9; color: #fff; text-decoration: none }
+.notifications .badge { font-size: 11px; line-height: normal; font-weight: normal; padding: 1px 3px; position: absolute; right: 6px; top: 4px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; text-shadow: 0 -1px 0 rgba(0, 0, 0, .4); color: #fff }
+.badge.badge-secondary { background-color: #dc0d17; background-image: -webkit-linear-gradient(#fa3c45, #dc0d17); background-image: linear-gradient(#fa3c45, #dc0d17) }
+.notifi-container { float: left; width: 590px; background-color: #fff; padding: 0; margin: 0; top: 37px; right: 0; left: auto }
+.notifi-container h3 { font-size: 12px; padding: 10px 15px; margin: 0; font-weight: bold }
+.notifi-container h3 a { float: right; font-weight: normal }
+.notifi-container ul { padding: 0; height: 262px; overflow-y: auto }
+.notifi-container ul li { border-top: solid 1px #e4eaec; font-size: 12px; padding: 0 }
+.notifi-container .txtinfo, .notifi-container .datepost, .notifi-container .xclose { padding: 10px 15px }
+.notifi-container .datepost { font-weight: normal; color: #999; text-align: right; padding-right: 0 !important }
+.notifi-container .xclose { text-align: right }
+.notifi-container .xclose a { font-size: 14px; color: #cdcdcd; display: block; padding-top: 1px }
+.notifi-container .xclose a:hover { color: #838383 }
+.profile-info.dropdown.pull-right .dropdown-menu { background-color: #fff; margin-top: 0; padding: 0; text-align: left; border-radius: 0 }
+.profile-info.dropdown .dropdown-menu > li { border-bottom: 1px solid #e4eaec }
+.profile-info.dropdown .dropdown-menu li { color: #aaabae; font-size: 12px; padding: 0 }
+.profile-info.dropdown .dropdown-menu > li > a { display: block; min-width: 170px }
+.profile-info.dropdown .dropdown-menu li a { color: #000; padding: 10px; transition: all 300ms ease-in-out 0s }
+.profile-info.dropdown .dropdown-menu li i.fa { font-size: 13px }
+.profile-info a.dropdown-toggle { display: block; padding: 5px 10px; color: #000; max-width: 170px }
+.profile-info img { width: 35px; height: 35px; margin-right: 5px }
+.profile-info.dropdown.pull-right .dropdown-menu.dropdown-submenu { left: -170px; top: 0 }
+
+#ats-main-content .page-header { margin: 0 0 15px; padding-bottom: 0; border: none 0 }
+.ats-homepage .col-md-3, .ats-homepage .col-md-7, .ats-homepage .col-md-5 { padding: 10px }
+.ats-homepage { padding-top: 10px }
+.ats-homepage .ds-highlight { padding: 15px 20px; max-height: 120px; float: left; width: 100%; background-position: right bottom; background-repeat: no-repeat }
+.ats-homepage .highlight-1 { background-image: url('images/icon1_12.png'); background-color: #009b74 }
+.ats-homepage .highlight-2 { background-image: url('images/icon2_09.png'); background-color: #09a0db }
+.ats-homepage .highlight-3 { background-image: url('images/icon3_03.png'); background-color: #e78523 }
+.ats-homepage .highlight-4 { background-image: url('images/icon4_06.png'); background-color: #1e5c8b }
+.ats-homepage .ds-highlight h3 { font-size: 14px; color: #fff; margin-top: 0; padding-bottom: 10px }
+.ats-homepage .ds-highlight ul { padding-left: 0; color: #fff; float: left; width: 100%; margin-bottom: 0 }
+.ats-homepage .ds-highlight ul li { float: left; width: 100%; padding-bottom: 5px }
+.ats-homepage .ds-highlight ul li span { float: left; font-size: 12px }
+.ats-homepage .ds-highlight ul li b { font-size: 15px; text-align: right; float: right }
+.panel-table, .newshadow { -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1) }
+.panel-table { padding: 15px 20px; margin: 0; border: 0px !important }
+.panel-table .panel-title h3 { font-size: 14px; font-weight: bold }
+.panel-table .panel-body { padding: 0; margin: 0 }
+.panel-job-requisition ul, .panel-job-postings ul { margin-bottom: 10px }
+.nav-pills > li + li { padding-left: 10px; border-right: none; margin-left: 0 }
+.nav-pills > li > a:hover { background: none; text-decoration: underline }
+.table-fixed thead { width: 97% }
+.table-fixed thead, .table-fixed tbody { display: block }
+.table-fixed tr { float: left; width: 100% }
+.table-fixed tbody td, .table-fixed thead > tr> th { float: left; border-bottom-width: 0 }
+.table-fixed thead > tr > th, .panel-topmember .col-label { color: #727272 }
+.table-fixed tr:hover { background-color: #f4f6f7 }
+.table a.location { color: #000; font-size: 11px }
+.table .creater { font-size: 11px }
+.panel-job-requisition, .panel-calendar, .panel-job-postings, .panel-posting-channel, .panel-topmember { min-height: 340px; max-height: 340px }
+.panel-candidate-status, .panel-activity-stream, .panel-candidate-sources { min-height: 360px; max-height: 360px }
+.panel-job-requisition .table-fixed tbody { overflow-y: auto; width: 100%; height: 165px }
+.panel-calendar .table-fixed tbody { overflow-y: auto; width: 100%; height: 202px }
+.panel-topmember .panel-title, .panel-candidate-status, .panel-activity-stream { position: relative }
+.panel-topmember .col-xs-12, .panel-posting-channel .col-xs-12 { padding: 0 }
+.panel-topmember .col-xs-12.item { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid #ddd }
+.panel-topmember .col-xs-12.item:last-child { padding: 0; margin: 0; border: 0 }
+.panel-topmember ul, .panel-candidate-status table { margin-bottom: 0 }
+.panel-topmember ul li.col-xs-12 { padding: 6px 0 }
+.panel-topmember .col-md-3 { padding: 0 5px }
+.panel-job-postings .table-fixed tbody { overflow-y: auto; width: 100%; height: 163px }
+.panel-job-requisition p, .panel-job-postings p { margin: 0 0 5px }
+.panel-job-requisition table tr td img, .job-postings table tr td img { float: left }
+.panel-job-requisition table tr td span, .job-postings table tr td span { float: left; margin-left: 5px }
+.panel-job-requisition td.col-xs-4 span { width: 87% }
+.btn-primary { background-color: #f79c25; border: none }
+.btn-primary:hover { background-color: #e28204 }
+.btn { font-size: 12px; padding: 4px 16px }
+.panel-posting-channel ul { padding-top: 30px }
+.panel-posting-channel li { margin-bottom: 20px }
+.panel-posting-channel .title { float: left; padding: 0 10px 0 0; text-align: right; color: #727272 }
+.progress { height: 24px; background-color: transparent; border-radius: 0px; -webkit-box-shadow: none; box-shadow: none; margin-bottom: 0 }
+.progress .skill { line-height: 24px; padding: 0; margin: 0 0 0 20px; text-transform: uppercase }
+.progress .skill .val { float: right; font-style: normal; margin: 0 20px 0 0; margin: 0 -15px 0 0; color: #333 }
+.progress-bar { text-align: left; transition-duration: 3s; background-color: #f79c25 }
+.panel-candidate-status .form-inline, .panel-activity-stream .form-inline { position: absolute; right: 20px; top: 15px }
+.panel-candidate-status .form-control, .panel-activity-stream .form-control { height: 23px; padding: 2px 6px; font-size: 11px; border-radius: 0; max-width: 250px }
+.panel-candidate-status .form-inline .form-group label, .panel-activity-stream .form-inline .form-group label { margin-right: 10px; font-weight: normal }
+.panel-candidate-status .table-fixed tbody { overflow-y: auto; width: 100%; height: 245px }
+#chart_div { position: absolute; top: 55px }
+#chart_div tspan { font-weight: normal!important; font-size: 12px }
+.highcharts-text-outline { stroke-width: 0; font-size: 12px }
+.panel-activity-stream ul { padding-left: 0; list-style: none; overflow-y: auto; height: 105px; margin-bottom: 0; margin-top: 10px }
+.panel-activity-stream ul li { padding: 0 0 10px }
+.panel-activity-stream ul li i { font-size: 15px; color: #abbac5; text-align: left }
+.panel-activity-stream ul li span.icon { margin-right: 5px }
+.panel-activity-stream .log-time { float: right; font-style: italic; color: #999; padding: 0 10px; text-align: right }
+.panel-activity-stream, .panel-support-info { min-height: 187px }
+.panel-support-info ul { padding-left: 0; list-style: none; margin-bottom: 0 }
+.panel-support-info ul li { padding-bottom: 5px }
+
+/*Menu for Mobile*/
+html.header-medium-screen-menu-displayed { overflow: hidden; position: fixed; width: 100% }
+.header-medium-screen-menu-displayed body { left: 290px }
+#header-menu-mobile a { color: #000 }
+#header-menu-mobile { background: white; border-right: 1px solid #dfdada; left: -290px; position: absolute; top: 0; width: 290px; height: 100%; overflow-x: auto }
+#header-menu-mobile .c1 { float: left; padding: 20px 15px }
+#header-menu-greeting { float: left; width: 100%; padding: 30px 0 30px }
+#header-menu-greeting .col-xs-12 { padding: 0 }
+#header-menu-greeting h2, #header-menu-greeting h3 { color: #182642; margin-bottom: 8px; font-weight: normal; font-size: 18px }
+#header-menu-links, #header-menu-links ul { float: left; width: 100% }
+#header-menu-links { padding-top: 20px }
+#header-menu-links ul li { float: left; width: 100%; padding: 10px 0 }
+#header-menu-mobile #header-menu-authentication-links { display: none }
+#header-menu-authentication-links { border-bottom: 1px solid #dfdada; margin-bottom: 0.5rem; padding-bottom: 0.5rem }
+#header-menu-authentication-links .col-xs-6 { width: 50%; margin: 0; padding: 0 10px  }
+#header-menu-links .btn { border: 2px solid #182642; font-size: 14px; font-weight: bold; color: #182642; display: inline-block; margin-bottom: 0.625rem; text-align: center; transition: background-color 300ms ease-out 0s; width: 100%;  padding: 8px 20px; line-height: 1.42857143; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border-radius: 3px; outline: none }
+#header-menu-links .btn:hover { color: #fff; text-decoration: none; border-color: #da251c }
+#header-menu-links ul.submenu li { padding-left: 20px }
+#header-menu-links ul.submenu li:last-child { padding-bottom: 0 }
+
+@media only screen and (max-width: 1279px) {	
+	html { -webkit-text-size-adjust: none }
+	#ats-header .hidden { display: block!important }
+	#ats-header #show-menu { height: 65px }
+	#header-menu-greeting { border-bottom: 1px solid #dfdada }
+	#ats-header .top-menu .search-bar, nav.ats-nav { display: none }
+}
+@media only screen and (max-width: 1024px) {	
+	#ats-header .top-menu { width: 72% }
+	#TNlogo { margin-top: 10px }
+	#TNlogo img { width: 100px }
+	.AccountActive { width: 212px; padding: 5px }
+	.ShowData .ResumeSearch .containerData div.row label, .ShowData .MemberSearch .containerData div.row label { padding-right: 5px }
+	.HomeCoreCompany .ResumeSearch .input_long, .HomeCoreCompany .MemberSearch .input_long { width: 200px }
+	.HomeCoreCompany .ResumeSearch .select_long, .HomeCoreCompany .MemberSearch .select_long { width: 212px }
+	.ResumeSearch .date_month, .MemberSearch .date_month { width: 58px }
+	.ResumeSearch .form, .MemberSearch .form { width: auto }
+	#currentDay { font-size: 9px }
+	#currentDate { font-size: 52px }
+	#minicalendar .ui-datepicker { width: 14em }
+	.AccountActive p span.Statistic { font-size: 12px }
+    .MenuTopCtr ul li { padding-left: 20px }
+	.SelectActive { left: 5px }
+}
+@media only screen and (max-width: 973px) {	
+	#main-content { float: left; width: 100% }
+	.LeftPanel { display: none }
+	.RightPanel { float: none; margin: 0 auto; border-left: none }
+	.RightPanel .ShowData .mainFilter { width: 100%; padding-left: 0 }
+	.RightPanel .cb-createresume .saveBtn { clear: both; padding: 0 0 30px 0; width: 200px; margin: 0 auto }
+	.RightPanel .cb-createresume .saveBtn input { padding-left: 0; padding-right: 0; width: 100% }
+}
+@media only screen and (max-width: 800px) {	
+	.notifi-container { width: 475px }
+	#ats-header .top-menu .whatsnew { display: none }
+	.RightPanel, .RightPanel .ShowData, .RightPanel .EditRecommendJob .form .row, .creResume { width: 100% }
+	.RightPanel .ShowData .containerData { width: 100%; padding-left: 0 }
+	.creResume .bystep { width: 70%; padding-left: 30% }
+}
+@media only screen and (max-width: 768px) {	
+	#ats-header .page-logo { width: 25% }
+	#ats-header .top-menu { width: 55% }
+	.RightPanel .cb-myprofile .my_avatar, .RightPanel  .cb-createresume .my_avatar { right: 1% }
+	.RightPanel .ShowData .containerData div.row label.width_160 { width: 25%; padding-right: 5% }
+	.RightPanel .ShowData .containerData div.width_500 { width: 70% }
+	.RightPanel .ShowData .containerData .cb-createresume fieldset .label_1 { width: 25%; padding-right: 5% }
+	.RightPanel .ShowData .containerData .cb-createresume fieldset .width_383 { width: 70% }
+	.RightPanel .cb-createresume .sumcharacter { width: 100%; background: none; border: none; padding: 0 0 10px 0 }
+	.RightPanel .ShowData .containerData .cb-createresume select[name="language[]"] { margin-bottom: 10px }
+	.cb-createresume fieldset, .cb-createRequisition fieldset { width: 96% }
+	.cb-createresume input.width_500, #strJkAddCur, .RightPanel .ShowData .containerData .cb-createresume input[name="last_company"] { width: 98% }
+	.cb-createresume select.width_202, select.chosen_multiple, select.chosen_multiple_new, select.required { width: 100% }
+	.cb-recommendjob select.chosen_multiple, .cb-recommendjob select.chosen { width: 99%!important }
+	
+}
+@media only screen and (max-width: 767px) {	
+	.notifi-container .datepost { padding: 0 15px 10px; text-align: left }
+	.notifi-container .xclose { display: none }
+	.EditRecommendJob .chosen-container-multi .chosen-choices { background: none }
+	.cb-viewresume .my_avatar { position: static; margin: 0 auto }
+	.cb-viewresume .profile_CV { float: left; width: 100%; padding-left: 0; padding-top: 30px }
+	.RightPanel .ShowData .containerData .cb-viewresume div.row label.width_160 { width: 50%; padding-right: 5% }
+	.RightPanel .ShowData .containerData .cb-viewresume div.width_500 { width: 45% }
+	.cb-viewresume .profile_CV { font-size: 12px }
+}
+@media only screen and (max-width: 700px) {	
+	#ats-header .page-logo { width: 94%; padding: 0; text-align: center }
+	#ats-header .top-menu { display: none }
+	.EditRecommendJob .jobtitle { width: 98% }
+	.EditRecommendJob, .EditRecommendJob .col { width: 100% }
+	.EditRecommendJob .col { margin-bottom: 10px }
+}
+@media only screen and (max-width: 640px) {
+	#ats-header .page-logo { width: 93% }
+	#header-menu-greeting { border-bottom: 0 }
+	#header-menu-mobile #header-menu-authentication-links { display: block }
+	.flocation, .fdistrict, .EditRecommendJob{ width: 100% }
+	.fdistrict { padding-left: 0!important; margin-top: 10px }
+	.creResume .bystep { width: 100%; padding-left: 0; background: none }
+}
+@media only screen and (max-width: 558px) {
+	#ats-header .page-logo { width: 91% }
+	.RightPanel .form .row { margin-bottom: 15px }
+	.RightPanel .ShowData .containerData div.row label.width_160, .RightPanel .ShowData .containerData .cb-createresume fieldset .label_1 { text-align: left; padding-right: 0; padding-bottom: 5px  }
+	.RightPanel .ShowData .containerData div.row label.width_160, .RightPanel .ShowData .containerData div.width_500 { float: left; width: 100% }
+	.RightPanel .ShowData .containerData .cb-createresume fieldset.PrimaryAddress .label_1, .MyResume table.tblJob tr td:nth-child(2), .Appli_History table.tblJob tr td:nth-child(2), .cb-myprofile #frmSubcription label.width_160 { display: none }
+	.RightPanel .cb-createresume fieldset { padding-bottom: 0 }
+	.RightPanel .ShowData .containerData .cb-createresume .m-gender .width_500 label, .RightPanel .ShowData .containerData .cb-createresume .m-marital .width_500 label { padding-right: 30px }
+	#strJkAddCur { padding-left: 0; padding-right: 0 }
+	.cb-myprofile select { width: 100% }
+	.cb-myprofile #frmChangePass input.input_long, .cb-myprofile #frmChangeEmail input.input_long,  .cb-myprofile input[name="mobile"] { width: 98% }
+	.cb-myprofile a.link_preference { clear: both; float: left; margin-top: 10px }
+}
+@media only screen and (max-width: 480px) {
+	#ats-header .page-logo { width: 80% }
+}
+@media only screen and (max-width: 375px) {
+	#span_y0exp { margin-left: 0; margin-top: 10px }
+	.RightPanel .ShowData .containerData .cb-viewresume div.row label.width_160, .cb-viewresume .profile_CV ul.block01 li label { width: 100%; padding-right: 0 }
+	.RightPanel .ShowData .containerData .cb-viewresume div.width_500 { width: 100% }
+	.cb-viewresume .profile_CV ul.block01 li > div { width: 100%; padding-left: 0 }
+}
+@media only screen and (max-width: 360px) {
+	.RightPanel .label_gr { width: 96%; padding: 0 2% }
+	.RightPanel .cb-createresume fieldset { width: 92% }
+	.cb-createresume select { min-width: none }
+}
+@media only screen and (max-width: 320px) {
+
+}
+
+.datemonth { background: #fff url("images/i-calendar.gif") no-repeat right; border: 1px solid #7F9DB9; height: 15px; line-height: 15px }
+.frontend_clients .cb-createresume .birth .date_month { background-position: 84px 4px }
+.frontend_clients .cb-myprofile .birth .date_month { background-position: 80px 4px }
+.frontend_clients .RightPanel .ShowData input[type="radio"], .frontend_clients .RightPanel .ShowData input[type="checkbox"] { margin: -1px 5px 0 0!important } 
+.frontend_clients .RightPanel .ShowData .rightheader { float: right }

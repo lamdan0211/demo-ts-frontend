@@ -1,0 +1,530 @@
+---
+alwaysApply: false
+---
+
+# 🎯 **GENERAL RULES: Smarty to Next.js Migration Project Standards**
+
+
+## 📋 **RULE #1: PRE-IMPLEMENTATION ANALYSIS (MANDATORY)**
+
+### **Before writing ANY code:**
+```bash
+# ✅ STEP 1: Read project structure
+1. Analyze existing similar components in /components/jobseekers/
+2. Check /types/jobseekers/ for existing interfaces
+3. Review /hooks/jobseekers/ for reusable hooks
+4. Examine /libs/api/jobseekers/ for API patterns
+5. Study /styles/jobseekers/ for CSS organization
+```
+
+### **Component Analysis Checklist:**
+- [ ] **Interactive elements** → Client Component required
+- [ ] **Static content only** → Server Component sufficient
+- [ ] **Data fetching needs** → SWR hook required
+- [ ] **Multi-selection** → useMultiSelect integration
+- [ ] **Pagination** → UIPagination integration
+- [ ] **User actions** → Dialog components needed
+
+## 🏗️ **RULE #2: ARCHITECTURE DECISION MATRIX**
+
+### **Server Component (page.tsx) - Use when:**
+- Static content rendering
+- SEO-critical pages
+- Layout and meta data
+- Initial data fetching
+- **NEVER**: Interactive functionality, hooks, event handlers
+
+### **Client Component - Use when:**
+- Form interactions
+- Checkboxes, buttons with onClick
+- State management (useState, useEffect)
+- Real-time updates
+- User feedback dialogs
+
+### **Hybrid Pattern (RECOMMENDED):**
+```typescript
+// ✅ Server Component (page.tsx)
+export default async function FeaturePage() {
+  const t = await getTranslations();
+  // Layout + metadata only
+  return (
+    <FeatureWrapper>
+      <ClientFeatureComponent />
+    </FeatureWrapper>
+  );
+}
+
+// ✅ Client Component (separate file)
+'use client';
+export default function ClientFeatureComponent() {
+  // All interactive functionality
+}
+```
+
+## 📁 **RULE #3: UNIVERSAL FILE STRUCTURE**
+
+### **Mandatory Structure for ANY feature:**
+```
+src/
+├── app/[locale]/(jobseekers)/path/to/feature/
+│   └── page.tsx                           // Server Component only
+├── components/jobseekers/dashboard/feature-name/
+│   ├── MainComponent.tsx                  // Primary Client Component
+│   ├── SubComponent1.tsx                  // Feature sub-components
+│   └── utils.ts                          // Feature-specific utilities
+├── hooks/jobseekers/feature-name/
+│   ├── useGetFeatureData.tsx             // Data fetching
+│   ├── useFeatureActions.tsx             // CRUD operations
+│   └── useFeatureState.tsx               // Complex state logic
+├── libs/api/jobseekers/feature-name/
+│   └── index.ts                          // API class
+├── types/jobseekers/feature-name/
+│   └── index.ts                          // TypeScript interfaces
+└── styles/jobseekers/feature-name/
+    └── feature.css                       // Feature-specific CSS
+```
+
+### **Naming Convention Rules:**
+- **Folders**: `kebab-case` (feedback-employer, job-application)
+- **Components**: `PascalCase.tsx` (FeedbackTable.tsx)
+- **Hooks**: `camelCase.tsx` (useGetFeedback.tsx)
+- **Types**: `interface PascalCase`
+- **CSS**: `kebab-case.css`
+
+## 🔌 **RULE #4: DATA INTEGRATION PATTERNS**
+
+### **SWR Hook Template (MANDATORY):**
+```typescript
+// /hooks/jobseekers/{feature}/useGet{Feature}.tsx
+import useSWR from 'swr';
+import { JOBSEEKER_SWR_KEYS } from '@/constants/swr-keys/jobseekers';
+import { FeatureApi } from '@/libs/api/jobseekers/{feature}';
+
+export const useGetFeature = (params?: any) => {
+  const { data, error, isLoading, mutate } = useSWR(
+    [JOBSEEKER_SWR_KEYS.GET_FEATURE, params],
+    () => FeatureApi.getData(params),
+    {
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+    }
+  );
+  
+  return { data, isLoading, isError: !!error, error, mutate };
+};
+```
+
+### **API Class Template (MANDATORY):**
+```typescript
+// /libs/api/jobseekers/{feature}/index.ts
+import { ApiResponse } from '@/types/jobseekers/api';
+import { axiosInternal } from '@/libs/axios/axios';
+
+export class FeatureApi {
+  static getData = async (params: any): Promise<ApiResponse<DataType[]>> => {
+    try {
+      const res = await axiosInternal.get('/api/endpoint', { params });
+      return res.data;
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  static createItem = async (data: CreateType): Promise<ApiResponse<DataType>> => {
+    try {
+      const res = await axiosInternal.post('/api/endpoint', data);
+      return res.data;
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  static updateItem = async (id: string, data: UpdateType): Promise<ApiResponse<DataType>> => {
+    try {
+      const res = await axiosInternal.put(`/api/endpoint/${id}`, data);
+      return res.data;
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  static deleteItem = async (id: string): Promise<ApiResponse<void>> => {
+    try {
+      const res = await axiosInternal.delete(`/api/endpoint/${id}`);
+      return res.data;
+    } catch (error) {
+      throw error;
+    }
+  };
+}
+```
+
+## 🎮 **RULE #5: STATE MANAGEMENT STANDARDS**
+
+### **Multi-Selection (Checkboxes):**
+```typescript
+// ✅ ALWAYS use existing hook
+import { useMultiSelect } from '@/hooks/share/useMultiSelect';
+
+const itemIds = data?.map(item => hexID(parseInt(item.ID))) || [];
+const {
+  selectedItems,
+  handleCheckSingle,
+  handleCheckAll,
+  clearCheck,
+  isEmpty,
+  isAllChecked
+} = useMultiSelect(itemIds);
+```
+
+### **URL State Management:**
+```typescript
+// ✅ ALWAYS sync with URL for navigation states
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
+
+const searchParams = useSearchParams();
+const router = useRouter();
+const pathname = usePathname();
+
+// Get params
+const page = searchParams.get('page') || '1';
+const filter = searchParams.get('filter') || '';
+
+// Update params
+const updateParams = (key: string, value: string) => {
+  const params = new URLSearchParams(searchParams);
+  if (value) {
+    params.set(key, value);
+  } else {
+    params.delete(key);
+  }
+  router.push(`${pathname}?${params.toString()}`);
+};
+```
+
+### **Form State:**
+```typescript
+// ✅ Use react-hook-form for complex forms
+import { useForm } from 'react-hook-form';
+
+interface FormData {
+  // Form fields
+}
+
+export default function FormComponent() {
+  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+  
+  const onSubmit = async (data: FormData) => {
+    // Form submission logic
+  };
+}
+```
+
+## 🎨 **RULE #6: UI COMPONENT INTEGRATION**
+
+### **Loading States (MANDATORY):**
+```typescript
+// ✅ Tables
+{isLoading ? (
+  <SkeletonTable rows={5} columns={3} />
+) : (
+  <ActualTable />
+)}
+
+// ✅ Lists
+{isLoading ? (
+  <SkeletonList items={5} />
+) : (
+  <ActualList />
+)}
+
+// ✅ Cards
+{isLoading ? (
+  <SkeletonCard />
+) : (
+  <ActualCard />
+)}
+```
+
+### **Pagination (MANDATORY):**
+```typescript
+import { UIPagination, createPageObject } from '@/components/UI/pagination/UIPagination';
+
+// Create page object
+const pageObject = createPageObject(
+  totalItems,
+  itemsPerPage,
+  currentPage
+);
+
+// Render pagination
+<UIPagination
+  pageObject={pageObject}
+  basePath={`/${locale}/feature/path`}
+  mapKeys={{ page: 'page' }}
+  showFirstLastNav={true}
+/>
+```
+
+### **Dialogs (MANDATORY for actions):**
+```typescript
+import { ConfirmationDialog } from '@/components/UI/dialog/notice/ConfirmDialog';
+import { NoticeDialog } from '@/components/UI/dialog/notice/NoticeDialog';
+
+// State management
+const [openConfirm, setOpenConfirm] = useState(false);
+const [openNotice, setOpenNotice] = useState(false);
+const [message, setMessage] = useState('');
+
+// Confirmation dialog
+<ConfirmationDialog 
+  open={openConfirm}
+  onClose={() => setOpenConfirm(false)}
+  onConfirm={handleConfirm}
+  loading={isProcessing}
+  title={t('confirm_title')}
+  message={message}
+/>
+
+// Notice dialog
+<NoticeDialog 
+  open={openNotice}
+  onClose={() => setOpenNotice(false)}
+  message={message}
+/>
+```
+
+## 🔧 **RULE #7: UTILITY INTEGRATION**
+
+### **Required Utility Imports:**
+```typescript
+// ✅ ALWAYS import from /utils
+import { 
+  hexID,           // ID conversion
+  createJobUrl,    // URL slug creation  
+  bitToArray,      // Contact visibility
+  formatMoney,     // Money formatting
+  createTitleUrl   // Title to URL
+} from '@/utils';
+```
+
+### **Image Handling Standard:**
+```typescript
+import Image from 'next/image';
+import DefaultImage from '@/assets/img/jobseekers/default-image.png';
+
+// ✅ ALWAYS with fallback
+<Image 
+  src={item.imageUrl || DefaultImage} 
+  alt={item.title || 'Default alt'} 
+  width={requiredWidth}
+  height={requiredHeight}
+  priority={false}
+/>
+```
+
+### **Contact Visibility Logic:**
+```typescript
+// ✅ STANDARD pattern for contact bits
+const contactBits = bitToArray(item.CONTACT_HIDE || '00000000') || [];
+const contactBitsMap: Record<number, string> = {};
+contactBits.forEach((bit, index) => {
+  contactBitsMap[index + 1] = bit;
+});
+
+const isContactHidden = contactBitsMap[1] === '1' || contactBitsMap[2] === '1';
+const isClientHidden = contactBitsMap[7] === '1';
+
+// Display logic
+let displayName = item.NAME;
+if (isContactHidden) {
+  displayName = isClientHidden 
+    ? t('common_hide_infomation_client')
+    : t('common_hide_contact');
+}
+```
+
+## 📝 **RULE #8: TYPESCRIPT STANDARDS**
+
+### **Interface Definition Rules:**
+```typescript
+// ✅ /types/jobseekers/{feature}/index.ts
+export interface MainDataInterface {
+  ID: string;                    // ALWAYS string for IDs
+  NAME: string;
+  CREATED_DATE: string;          // ISO date strings
+  STATUS: number;                // Status as numbers
+  // Use EXACT backend field names
+}
+
+export interface CreateInterface {
+  name: string;
+  // Only fields needed for creation
+}
+
+export interface UpdateInterface extends Partial<CreateInterface> {
+  id: string;
+  // Only updatable fields
+}
+
+export interface ApiResponseInterface extends ApiResponse<MainDataInterface[]> {
+  metadata?: {
+    itemCount: number;
+    totalPages: number;
+    currentPage: number;
+  };
+}
+```
+
+### **Component Props Interface:**
+```typescript
+interface ComponentProps {
+  data?: MainDataInterface[];
+  isLoading?: boolean;
+  onAction?: (id: string) => void;
+  // Optional props with defaults
+}
+
+export default function Component({ 
+  data = [], 
+  isLoading = false,
+  onAction 
+}: ComponentProps) {
+  // Component logic
+}
+```
+
+## 🌐 **RULE #9: TRANSLATION INTEGRATION**
+
+### **Translation Patterns:**
+```typescript
+// ✅ Client components
+import { useTranslations, useLocale } from 'next-intl';
+const t = useTranslations();
+const locale = useLocale();
+
+// ✅ Server components  
+import { getTranslations, getLocale } from 'next-intl/server';
+const t = await getTranslations();
+const locale = await getLocale();
+
+// ✅ Text content
+{t('translation_key')}
+
+// ✅ HTML content
+import parse from 'html-react-parser';
+{parse(t.raw('key_with_html'))}
+
+// ✅ Dynamic content
+{t('welcome_message', { name: user.name })}
+```
+
+### **Locale-specific Logic:**
+```typescript
+// ✅ URL generation with locale
+const generateUrl = (path: string) => `/${locale}${path}`;
+
+// ✅ Conditional content by locale
+{locale === 'vi' ? 'Vietnamese content' : 'English content'}
+```
+
+## 🚨 **RULE #10: ERROR HANDLING & USER FEEDBACK**
+
+### **Standard Error Handling:**
+```typescript
+const executeAction = async (actionData: any) => {
+  setIsProcessing(true);
+  try {
+    await FeatureApi.performAction(actionData);
+    
+    // ✅ Refresh data
+    mutate(JOBSEEKER_SWR_KEYS.GET_FEATURE_DATA);
+    
+    // ✅ Success feedback
+    setOpenNotice(true);
+    setMessage(t('action_success_message'));
+    
+  } catch (error: any) {
+    // ✅ Error feedback
+    setOpenNotice(true);
+    setMessage(error?.message || t('action_error_message'));
+    
+  } finally {
+    setIsProcessing(false);
+  }
+};
+```
+
+### **Loading State Management:**
+```typescript
+// ✅ Global loading states
+const [isProcessing, setIsProcessing] = useState(false);
+const [isDeleting, setIsDeleting] = useState(false);
+const [isCreating, setIsCreating] = useState(false);
+
+// ✅ Disable interactions during loading
+<button 
+  onClick={handleAction}
+  disabled={isProcessing}
+>
+  {isProcessing ? t('processing') : t('action_button')}
+</button>
+```
+
+## 🎯 **RULE #11: SMARTY CONVERSION PATTERNS**
+
+### **Variable Conversion Map:**
+```typescript
+// Smarty → TypeScript
+{$variable}                    → data?.variable
+{$array|count}                → array?.length || 0
+{$array|@count > 0}           → array && array.length > 0
+{if $condition}...{/if}       → {condition && (...)}
+{foreach $array as $item}     → array?.map((item, index) => (...))
+{$smarty.const.CONSTANT}      → CONSTANT (import from constants)
+{$item.FIELD|escape}          → item.FIELD (auto-escaped in React)
+{$item.FIELD|nl2br}           → item.FIELD?.replace(/\n/g, '<br>')
+```
+
+### **Template Structure Conversion:**
+```typescript
+// ✅ Preserve HTML structure exactly
+// Smarty:
+<div class="widget widget-10">
+  <div class="widget-head">
+    <h3>{$title}</h3>
+  </div>
+</div>
+
+// React:
+<div className="widget widget-10">
+  <div className="widget-head">
+    <h3>{title}</h3>
+  </div>
+</div>
+```
+
+## 🚀 **RULE #12: DEPLOYMENT CHECKLIST**
+
+### **Before marking task complete:**
+- [ ] **Structure**: Files in correct locations
+- [ ] **TypeScript**: No errors, proper interfaces
+- [ ] **Translation**: All text externalized
+- [ ] **Loading**: Skeleton states implemented
+- [ ] **Error**: Proper error handling
+- [ ] **Responsive**: Mobile-friendly
+- [ ] **Accessibility**: Proper ARIA labels
+- [ ] **Performance**: No unnecessary re-renders
+- [ ] **SEO**: Proper meta data (if server component)
+- [ ] **Testing**: Manual testing completed
+
+### **Code Quality Gates:**
+- [ ] ESLint passes
+- [ ] TypeScript strict mode passes
+- [ ] No console.errors in browser
+- [ ] Proper error boundaries
+- [ ] SWR mutations after data changes
+- [ ] URL state properly managed
+- [ ] Mobile responsive design
+
+**These universal rules ensure consistency across ALL Smarty to Next.js migration tasks in the project.**

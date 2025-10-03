@@ -1,0 +1,170 @@
+---
+alwaysApply: false
+---
+# 🎨 **CSS MIGRATION RULE - ABSOLUTE MANDATORY**
+
+
+## 🚨 **RULE #13: CSS PLACEHOLDER ONLY - USER HANDLES CSS IMPORTS (NON-NEGOTIABLE)**
+
+### **ABSOLUTE PROHIBITION:**
+- ❌ **NEVER CREATE NEW CSS FILES** for any migration task
+- ❌ **NEVER MODIFY EXISTING CSS FILES** 
+- ❌ **NEVER ADD ACTUAL CSS IMPORTS** to components
+- ❌ **NEVER INCLUDE REAL CSS IMPORT STATEMENTS**
+
+### **MANDATORY CSS STRATEGY:**
+- ✅ **CREATE CSS PLACEHOLDER COMMENTS ONLY**
+- ✅ **USER WILL HANDLE ALL CSS IMPORTS** manually
+- ✅ **PRESERVE ALL CLASS NAMES** exactly as they appear in Smarty templates
+- ✅ **DOCUMENT REQUIRED CSS FILES** in comments only
+
+### **CSS PLACEHOLDER PATTERN (REQUIRED):**
+```typescript
+// ✅ CORRECT - CSS Placeholder comments only
+'use client';
+
+// CSS FILES NEEDED (User will import manually):
+// - @/styles/cv-hay/template-themes-new.css
+// - @/styles/cv-hay/cvhay-common.css  
+// - @/styles/jobseekers/global.css
+// - @/styles/jobseekers/change-template/change-template.css
+
+import { useState } from 'react';
+// ... component code
+
+// ❌ FORBIDDEN - Actual CSS imports
+// import '@/styles/cv-hay/template-themes-new.css';
+// import '@/styles/jobseekers/global.css';
+```
+
+### **COMPONENT HEADER TEMPLATE (MANDATORY):**
+```typescript
+'use client';
+
+// ================================================
+// CSS IMPORTS REQUIRED (User will add manually):
+// ================================================
+// import '@/styles/legacy/file1.css';
+// import '@/styles/legacy/file2.css';
+// import '@/styles/legacy/file3.css';
+// ================================================
+
+import { useState } from 'react';
+// ... rest of component
+```
+
+### **HTML CLASS PRESERVATION (MANDATORY):**
+```typescript
+// ✅ CORRECT - Exact class preservation with placeholder
+export default function Component() {
+  // CSS CLASSES USED (require corresponding CSS imports):
+  // - change-cv-template-wrap
+  // - tools-schemes  
+  // - head-tools
+  // - figure
+  
+  return (
+    <div className="change-cv-template-wrap">
+      <div className="tools-schemes">
+        <div className="head-tools">
+          <div className="figure">
+            {/* Preserve exact structure */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+### **IMPLEMENTATION PROCESS:**
+1. **ANALYZE SMARTY TEMPLATE** - Identify all CSS classes used
+2. **CREATE CSS PLACEHOLDER COMMENTS** - List required CSS files in comments
+3. **PRESERVE STRUCTURE** - Maintain exact HTML structure and class names
+4. **DOCUMENT CSS DEPENDENCIES** - Add detailed comments about CSS requirements
+5. **USER IMPORTS CSS** - User will manually add import statements
+
+### **CSS DOCUMENTATION TEMPLATE:**
+```typescript
+// ================================================
+// CSS REQUIREMENTS ANALYSIS:
+// ================================================
+// Based on Smarty template: filename.tpl
+// 
+// REQUIRED CSS FILES (User must import):
+// 1. @/styles/legacy/main-styles.css
+// 2. @/styles/legacy/component-styles.css
+// 3. @/styles/legacy/theme-styles.css
+//
+// CRITICAL CSS CLASSES USED:
+// - .main-wrapper
+// - .component-container  
+// - .interactive-element
+// - .modal-overlay
+// ================================================
+```
+
+### **TASK EXECUTION RULE:**
+```typescript
+// ✅ ALWAYS provide CSS placeholder structure:
+
+// Step 1: Create component with CSS comments
+'use client';
+
+// CSS IMPORTS NEEDED (User will handle):
+// - List all required CSS files here
+// - Document which Smarty template they came from
+// - Note any critical CSS classes
+
+// Step 2: Component implementation with exact class names
+export default function ComponentName() {
+  return (
+    <div className="exact-smarty-class-name">
+      {/* Preserve exact HTML structure */}
+    </div>
+  );
+}
+
+// ❌ NEVER include actual import statements
+```
+
+### **SUCCESS VALIDATION:**
+- ✅ **CSS Comments Present** - All required CSS files documented in comments
+- ✅ **No Actual Imports** - Zero real CSS import statements in code
+- ✅ **Class Name Preservation** - All original classes preserved exactly
+- ✅ **Structure Preservation** - Exact HTML structure maintained
+- ✅ **User Documentation** - Clear instructions for manual CSS import
+
+---
+
+## 📋 **PRE-TASK CSS CHECKLIST (MANDATORY)**
+
+Before starting ANY migration task:
+- [ ] **Identify all CSS classes** in the Smarty template
+- [ ] **Create CSS requirement comments** listing all needed files
+- [ ] **Document CSS dependencies** in component header
+- [ ] **Preserve exact class names** in HTML structure
+- [ ] **Add user instructions** for manual CSS import
+
+### **EXAMPLE OUTPUT:**
+```typescript
+'use client';
+
+// ================================================
+// 🎨 CSS IMPORTS REQUIRED (User will add manually):
+// ================================================
+// import '@/styles/cv-hay/template-themes-new.css';
+// import '@/styles/cv-hay/cvhay-common.css';
+// import '@/styles/jobseekers/global.css';
+// 
+// Source: changetemplate.tpl
+// Critical classes: change-cv-template-wrap, tools-schemes, head-tools
+// ================================================
+
+import { useState } from 'react';
+// ... component implementation
+```
+
+---
+
+**CRITICAL RULE: I will ONLY create CSS placeholder comments. The user will manually handle all CSS imports. My job is to preserve exact class names and document CSS requirements, not to import CSS files.** 🎯
