@@ -218,6 +218,7 @@ export default function LayoutWrapper({
           await loadScript('/themes/js/jquery.validate.js');
           await loadScript('/themes/js/additional-methods.js');
           await loadScript('/themes/js/tn-validate-methods.js');
+          await loadScript('/themes/js/hoverIntent.js');
           await loadScript('/themes/js/common.js');
           await loadScript('/themes/js/common_premium.js');
           await loadScript(`/themes/${siteId}/custom/js_custom.js`);
