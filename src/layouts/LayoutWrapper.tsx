@@ -129,6 +129,46 @@ export default function LayoutWrapper({
         link.media = 'screen';
         document.head.appendChild(link);
       });
+      
+      // Add menu hover styles
+      const menuHoverStyle = document.createElement('style');
+      menuHoverStyle.type = 'text/css';
+      menuHoverStyle.innerHTML = `
+        #nav-bar ul.submenu { 
+          position: absolute; 
+          left: 0; 
+          display: none; 
+          z-index: 10000;
+          min-width: 200px;
+          width: auto;
+        }
+        #nav-bar .over ul.submenu { 
+          display: block; 
+        }
+        #nav-bar ul.submenu li { 
+          clear: both; 
+          float: left; 
+          width: 100%; 
+        }
+        #nav-bar ul.submenu a { 
+          display: block; 
+          background-image: url("/themes/css/images/arr_white.gif"); 
+          background-repeat: no-repeat;
+          background-position: 10px 12px;
+          background-color: #226fb0;
+          border-top: 1px solid #fff;
+          border-bottom: 0;
+          font-size: 12px;
+          padding: 6px 0 6px 20px;
+          color: #fff;
+        }
+        #nav-bar ul.submenu a:hover { 
+          border-top: 1px solid #fff; 
+          background-color: #15487c; 
+          border-bottom: 0; 
+        }
+      `;
+      document.head.appendChild(menuHoverStyle);
     };
 
     // Load JavaScript files
@@ -179,12 +219,63 @@ export default function LayoutWrapper({
           await loadScript('/themes/js/additional-methods.js');
           await loadScript('/themes/js/tn-validate-methods.js');
           await loadScript('/themes/js/common.js');
+          await loadScript('/themes/js/common_premium.js');
           await loadScript(`/themes/${siteId}/custom/js_custom.js`);
         };
 
         loadSequentially().then(() => {
           // Load initialization script after all scripts are loaded
           loadInitScript();
+          
+          // Initialize showDialog functionality after all scripts are loaded
+          setTimeout(() => {
+            if ((window as any).jQuery && (window as any).jQuery.fancybox) {
+              (window as any).jQuery('.showDialog').fancybox({
+                'padding': 0,
+                onComplete: function() {
+                  const fancyboxContent = (window as any).jQuery('#fancybox-content');
+                  if (fancyboxContent.length) {
+                    (window as any).jQuery('#fancybox-wrap').css({ 
+                      'width': (fancyboxContent.width() + 40) + 'px', 
+                      'padding': 0 
+                    });
+                  }
+                }
+              });
+              
+              if (!checkMobile()) {
+                (window as any).jQuery('.showDialogD').fancybox({
+                  'padding': 0,
+                  onComplete: function() {
+                    const fancyboxContent = (window as any).jQuery('#fancybox-content');
+                    if (fancyboxContent.length) {
+                      (window as any).jQuery('#fancybox-wrap').css({ 
+                        'width': (fancyboxContent.width() + 40) + 'px', 
+                        'padding': 0 
+                      });
+                    }
+                  }
+                });
+              }
+            }
+            
+            // Initialize menu hover functionality
+            if ((window as any).jQuery) {
+              const $ = (window as any).jQuery;
+              
+              // Add hover functionality for #nav-bar menu
+              $('#nav-bar li.parent').hover(
+                function() {
+                  $(this).addClass('over');
+                  $(this).children('ul.submenu').show();
+                },
+                function() {
+                  $(this).removeClass('over');
+                  $(this).children('ul.submenu').hide();
+                }
+              );
+            }
+          }, 100);
         });
       };
 
@@ -208,6 +299,9 @@ export default function LayoutWrapper({
         var FILESUPPORT = 'pdf,doc,docx';
         var EMP_NAME = 'Job Portal';
         var LINK_FORGOT = '/forgot-password';
+        var Controller = '${controller}';
+        var Action = '${action}';
+        var Layout_Template = 'P31';
 
         function checkIos() {
           return /webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -215,6 +309,10 @@ export default function LayoutWrapper({
 
         function windowsPhone() {
           return /windows phone/i.test(navigator.userAgent);
+        }
+
+        function checkMobile() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         }
 
         function getCookie(name) {
