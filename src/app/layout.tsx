@@ -22,7 +22,29 @@ export default async function SiteLayout({ children, params }: SiteLayoutProps) 
 
   return (
     <html lang="vi">
-      <body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Remove browser extension attributes that cause hydration errors
+              if (typeof window !== 'undefined') {
+                const body = document.body;
+                if (body) {
+                  body.removeAttribute('bis_register');
+                  body.removeAttribute('_processed_');
+                  // Remove any other extension-added attributes
+                  Array.from(body.attributes).forEach(attr => {
+                    if (attr.name.startsWith('_processed_') || attr.name.startsWith('bis_')) {
+                      body.removeAttribute(attr.name);
+                    }
+                  });
+                }
+              }
+            `,
+          }}
+        />
+      </head>
+      <body suppressHydrationWarning={true}>
         <div className={`site-${validSiteId}`}>
           {children}
         </div>
