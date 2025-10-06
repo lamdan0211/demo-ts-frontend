@@ -1,10 +1,23 @@
 'use client';
 
-import { BoxCareerProps, Job } from '@/lib/types';
-import { getSiteConfig } from '@/lib/site-config';
+import React from 'react';
 
-// Translation function (equivalent to PHP |t filter)
-function t(key: string, language: 'vi' | 'en' = 'vi'): string {
+interface Job {
+  JOB_ID: number;
+  JOB_TITLE: string;
+  LINK: string;
+}
+
+interface BoxCareerProps {
+  siteId?: string;
+  language?: string;
+  arrJobs?: Job[];
+  jobNum?: number;
+  LINK_JOBS?: string;
+}
+
+// Translation function
+function t(key: string, language: string = 'en'): string {
   const translations: Record<string, Record<string, string>> = {
     '_Career Opportunities_': {
       vi: 'Cơ hội nghề nghiệp',
@@ -19,55 +32,40 @@ function t(key: string, language: 'vi' | 'en' = 'vi'): string {
   return translations[key]?.[language] || key;
 }
 
-// Helper function to escape HTML (equivalent to PHP escape)
-function escapeHtml(text: string): string {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
-}
-
-export default function BoxCareer({ 
-  siteId, 
-  arrJobs = [], 
-  jobNum = 5, 
-  language = 'vi' 
+export default function BoxCareer({
+  siteId = 'demoa2',
+  language = 'en',
+  arrJobs = [],
+  jobNum = 5,
+  LINK_JOBS = '/demoa2/jobs'
 }: BoxCareerProps) {
-  const siteConfig = getSiteConfig(siteId);
-  if (!siteConfig) return null;
-
-  if (arrJobs.length === 0) {
+  
+  if (!arrJobs || arrJobs.length === 0) {
     return null;
   }
 
-  // Slice jobs array to show only the specified number
   const displayJobs = arrJobs.slice(0, jobNum);
 
   const handleViewAllJobs = () => {
-    window.location.href = siteConfig.constants.LINK_JOBS || '/jobs';
+    window.location.href = LINK_JOBS;
   };
 
   return (
     <div className="BoxHolder">
-      <div className="bgcolor_theme headerBox">
-        {t('_Career Opportunities_', language)}
-      </div>
-      
+      <div className="bgcolor_theme headerBox">{t('_Career Opportunities_', language)}</div>
       <div className="containerBox">
         <ul className="ListCareer">
           {displayJobs.map((job, index) => (
-            <li key={index}>
+            <li key={job.JOB_ID || index}>
               <a 
                 href={job.LINK} 
-                title={escapeHtml(job.JOB_TITLE)}
-                target="_blank"
-                rel="noopener noreferrer"
+                title={job.JOB_TITLE}
               >
                 {job.JOB_TITLE}
               </a>
             </li>
           ))}
         </ul>
-        
         <div className="allJobBtn">
           <input 
             type="submit" 

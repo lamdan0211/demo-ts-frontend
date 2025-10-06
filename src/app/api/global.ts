@@ -28,10 +28,10 @@ const OWNER_CONFIGS: Record<string, OwnerConfig> = {
   },
   'demoa2': {
     name: 'demoa2',
-    staticPath: '/themes/demoa1',
-    imagesPath: '/themes/demoa1/images',
-    cssPath: '/themes/demoa1/css',
-    jsPath: '/themes/demoa1/js',
+    staticPath: '/themes/demoa2',
+    imagesPath: '/themes/demoa2/images',
+    cssPath: '/themes/demoa2/css',
+    jsPath: '/themes/demoa2/js',
     domain: 'localhost:3001',
     language: 'en'
   },
@@ -57,13 +57,13 @@ export interface LayoutConfig {
 const OWNER_LAYOUT_CONFIGS: Record<string, LayoutConfig> = {
   'demoa1': {
     tempName: 'demoa1',
-    layoutType: '3',
-    layoutName: 'layout03'
+    layoutType: 'default',
+    layoutName: 'default'
   },
   'demoa2': {
-    tempName: 'demoa1',
-    layoutType: '4',
-    layoutName: 'layout04'
+    tempName: 'demoa2',
+    layoutType: 'default',
+    layoutName: 'default'
   },
   'hoasen': {
     tempName: 'hoasen',

@@ -5,7 +5,7 @@ const sites: Record<string, SiteConfig> = {
     id: 'demoa1',
     name: 'Demo A1',
     language: 'vi',
-    layoutType: '03',
+    layoutType: 'default',
     theme: {
       primaryColor: '#ff5b00',
       secondaryColor: '#fff',
@@ -26,17 +26,17 @@ const sites: Record<string, SiteConfig> = {
     id: 'demoa2',
     name: 'Demo A2',
     language: 'en',
-    layoutType: '04',
+    layoutType: 'default',
     theme: {
       primaryColor: '#007bff',
       secondaryColor: '#fff',
       backgroundColor: '#f8f9fa'
     },
     constants: {
-      TN: '/demoa1',
+      TN: '/demoa2',
       JSK: '/jobseekers',
       LANGUAGE: 'en',
-      LINK_RW_IMAGES: '/themes/demoa1/images',
+      LINK_RW_IMAGES: '/themes/demoa2/images',
       LINK_RESUME: '/resume',
       LINK_JOBS: '/jobs',
       LINK_JOBS_SEARCH: '/jobs/search',
@@ -54,10 +54,10 @@ const sites: Record<string, SiteConfig> = {
       backgroundColor: '#f8f9fa'
     },
     constants: {
-      TN: '/demoa1',
+      TN: '/hoasen',
       JSK: '/jobseekers',
       LANGUAGE: 'vi',
-      LINK_RW_IMAGES: '/themes/demoa1/images',
+      LINK_RW_IMAGES: '/themes/hoasen/images',
       LINK_RESUME: '/resume',
       LINK_JOBS: '/jobs',
       LINK_JOBS_SEARCH: '/jobs/search',

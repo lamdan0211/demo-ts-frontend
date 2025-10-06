@@ -35,6 +35,42 @@ export const demoa1FooterData: FooterMenuCategory[] = [
   }
 ];
 
+// Demoa2 Footer data
+export const demoa2FooterData: FooterMenuCategory[] = [
+  {
+    CATE_TYPE: 1,
+    CATE_CODE: '',
+    CATE_ID: 1,
+    CATE_NAME: 'Home',
+    CATE_LINK: '/demoa2',
+    CATE_LINKTARGET: '_self'
+  },
+  {
+    CATE_TYPE: 1,
+    CATE_CODE: '',
+    CATE_ID: 2,
+    CATE_NAME: 'Find Jobs',
+    CATE_LINK: '/demoa2/jobs',
+    CATE_LINKTARGET: '_self'
+  },
+  {
+    CATE_TYPE: 2,
+    CATE_CODE: 'about',
+    CATE_ID: 3,
+    CATE_NAME: 'About Us',
+    CATE_LINK: '/demoa2/about',
+    CATE_LINKTARGET: '_self'
+  },
+  {
+    CATE_TYPE: 1,
+    CATE_CODE: '',
+    CATE_ID: 4,
+    CATE_NAME: 'Contact',
+    CATE_LINK: '/demoa2/contact',
+    CATE_LINKTARGET: '_self'
+  }
+];
+
 // Header sample data
 export const demoa1HeaderData = {
   arrRwInfo: {
@@ -133,10 +169,124 @@ export const demoa1ContactData = {
   strCaptcha: 'ABC123'
 };
 
+// Demoa2 Header data
+export const demoa2HeaderData = {
+  arrRwInfo: {
+    RW_LOGO: 'logo.png'
+  } as RewriteInfo,
+  arrEmployer: {
+    EMP_NAME: 'Demo A2 Company'
+  } as EmployerInfo,
+  arrMenuCates: [
+    {
+      CATE_TYPE: 1,
+      CATE_CODE: '',
+      CATE_ID: 1,
+      CATE_NAME: 'Home',
+      CATE_LINK: '/demoa2',
+      CATE_LINKTARGET: '_self',
+      SUBURL_CONTROLLER: 'index',
+      SUBURL_ACTION: 'index'
+    },
+    {
+      CATE_TYPE: 1,
+      CATE_CODE: '',
+      CATE_ID: 2,
+      CATE_NAME: 'Find Jobs',
+      CATE_LINK: '/demoa2/jobs',
+      CATE_LINKTARGET: '_self',
+      SUBURL_CONTROLLER: 'jobs',
+      SUBURL_ACTION: 'index',
+      CHILDREN: [
+        {
+          CATE_TYPE: 1,
+          CATE_CODE: '',
+          CATE_ID: 21,
+          CATE_NAME: 'IT Jobs',
+          CATE_LINK: '/demoa2/jobs/it',
+          CATE_LINKTARGET: '_self',
+          SUBURL_CONTROLLER: 'jobs',
+          SUBURL_ACTION: 'it'
+        },
+        {
+          CATE_TYPE: 1,
+          CATE_CODE: '',
+          CATE_ID: 22,
+          CATE_NAME: 'Marketing Jobs',
+          CATE_LINK: '/demoa2/jobs/marketing',
+          CATE_LINKTARGET: '_self',
+          SUBURL_CONTROLLER: 'jobs',
+          SUBURL_ACTION: 'marketing'
+        }
+      ]
+    },
+    {
+      CATE_TYPE: 2,
+      CATE_CODE: 'about',
+      CATE_ID: 3,
+      CATE_NAME: 'About Us',
+      CATE_LINK: '/demoa2/about',
+      CATE_LINKTARGET: '_self',
+      SUBURL_CONTROLLER: 'about',
+      SUBURL_ACTION: 'index'
+    },
+    {
+      CATE_TYPE: 1,
+      CATE_CODE: '',
+      CATE_ID: 4,
+      CATE_NAME: 'Contact',
+      CATE_LINK: '/demoa2/contact',
+      CATE_LINKTARGET: '_self',
+      SUBURL_CONTROLLER: 'contact',
+      SUBURL_ACTION: 'index'
+    }
+  ] as MenuCategory[],
+  listFeatureCareer: [
+    {
+      FEATURE_CAREER_NAME: 'Software Engineer',
+      LINK: '/demoa2/careers/software-engineer'
+    },
+    {
+      FEATURE_CAREER_NAME: 'Product Manager',
+      LINK: '/demoa2/careers/product-manager'
+    },
+    {
+      FEATURE_CAREER_NAME: 'UX Designer',
+      LINK: '/demoa2/careers/ux-designer'
+    }
+  ] as FeatureCareer[]
+};
+
+// Demoa2 Index data
+export const demoa2IndexData = {
+  arrRwInfo: {
+    RW_BANNER: 'banner1.jpg;banner2.jpg;banner3.jpg',
+    RW_LOGO: 'logo.png'
+  } as RewriteInfo,
+  arrIndexNews: {
+    NEWS_TITLE: 'Welcome to Demoa2 Job Portal',
+    NEWS_CONTENT: '<p>Find your dream job with our comprehensive job search platform. We connect talented professionals with top companies worldwide.</p><p>Our platform offers advanced search features, career resources, and networking opportunities to help you succeed in your career journey.</p>'
+  },
+  arrIndustries: [
+    { INDUSTRY_ID: 1, INDUSTRY_NAME: 'Information Technology', LINK: '/demoa2/jobs/it', JOB_INDUSTRY_NUM: 150 },
+    { INDUSTRY_ID: 2, INDUSTRY_NAME: 'Finance - Banking', LINK: '/demoa2/jobs/finance', JOB_INDUSTRY_NUM: 89 },
+    { INDUSTRY_ID: 3, INDUSTRY_NAME: 'Sales - Marketing', LINK: '/demoa2/jobs/sales', JOB_INDUSTRY_NUM: 120 },
+    { INDUSTRY_ID: 4, INDUSTRY_NAME: 'Human Resources', LINK: '/demoa2/jobs/hr', JOB_INDUSTRY_NUM: 45 },
+    { INDUSTRY_ID: 5, INDUSTRY_NAME: 'Accounting - Audit', LINK: '/demoa2/jobs/accounting', JOB_INDUSTRY_NUM: 67 }
+  ] as { INDUSTRY_ID: number; INDUSTRY_NAME: string; LINK: string; JOB_INDUSTRY_NUM: number }[],
+  arrLocations: [
+    { LOCATION_ID: 1, LOCATION_NAME: 'Ho Chi Minh City', LINK: '/demoa2/jobs/hcm', JOB_LOCATION_NUM: 200 },
+    { LOCATION_ID: 2, LOCATION_NAME: 'Hanoi', LINK: '/demoa2/jobs/hanoi', JOB_LOCATION_NUM: 150 },
+    { LOCATION_ID: 3, LOCATION_NAME: 'Da Nang', LINK: '/demoa2/jobs/danang', JOB_LOCATION_NUM: 80 },
+    { LOCATION_ID: 4, LOCATION_NAME: 'Can Tho', LINK: '/demoa2/jobs/cantho', JOB_LOCATION_NUM: 45 }
+  ] as { LOCATION_ID: number; LOCATION_NAME: string; LINK: string; JOB_LOCATION_NUM: number }[]
+};
+
 // Index page sample data
 export const demoa1IndexData = {
   arrRwInfo: {
-    RW_BANNER: 'banner1.jpg;banner2.jpg;banner3.jpg'
+    RW_BANNER: 'bgframe1.jpg;bgframe2.jpg;bgframe1.jpg',
+    RW_LOGO: 'logo.png'
   } as RewriteInfo,
   arrIndustries: [
     { INDUSTRY_ID: 1, INDUSTRY_NAME: 'Công nghệ thông tin', LINK: '/it', JOB_INDUSTRY_NUM: 150 },
@@ -144,14 +294,14 @@ export const demoa1IndexData = {
     { INDUSTRY_ID: 3, INDUSTRY_NAME: 'Bán hàng - Marketing', LINK: '/sales', JOB_INDUSTRY_NUM: 120 },
     { INDUSTRY_ID: 4, INDUSTRY_NAME: 'Nhân sự', LINK: '/hr', JOB_INDUSTRY_NUM: 45 },
     { INDUSTRY_ID: 5, INDUSTRY_NAME: 'Kế toán - Kiểm toán', LINK: '/accounting', JOB_INDUSTRY_NUM: 67 }
-  ] as Industry[],
+  ] as { INDUSTRY_ID: number; INDUSTRY_NAME: string; LINK: string; JOB_INDUSTRY_NUM: number }[],
   arrLocations: [
     { LOCATION_ID: 1, LOCATION_NAME: 'Hồ Chí Minh', LINK: '/hcm', JOB_LOCATION_NUM: 200 },
     { LOCATION_ID: 2, LOCATION_NAME: 'Hà Nội', LINK: '/hanoi', JOB_LOCATION_NUM: 150 },
     { LOCATION_ID: 3, LOCATION_NAME: 'Đà Nẵng', LINK: '/danang', JOB_LOCATION_NUM: 80 },
     { LOCATION_ID: 4, LOCATION_NAME: 'Cần Thơ', LINK: '/cantho', JOB_LOCATION_NUM: 45 },
     { LOCATION_ID: 5, LOCATION_NAME: 'Hải Phòng', LINK: '/haiphong', JOB_LOCATION_NUM: 30 }
-  ] as Location[]
+  ] as { LOCATION_ID: number; LOCATION_NAME: string; LINK: string; JOB_LOCATION_NUM: number }[]
 };
 
 // Jobs page sample data
@@ -212,7 +362,7 @@ export const demoa1JobsData = {
       LINK: '/jobs/5',
       RECNO: 5
     }
-  ] as Job[],
+  ] as { JOB_ID: number; JOB_TITLE: string; JOB_LOCATION_NAME: string; JOB_SALARY_MIN: number; JOB_SALARY_MAX: number; JOB_ACTIVEDATE: string; JOB_TOPLISTING: boolean; LINK: string; RECNO: number }[],
   pages: {
     current: 1,
     pageCount: 5,
@@ -226,7 +376,7 @@ export const demoa1JobsData = {
     { INDUSTRY_ID: 3, INDUSTRY_NAME: 'Bán hàng - Marketing', LINK: '/sales', JOB_INDUSTRY_NUM: 120 },
     { INDUSTRY_ID: 4, INDUSTRY_NAME: 'Nhân sự', LINK: '/hr', JOB_INDUSTRY_NUM: 45 },
     { INDUSTRY_ID: 5, INDUSTRY_NAME: 'Kế toán - Kiểm toán', LINK: '/accounting', JOB_INDUSTRY_NUM: 67 }
-  ] as Industry[],
+  ] as { INDUSTRY_ID: number; INDUSTRY_NAME: string; LINK: string; JOB_INDUSTRY_NUM: number }[],
   getAllLocateCountry: [
     {
       COUNTRY_ID: 1,
@@ -247,4 +397,130 @@ export const demoa1JobsData = {
   arrFunction: {
     OFF_JOIN_TALENT_NETWORK: false
   }
+};
+
+// Hoasen data
+export const hoasenHeaderData = {
+  arrRwInfo: {
+    RW_LOGO: 'logo.png',
+    RW_TITLE: 'Hoa Sen Group',
+    RW_DESCRIPTION: 'Hoa Sen Group - Leading steel manufacturer in Vietnam'
+  },
+  arrEmployer: {
+    EMP_NAME: 'Hoa Sen Group',
+    RW_LOGO: 'logo.png'
+  },
+  arrMenuCates: [
+    {
+      CATE_ID: 1,
+      CATE_NAME: 'Trang chủ',
+      CATE_LINK: '/hoasen',
+      CATE_TYPE: 1,
+      CATE_LINKTARGET: '_self'
+    },
+    {
+      CATE_ID: 2,
+      CATE_NAME: 'Việc làm',
+      CATE_LINK: '/hoasen/jobs',
+      CATE_TYPE: 1,
+      CATE_LINKTARGET: '_self'
+    },
+    {
+      CATE_ID: 3,
+      CATE_NAME: 'Tin tức',
+      CATE_LINK: '/hoasen/news',
+      CATE_TYPE: 1,
+      CATE_LINKTARGET: '_self'
+    },
+    {
+      CATE_ID: 4,
+      CATE_NAME: 'Liên hệ',
+      CATE_LINK: '/hoasen/contact',
+      CATE_TYPE: 1,
+      CATE_LINKTARGET: '_self'
+    }
+  ],
+  listFeatureCareer: [],
+  CHANGE_LANG_URL: '/hoasen?lang=en'
+};
+
+export const hoasenFooterData = [
+  {
+    CATE_ID: 1,
+    CATE_NAME: 'Về chúng tôi',
+    CATE_URL: '/hoasen/about',
+    CATE_ACTIVE: false,
+    arrSubMenu: [
+      {
+        SUB_ID: 1,
+        SUB_NAME: 'Giới thiệu',
+        SUB_URL: '/hoasen/about',
+        SUB_ACTIVE: false
+      },
+      {
+        SUB_ID: 2,
+        SUB_NAME: 'Lịch sử phát triển',
+        SUB_URL: '/hoasen/history',
+        SUB_ACTIVE: false
+      }
+    ]
+  },
+  {
+    CATE_ID: 2,
+    CATE_NAME: 'Tuyển dụng',
+    CATE_URL: '/hoasen/jobs',
+    CATE_ACTIVE: false,
+    arrSubMenu: [
+      {
+        SUB_ID: 3,
+        SUB_NAME: 'Việc làm mới nhất',
+        SUB_URL: '/hoasen/jobs',
+        SUB_ACTIVE: false
+      },
+      {
+        SUB_ID: 4,
+        SUB_NAME: 'Tìm kiếm việc làm',
+        SUB_URL: '/hoasen/jobs/search',
+        SUB_ACTIVE: false
+      }
+    ]
+  }
+];
+
+export const hoasenIndexData = {
+  arrRwInfo: {
+    RW_LOGO: 'logo.png',
+    RW_TITLE: 'Hoa Sen Group',
+    RW_DESCRIPTION: 'Leading steel manufacturer in Vietnam',
+    RW_BANNER_TOP: 'banner1.jpg;banner2.jpg;banner3.jpg',
+    RW_BANNER: 'banner1.jpg;banner2.jpg;banner3.jpg'
+  },
+  arrIndustries: [
+    {
+      IND_ID: 1,
+      IND_NAME: 'Sản xuất thép',
+      IND_URL: '/hoasen/jobs?industry=1',
+      IND_ACTIVE: false
+    },
+    {
+      IND_ID: 2,
+      IND_NAME: 'Xây dựng',
+      IND_URL: '/hoasen/jobs?industry=2',
+      IND_ACTIVE: false
+    }
+  ],
+  arrLocations: [
+    {
+      LOC_ID: 1,
+      LOC_NAME: 'Hồ Chí Minh',
+      LOC_URL: '/hoasen/jobs?location=1',
+      LOC_ACTIVE: false
+    },
+    {
+      LOC_ID: 2,
+      LOC_NAME: 'Hà Nội',
+      LOC_URL: '/hoasen/jobs?location=2',
+      LOC_ACTIVE: false
+    }
+  ]
 };

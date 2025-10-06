@@ -26,7 +26,7 @@ export default function Layout03({
       <link href="/themes/css/theme_default.css" rel="stylesheet" type="text/css" media="screen" />
       <link href={`/themes/${tempName || 'demoa1'}/css/themes.css?t=100520152`} rel="stylesheet" type="text/css" media="screen" />
       <link href={`/themes/${tempName || 'demoa1'}/${owner}/skin.css?t=12032015`} rel="stylesheet" type="text/css" media="screen" />
-      <link href={`/themes/${tempName || 'demoa1'}/${tempName || 'demoa1'}/nav_vi.css?t=12032015`} rel="stylesheet" type="text/css" media="screen" />
+      <link href={`/themes/${tempName || 'demoa1'}/css/nav_vi.css?t=12032015`} rel="stylesheet" type="text/css" media="screen" />
       <link href="/themes/js/jquery_ui/jquery.multiselect.css" rel="stylesheet" type="text/css" />
       <link href="/themes/js/jquery_ui/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
       <link href="/themes/css/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />

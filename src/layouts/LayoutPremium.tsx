@@ -5,6 +5,7 @@ import Head from 'next/head';
 
 interface LayoutPremiumProps {
   children: React.ReactNode;
+  siteId?: string;
   title?: string;
   description?: string;
   keywords?: string;
@@ -88,6 +89,7 @@ const GLOBAL_CONFIG = {
 
 export default function LayoutPremium({
   children,
+  siteId = 'demoa1',
   title = 'Job Portal - Find Your Dream Job',
   description = 'Find management and executive level jobs. Join our talent network today!',
   keywords = 'jobs, careers, employment, talent network, management, executive',
@@ -139,10 +141,10 @@ export default function LayoutPremium({
 }: LayoutPremiumProps) {
   // Translation helper function
   const t = (key: string) => objTrans.translations[key] || key;
-  const strLogo = `/themes/demoa1/images/${arrEmployer.RW_LOGO}`;
-  const finalTitle = arrMetaTag.title || title;
-  const finalDescription = arrMetaTag.description || description;
-  const finalKeywords = arrMetaTag.keywords || keywords;
+  const strLogo = `/themes/${siteId}/images/${arrEmployer?.RW_LOGO || 'logo.png'}`;
+  const finalTitle = arrMetaTag?.title || title;
+  const finalDescription = arrMetaTag?.description || description;
+  const finalKeywords = arrMetaTag?.keywords || keywords;
   const finalOgImage = ogImage || `${GLOBAL_CONFIG.TN}/sharefb?file=${imageShare.file || strLogo}`;
 
   // Determine if Bootstrap should be used
@@ -179,7 +181,7 @@ export default function LayoutPremium({
         {CHANGE_LANG_URL && GLOBAL_CONFIG.LANGUAGE !== CHANGE_LANG_URL && (
           <link href={CHANGE_LANG_URL} hrefLang={GLOBAL_CONFIG.LANGUAGE === 'vi' ? 'en' : 'vi'} rel="alternate" />
         )}
-        <base href={`${GLOBAL_CONFIG.STATIC_TN}${arrEmployer.TEMPLATEDEFAULT_ID}/`} />
+        {/* <base href={`${GLOBAL_CONFIG.STATIC_TN}${arrEmployer?.TEMPLATEDEFAULT_ID || 'P21'}/`} /> */}
         
         {/* Favicon */}
         <link rel="icon" href={`${GLOBAL_CONFIG.STATIC_TN}/favicon_${GLOBAL_CONFIG.OWNER}.ico?t=1`} />
@@ -191,7 +193,7 @@ export default function LayoutPremium({
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content={arrEmployer.EMP_NAME} />
+        <meta property="og:site_name" content={arrEmployer?.EMP_NAME || 'Job Portal'} />
         <meta property="og:title" content={finalTitle} />
         <meta property="og:url" content={currentUrl} />
         <meta property="og:image:type" content="image/jpeg" />
@@ -214,20 +216,20 @@ export default function LayoutPremium({
         {/* Bootstrap CSS */}
         {shouldUseBootstrap && (
           <>
-            {arrEmployer.TEMPLATEDEFAULT_ID === 'P21' ? (
+            {arrEmployer?.TEMPLATEDEFAULT_ID === 'P21' ? (
               <>
-                <link href="/themes/templateP21/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
+                <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
                 {/*[if lt IE 9]*/}
-                <link href="/themes/templateP21/css/iefix.css" rel="stylesheet" type="text/css" />
+                <link href="/themes/css/iefix.css" rel="stylesheet" type="text/css" />
                 <script src="/themes/js/html5shiv.min.js" />
                 <script src="/themes/js/respond.min.js" />
                 {/*[endif]*/}
               </>
             ) : (
               <>
-                <link href={`/themes/template${arrEmployer.TEMPLATEDEFAULT_ID}/css/bootstrap.css`} rel="stylesheet" type="text/css" media="screen" />
+                <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
                 {/*[if lt IE 9]*/}
-                <link href={`/themes/template${arrEmployer.TEMPLATEDEFAULT_ID}/css/iefix.css`} rel="stylesheet" type="text/css" />
+                <link href={`/themes/template${arrEmployer?.TEMPLATEDEFAULT_ID || 'P21'}/css/iefix.css`} rel="stylesheet" type="text/css" />
                 <script src="/themes/js/html5shiv.min.js" />
                 <script src="/themes/js/respond.min.js" />
                 {/*[endif]*/}
@@ -272,6 +274,8 @@ export default function LayoutPremium({
         {/* CSS Imports */}
         <link href="/themes/css/general.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/themes/css/FontAwesome.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/themes/css/swiper-9.min.css" rel="stylesheet" type="text/css" media="screen" />
         {newlayout !== 1 && (
           <link href="/themes/css/core.css?t=20171010" rel="stylesheet" type="text/css" media="screen" />
         )}
@@ -282,9 +286,9 @@ export default function LayoutPremium({
             <link href="/themes/css/TNredirect.css" rel="stylesheet" type="text/css" media="screen" />
           </>
         )}
+        <link href="/themes/templateP31/css/premium.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/themes/hoasen/css/themes.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="/themes/templateP13/css/premium.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="/themes/hoasen/css/homepage-p13.css" rel="stylesheet" type="text/css" media="screen" />
+        {/* <link href="/themes/hoasen/css/homepage-p13.css" rel="stylesheet" type="text/css" media="screen" /> */}
         {GLOBAL_CONFIG.LANGUAGE === 'vi' && (
           <link rel="stylesheet" type="text/css" href="/themes/hoasen/css/nav_vi.css?t=12032015" media="screen" />
         )}
@@ -322,11 +326,11 @@ export default function LayoutPremium({
             var OWNER = '${GLOBAL_CONFIG.OWNER}';
             var IMAGES_TN = '${GLOBAL_CONFIG.IMAGES_TN}';
             var STATIC_TN = '${GLOBAL_CONFIG.STATIC_TN}';
-            var FILESUPPORT = '${arrEmployer.RW_FILETYPE_SUPPORT}';
+            var FILESUPPORT = '${arrEmployer?.RW_FILETYPE_SUPPORT || ''}';
             var Controller = '${controller}';
             var Action = '${action}';
-            var Layout_Template = '${arrEmployer.TEMPLATEDEFAULT_ID}';
-            var EMP_NAME = '${arrEmployer.EMP_NAME}';
+            var Layout_Template = '${arrEmployer?.TEMPLATEDEFAULT_ID || 'P21'}';
+            var EMP_NAME = '${arrEmployer?.EMP_NAME || 'Job Portal'}';
             var LINK_FORGOT = '${GLOBAL_CONFIG.LINK_FORGOT}';
             
             function checkIos() {
@@ -371,26 +375,26 @@ export default function LayoutPremium({
         }} />
         
         {/* Google Drive Integration */}
-        {notViewIE === 0 && arrEmployer.RW_GOOGLEDRIVE_CLIENT_ID && ['rod', 'demo', 'demo1', 'demo2', 'tonducthang', 'premium', 'demo5', 'demo6'].includes(GLOBAL_CONFIG.OWNER) && (
+        {notViewIE === 0 && arrEmployer?.RW_GOOGLEDRIVE_CLIENT_ID && ['rod', 'demo', 'demo1', 'demo2', 'tonducthang', 'premium', 'demo5', 'demo6'].includes(GLOBAL_CONFIG.OWNER) && (
           <>
             <script dangerouslySetInnerHTML={{
               __html: `
-                var googledrive_client_id = "${arrEmployer.RW_GOOGLEDRIVE_CLIENT_ID}";
+                var googledrive_client_id = "${arrEmployer?.RW_GOOGLEDRIVE_CLIENT_ID}";
                 var googledrive_client_app_id = "${googleAppId}";
                 $(window).on("load", function() {
                   $("[id*=oauth2relay]").css({'position':'unset','width':'','height':'0','border':'0'});
                 });
               `
             }} />
-            <script src={`https://www.google.com/jsapi?key=${arrEmployer.RW_GOOGLEDRIVE_CLIENT_ID}`} type="text/javascript" />
+            <script src={`https://www.google.com/jsapi?key=${arrEmployer?.RW_GOOGLEDRIVE_CLIENT_ID}`} type="text/javascript" />
             <script src={`${GLOBAL_CONFIG.STATIC_TN}/js/googleresumeapply.js?t=20150806`} type="text/javascript" />
             <script src="https://apis.google.com/js/client.js?onload=handleClientLoad" type="text/javascript" />
           </>
         )}
         
         {/* Dropbox Integration */}
-        {notViewIE === 0 && arrEmployer.RW_DROPBOX_KEY && (
-          <script src="https://www.dropbox.com/static/api/2/dropins.js" data-app-key={arrEmployer.RW_DROPBOX_KEY} id="dropboxjs" />
+        {notViewIE === 0 && arrEmployer?.RW_DROPBOX_KEY && (
+          <script src="https://www.dropbox.com/static/api/2/dropins.js" data-app-key={arrEmployer?.RW_DROPBOX_KEY} id="dropboxjs" />
         )}
         
         {/* Google Analytics for Job Apply */}
@@ -415,7 +419,7 @@ export default function LayoutPremium({
         {headStyle}
         
         {/* Google Analytics */}
-        {arrEmployer.RW_GOOGLE_SCRIPT ? (
+        {arrEmployer?.RW_GOOGLE_SCRIPT ? (
           <div dangerouslySetInnerHTML={{ __html: arrEmployer.RW_GOOGLE_SCRIPT }} />
         ) : (
           <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
@@ -423,7 +427,7 @@ export default function LayoutPremium({
       {/* End of head content */}
       <div className={getBodyClass()}>
         {/* Facebook Script */}
-        {arrEmployer.RW_FACEBOOK_SCRIPT && (
+        {arrEmployer?.RW_FACEBOOK_SCRIPT && (
           <div dangerouslySetInnerHTML={{ __html: arrEmployer.RW_FACEBOOK_SCRIPT }} />
         )}
         
@@ -488,7 +492,7 @@ export default function LayoutPremium({
               </div>
             ) : (
               <div id="wrapper">
-                {arrEmployer.TEMPLATEDEFAULT_ID === 'P21' ? (
+                {arrEmployer?.TEMPLATEDEFAULT_ID === 'P21' ? (
                   <div className="main-container">{children}</div>
                 ) : (
                   children
@@ -625,7 +629,7 @@ export default function LayoutPremium({
         )}
         
         {/* Template-specific styles */}
-        {arrEmployer.TEMPLATEDEFAULT_ID === 'P21' && (
+        {arrEmployer?.TEMPLATEDEFAULT_ID === 'P21' && (
           <style dangerouslySetInnerHTML={{
             __html: `
               .header {

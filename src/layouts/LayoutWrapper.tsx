@@ -97,17 +97,18 @@ export default function LayoutWrapper({
     // Load CSS files based on layout type and owner
     const loadCSS = () => {
       const baseCSS = [
+         '/themes/css/theme_default.css',
         '/themes/css/general.css',
         '/themes/css/FontAwesome.css',
-        '/themes/css/core.css',
-        '/themes/css/theme_default.css'
+        '/themes/css/core.css'
+       
       ];
 
       // CSS theo cấu trúc: /themes/{tempName}/css/themes.css và /themes/{tempName}/{owner}/skin.css
       const themeCSS = [
         `/themes/${tempName}/css/themes.css`,
         `/themes/${tempName}/${owner}/skin.css`,
-        `/themes/${tempName}/${owner}/nav_vi.css`
+        // `/themes/${tempName}/css/nav_vi.css`
       ];
 
       const pluginCSS = [
@@ -264,6 +265,7 @@ export default function LayoutWrapper({
   // Render layout based on layoutType
   const renderLayout = () => {
     const commonProps = {
+      siteId,
       owner,
       tempName,
       layoutType,

@@ -1,8 +1,8 @@
 import { getSiteConfig } from '@/lib/site-config';
-import Header from '@/app/demoa1/common/_header';
-import Footer from '@/app/demoa1/common/_footer';
-import IndexPage from '@/app/demoa1/index/index';
-import { demoa1FooterData, demoa1HeaderData, demoa1IndexData } from '@/lib/sample-data';
+import Header from '@/app/demoa2/common/_header';
+import Footer from '@/app/demoa2/common/_footer';
+import IndexPage from '@/app/demoa2/index/index';
+import { demoa2FooterData, demoa2HeaderData, demoa2IndexData } from '@/lib/sample-data';
 
 export default async function Demoa2HomePage() {
   const siteId = 'demoa2';
@@ -12,27 +12,31 @@ export default async function Demoa2HomePage() {
     <div className="min-h-screen">
       <Header 
         siteId={siteId}
-        arrRwInfo={demoa1HeaderData.arrRwInfo}
-        arrEmployer={demoa1HeaderData.arrEmployer}
+        arrRwInfo={demoa2HeaderData.arrRwInfo}
+        arrEmployer={demoa2HeaderData.arrEmployer}
         controller="index"
         action="index"
-        arrMenuCates={demoa1HeaderData.arrMenuCates}
-        listFeatureCareer={demoa1HeaderData.listFeatureCareer}
+        arrMenuCates={demoa2HeaderData.arrMenuCates}
+        listFeatureCareer={demoa2HeaderData.listFeatureCareer}
         currentUrl="/demoa2"
         changeLangUrl="/demoa2?lang=en"
       />
       
       <IndexPage
         siteId={siteId}
-        arrRwInfo={demoa1IndexData.arrRwInfo}
-        arrIndustries={demoa1IndexData.arrIndustries}
-        arrLocations={demoa1IndexData.arrLocations}
-        language={siteConfig?.language || 'vi'}
+        arrRwInfo={{
+          RW_BANNER: 'banner1.jpg;banner2.jpg;banner3.jpg'
+        }}
+        arrIndexNews={{
+          NEWS_TITLE: 'Welcome to Demoa2 Job Portal',
+          NEWS_CONTENT: '<p>Find your dream job with our comprehensive job search platform. We connect talented professionals with top companies worldwide.</p><p>Our platform offers advanced search features, career resources, and networking opportunities to help you succeed in your career journey.</p>'
+        }}
+        language={siteConfig?.language || 'en'}
       />
       
       <Footer 
         siteId={siteId} 
-        footerMenuCates={demoa1FooterData}
+        footerMenuCates={demoa2FooterData}
         language={siteConfig?.language || 'vi'}
       />
     </div>

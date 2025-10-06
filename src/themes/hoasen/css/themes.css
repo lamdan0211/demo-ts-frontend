@@ -15,7 +15,7 @@ header h2.section-title { font-size: 35px; margin-bottom: 50px; text-transform: 
 #header-pre .logo img { max-height: 65px }
 #header-pre .fa-bars { color: #666!important }
 .texton, .filter-video, .join-talent-onclip { display: none!important }
-.container-search { float: left; position: static; background-color: #f7f7f9!important; bottom: 60px }
+.container-search { float: left; position: static; background-color: #f7f7f9!important; bottom: 60px; z-index: 1 }
 .search-jobs-main { width: 1210px; padding: 30px 20px }
 .search-jobs-main input.width_545 { width: 345px; color: #494646 }
 .search-jobs-main input.width_545, .search-jobs-main .chosen-container-single .chosen-single, .search-jobs-main select.slc-mb { border-color: #494646 }
@@ -72,7 +72,7 @@ header h2.section-title { font-size: 35px; margin-bottom: 50px; text-transform: 
 .docked-nav.job h3 { margin: 0; height: 100%; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center }
 .docked-nav.job .docked-ctas { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: end; justify-content: flex-end; height: 135px; margin: 0 }
 #back-top { visibility: hidden }
-#footer { background-color: inherit; padding: 0 }
+#footer { background-color: #fff !important; padding: 0 }
 #footer .container { position: relative }
 #footer .column h6 { font-weight: bold; margin-top: 20px }
 #footer .container:before { position: absolute; top: 0; left: 0; width: 100%; height: 2px; background-color: #666 }

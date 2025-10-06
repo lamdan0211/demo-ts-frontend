@@ -52,6 +52,13 @@ export interface UserInfo {
 // Rewrite info
 export interface RewriteInfo {
   RW_LOGO: string;
+  RW_TITLE?: string;
+  RW_DESCRIPTION?: string;
+  RW_BANNER_TOP?: string;
+  RW_BANNER?: string;
+  RW_BANNER_MOBILE?: string;
+  RW_BANNER_PROPERTY?: string;
+  RW_VIDEO?: string;
 }
 
 // Feature career
@@ -246,6 +253,14 @@ export interface Industry {
   INDUSTRY_NAME: string;
   LINK: string;
   JOB_INDUSTRY_NUM: number;
+}
+
+export interface Location {
+  LOCATION_ID: number;
+  LOCATION_NAME: string;
+  LOCATION_CODE: string;
+  LOCATION_LINK: string;
+  LOCATION_COUNT: number;
 }
 
 // Box Horizontal Industries props

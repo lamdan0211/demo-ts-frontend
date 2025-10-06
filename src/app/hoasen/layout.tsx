@@ -1,6 +1,5 @@
 import { getSiteConfig } from '@/lib/site-config';
 import LayoutWrapper from '@/layouts/LayoutWrapper';
-import '@/themes/demoa1/globals.css'; // Import theme-specific CSS
 
 interface HoasenLayoutProps {
   children: React.ReactNode;

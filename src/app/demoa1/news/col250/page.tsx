@@ -1,4 +1,4 @@
-import Col250Box from './col250/box';
+import Col250Box from './box';
 
 export default function NewsCol250() {
   return <Col250Box />;

@@ -1,6 +1,5 @@
 import { getSiteConfig } from '@/lib/site-config';
 import LayoutWrapper from '@/layouts/LayoutWrapper';
-import '@/themes/demoa1/globals.css'; // Import theme-specific CSS
 
 interface Demoa2LayoutProps {
   children: React.ReactNode;
@@ -13,9 +12,9 @@ export default async function Demoa2Layout({ children }: Demoa2LayoutProps) {
   return (
     <LayoutWrapper
       siteId={siteId}
-      layoutType={siteConfig?.layoutType || "04"}
+      layoutType={siteConfig?.layoutType || "default"}
       owner="demoa2" // Owner sử dụng theme
-      tempName="demoa1" // Template name (sử dụng theme demoa1)
+      tempName="demoa2" // Template name (sử dụng theme demoa2)
       controller="index"
       action="index"
       arrFunction={{ SUPPORT_MOBILE: true }}

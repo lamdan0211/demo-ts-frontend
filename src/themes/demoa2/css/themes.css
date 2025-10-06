@@ -1,0 +1,110 @@
+.col_theme { color: var(--text-theme,#49b344) }
+.bgcolor_theme, .JoinCollegeNw .leftCol .ui_btnCb { background-color: var(--bgcolor-theme,#49b344) }
+.link_theme, a { color: var(--link-theme,#0078c9) }
+#fancybox-content { border-color: var(--bordercolor-theme,#49b344)!important }
+#header-container { background: none }
+#logo { width: 206px; height: 56px }
+.headerfront #header-join-container { width: 425px; padding-right: 20px; width: 70% }
+.joinarea { float: right; *width: 63% }
+#header { position: relative; padding: 15px 0 }
+#header-join { float: left }
+#header-join a.buttonJoin, .loginJoinTalentNetwork a { background: url("images/join_now.png") no-repeat; width: 225px; height: 28px }
+#header-join .stayconnect { color: #0078c9 }
+.headerfront #lang { text-align: left; float: right; margin-left: 50px }
+.headerfront #lang .language_all { font-weight: normal; background: url("images/lang.gif") no-repeat; display: block; float: left; margin-top: 3px; padding-left: 30px; height: 13px; line-height: 13px }
+.headerfront #lang .english_flag { background-position: 0 -13px }
+.headerfront #lang .vietnam_flag { background-position: 0 0 }
+.headerfront #lang .separated { color: #0078c9; font-weight: normal }
+.language_top { float: right; padding-bottom: 10px }
+.headerfront .logined { padding-top: 0 }
+#lang ul.nav { float: right; clear: both }
+#nav-bar { border-bottom-width: 5px; border-bottom-style: solid; border-bottom-color: var(--bordercolor-theme,#49b344); margin: 0 }
+#nav-bar ul li { border-right: none; margin-right: 7px }
+#nav-bar a, #nav-bar a:hover, #nav-bar .focus { border-bottom: 0 }
+#nav-bar a { background: var(--bgcolormenu-theme-rgba,rgba(73, 179, 68, 0.5)); color: #333; padding: 10px 25px 6px; font-size: 13px; text-transform: uppercase; 
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-o-border-radius: 5px 5px 0 0;
+	-ms-border-radius: 5px 5px 0 0;
+}
+#nav-bar a:hover, #nav-bar .focus, #nav-bar ul.submenu a { color: #fff; background-color: var(--bgcolor-theme,#49b344) }
+#nav-bar ul.submenu a { text-transform: none; border-radius: 0 }
+#nav-bar ul.submenu a, #nav-bar ul.submenu a:hover { border-top: 0; border-bottom: 1px solid #198e93 }
+#nav-bar ul.submenu a:hover { background-color: #198e93 }
+#nav-bar ul.submenu a.moresub { font-weight: normal; background-image: none }
+.logina { position: absolute; right: 0; bottom: -25px; font-weight: bold; white-space: nowrap }
+.frmContact, .SearchJobBy { padding: 20px; border: 1px solid #bdcbd9; float: left; width: 932px;
+	box-shadow: 0 0 10px #c2c2c2;
+	-moz-box-shadow: 0 0 10px #c2c2c2;
+	-webkit-box-shadow: 0 0 10px #c2c2c2;
+	-o-box-shadow: 0 0 10px #c2c2c2;
+	-ms-box-shadow: 0 0 10px #c2c2c2;
+}
+.SearchJobBy { margin-top: 20px }
+.SearchJobBy h3 { color: var(--text-theme,#49b344); font-size: 16px; padding-bottom: 15px; text-align: left }
+.JobByLocation { width: 50%; float: left }
+.JobByIndustry ul { float: left; width: 250px; padding-left: 30px; border-right: 1px dashed #bccbd9 }
+.JobByIndustry ul.last { padding-right: 0; border: 0 }
+.JobByIndustry ul li, ul.ListCareer li, .OtherNewsTalent ul li { position: relative; padding: 0 0 0 15px; margin-bottom: 5px; background-image: none }
+.JobByIndustry ul li:before, ul.ListCareer li:before, .OtherNewsTalent ul li:before { content:''; position: absolute; left: 0; top: 5px; width: 5px; height: 5px; border-radius: 100%; background-color: var(--bgcolor-theme,#49b344) }
+.JobByIndustry .viewmore { padding-left: 20px; float: left }
+.viewmore { font-weight: bold; padding-top: 5px; display: block }
+#mainslide { position: relative; clear: both; float: none; width: 974px; height: 273px; margin: 0 auto; overflow: hidden }
+.Employer_home { position: absolute; top: 0; left: 0 }
+.Employer_home a { font-size: 14px; font-weight: bold; display: block; color: #ff5b00; padding: 7px 15px; background-color: rgba(255,255,255,0.7);
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-o-border-radius: 0 0 5px 5px;
+}
+#slidehr { position: absolute; left: 0; top: 0; z-index: 1 }
+#pager { position: absolute; bottom: 10px; left: 60%; z-index: 1000 }
+#pager li { float: left; padding-right: 10px }
+#pager li a { background: rgba(0, 0, 0, 0.2); background-image: none!important; width: 15px; height: 15px; border-radius: 100%; display: block }
+#pager li a.activeSlide { background: var(--bgcolor-theme,#49b344) }
+#search-banner { width: 974px; margin: 0 auto; position: relative; z-index: 900; height: 354px }
+#search-banner .search-home { position: absolute; right: 20px; top: 40px; width: 340px }
+.search-home h2 { height: 75px; font-size: 26px; color: #656565; text-align: center; font-weight: normal }
+.search-box-right { background: #748c8d; padding: 25px 30px; width: 280px; float: left;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+}
+.search-box-right .row input[type=text] { height: 18px; font-size: 13px; line-height: 18px }
+.search-box-right .row select { height: 26px; font-size: 12px; line-height: 26px }
+.search-box-right .last { margin-bottom: 0 }
+.search_banner { width: 272px; height: 38px; font-size: 14px }
+.search-full input.width_545 { font-size: 12px; font-family: Arial!important }
+.search-full .brOrgane { border-color: #aaa!important }
+.LeftContact { float: left; width: 48%; border-right: 1px dotted #7c7c7c; padding-right: 2% }
+.RightContact { float: right; width: 47%; padding-left: 2% }
+.frmContact .row { width: 435px }
+.Left-ListNews .nav_hor, .TitleChung { background: url("images/dotted.gif") repeat-x scroll left bottom rgba(0, 0, 0, 0); padding-bottom: 5px; margin-bottom: 10px }
+.btnContinute { background-image: url("images/btn-continute.png") }
+.share { margin-top: 10px }
+.JoinCollegeNw .leftCol .ui_btnCb { border: 0 }
+
+/* Testimonial */
+.TestimonialPage { }
+.TestimoLine { width: 100%; float: left; margin-bottom: 20px }
+.TestimoLogo { float: left; width: 170px }
+.TestimoLogo img { width: 160px!important }
+.TestimoView { float: right; width: 455px; position: relative; border: 2px solid #d1d1d1; padding: 15px 20px 15px 35px; position: relative;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+}
+.TestimoView .RowTestimo { position: absolute; left: -17px; top: 42px; background: url("images/row_testimo.png") no-repeat; width: 17px; height: 16px }
+.TestimoView .NhapKepOpen { position: absolute; left: 15px; top: 20px; background: url("images/nhay_kep_open.png") no-repeat; width: 14px; height: 10px }
+.TestimoView .NhapKepClose { position: absolute; bottom: 35px; right: 15px; background: url("images/nhay_kep_close.png") no-repeat; width: 14px; height: 10px }
+.TestimoView .cont_view { text-align: justify; margin-bottom: 10px; line-height: 20px }
+.TestimoView .name_view { text-align: right; padding-right: 15px }
+
+#footer { padding: 20px 0; background-color: var(--footerbgcolor-theme,#505050) }
+.linkofClient a { font-weight: normal }
+.developed-by-CB a:hover { text-decoration: none }
