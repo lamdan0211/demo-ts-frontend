@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { HeaderProps, MenuCategory, EmployerInfo, UserInfo } from '@/lib/types';
 import { getSiteConfig } from '@/lib/site-config';
+import { useModal } from '@/hooks/useModal';
+import { WhyJoinModal } from '@/components/UI';
 
 // Helper function to convert decimal to hex (equivalent to PHP dec2hex)
 function dec2hex(dec: number): string {
@@ -114,6 +116,7 @@ export default function Header({
 }: HeaderProps) {
   const [isLoggedIn, setIsLoggedIn] = useState(!!arrInfo);
   const [isHovered, setIsHovered] = useState<string | null>(null);
+  const { isOpen: isWhyJoinOpen, openModal: openWhyJoin, closeModal: closeWhyJoin } = useModal();
   
   const siteConfig = getSiteConfig(siteId);
   if (!siteConfig) return null;
@@ -135,10 +138,11 @@ export default function Header({
       <div id="header">
         <div id="logo">
           {arrRwInfo && (
-            <a href={constants.TN} target="_blank">
+            <a href={constants.TN} target="_blank" suppressHydrationWarning={true}>
               <img 
                 alt={arrEmployer?.EMP_NAME || 'Logo'} 
                 src={`${constants.LINK_RW_IMAGES}/${arrRwInfo.RW_LOGO}`}
+                suppressHydrationWarning={true}
               />
             </a>
           )}
@@ -153,9 +157,21 @@ export default function Header({
                 </a>
                 <p className="col_theme stayconnect">
                   {t('_Stay Connected_', siteConfig.language)}. 
-                  <a href="#WhyJoin" className="showDialog line_bot link_theme">
+                  <button 
+                    onClick={openWhyJoin}
+                    className="line_bot link_theme"
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      color: 'inherit',
+                      textDecoration: 'underline',
+                      cursor: 'pointer',
+                      padding: 0,
+                      font: 'inherit'
+                    }}
+                  >
                     {t('Why?', siteConfig.language)}
-                  </a>
+                  </button>
                 </p>
               </div>
             )}
@@ -293,6 +309,13 @@ export default function Header({
           </div>
         </div>
       </div>
+      
+      {/* Why Join Modal */}
+      <WhyJoinModal 
+        isOpen={isWhyJoinOpen}
+        onClose={closeWhyJoin}
+        language={siteConfig.language}
+      />
     </div>
   );
 }

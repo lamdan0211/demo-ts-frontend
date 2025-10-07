@@ -275,7 +275,7 @@ export default function LayoutPremium({
             <link href="/themes/css/TNredirect.css" rel="stylesheet" type="text/css" media="screen" />
           </>
         )}
-        <link href="/themes/templateP31/css/premium.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/themes/css/premium.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/themes/hoasen/css/themes.css" rel="stylesheet" type="text/css" media="screen" />
         {/* <link href="/themes/hoasen/css/homepage-p13.css" rel="stylesheet" type="text/css" media="screen" /> */}
         {GLOBAL_CONFIG.LANGUAGE === 'vi' && (
@@ -283,9 +283,6 @@ export default function LayoutPremium({
         )}
         <link href="/themes/js/jquery_ui/jquery.multiselect.css" rel="stylesheet" type="text/css" />
         <link href="/themes/js/jquery_ui/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
-        {newlayout !== 1 && (
-          <link href="/themes/css/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
-        )}
         <link href="/themes/css/jquery-confirm.min.css" rel="stylesheet" type="text/css" />
         <link href="/themes/js/chosen/chosen.css" rel="stylesheet" type="text/css" />
         
@@ -299,7 +296,6 @@ export default function LayoutPremium({
             <script src="/themes/js/jquery_ui/jquery.multiselect.js" />
           </>
         )}
-        <script src="/themes/js/jquery.formatcurrency.js" />
         <script src="/themes/js/jquery-confirm.min.js" />
         <script src="/themes/js/lazyload.js" />
         <script src="/themes/js/hoverIntent.js" />
@@ -583,9 +579,6 @@ export default function LayoutPremium({
         }} />
         
         {/* Additional Scripts */}
-        {newlayout !== 1 && (
-          <script src="/themes/js/fancybox/jquery.fancybox-1.3.4.js" />
-        )}
         <script src="/themes/js/jquery.validate.js" />
         <script src="/themes/js/additional-methods.js" />
         <script src="/themes/js/tn-validate-methods.js" />
@@ -597,7 +590,12 @@ export default function LayoutPremium({
           <link href="custom/css_custom.css" rel="stylesheet" type="text/css" media="screen" />
         )}
         {js_custom === 1 && (
-          <script src="custom/js_custom.js" />
+          <script dangerouslySetInnerHTML={{
+            __html: `
+              // Custom JS - only load if exists
+              console.log('Custom JS would be loaded here');
+            `
+          }} />
         )}
         
         {/* New Layout Scripts */}

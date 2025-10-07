@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { useModal } from '@/hooks/useModal';
+import { WhyJoinModal } from '@/components/UI';
 
 interface HeaderProps {
   siteId?: string;
@@ -130,6 +132,7 @@ export default function Header({
   LINK_RW_IMAGES = '/themes/demoa2/images',
   LINK_RESUME = '/demoa2/resume'
 }: HeaderProps) {
+  const { isOpen: isWhyJoinOpen, openModal: openWhyJoin, closeModal: closeWhyJoin } = useModal();
   
   const strLogo = `${LINK_RW_IMAGES}/${arrRwInfo?.RW_LOGO || 'logo.png'}`;
   const otherLanguage = detectOtherLanguage(language);
@@ -227,8 +230,8 @@ export default function Header({
       <div id="header">
         <div id="logo">
           {arrRwInfo && (
-            <a href={TN} target="_blank">
-              <img alt={arrEmployer?.EMP_NAME} src={strLogo} />
+            <a href={TN} target="_blank" suppressHydrationWarning={true}>
+              <img alt={arrEmployer?.EMP_NAME} src={strLogo} suppressHydrationWarning={true} />
             </a>
           )}
         </div>
@@ -248,9 +251,21 @@ export default function Header({
                 </a>
                 <p className="col_theme stayconnect">
                   {t('_Stay Connected_', language)}. 
-                  <a className="showDialog line_bot link_theme" href="#WhyJoin">
+                  <button 
+                    onClick={openWhyJoin}
+                    className="line_bot link_theme"
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      color: 'inherit',
+                      textDecoration: 'underline',
+                      cursor: 'pointer',
+                      padding: 0,
+                      font: 'inherit'
+                    }}
+                  >
                     {t('Why?', language)}
-                  </a>
+                  </button>
                 </p>
               </div>
             )}
@@ -340,29 +355,12 @@ export default function Header({
         </ul>
       </div>
       
-      {/* Why Join Dialog */}
-      <div style={{ display: 'none' }}>
-        <div id="WhyJoin" className="wrapDialog msgbox">
-          <div className="container">
-            <h3 className="col_theme">{t('_Join Our Talent Network_', language)}</h3>
-            <div className="content_why_join">
-              {t('_content_why_join_', language)}
-              <p>
-                <a href={getLink('join', { currentUrl })} className="showDialogD">
-                  <strong>{t('_Join our Talent Network today!_', language)}</strong>
-                </a>
-              </p>
-            </div>
-            <div className="clearall mar_top10">
-              <div className="btnContinute">
-                <a href={getLink('join', { currentUrl })} className="showDialogD">
-                  {t('Continute', language)}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Why Join Modal */}
+      <WhyJoinModal 
+        isOpen={isWhyJoinOpen}
+        onClose={closeWhyJoin}
+        language={language}
+      />
     </div>
   );
 }

@@ -108,14 +108,12 @@ export default function Layout({
       <link href={`/themes/${siteId}/css/themes.css`} rel="stylesheet" type="text/css" media="screen" />
       <link href={`/themes/${siteId}/${owner}/skin.css`} rel="stylesheet" type="text/css" media="screen" />
       <link href="/themes/js/chosen/chosen.css" rel="stylesheet" type="text/css" />
-      <link href="/themes/css/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
       <link href="/themes/css/jquery-confirm.min.css" rel="stylesheet" type="text/css" />
       
       {/* JavaScript Files */}
       <script src="/themes/js/jquery.min.js" />
       <script src="/themes/js/jquery_ui/jquery-ui.min.js" />
       <script src="/themes/js/chosen/chosen.jquery.js" />
-      <script src="/themes/js/fancybox/jquery.fancybox-1.3.4.js" />
       <script src="/themes/js/jquery-confirm.min.js" />
       <script src="/themes/js/lazyload.js" />
       <script src="/themes/js/common.js" />
@@ -158,6 +156,7 @@ export default function Layout({
           </div>
         </div>
       </div>
+      
     </>
   );
 }

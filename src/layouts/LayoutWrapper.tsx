@@ -115,7 +115,6 @@ export default function LayoutWrapper({
         '/themes/js/jquery_ui/jquery.multiselect.css',
         '/themes/js/jquery_ui/themes/ui-lightness/jquery-ui.css',
         '/themes/js/chosen/chosen.min.css',
-        '/themes/css/fancybox/jquery.fancybox-1.3.4.css',
         '/themes/css/jquery-confirm.min.css'
       ];
 
@@ -214,80 +213,30 @@ export default function LayoutWrapper({
           await loadScript('/themes/js/jquery_ui/jquery-ui.min.js');
           await loadScript('/themes/js/jquery_ui/jquery.multiselect.js');
           await loadScript('/themes/js/chosen/chosen.jquery.min.js');
-          await loadScript('/themes/js/jquery.formatcurrency.js');
           await loadScript('/themes/js/jquery.cycle.all.2.74.js');
           await loadScript('/themes/js/jquery-confirm.min.js');
           await loadScript('/themes/js/lazyload.js');
-          await loadScript('/themes/js/fancybox/jquery.fancybox-1.3.4.js');
           await loadScript('/themes/js/jquery.validate.js');
           await loadScript('/themes/js/additional-methods.js');
           await loadScript('/themes/js/tn-validate-methods.js');
           await loadScript('/themes/js/hoverIntent.js');
           await loadScript('/themes/js/common.js');
           await loadScript('/themes/js/common_premium.js');
-          await loadScript(`/themes/${siteId}/custom/js_custom.js`);
+          // Custom JS - only load if exists
+          try {
+            await loadScript(`/themes/${siteId}/custom/js_custom.js`);
+          } catch (e) {
+            console.log(`Custom JS not found for ${siteId}`);
+          }
         };
 
         loadSequentially().then(() => {
           // Load initialization script after all scripts are loaded
           loadInitScript();
           
-          // Initialize showDialog functionality after all scripts are loaded
-          setTimeout(() => {
-            try {
-              if ((window as any).jQuery && (window as any).jQuery.fancybox) {
-                const $ = (window as any).jQuery;
-                
-                // Initialize showDialog with error handling
-                if ($('.showDialog').length > 0) {
-                  $('.showDialog').fancybox({
-                    'padding': 0,
-                    onComplete: function() {
-                      try {
-                        const fancyboxContent = $('#fancybox-content');
-                        if (fancyboxContent.length) {
-                          $('#fancybox-wrap').css({ 
-                            'width': (fancyboxContent.width() + 40) + 'px', 
-                            'padding': 0 
-                          });
-                        }
-                      } catch (e) {
-                        console.warn('Fancybox onComplete error:', e);
-                      }
-                    },
-                    onError: function() {
-                      console.warn('Fancybox showDialog error');
-                    }
-                  });
-                }
-                
-                // Initialize showDialogD with error handling
-                if (!checkMobile() && $('.showDialogD').length > 0) {
-                  $('.showDialogD').fancybox({
-                    'padding': 0,
-                    onComplete: function() {
-                      try {
-                        const fancyboxContent = $('#fancybox-content');
-                        if (fancyboxContent.length) {
-                          $('#fancybox-wrap').css({ 
-                            'width': (fancyboxContent.width() + 40) + 'px', 
-                            'padding': 0 
-                          });
-                        }
-                      } catch (e) {
-                        console.warn('Fancybox onComplete error:', e);
-                      }
-                    },
-                    onError: function() {
-                      console.warn('Fancybox showDialogD error');
-                    }
-                  });
-                }
-              }
-            } catch (e) {
-              console.warn('Fancybox initialization error:', e);
-            }
-            
+          // Load scripts
+          loadScripts();
+          
             // Initialize menu hover functionality
             if ((window as any).jQuery) {
               const $ = (window as any).jQuery;
@@ -308,11 +257,7 @@ export default function LayoutWrapper({
         });
       };
 
-      // Load jQuery first, then other scripts
-      loadJQuery().then(loadOtherScripts);
-    };
-
-    // Load global variables
+      // Load global variables
     const loadGlobalVariables = () => {
       const script = document.createElement('script');
       script.innerHTML = `
@@ -383,55 +328,55 @@ export default function LayoutWrapper({
       document.head.appendChild(script);
     };
 
-    // Load all resources
-    loadCSS();
-    loadScripts();
-    loadGlobalVariables();
-  }, [siteId, owner, tempName, controller, action]);
+      // Load all resources
+      loadCSS();
+      loadScripts();
+      loadGlobalVariables();
+    }, [siteId, owner, tempName, controller, action]);
 
-  // Render layout based on layoutType
-  const renderLayout = () => {
-    const commonProps = {
-      siteId,
-      owner,
-      tempName,
-      layoutType,
-      controller,
-      action,
-      newlayout,
-      arrFunction,
-      arrSupportedLanguages,
-      arrMenuCates,
-      CHANGE_LANG_URL,
-      arrInfo,
-      currentUrl,
-      title,
-      description,
-      keywords,
-      ogImage,
-      ogImageWidth,
-      ogImageHeight,
-      arrEmployer,
-      arrMetaTag
+    // Render layout based on layoutType
+    const renderLayout = () => {
+      const commonProps = {
+        siteId,
+        owner,
+        tempName,
+        layoutType,
+        controller,
+        action,
+        newlayout,
+        arrFunction,
+        arrSupportedLanguages,
+        arrMenuCates,
+        CHANGE_LANG_URL,
+        arrInfo,
+        currentUrl,
+        title,
+        description,
+        keywords,
+        ogImage,
+        ogImageWidth,
+        ogImageHeight,
+        arrEmployer,
+        arrMetaTag
+      };
+
+      switch (layoutType) {
+        case '03':
+          return <Layout03 {...commonProps}>{children}</Layout03>;
+        
+        case '04':
+          return <Layout04 {...commonProps}>{children}</Layout04>;
+        
+        case 'premium':
+          return <LayoutPremium {...commonProps}>{children}</LayoutPremium>;
+        
+        case 'main':
+        default:
+          return <Layout {...commonProps}>{children}</Layout>;
+      }
     };
 
-    switch (layoutType) {
-      case '03':
-        return <Layout03 {...commonProps}>{children}</Layout03>;
-      
-      case '04':
-        return <Layout04 {...commonProps}>{children}</Layout04>;
-      
-      case 'premium':
-        return <LayoutPremium {...commonProps}>{children}</LayoutPremium>;
-      
-      case 'main':
-      default:
-        return <Layout {...commonProps}>{children}</Layout>;
-    }
-  };
-
-  return renderLayout();
+    return renderLayout();
 }
 
 // Export ThemeImage as named export
