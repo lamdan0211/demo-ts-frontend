@@ -138,8 +138,8 @@ export default function SearchJobSectionP31({
         
         <select name="cat" className="chosen slc-mb search-select">
           <option key="category-default" value="">{t('Category', language)}</option>
-          {arrIndustries.map((industry) => (
-            <option key={industry.INDUSTRY_ID} value={industry.INDUSTRY_ID}>
+          {arrIndustries.map((industry, index) => (
+            <option key={`industry-${index}-${industry.INDUSTRY_ID}`} value={industry.INDUSTRY_ID}>
               {industry.INDUSTRY_NAME}
             </option>
           ))}
@@ -149,8 +149,8 @@ export default function SearchJobSectionP31({
           <option key="location-default" value="">{t('Location', language)}</option>
           {getAllLocateCountry.map((country, countryIndex) => (
             <optgroup key={countryIndex} label={country.NAME}>
-              {country.LOCATION.map((location) => (
-                <option key={location.LOCATION_ID} value={location.LOCATION_ID}>
+              {country.LOCATION.map((location, locationIndex) => (
+                <option key={`${countryIndex}-${locationIndex}-${location.LOCATION_ID}`} value={location.LOCATION_ID}>
                   {location.LOCATION_NAME}
                 </option>
               ))}

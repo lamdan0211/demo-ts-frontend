@@ -184,7 +184,7 @@ export default function Contact({
   // Initialize jQuery validation when component mounts
   useEffect(() => {
     const initValidation = () => {
-      if (typeof window !== 'undefined' && (window as any).$) {
+      if (typeof window !== 'undefined' && (window as any).$ && (window as any).$.fn.validate) {
         const $ = (window as any).$;
         
         $("#frmContact").validate({
@@ -207,16 +207,27 @@ export default function Contact({
       }
     };
 
-    // Check if jQuery is loaded
-    if (typeof window !== 'undefined' && (window as any).$) {
-      initValidation();
-    } else {
-      const checkJQuery = setInterval(() => {
-        if (typeof window !== 'undefined' && (window as any).$) {
-          clearInterval(checkJQuery);
-          initValidation();
+    // Check if jQuery and validation plugin are loaded
+    const checkValidation = () => {
+      if (typeof window !== 'undefined' && (window as any).$ && (window as any).$.fn.validate) {
+        initValidation();
+        return true;
+      }
+      return false;
+    };
+
+    // Try immediately first
+    if (!checkValidation()) {
+      // If not ready, check every 200ms for up to 10 seconds
+      let attempts = 0;
+      const maxAttempts = 50; // 10 seconds
+      
+      const interval = setInterval(() => {
+        attempts++;
+        if (checkValidation() || attempts >= maxAttempts) {
+          clearInterval(interval);
         }
-      }, 100);
+      }, 200);
     }
   }, []);
 
@@ -253,6 +264,7 @@ export default function Contact({
                 marginWidth={0} 
                 src={`https://maps.google.com/maps?f=q&q=${encodeURIComponent(detailOwner.EMP_ADDRESS)}&output=embed`}
                 title="Company Location"
+                suppressHydrationWarning={true}
               />
             </div>
           )}

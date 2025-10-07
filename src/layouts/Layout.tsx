@@ -95,35 +95,38 @@ export default function Layout({
         <meta property="og:url" content={currentUrl} />
         <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        {/* CSS Files */}
-        <link href="/themes/css/general.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="/themes/css/FontAwesome.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="/themes/css/core.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="/themes/css/theme_default.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href={`/themes/${siteId}/css/themes.css`} rel="stylesheet" type="text/css" media="screen" />
-        <link href={`/themes/${siteId}/${owner}/skin.css`} rel="stylesheet" type="text/css" media="screen" />
-        <link href="/themes/js/chosen/chosen.css" rel="stylesheet" type="text/css" />
-        <link href="/themes/css/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
-        <link href="/themes/css/jquery-confirm.min.css" rel="stylesheet" type="text/css" />
-        
-        {/* JavaScript Files */}
-        <script src="/themes/js/jquery.min.js" />
-        <script src="/themes/js/jquery_ui/jquery-ui.min.js" />
-        <script src="/themes/js/chosen/chosen.jquery.js" />
-        <script src="/themes/js/fancybox/jquery.fancybox-1.3.4.js" />
-        <script src="/themes/js/jquery-confirm.min.js" />
-        <script src="/themes/js/lazyload.js" />
-        <script src="/themes/js/common.js" />
       </Head>
       
-      <div className={`site-${siteId}`}>
+      {/* CSS Files */}
+      {siteId === 'demoa2' && (
+        <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" />
+      )}
+      <link href="/themes/css/general.css" rel="stylesheet" type="text/css" media="screen" />
+      <link href="/themes/css/FontAwesome.css" rel="stylesheet" type="text/css" media="screen" />
+      <link href="/themes/css/core.css" rel="stylesheet" type="text/css" media="screen" />
+      <link href="/themes/css/theme_default.css" rel="stylesheet" type="text/css" media="screen" />
+      <link href={`/themes/${siteId}/css/themes.css`} rel="stylesheet" type="text/css" media="screen" />
+      <link href={`/themes/${siteId}/${owner}/skin.css`} rel="stylesheet" type="text/css" media="screen" />
+      <link href="/themes/js/chosen/chosen.css" rel="stylesheet" type="text/css" />
+      <link href="/themes/css/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
+      <link href="/themes/css/jquery-confirm.min.css" rel="stylesheet" type="text/css" />
+      
+      {/* JavaScript Files */}
+      <script src="/themes/js/jquery.min.js" />
+      <script src="/themes/js/jquery_ui/jquery-ui.min.js" />
+      <script src="/themes/js/chosen/chosen.jquery.js" />
+      <script src="/themes/js/fancybox/jquery.fancybox-1.3.4.js" />
+      <script src="/themes/js/jquery-confirm.min.js" />
+      <script src="/themes/js/lazyload.js" />
+      <script src="/themes/js/common.js" />
+      
+      <div className={`site-${siteId}`} suppressHydrationWarning={true}>
         {/* Header */}
         <div id="section-header">
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12">
-                <div id="header-pre">
+                <div id="header-pre" suppressHydrationWarning={true}>
                   <div className="logo">
                     <a href="/">
                       <img src={strLogo} alt={arrEmployer?.EMP_NAME} />

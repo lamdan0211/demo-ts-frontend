@@ -145,9 +145,9 @@ export default function HoasenIndex({
     <>
 
       {/* Desktop Slider */}
-      <div>
+      <div suppressHydrationWarning={true}>
         <div className="ads-pre slidebg sliderSetheight">
-          <div className="texton">
+          <div className="texton" suppressHydrationWarning={true}>
             <h1>Welcome to Hoasen Job Portal</h1>
             <p>Find your dream job with us!</p>
           </div>

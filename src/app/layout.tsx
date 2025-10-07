@@ -32,13 +32,28 @@ export default async function SiteLayout({ children, params }: SiteLayoutProps) 
                 if (body) {
                   body.removeAttribute('bis_register');
                   body.removeAttribute('_processed_');
+                  body.removeAttribute('bis_skin_checked');
                   // Remove any other extension-added attributes
                   Array.from(body.attributes).forEach(attr => {
-                    if (attr.name.startsWith('_processed_') || attr.name.startsWith('bis_')) {
+                    if (attr.name.startsWith('_processed_') || 
+                        attr.name.startsWith('bis_') || 
+                        attr.name.includes('bis_skin_checked')) {
                       body.removeAttribute(attr.name);
                     }
                   });
                 }
+                
+                // Also check for any divs with extension attributes
+                const allElements = document.querySelectorAll('*');
+                allElements.forEach(element => {
+                  Array.from(element.attributes).forEach(attr => {
+                    if (attr.name.startsWith('_processed_') || 
+                        attr.name.startsWith('bis_') || 
+                        attr.name.includes('bis_skin_checked')) {
+                      element.removeAttribute(attr.name);
+                    }
+                  });
+                });
               }
             `,
           }}

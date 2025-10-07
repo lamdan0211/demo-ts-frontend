@@ -216,25 +216,15 @@ export default function LayoutPremium({
         {/* Bootstrap CSS */}
         {shouldUseBootstrap && (
           <>
-            {arrEmployer?.TEMPLATEDEFAULT_ID === 'P21' ? (
-              <>
-                <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
-                {/*[if lt IE 9]*/}
-                <link href="/themes/css/iefix.css" rel="stylesheet" type="text/css" />
-                <script src="/themes/js/html5shiv.min.js" />
-                <script src="/themes/js/respond.min.js" />
-                {/*[endif]*/}
-              </>
-            ) : (
-              <>
-                <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
-                {/*[if lt IE 9]*/}
-                <link href={`/themes/template${arrEmployer?.TEMPLATEDEFAULT_ID || 'P21'}/css/iefix.css`} rel="stylesheet" type="text/css" />
-                <script src="/themes/js/html5shiv.min.js" />
-                <script src="/themes/js/respond.min.js" />
-                {/*[endif]*/}
-              </>
-            )}
+            {/* Temporarily commented out P21 template support - removed due to syntax errors */}
+            
+            {/* Default template support */}
+            <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
+            {/*[if lt IE 9]*/}
+            <link href="/themes/css/iefix.css" rel="stylesheet" type="text/css" />
+            <script src="/themes/js/html5shiv.min.js" />
+            <script src="/themes/js/respond.min.js" />
+            {/*[endif]*/}
             
             {/* Bootstrap-specific styles */}
             <style dangerouslySetInnerHTML={{
@@ -275,7 +265,6 @@ export default function LayoutPremium({
         <link href="/themes/css/general.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/themes/css/FontAwesome.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="/themes/css/swiper-9.min.css" rel="stylesheet" type="text/css" media="screen" />
         {newlayout !== 1 && (
           <link href="/themes/css/core.css?t=20171010" rel="stylesheet" type="text/css" media="screen" />
         )}

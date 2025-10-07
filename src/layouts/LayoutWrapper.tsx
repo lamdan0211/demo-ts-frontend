@@ -207,6 +207,10 @@ export default function LayoutWrapper({
 
         // Load scripts sequentially to ensure proper order
         const loadSequentially = async () => {
+          // First load jQuery core
+          await loadScript('/themes/js/jquery.min.js');
+          
+          // Then load jQuery UI and plugins
           await loadScript('/themes/js/jquery_ui/jquery-ui.min.js');
           await loadScript('/themes/js/jquery_ui/jquery.multiselect.js');
           await loadScript('/themes/js/chosen/chosen.jquery.min.js');
@@ -230,34 +234,58 @@ export default function LayoutWrapper({
           
           // Initialize showDialog functionality after all scripts are loaded
           setTimeout(() => {
-            if ((window as any).jQuery && (window as any).jQuery.fancybox) {
-              (window as any).jQuery('.showDialog').fancybox({
-                'padding': 0,
-                onComplete: function() {
-                  const fancyboxContent = (window as any).jQuery('#fancybox-content');
-                  if (fancyboxContent.length) {
-                    (window as any).jQuery('#fancybox-wrap').css({ 
-                      'width': (fancyboxContent.width() + 40) + 'px', 
-                      'padding': 0 
-                    });
-                  }
-                }
-              });
-              
-              if (!checkMobile()) {
-                (window as any).jQuery('.showDialogD').fancybox({
-                  'padding': 0,
-                  onComplete: function() {
-                    const fancyboxContent = (window as any).jQuery('#fancybox-content');
-                    if (fancyboxContent.length) {
-                      (window as any).jQuery('#fancybox-wrap').css({ 
-                        'width': (fancyboxContent.width() + 40) + 'px', 
-                        'padding': 0 
-                      });
+            try {
+              if ((window as any).jQuery && (window as any).jQuery.fancybox) {
+                const $ = (window as any).jQuery;
+                
+                // Initialize showDialog with error handling
+                if ($('.showDialog').length > 0) {
+                  $('.showDialog').fancybox({
+                    'padding': 0,
+                    onComplete: function() {
+                      try {
+                        const fancyboxContent = $('#fancybox-content');
+                        if (fancyboxContent.length) {
+                          $('#fancybox-wrap').css({ 
+                            'width': (fancyboxContent.width() + 40) + 'px', 
+                            'padding': 0 
+                          });
+                        }
+                      } catch (e) {
+                        console.warn('Fancybox onComplete error:', e);
+                      }
+                    },
+                    onError: function() {
+                      console.warn('Fancybox showDialog error');
                     }
-                  }
-                });
+                  });
+                }
+                
+                // Initialize showDialogD with error handling
+                if (!checkMobile() && $('.showDialogD').length > 0) {
+                  $('.showDialogD').fancybox({
+                    'padding': 0,
+                    onComplete: function() {
+                      try {
+                        const fancyboxContent = $('#fancybox-content');
+                        if (fancyboxContent.length) {
+                          $('#fancybox-wrap').css({ 
+                            'width': (fancyboxContent.width() + 40) + 'px', 
+                            'padding': 0 
+                          });
+                        }
+                      } catch (e) {
+                        console.warn('Fancybox onComplete error:', e);
+                      }
+                    },
+                    onError: function() {
+                      console.warn('Fancybox showDialogD error');
+                    }
+                  });
+                }
               }
+            } catch (e) {
+              console.warn('Fancybox initialization error:', e);
             }
             
             // Initialize menu hover functionality

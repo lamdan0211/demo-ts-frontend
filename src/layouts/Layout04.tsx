@@ -85,13 +85,56 @@ export default function Layout04({
         }} />
         
       {/* Document Ready Script */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            $(document).ready(function() {
-              $(".lazyload").lazyload();
-            });
-          `
-        }} />
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          $(document).ready(function() {
+            $(".lazyload").lazyload();
+            
+            // Initialize Fancybox for modals
+            if (typeof $.fancybox !== 'undefined') {
+              $('.showDialog').fancybox({
+                'padding': 0,
+                onComplete: function() {
+                  try {
+                    const fancyboxContent = $('#fancybox-content');
+                    if (fancyboxContent.length) {
+                      $('#fancybox-wrap').css({ 
+                        'width': (fancyboxContent.width() + 40) + 'px', 
+                        'padding': 0 
+                      });
+                    }
+                  } catch (e) {
+                    console.warn('Fancybox onComplete error:', e);
+                  }
+                },
+                onError: function() {
+                  console.warn('Fancybox showDialog error');
+                }
+              });
+              
+              $('.showDialogD').fancybox({
+                'padding': 0,
+                onComplete: function() {
+                  try {
+                    const fancyboxContent = $('#fancybox-content');
+                    if (fancyboxContent.length) {
+                      $('#fancybox-wrap').css({ 
+                        'width': (fancyboxContent.width() + 40) + 'px', 
+                        'padding': 0 
+                      });
+                    }
+                  } catch (e) {
+                    console.warn('Fancybox onComplete error:', e);
+                  }
+                },
+                onError: function() {
+                  console.warn('Fancybox showDialogD error');
+                }
+              });
+            }
+          });
+        `
+      }} />
         
       {/* Main Content */}
       <div className="main-wrapper">

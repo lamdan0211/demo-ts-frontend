@@ -14,7 +14,7 @@ export const demoa1FooterData: FooterMenuCategory[] = [
     CATE_CODE: '',
     CATE_ID: 2,
     CATE_NAME: 'Tìm việc',
-    CATE_LINK: '/jobs',
+    CATE_LINK: '/demoa1/jobs',
     CATE_LINKTARGET: '_self'
   },
   {
@@ -54,11 +54,11 @@ export const demoa2FooterData: FooterMenuCategory[] = [
     CATE_LINKTARGET: '_self'
   },
   {
-    CATE_TYPE: 2,
-    CATE_CODE: 'about',
+    CATE_TYPE: 1,
+    CATE_CODE: '',
     CATE_ID: 3,
-    CATE_NAME: 'About Us',
-    CATE_LINK: '/demoa2/about',
+    CATE_NAME: 'News',
+    CATE_LINK: '/demoa2/news',
     CATE_LINKTARGET: '_self'
   },
   {
@@ -95,7 +95,7 @@ export const demoa1HeaderData = {
       CATE_CODE: '',
       CATE_ID: 2,
       CATE_NAME: 'Tìm việc',
-      CATE_LINK: '/jobs',
+      CATE_LINK: '/demoa1/jobs',
       CATE_LINKTARGET: '_self',
       SUBURL_CONTROLLER: 'jobs',
       SUBURL_ACTION: 'index',
@@ -105,7 +105,7 @@ export const demoa1HeaderData = {
           CATE_CODE: '',
           CATE_ID: 21,
           CATE_NAME: 'Việc làm IT',
-          CATE_LINK: '/jobs/it',
+          CATE_LINK: '/demoa1/jobs/it',
           CATE_LINKTARGET: '_self',
           SUBURL_CONTROLLER: 'jobs',
           SUBURL_ACTION: 'it'
@@ -115,7 +115,7 @@ export const demoa1HeaderData = {
           CATE_CODE: '',
           CATE_ID: 22,
           CATE_NAME: 'Việc làm Marketing',
-          CATE_LINK: '/jobs/marketing',
+          CATE_LINK: '/demoa1/jobs/marketing',
           CATE_LINKTARGET: '_self',
           SUBURL_CONTROLLER: 'jobs',
           SUBURL_ACTION: 'marketing'
@@ -221,14 +221,46 @@ export const demoa2HeaderData = {
       ]
     },
     {
-      CATE_TYPE: 2,
-      CATE_CODE: 'about',
+      CATE_TYPE: 1,
+      CATE_CODE: '',
       CATE_ID: 3,
-      CATE_NAME: 'About Us',
-      CATE_LINK: '/demoa2/about',
+      CATE_NAME: 'News',
+      CATE_LINK: '/demoa2/news',
       CATE_LINKTARGET: '_self',
-      SUBURL_CONTROLLER: 'about',
-      SUBURL_ACTION: 'index'
+      SUBURL_CONTROLLER: 'news',
+      SUBURL_ACTION: 'index',
+      CHILDREN: [
+        {
+          CATE_TYPE: 1,
+          CATE_CODE: '',
+          CATE_ID: 31,
+          CATE_NAME: 'Technology News',
+          CATE_LINK: '/demoa2/news/technology',
+          CATE_LINKTARGET: '_self',
+          SUBURL_CONTROLLER: 'news',
+          SUBURL_ACTION: 'technology'
+        },
+        {
+          CATE_TYPE: 1,
+          CATE_CODE: '',
+          CATE_ID: 32,
+          CATE_NAME: 'Career Tips',
+          CATE_LINK: '/demoa2/news/career-tips',
+          CATE_LINKTARGET: '_self',
+          SUBURL_CONTROLLER: 'news',
+          SUBURL_ACTION: 'career-tips'
+        },
+        {
+          CATE_TYPE: 1,
+          CATE_CODE: '',
+          CATE_ID: 33,
+          CATE_NAME: 'Industry Updates',
+          CATE_LINK: '/demoa2/news/industry-updates',
+          CATE_LINKTARGET: '_self',
+          SUBURL_CONTROLLER: 'news',
+          SUBURL_ACTION: 'industry-updates'
+        }
+      ]
     },
     {
       CATE_TYPE: 1,

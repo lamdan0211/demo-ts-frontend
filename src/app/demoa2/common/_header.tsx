@@ -223,7 +223,7 @@ export default function Header({
   };
 
   return (
-    <div id="header-container" className="headerfront">
+    <div id="header-container" className="headerfront" suppressHydrationWarning={true}>
       <div id="header">
         <div id="logo">
           {arrRwInfo && (
