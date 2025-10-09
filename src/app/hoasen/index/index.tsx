@@ -7,6 +7,7 @@ import BoxCareerP31 from '@/components/index/box-career-p31';
 import IndexNewsP31 from '@/components/index/index-news-p31';
 import IndexListJobP31 from '@/components/index/index-listjob-p31';
 import BoxPartnerP13 from '@/components/index/box-partner-p13';
+import { SwiperBanner } from '@/components/UI';
 
 interface HoasenIndexProps {
   siteId: string;
@@ -63,49 +64,7 @@ export default function HoasenIndex({
         }
 
 
-        // Initialize desktop slider
-        if ($('#sliderTopMain').length > 0) {
-          $('#sliderTopMain').cycle({
-            fx: 'fade',
-            timeout: 5000,
-            pauseOnPagerHover: true,
-            pager: '#pagerTopMain',
-            pagerAnchorBuilder: function(idx: number, slide: any) { 
-              return '#pagerTopMain li:eq(' + idx + ')'; 
-            }
-          });
-        }
-
-        // Initialize main banner slider
-        if ($('#slidehr').length > 0) {
-          $('#slidehr').cycle({
-            fx: 'fade',
-            timeout: 5000,
-            pauseOnPagerHover: true,
-            pager: '#pager',
-            pagerAnchorBuilder: function(idx: number, slide: any) { 
-              return '#pager li:eq(' + idx + ')'; 
-            }
-          });
-        }
-
-        // Position pagers
-        const positionPagers = () => {
-          const $pagers = ['#pagerTopMain', '#pager'];
-          $pagers.forEach(selector => {
-            const $pager = $(selector);
-            if ($pager.length) {
-              const posPage = ($(window).width() - $pager.width()) / 2;
-              $pager.css({'left': posPage + 'px'});
-              $pager.show();
-            }
-          });
-        };
-
-        // Position pagers after a short delay
-        setTimeout(positionPagers, 500);
-        
-        $(window).on('resize', positionPagers);
+        // Sliders are now handled by SwiperBanner components
       };
 
       // Start checking when DOM is ready
@@ -119,27 +78,46 @@ export default function HoasenIndex({
     initSlider();
   }, []);
 
-  // Parse banner data
+  // Parse banner data for Swiper
   const parseBannerData = () => {
     if (arrRwInfo?.RW_BANNER_TOP) {
-      const arrBannerSlide = arrRwInfo.RW_BANNER_TOP.split(';').map((item: string) => 
-        `/themes/${siteId}/images/${item}`
-      );
-      return { arrBannerSlide, arrBannerLink: [] };
+      const arrBannerSlide = arrRwInfo.RW_BANNER_TOP.split(';').map((item: string, index: number) => ({
+        id: index,
+        image: `/themes/${siteId}/images/${item}`,
+        alt: `Banner ${index + 1}`,
+        title: `Welcome to Hoasen ${index + 1}`,
+        description: `Find your dream job with us - Slide ${index + 1}`
+      }));
+      return arrBannerSlide;
     }
     
     // Fallback to default banners
-    return {
-      arrBannerSlide: [
-        `/themes/${siteId}/images/banner1.jpg`,
-        `/themes/${siteId}/images/banner2.jpg`,
-        `/themes/${siteId}/images/banner3.jpg`
-      ],
-      arrBannerLink: []
-    };
+    return [
+      {
+        id: 0,
+        image: `/themes/${siteId}/images/banner1.jpg`,
+        alt: 'Banner 1',
+        title: 'Welcome to Hoasen Job Portal',
+        description: 'Find your dream job with us!'
+      },
+      {
+        id: 1,
+        image: `/themes/${siteId}/images/banner2.jpg`,
+        alt: 'Banner 2',
+        title: 'Top Companies Hiring',
+        description: 'Connect with leading employers'
+      },
+      {
+        id: 2,
+        image: `/themes/${siteId}/images/banner3.jpg`,
+        alt: 'Banner 3',
+        title: 'Career Growth Opportunities',
+        description: 'Advance your career with us'
+      }
+    ];
   };
 
-  const { arrBannerSlide, arrBannerLink } = parseBannerData();
+  const bannerData = parseBannerData();
 
   return (
     <>
@@ -151,34 +129,19 @@ export default function HoasenIndex({
             <h1>Welcome to Hoasen Job Portal</h1>
             <p>Find your dream job with us!</p>
           </div>
-          <div id="sliderTopMain">
-            {arrBannerSlide.map((banner: string, index: number) => (
-              <div key={index} className="bgimage" style={{backgroundImage: `url(${banner})`}}>
-                {arrBannerLink[index] && (
-                  <a 
-                    href={arrBannerLink[index]} 
-                    target="_blank" 
-                    style={{height: '100%', width: '100%'}} 
-                    className="mask-banner"
-                  >
-                    &nbsp;
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
-          {arrBannerSlide.length > 1 && (
-            <ul id="pagerTopMain">
-              {arrBannerSlide.map((_: any, index: number) => (
-                <li key={index}>
-                  <a href="#" onClick={(e) => e.preventDefault()}></a>
-                </li>
-              ))}
-            </ul>
-          )}
+          <SwiperBanner
+            banners={bannerData}
+            height="750px"
+            autoplay={true}
+            autoplayDelay={5000}
+            showPagination={true}
+            showNavigation={bannerData.length > 1}
+            loop={bannerData.length > 1}
+            className="hoasen-banner"
+          />
         </div>
               {/* Search Container */}
-      <div className="container-search setOutBanner" style={{marginTop:'105px'}}>
+      <div className="container-search setOutBanner">
         <SearchJobSectionP31
           arrIndustries={arrIndustries}
           getAllLocateCountry={[
@@ -245,31 +208,16 @@ export default function HoasenIndex({
       {/* Main Banner Slider */}
       <div className="hidden-xs hidden-sm">
         <div className="ads-pre slidebg">
-          <div id="slidehr">
-            {arrBannerSlide.map((banner: string, index: number) => (
-              <div key={index} className="bgimage" style={{backgroundImage: `url(${banner})`}}>
-                {arrBannerLink[index] && (
-                  <a 
-                    href={arrBannerLink[index]} 
-                    target="_blank" 
-                    style={{height: '100%', width: '100%'}} 
-                    className="mask-banner"
-                  >
-                    &nbsp;
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
-          {arrBannerSlide.length > 1 && (
-            <ul id="pager">
-              {arrBannerSlide.map((_: any, index: number) => (
-                <li key={index}>
-                  <a href="#" onClick={(e) => e.preventDefault()}></a>
-                </li>
-              ))}
-            </ul>
-          )}
+          <SwiperBanner
+            banners={bannerData}
+            height="400px"
+            autoplay={true}
+            autoplayDelay={5000}
+            showPagination={true}
+            showNavigation={bannerData.length > 1}
+            loop={bannerData.length > 1}
+            className="hoasen-main-banner"
+          />
         </div>
       </div>
 

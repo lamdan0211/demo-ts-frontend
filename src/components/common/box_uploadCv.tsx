@@ -22,11 +22,22 @@ export default function BoxUploadCv({
         className={linkClass}
         title={arrInfo ? 'Upload CV' : 'Join to upload CV'}
       >
-        <img 
-          src="/template02/images/upload.png" 
-          alt="Upload CV"
-          style={{ width: '100%', height: 'auto' }}
-        />
+        <div 
+          style={{ 
+            width: '100%', 
+            height: '120px', 
+            backgroundColor: '#f8f9fa', 
+            border: '2px dashed #dee2e6',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#6c757d',
+            fontSize: '14px',
+            fontWeight: '500'
+          }}
+        >
+          📄 Upload CV
+        </div>
       </a>
     </div>
   );

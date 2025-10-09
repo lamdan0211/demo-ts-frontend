@@ -7,14 +7,14 @@ import Footer from '../../../common/_footer';
 import { demoa2HeaderData, demoa2FooterData } from '@/lib/sample-data';
 
 interface NewsDetailPageProps {
-  params: {
+  params: Promise<{
     category: string;
     id: string;
-  };
+  }>;
 }
 
 export default function NewsDetailPage({ params }: NewsDetailPageProps) {
-  const { category, id } = params;
+  const { category, id } = React.use(params);
 
   // Map category slugs to display names
   const categoryMap: Record<string, string> = {

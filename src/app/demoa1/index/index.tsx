@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { IndexPageProps, RewriteInfo, Industry, Location, Job } from '@/lib/types';
 import { getSiteConfig } from '@/lib/site-config';
+import { SwiperBanner } from '@/components/UI';
 
 // Translation function (equivalent to PHP |t filter)
 function t(key: string, language: 'vi' | 'en' = 'vi'): string {
@@ -57,7 +58,6 @@ export default function IndexPage({
   arrLocations = [], 
   language = 'vi' 
 }: IndexPageProps) {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [searchForm, setSearchForm] = useState({
     q: t('Keyword', language),
     cat: '',
@@ -67,18 +67,14 @@ export default function IndexPage({
   const siteConfig = getSiteConfig(siteId);
   if (!siteConfig) return null;
 
-  // Process banner data
-  const banners = arrRwInfo?.RW_BANNER ? arrRwInfo.RW_BANNER.split(';').filter(Boolean) : [];
-
-  // Auto-rotate slides
-  useEffect(() => {
-    if (banners.length > 1) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % banners.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [banners.length]);
+  // Process banner data for Swiper
+  const bannerData = arrRwInfo?.RW_BANNER 
+    ? arrRwInfo.RW_BANNER.split(';').filter(Boolean).map((banner, index) => ({
+        id: index,
+        image: `${siteConfig.constants.LINK_RW_IMAGES}/${banner}`,
+        alt: `Banner ${index + 1}`
+      }))
+    : [];
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -117,33 +113,19 @@ export default function IndexPage({
   return (
     <>
       <div id="mainslide">
-        <div id="slidehr" className="wfull">
-          {banners.map((banner, index) => (
-            <div 
-              key={index}
-              style={{
-                background: `url(${siteConfig.constants.LINK_RW_IMAGES}/${banner}) no-repeat center center`,
-                height: '354px',
-                width: '100%',
-                display: index === currentSlide ? 'block' : 'none'
-              }}
-            />
-          ))}
-        </div>
-        
-        <ul id="pager" style={{ zIndex: 2 }}>
-          {banners.map((_, index) => (
-            <li key={index}>
-              <a 
-                href="javascript:void(0);" 
-                onClick={() => setCurrentSlide(index)}
-                className={index === currentSlide ? 'active' : ''}
-              />
-            </li>
-          ))}
-        </ul>
-        
-        <div id="search-banner">
+        <SwiperBanner
+          banners={bannerData}
+          height="354px"
+          autoplay={true}
+          autoplayDelay={5000}
+          showPagination={true}
+          showNavigation={bannerData.length > 1}
+          loop={bannerData.length > 1}
+          className="demoa1-banner"
+        />
+      </div>
+
+      <div id="search-banner" style={{top: '170px', zIndex: 1}}>
           <div className="search-home">
             <h2>{t('_Find Management and Executive Level Jobs_', language)}</h2>
             <div className="search-box-right">
@@ -204,7 +186,6 @@ export default function IndexPage({
             </div>
           </div>
         </div>
-      </div>
       
       <div id="main-content">
         <div id="col709">

@@ -213,7 +213,6 @@ export default function LayoutWrapper({
           await loadScript('/themes/js/jquery_ui/jquery-ui.min.js');
           await loadScript('/themes/js/jquery_ui/jquery.multiselect.js');
           await loadScript('/themes/js/chosen/chosen.jquery.min.js');
-          await loadScript('/themes/js/jquery.cycle.all.2.74.js');
           await loadScript('/themes/js/jquery-confirm.min.js');
           await loadScript('/themes/js/lazyload.js');
           await loadScript('/themes/js/jquery.validate.js');
@@ -266,7 +265,15 @@ export default function LayoutWrapper({
         var CKEDITOR_BASEPATH = '/themes/js/ckeditor/';
         var EMP_TN = '/employers';
         var LANGUAGE = 'vi';
-        var language = 'vi';
+        var language = {
+          Show_fancybox_notification: 0,
+          Link_image_fancybox_noti: '',
+          member_register_write_lastname: 'Họ',
+          member_register_write_firstname: 'Tên',
+          employer_register_write_fullname: 'Tên đầy đủ',
+          employer_register_write_currentposition: 'Vị trí hiện tại',
+          employer_write_foldername: 'Tên thư mục'
+        };
         var OWNER = '${owner}';
         var IMAGES_TN = '/images';
         var STATIC_TN = '/themes';

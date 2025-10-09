@@ -141,7 +141,7 @@ export default function Header({
             <a href={constants.TN} target="_blank" suppressHydrationWarning={true}>
               <img 
                 alt={arrEmployer?.EMP_NAME || 'Logo'} 
-                src={`${constants.LINK_RW_IMAGES}/${arrRwInfo.RW_LOGO}`}
+                src={`${constants.LINK_RW_IMAGES}/${arrRwInfo.RW_LOGO || 'logo.png'}`}
                 suppressHydrationWarning={true}
               />
             </a>

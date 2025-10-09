@@ -5,6 +5,7 @@ import BoxSocialShareLeft from '@/components/common/box_social_share_left';
 import BoxSearchJobs from '@/components/common/box_search_jobs';
 import BoxCareer from '@/components/common/box_career';
 import BoxSocialFollow from '@/components/common/box_social_follow';
+import { SwiperBanner } from '@/components/UI';
 
 interface Demoa2IndexProps {
   siteId?: string;
@@ -72,19 +73,7 @@ export default function Demoa2Index({
       });
     };
 
-    const initializeSlider = () => {
-      if (typeof window !== 'undefined' && (window as any).$ && (window as any).$.fn.cycle) {
-        (window as any).$('#slidehr').cycle({
-          fx: 'fade',
-          timeout: 5000,
-          pauseOnPagerHover: true,
-          pager: '#pager',
-          pagerAnchorBuilder: function(idx: number, slide: any) { 
-            return '#pager li:eq(' + (idx) + ')'; 
-          }
-        });
-      }
-    };
+    // Slider is now handled by SwiperBanner component
 
     const loadJobsMapBox = (elementId: string) => {
       // This function would be implemented based on your map requirements
@@ -93,7 +82,6 @@ export default function Demoa2Index({
 
     // Initialize everything
     Promise.all([loadCycleScript(), loadBingMaps()]).then(() => {
-      initializeSlider();
       loadJobsMapBox('SearchJobBy');
     });
 
@@ -103,33 +91,35 @@ export default function Demoa2Index({
     }
   }, []);
 
-  // Parse banner images
-  const arrBanners = arrRwInfo.RW_BANNER ? arrRwInfo.RW_BANNER.split(';') : [];
+  // Parse banner images for Swiper
+  const bannerData = arrRwInfo.RW_BANNER 
+    ? arrRwInfo.RW_BANNER.split(';').filter(Boolean).map((banner: string, index: number) => {
+        const extension = banner.split('.').pop()?.toLowerCase();
+        // Only include non-SWF files
+        if (extension !== 'swf') {
+          return {
+            id: index,
+            image: `/themes/${siteId}/images/${banner}`,
+            alt: `Banner ${index + 1}`
+          };
+        }
+        return null;
+      }).filter(Boolean)
+    : [];
 
   return (
     <>
       <div id="mainslide">
-        <div id="slidehr">
-          {arrBanners.map((banner: string, index: number) => {
-            // Check if it's not a SWF file
-            const extension = banner.split('.').pop()?.toLowerCase();
-            if (extension !== 'swf') {
-              return (
-                <div key={index}>
-                  <img src={`/themes/${siteId}/images/${banner}`} alt="" />
-                </div>
-              );
-            }
-            return null;
-          })}
-        </div>
-        <ul id="pager">
-          {arrBanners.map((banner: string, index: number) => (
-            <li key={index}>
-              <a href="#" onClick={(e) => e.preventDefault()}></a>
-            </li>
-          ))}
-        </ul>
+        <SwiperBanner
+          banners={bannerData}
+          height="auto"
+          autoplay={true}
+          autoplayDelay={5000}
+          showPagination={true}
+          showNavigation={bannerData.length > 1}
+          loop={bannerData.length > 1}
+          className="demoa2-banner"
+        />
       </div>
 
       <div id="main-content">

@@ -233,8 +233,6 @@ export default function JobsPage({
           )}
         </div>
       </div>
-      </div>
-
       <Col250Index
         siteId={siteId}
         arrBoxIndustries={arrIndustries}
@@ -244,7 +242,7 @@ export default function JobsPage({
         currentUrl="/demoa1/jobs"
         language={language}
       />
-
+      </div>
       <Footer 
         siteId={siteId}
         arrRwInfo={arrRwInfo}

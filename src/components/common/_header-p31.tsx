@@ -204,10 +204,11 @@ export default function HeaderP31({
           <div className="container">
             {/* Logo */}
             <div className="logo">
-              <a href={JSK}>
+              <a href={JSK} suppressHydrationWarning={true}>
                 <img 
                   alt={arrEmployer.EMP_NAME} 
-                  src={arrRwInfo.RW_LOGO.startsWith('http') ? arrRwInfo.RW_LOGO : `${LINK_RW_IMAGES}/${arrRwInfo.RW_LOGO}`} 
+                  src={arrRwInfo.RW_LOGO.startsWith('http') ? arrRwInfo.RW_LOGO : `${LINK_RW_IMAGES}/${arrRwInfo.RW_LOGO}`}
+                  suppressHydrationWarning={true}
                 />
               </a>
             </div>

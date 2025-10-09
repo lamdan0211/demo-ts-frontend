@@ -54,7 +54,6 @@ export default function Layout04({
       <script src="/themes/js/jquery.min.js"></script>
       <script src="/themes/js/jquery_ui/jquery-ui.min.js"></script>
       <script src="/themes/js/jquery_ui/jquery.multiselect.js"></script>
-      <script src="/themes/js/jquery.cycle.all.2.74.js"></script>
       <script src="/themes/js/jquery-confirm.min.js"></script>
       <script src="/themes/js/lazyload.js"></script>
       <script src="/themes/js/hoverIntent.js"></script>
@@ -69,7 +68,15 @@ export default function Layout04({
           var CKEDITOR_BASEPATH = '/style/js/ckeditor/';
           var EMP_TN = '/employers';
           var LANGUAGE = 'en';
-          var language = '${language}';
+          var language = {
+            Show_fancybox_notification: 0,
+            Link_image_fancybox_noti: '',
+            member_register_write_lastname: 'Họ',
+            member_register_write_firstname: 'Tên',
+            employer_register_write_fullname: 'Tên đầy đủ',
+            employer_register_write_currentposition: 'Vị trí hiện tại',
+            employer_write_foldername: 'Tên thư mục'
+          };
           var OWNER = '${owner}';
           var IMAGES_TN = '/images';
           var STATIC_TN = '/style';

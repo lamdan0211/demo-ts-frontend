@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 
 interface SiteLayoutProps {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     siteId: string;
-  };
+  }>;
 }
 
 export default async function SiteLayout({ children, params }: SiteLayoutProps) {
-  const { siteId } = params;
+  const { siteId } = await params;
   
   // Validate siteId exists - use fallback if not found
   const siteConfig = getSiteConfig(siteId);
