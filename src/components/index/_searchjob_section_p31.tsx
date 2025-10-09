@@ -1,6 +1,8 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
+import { SingleSelect } from '@/components/UI';
+import styles from '@/styles/_searchjob_section_p31.module.css';
 
 // Types
 interface Industry {
@@ -50,21 +52,6 @@ function t(key: string, language: 'vi' | 'en' = 'vi'): string {
   return translations[key]?.[language] || key;
 }
 
-// Validation function
-function validateSearch(form: HTMLFormElement): boolean {
-  const keyword = (form.querySelector('input[name="q"]') as HTMLInputElement)?.value;
-  const category = (form.querySelector('select[name="cat"]') as HTMLSelectElement)?.value;
-  const location = (form.querySelector('select[name="loc"]') as HTMLSelectElement)?.value;
-
-  // Basic validation - at least one field should be filled
-  if (!keyword && !category && !location) {
-    alert('Vui lòng nhập ít nhất một tiêu chí tìm kiếm');
-    return false;
-  }
-
-  return true;
-}
-
 export default function SearchJobSectionP31({
   arrIndustries = [],
   getAllLocateCountry = [],
@@ -72,191 +59,146 @@ export default function SearchJobSectionP31({
   LINK_JOBS_SEARCH = '/hoasen/jobs/search',
   LANGUAGE = 'vi'
 }: SearchJobSectionP31Props) {
+  const [searchForm, setSearchForm] = useState({
+    q: '',
+    cat: '',
+    loc: ''
+  });
+  const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    // Initialize Chosen plugin for select elements
-    const initChosen = () => {
-      if (typeof window !== 'undefined' && (window as any).jQuery && (window as any).jQuery.fn.chosen) {
-        // Destroy existing Chosen instances first
-        (window as any).jQuery('.chosen').chosen('destroy');
-        
-        // Initialize Chosen on select elements
-        (window as any).jQuery('.chosen').chosen({
-          width: '100%',
-          placeholder_text_single: t('Category', language),
-          no_results_text: 'Không tìm thấy kết quả',
-          allow_single_deselect: true
-        });
+  // Ensure component is mounted before rendering
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
-        console.log('Chosen initialized successfully');
-      } else {
-        console.log('jQuery or Chosen not available, retrying...');
-        setTimeout(initChosen, 200);
-      }
-    };
-
-    // Wait for DOM to be ready
-    if (typeof window !== 'undefined') {
-      if ((window as any).jQuery) {
-        (window as any).jQuery(document).ready(initChosen);
-      } else {
-        setTimeout(() => {
-          if ((window as any).jQuery) {
-            (window as any).jQuery(document).ready(initChosen);
-          } else {
-            initChosen();
-          }
-        }, 500);
-      }
+  // Validation function using state instead of DOM
+  const validateSearch = (): boolean => {
+    if (!searchForm.q && !searchForm.cat && !searchForm.loc) {
+      alert('Vui lòng nhập ít nhất một tiêu chí tìm kiếm');
+      return false;
     }
-  }, [language]);
+    
+    return true;
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
     
-    if (validateSearch(form)) {
-      form.submit();
+    if (validateSearch()) {
+      // Handle search submission using state
+      const searchParams = new URLSearchParams();
+      if (searchForm.q) searchParams.set('q', searchForm.q);
+      if (searchForm.cat) searchParams.set('cat', searchForm.cat);
+      if (searchForm.loc) searchParams.set('loc', searchForm.loc);
+      
+      window.location.href = `${LINK_JOBS_SEARCH}/${LANGUAGE}?${searchParams.toString()}`;
     }
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchForm(prev => ({ ...prev, q: e.target.value }));
+  };
+
+  // Create options for SingleSelect components
+  const categoryOptions = [
+    ...arrIndustries.filter(industry => industry && industry.INDUSTRY_ID).map((industry) => ({
+      value: industry.INDUSTRY_ID.toString(),
+      label: industry.INDUSTRY_NAME || 'Unknown Industry',
+      group: 'Industries'
+    })),
+    // Sample data
+    { value: '1001', label: 'Công nghệ thông tin', group: 'Ngành nghề' },
+    { value: '1002', label: 'Marketing & Quảng cáo', group: 'Ngành nghề' },
+    { value: '1003', label: 'Tài chính & Ngân hàng', group: 'Ngành nghề' },
+    { value: '1004', label: 'Bất động sản', group: 'Ngành nghề' },
+    { value: '1005', label: 'Giáo dục & Đào tạo', group: 'Ngành nghề' },
+    { value: '1006', label: 'Y tế & Chăm sóc sức khỏe', group: 'Ngành nghề' },
+    { value: '1007', label: 'Logistics & Vận tải', group: 'Ngành nghề' },
+    { value: '1008', label: 'Du lịch & Khách sạn', group: 'Ngành nghề' }
+  ];
+
+  const locationOptions = [
+    ...getAllLocateCountry.filter(country => country && country.LOCATION).flatMap((country) => 
+      country.LOCATION.filter(location => location && location.LOCATION_ID).map((location) => ({
+        value: location.LOCATION_ID.toString(),
+        label: location.LOCATION_NAME || 'Unknown Location',
+        group: country.NAME || 'Vietnam'
+      }))
+    ),
+    // Sample data
+    { value: '2001', label: 'Hà Nội', group: 'Địa điểm' },
+    { value: '2002', label: 'TP. Hồ Chí Minh', group: 'Địa điểm' },
+    { value: '2003', label: 'Đà Nẵng', group: 'Địa điểm' },
+    { value: '2004', label: 'Hải Phòng', group: 'Địa điểm' },
+    { value: '2005', label: 'Cần Thơ', group: 'Địa điểm' },
+    { value: '2006', label: 'Nha Trang', group: 'Địa điểm' },
+    { value: '2007', label: 'Huế', group: 'Địa điểm' },
+    { value: '2008', label: 'Vũng Tàu', group: 'Địa điểm' }
+  ];
+
+  // Show skeleton while mounting to prevent layout shift
+  if (!isMounted) {
+    return (
+      <div className={styles.container}>
+        <div className={styles.searchJobsMain}>
+          <div className={`${styles.searchForm} ${styles.skeletonForm}`}>
+            <div className={styles.skeletonInput}></div>
+            <div className={styles.skeletonSelect}></div>
+            <div className={styles.skeletonSelect}></div>
+            <div className={styles.skeletonButton}></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="search-jobs-main">
-      <form 
-        method="get" 
-        action={`${LINK_JOBS_SEARCH}/${LANGUAGE}`}
-        onSubmit={handleSubmit}
-        id="frmSearchJob"
-        className="search-form"
-      >
-        <input 
-          name="q" 
-          type="text" 
-          className="brOrgane h15 width_545 search-input" 
-          placeholder={t('Keyword', language)}
-        />
-        
-        <select name="cat" className="chosen slc-mb search-select">
-          <option key="category-default" value="">{t('Category', language)}</option>
-          {arrIndustries.map((industry, index) => (
-            <option key={`industry-${index}-${industry.INDUSTRY_ID}`} value={industry.INDUSTRY_ID}>
-              {industry.INDUSTRY_NAME}
-            </option>
-          ))}
-        </select>
-        
-        <select name="loc" className="chosen slc-mb search-select">
-          <option key="location-default" value="">{t('Location', language)}</option>
-          {getAllLocateCountry.map((country, countryIndex) => (
-            <optgroup key={countryIndex} label={country.NAME}>
-              {country.LOCATION.map((location, locationIndex) => (
-                <option key={`${countryIndex}-${locationIndex}-${location.LOCATION_ID}`} value={location.LOCATION_ID}>
-                  {location.LOCATION_NAME}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
-        
-        <button 
-          className="searchvt1 search-button" 
-          type="submit"
+    <div className={styles.container}>
+      <div className={styles.searchJobsMain}>
+        <form 
+          method="get" 
+          action={`${LINK_JOBS_SEARCH}/${LANGUAGE}`}
+          onSubmit={handleSubmit}
+          id="frmSearchJob"
+          className={styles.searchForm}
         >
-          <span>{t('act_search', language)}</span>
-        </button>
-      </form>
-      
-      <style jsx global>{`
-        .search-jobs-main {
-          width: 100%;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 20px;
-        }
-        
-        .search-form {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-        
-        .search-input {
-          flex: 1;
-          min-width: 200px;
-          max-width: 300px;
-          padding: 10px 15px;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          font-size: 14px;
-        }
-        
-        .search-select {
-          min-width: 150px;
-          max-width: 200px;
-          padding: 10px 15px;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          font-size: 14px;
-          background: white;
-        }
-        
-        .search-button {
-          padding: 10px 20px;
-          background: #ff6b35;
-          color: white;
-          border: none;
-          border-radius: 4px;
-          font-size: 14px;
-          cursor: pointer;
-          transition: background 0.3s;
-        }
-        
-        .search-button:hover {
-          background: #e55a2b;
-        }
-        
-        .chosen-container {
-          float: left;
-          margin-right: 10px;
-        }
-        
-        .chosen-container-single .chosen-single {
-          height: 40px;
-          line-height: 40px;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          background: white;
-        }
-        
-        .chosen-container-single .chosen-single span {
-          padding-left: 15px;
-        }
-        
-        .chosen-container-single .chosen-single div b {
-          background-position: 0px 2px;
-        }
-        
-        @media (max-width: 768px) {
-          .search-form {
-            flex-direction: column;
-            align-items: stretch;
-          }
-          
-          .search-input,
-          .search-select {
-            max-width: 100%;
-            margin-bottom: 10px;
-          }
-          
-          .chosen-container {
-            float: none;
-            margin-right: 0;
-            margin-bottom: 10px;
-          }
-        }
-      `}</style>
+          <input
+            name="q"
+            type="text"
+            className={styles.searchInput}
+            placeholder="Tìm việc"
+            value={searchForm.q}
+            onChange={handleInputChange}
+          />
+
+          <SingleSelect
+            options={categoryOptions}
+            value={searchForm.cat}
+            onChange={(value) => setSearchForm(prev => ({ ...prev, cat: value }))}
+            placeholder="Ngành nghề"
+            className={styles.formSelect}
+            title="Ngành nghề"
+            subtitle="Chọn ngành nghề"
+          />
+
+          <SingleSelect
+            options={locationOptions}
+            value={searchForm.loc}
+            onChange={(value) => setSearchForm(prev => ({ ...prev, loc: value }))}
+            placeholder="Nơi làm việc"
+            className={styles.formSelect}
+            title="Nơi làm việc"
+            subtitle="Chọn địa điểm"
+          />
+
+          <button
+            className={styles.searchButton}
+            type="submit"
+          >
+            <span>TÌM KIẾM</span>
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

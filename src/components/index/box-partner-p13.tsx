@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 
 interface Department {
   DEP_ID: number;
@@ -144,26 +144,51 @@ export default function BoxPartnerP13({
     TN: ''
   }
 }: BoxPartnerP13Props) {
-  // Use useMemo to prevent infinite re-renders
-  const arrCompany = useMemo(() => {
-    return arrLstDepartment.filter(dept => dept.COMPANY_ID === 0);
-  }, [arrLstDepartment]);
-
-  const arrDepartmentRand = useMemo(() => {
-    if (arrCompany.length === 0) return [];
+  // Use useRef to track previous arrLstDepartment to prevent infinite loops
+  const prevArrLstDepartmentRef = useRef<Department[]>([]);
+  const [arrDepartmentRand, setArrDepartmentRand] = useState<number[]>([]);
+  const [arrCompany, setArrCompany] = useState<Department[]>([]);
+  
+  useEffect(() => {
+    // Check if arrLstDepartment actually changed
+    const currentArrLstDepartment = arrLstDepartment || [];
+    const prevArrLstDepartment = prevArrLstDepartmentRef.current;
+    
+    // Simple deep comparison for arrays
+    const hasChanged = currentArrLstDepartment.length !== prevArrLstDepartment.length ||
+      currentArrLstDepartment.some((dept, index) => 
+        !prevArrLstDepartment[index] || 
+        dept.DEP_ID !== prevArrLstDepartment[index].DEP_ID
+      );
+    
+    if (!hasChanged) {
+      return; // No change, skip update
+    }
+    
+    // Update ref with current value
+    prevArrLstDepartmentRef.current = currentArrLstDepartment;
+    
+    // Filter companies
+    const filteredCompanies = currentArrLstDepartment.filter(dept => dept.COMPANY_ID === 0);
+    setArrCompany(filteredCompanies);
+    
+    if (filteredCompanies.length === 0) {
+      setArrDepartmentRand([]);
+      return;
+    }
     
     const randomIndices: number[] = [];
-    const maxCount = Math.min(6, arrCompany.length);
+    const maxCount = Math.min(6, filteredCompanies.length);
     
     for (let i = 0; i < maxCount; i++) {
-      const randomIndex = Math.floor(Math.random() * arrCompany.length);
+      const randomIndex = Math.floor(Math.random() * filteredCompanies.length);
       if (!randomIndices.includes(randomIndex)) {
         randomIndices.push(randomIndex);
       }
     }
     
-    return randomIndices;
-  }, [arrCompany]);
+    setArrDepartmentRand(randomIndices);
+  }, [arrLstDepartment]);
 
   const generateLink = (dep: Department, index: number): string => {
     const title = encodeUrl(removeUnicode(dep.DEP_NAME));
@@ -225,17 +250,18 @@ export default function BoxPartnerP13({
   }, [arrDepartmentRand]);
 
   return (
-    <div 
-      id={R.CATE_ID} 
-      className={`section-page news-three-items-s2 ${k % 2 === 1 ? 'bg-odd' : ''}`}
-      style={R.CATE_ID_css ? (() => {
-        try {
-          return { ...JSON.parse(R.CATE_ID_css) };
-        } catch {
-          return {};
-        }
-      })() : {}}
-    >
+    <>
+      <div 
+        id={R.CATE_ID} 
+        className={`section-page news-three-items-s2 ${k % 2 === 1 ? 'bg-odd' : ''}`}
+        style={R.CATE_ID_css ? (() => {
+          try {
+            return { ...JSON.parse(R.CATE_ID_css) };
+          } catch {
+            return {};
+          }
+        })() : {}}
+      >
       <div className="container">
         <header className="container-fluid">
           <h2 
@@ -252,7 +278,38 @@ export default function BoxPartnerP13({
           </h2>
         </header>
         <div className="container-fluid">
-          {arrDepartmentRand.map((depIndex, index) => {
+          {arrDepartmentRand.length === 0 ? (
+            // Skeleton loading
+            <div className="row">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="col-xs-12 col-sm-6 col-md-4">
+                  <div className="col-xs-12 img-box">
+                    <div 
+                      style={{
+                        width: '100%',
+                        height: '120px',
+                        backgroundColor: '#f0f0f0',
+                        borderRadius: '4px',
+                        animation: 'skeletonPulse 1.5s ease-in-out infinite'
+                      }}
+                    />
+                  </div>
+                  <h3 className="boxhead">
+                    <div 
+                      style={{
+                        height: '20px',
+                        backgroundColor: '#f0f0f0',
+                        borderRadius: '4px',
+                        animation: 'skeletonPulse 1.5s ease-in-out infinite'
+                      }}
+                    />
+                  </h3>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="row">
+              {arrDepartmentRand.map((depIndex, index) => {
             const dep = arrCompany[depIndex];
             if (!dep) return null;
 
@@ -262,24 +319,25 @@ export default function BoxPartnerP13({
             return (
               <div key={dep.DEP_ID} className="col-xs-12 col-sm-6 col-md-4">
                 <div className="col-xs-12 img-box">
-                  <a href={link} title={dep.DEP_NAME}>
-                    <div 
-                      style={{
-                        width: '100%',
-                        height: '120px',
-                        backgroundColor: '#f8f9fa',
-                        border: '2px dashed #dee2e6',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: '#6c757d',
-                        fontSize: '14px',
-                        fontWeight: '500',
-                        borderRadius: '4px'
-                      }}
-                    >
-                      {dep.DEP_NAME}
-                    </div>
+                  <a 
+                    href={link} 
+                    title={dep.DEP_NAME}
+                    style={{
+                      width: '100%',
+                      height: '120px',
+                      backgroundColor: '#f8f9fa',
+                      border: '2px dashed #dee2e6',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#6c757d',
+                      fontSize: '14px',
+                      fontWeight: '500',
+                      borderRadius: '4px',
+                      textDecoration: 'none'
+                    }}
+                  >
+                    📄 {dep.DEP_NAME}
                   </a>
                 </div>
                 <h3 className="boxhead">
@@ -314,6 +372,8 @@ export default function BoxPartnerP13({
               </div>
             );
           })}
+            </div>
+          )}
         </div>
         <div className="row">
           <div className="col-xs-3 btn-viewmore">
@@ -323,6 +383,18 @@ export default function BoxPartnerP13({
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes skeletonPulse {
+          0%, 100% {
+            opacity: 0.7;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+      `}</style>
     </div>
+    </>
   );
 }

@@ -1,0 +1,182 @@
+/* SearchJobSectionP31 Component Styles */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.searchJobsMain {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+  height: 48px;
+  padding: 12px 16px;
+  border: 1px solid #494646;
+  border-radius: 40px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  background: white;
+  color: #374151;
+  font-weight: 400;
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.searchInput:focus {
+  border-color: #8b0000;
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.1);
+}
+
+.searchInput:hover {
+  border-color: #8b0000;
+}
+
+.formSelect {
+  flex: 1;
+  min-width: 180px;
+}
+
+.searchButton {
+  flex-shrink: 0;
+  height: 48px;
+  padding: 12px 32px;
+  background: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.searchButton:hover {
+  background: #8b0000;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(139, 0, 0, 0.3);
+}
+
+.searchButton:active {
+  background: #8b0000;
+  transform: translateY(0);
+}
+
+.searchButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.2);
+}
+
+/* Skeleton Loading Styles */
+.skeletonForm {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.skeletonInput {
+  flex: 1;
+  min-width: 200px;
+  height: 48px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeletonSelect {
+  flex: 1;
+  min-width: 180px;
+  height: 48px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeletonButton {
+  flex-shrink: 0;
+  height: 48px;
+  width: 140px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .searchForm {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .searchInput,
+  .formSelect,
+  .searchButton {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+    flex: unset !important;
+  }
+
+  /* Skeleton responsive */
+  .skeletonForm {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .skeletonInput,
+  .skeletonSelect,
+  .skeletonButton {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+    flex: unset !important;
+  }
+}
