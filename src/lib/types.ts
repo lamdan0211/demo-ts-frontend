@@ -333,18 +333,15 @@ export interface JobsPageProps {
   arrEmployer?: EmployerInfo;
   arrMenuCates?: MenuCategory[];
   arrInfo?: any;
-  arrFunction?: any;
+  arrFunction?: {
+    OFF_JOIN_TALENT_NETWORK?: boolean;
+  };
   language?: 'vi' | 'en';
   arrParam?: {
     q?: string;
     cat?: string;
     loc?: string;
   };
-  arrInfo?: any;
-  arrFunction?: {
-    OFF_JOIN_TALENT_NETWORK?: boolean;
-  };
-  language?: 'vi' | 'en';
 }
 
 // Box Upload CV props

@@ -6,7 +6,7 @@ export const demoa1FooterData: FooterMenuCategory[] = [
     CATE_CODE: '',
     CATE_ID: 1,
     CATE_NAME: 'Trang chủ',
-    CATE_LINK: '/',
+    CATE_LINK: '/demoa1',
     CATE_LINKTARGET: '_self'
   },
   {
@@ -18,11 +18,11 @@ export const demoa1FooterData: FooterMenuCategory[] = [
     CATE_LINKTARGET: '_self'
   },
   {
-    CATE_TYPE: 2,
-    CATE_CODE: 'about',
+    CATE_TYPE: 1,
+    CATE_CODE: '',
     CATE_ID: 3,
-    CATE_NAME: 'Giới thiệu',
-    CATE_LINK: '/demoa1/about',
+    CATE_NAME: 'Tin tức',
+    CATE_LINK: '/demoa1/news',
     CATE_LINKTARGET: '_self'
   },
   {
@@ -74,7 +74,8 @@ export const demoa2FooterData: FooterMenuCategory[] = [
 // Header sample data
 export const demoa1HeaderData = {
   arrRwInfo: {
-    RW_LOGO: 'logo.png'
+    RW_LOGO: 'logo.png',
+    RW_BANNER: 'banner1.jpg;banner2.jpg;banner3.jpg'
   } as RewriteInfo,
   arrEmployer: {
     EMP_NAME: 'Demo A1 Company'
@@ -85,7 +86,7 @@ export const demoa1HeaderData = {
       CATE_CODE: '',
       CATE_ID: 1,
       CATE_NAME: 'Trang chủ',
-      CATE_LINK: '/',
+      CATE_LINK: '/demoa1',
       CATE_LINKTARGET: '_self',
       SUBURL_CONTROLLER: 'index',
       SUBURL_ACTION: 'index'
@@ -123,13 +124,13 @@ export const demoa1HeaderData = {
       ]
     },
     {
-      CATE_TYPE: 2,
-      CATE_CODE: 'about',
+      CATE_TYPE: 1,
+      CATE_CODE: '',
       CATE_ID: 3,
-      CATE_NAME: 'Giới thiệu',
-      CATE_LINK: '/demoa1/about',
+      CATE_NAME: 'Tin tức',
+      CATE_LINK: '/demoa1/news',
       CATE_LINKTARGET: '_self',
-      SUBURL_CONTROLLER: 'about',
+      SUBURL_CONTROLLER: 'news',
       SUBURL_ACTION: 'index'
     },
     {
@@ -146,11 +147,11 @@ export const demoa1HeaderData = {
   listFeatureCareer: [
     {
       FEATURE_CAREER_NAME: 'Lập trình viên',
-      LINK: '/careers/developer'
+      LINK: '/demoa1/careers/developer'
     },
     {
       FEATURE_CAREER_NAME: 'Designer',
-      LINK: '/careers/designer'
+      LINK: '/demoa1/careers/designer'
     }
   ] as FeatureCareer[]
 };

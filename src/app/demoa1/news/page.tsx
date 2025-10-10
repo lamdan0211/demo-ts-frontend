@@ -1,10 +1,10 @@
 import React from 'react';
-import EmployerViPage from './index';
+import NewsPage from './index';
 import { demoa1HeaderData } from '@/lib/sample-data';
 
-const NewsEmployerVi = () => {
+const News = () => {
   return (
-    <EmployerViPage 
+    <NewsPage 
       siteId="demoa1" 
       arrRwInfo={demoa1HeaderData.arrRwInfo}
       arrEmployer={demoa1HeaderData.arrEmployer}
@@ -14,4 +14,4 @@ const NewsEmployerVi = () => {
   );
 };
 
-export default NewsEmployerVi;
+export default News;

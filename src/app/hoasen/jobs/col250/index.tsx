@@ -83,7 +83,7 @@ export default function Col250Index({
           
           {getTotalIndustries() > 10 && (
             <a 
-              href="/demoa1/jobs/all/?tab=category" 
+              href="/hoasen/jobs/all/?tab=category" 
               className="link_theme viewmore"
             >
               {t("_View more_")}
@@ -115,7 +115,7 @@ export default function Col250Index({
           
           {getTotalLocations() > 10 && (
             <a 
-              href="/demoa1/jobs/all" 
+              href="/hoasen/jobs/all" 
               className="link_theme viewmore"
             >
               {t("_View more_")}

@@ -292,7 +292,7 @@ export default function JobsIndex({
                     <span dangerouslySetInnerHTML={{
                       __html: t("msg_nodata_lstjob_nouser").replace(
                         '[LINK_JOIN]', 
-                        '<a href="/demoa1/join">' + t("join") + '</a>'
+                        '<a href="/hoasen/join">' + t("join") + '</a>'
                       )
                     }} />
                   )}

@@ -96,9 +96,7 @@ export default function Layout({
         <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      
-      {/* CSS Files */}
-      {siteId === 'demoa2' && (
+      {['demoa2', 'demoa1'].includes(siteId) && (
         <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" />
       )}
       <link href="/themes/css/general.css" rel="stylesheet" type="text/css" media="screen" />
@@ -107,16 +105,8 @@ export default function Layout({
       <link href="/themes/css/theme_default.css" rel="stylesheet" type="text/css" media="screen" />
       <link href={`/themes/${siteId}/css/themes.css`} rel="stylesheet" type="text/css" media="screen" />
       <link href={`/themes/${siteId}/${owner}/skin.css`} rel="stylesheet" type="text/css" media="screen" />
-      <link href="/themes/js/chosen/chosen.css" rel="stylesheet" type="text/css" />
-      <link href="/themes/css/jquery-confirm.min.css" rel="stylesheet" type="text/css" />
+      {/* Legacy CSS links removed */}
       
-      {/* JavaScript Files */}
-      <script src="/themes/js/jquery.min.js" />
-      <script src="/themes/js/jquery_ui/jquery-ui.min.js" />
-      <script src="/themes/js/chosen/chosen.jquery.js" />
-      <script src="/themes/js/jquery-confirm.min.js" />
-      <script src="/themes/js/lazyload.js" />
-      <script src="/themes/js/common.js" />
       
       <div className={`site-${siteId}`} suppressHydrationWarning={true}>
         {/* Header */}

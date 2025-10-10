@@ -99,14 +99,14 @@ export default function JobDetail({
     } else if (arrJobInfo.JOB_CHECK_EXTERNAL_APPLY === 1 && arrJobInfo.JOB_EXTERNAL_APPLY_LINK && arrFunction.EXTERNAL_APPLY_LINK === 1) {
       window.open(arrJobInfo.JOB_EXTERNAL_APPLY_LINK, '_blank');
     } else {
-      window.location.href = `/demoa1/jobs/apply/?id=${arrJobInfo.JOB_ID}`;
+      window.location.href = `/hoasen/jobs/apply/?id=${arrJobInfo.JOB_ID}`;
     }
   };
 
   const handleSaveJob = () => {
     if (!arrInfo) {
       // Redirect to login
-      window.location.href = '/demoa1/login';
+      window.location.href = '/hoasen/login';
     } else {
       // Call saveJob function
       (window as any).saveJob?.(arrJobInfo.JOB_ID);
@@ -167,7 +167,7 @@ export default function JobDetail({
             {!arrFunction.OFF_JOIN_TALENT_NETWORK && (
               <div className="favorite-container">
                 <a 
-                  href={!arrInfo ? '/demoa1/login' : 'javascript:void(0)'} 
+                  href={!arrInfo ? '/hoasen/login' : 'javascript:void(0)'} 
                   className={`favorite ${!arrInfo ? 'showDialogD' : ''}`}
                   onClick={!arrInfo ? undefined : handleSaveJob}
                 >
@@ -337,7 +337,7 @@ export default function JobDetail({
             {!arrFunction.OFF_JOIN_TALENT_NETWORK && (
               <div className="favorite-box-container">
                 <a 
-                  href={!arrInfo ? '/demoa1/login' : 'javascript:void(0)'} 
+                  href={!arrInfo ? '/hoasen/login' : 'javascript:void(0)'} 
                   className={`favorite ${!arrInfo ? 'showDialogD' : ''}`}
                   onClick={!arrInfo ? undefined : handleSaveJob}
                 >
@@ -388,12 +388,12 @@ export default function JobDetail({
               <h3>{t('_Useful Links_')}</h3>
               <ul>
                 <li>
-                  <a href="/demoa1/jobs/all#label_location">
+                  <a href="/hoasen/jobs/all#label_location">
                     <i className="fa fa-chevron-left"></i> {t("_Jobs by Location_")}
                   </a>
                 </li>
                 <li>
-                  <a href="/demoa1/jobs/all#label_industry">
+                  <a href="/hoasen/jobs/all#label_industry">
                     <i className="fa fa-chevron-left"></i> {t("_Jobs by Industry_")}
                   </a>
                 </li>
@@ -452,7 +452,7 @@ export default function JobDetail({
                       {arrJobTag.map((tag, index) => (
                         <a 
                           key={index}
-                          href={`/demoa1/tag/${encodeURIComponent(tag)}.html`} 
+                          href={`/hoasen/tag/${encodeURIComponent(tag)}.html`} 
                           title={tag}
                         >
                           {tag}
@@ -476,7 +476,7 @@ export default function JobDetail({
                     </a>
                     {!arrInfo && !arrFunction.OFF_JOIN_TALENT_NETWORK && (
                       <p className="notready">
-                        <a href={`/demoa1/join?url=${currentUrl}`} className="showDialogD">
+                        <a href={`/hoasen/join?url=${currentUrl}`} className="showDialogD">
                           {t("Not ready to apply?")}
                         </a>
                       </p>

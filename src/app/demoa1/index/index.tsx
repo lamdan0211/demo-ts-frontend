@@ -125,10 +125,10 @@ export default function IndexPage({
         />
       </div>
 
-      <div id="search-banner" style={{top: '170px', zIndex: 1}}>
+      <div id="search-banner" style={{top: '120px', zIndex: 1}}>
           <div className="search-home">
             <h2>{t('_Find Management and Executive Level Jobs_', language)}</h2>
-            <div className="search-box-right">
+            <div className="search-box-right" style={{width: '100%'}}>
               <form 
                 method="get" 
                 action={siteConfig.constants.LINK_JOBS_SEARCH} 

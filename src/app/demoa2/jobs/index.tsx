@@ -79,35 +79,29 @@ const sampleJobs: Job[] = [
   {
     JOB_ID: 1,
     JOB_TITLE: 'Senior Software Engineer',
-    COMPANY_NAME: 'Tech Solutions Inc.',
-    LOCATION: 'Ho Chi Minh City',
-    SALARY: '2000-3000 USD',
-    JOB_ACTIVE_DATE: '2024-01-15',
-    JOB_DESCRIPTION: 'We are looking for a Senior Software Engineer to join our development team...',
-    JOB_REQUIREMENTS: 'Bachelor degree in Computer Science, 5+ years experience...',
-    JOB_BENEFITS: 'Competitive salary, health insurance, flexible working hours...'
+    LINK: '/demoa2/jobs/1',
+    JOB_LOCATION_NAME: 'Ho Chi Minh City',
+    JOB_SALARY_MIN: 2000,
+    JOB_SALARY_MAX: 3000,
+    JOB_ACTIVEDATE: '2024-01-15'
   },
   {
     JOB_ID: 2,
     JOB_TITLE: 'Marketing Manager',
-    COMPANY_NAME: 'Digital Marketing Co.',
-    LOCATION: 'Hanoi',
-    SALARY: '1500-2500 USD',
-    JOB_ACTIVE_DATE: '2024-01-14',
-    JOB_DESCRIPTION: 'Lead our marketing team and develop strategies for brand growth...',
-    JOB_REQUIREMENTS: 'Marketing degree, 3+ years experience in digital marketing...',
-    JOB_BENEFITS: 'Performance bonus, professional development opportunities...'
+    LINK: '/demoa2/jobs/2',
+    JOB_LOCATION_NAME: 'Hanoi',
+    JOB_SALARY_MIN: 1500,
+    JOB_SALARY_MAX: 2500,
+    JOB_ACTIVEDATE: '2024-01-14'
   },
   {
     JOB_ID: 3,
     JOB_TITLE: 'Business Analyst',
-    COMPANY_NAME: 'Finance Group',
-    LOCATION: 'Da Nang',
-    SALARY: '1800-2800 USD',
-    JOB_ACTIVE_DATE: '2024-01-13',
-    JOB_DESCRIPTION: 'Analyze business processes and provide data-driven insights...',
-    JOB_REQUIREMENTS: 'Business or Finance degree, strong analytical skills...',
-    JOB_BENEFITS: 'Work from home options, comprehensive training...'
+    LINK: '/demoa2/jobs/3',
+    JOB_LOCATION_NAME: 'Da Nang',
+    JOB_SALARY_MIN: 1800,
+    JOB_SALARY_MAX: 2800,
+    JOB_ACTIVEDATE: '2024-01-13'
   }
 ];
 
@@ -121,10 +115,9 @@ export default function JobsPage({
   const [jobs, setJobs] = useState<Job[]>(sampleJobs);
   const [loading, setLoading] = useState(false);
   const [pagination, setPagination] = useState<PaginationInfo>({
-    currentPage: 1,
-    totalPages: 1,
-    totalItems: sampleJobs.length,
-    itemsPerPage: 10
+    current: 1,
+    pageCount: 1,
+    pagesInRange: [1]
   });
 
   const siteConfig = getSiteConfig(siteId);
@@ -143,7 +136,7 @@ export default function JobsPage({
 
   // Handle pagination
   const handlePageChange = (page: number) => {
-    setPagination(prev => ({ ...prev, currentPage: page }));
+    setPagination(prev => ({ ...prev, current: page }));
   };
 
   return (
@@ -151,12 +144,13 @@ export default function JobsPage({
       <Header 
         siteId={siteId}
         arrRwInfo={arrRwInfo}
-        arrEmployer={arrEmployer}
+        arrEmployer={arrEmployer ? { ...arrEmployer, RW_LOGO: 'logo.png' } : undefined}
         controller="jobs"
         action="index"
         arrMenuCates={arrMenuCates}
         currentUrl={`/${siteId}/jobs`}
-        changeLangUrl={`/${siteId}/jobs?lang=${language === 'en' ? 'vi' : 'en'}`}
+        CHANGE_LANG_URL={`/${siteId}/jobs?lang=${language === 'en' ? 'vi' : 'en'}`}
+        language={language}
       />
       
       <div className="main-content">
@@ -170,7 +164,9 @@ export default function JobsPage({
                 {/* Search Box */}
                 <BoxSearch
                   siteId={siteId}
-                  onSearch={handleSearch}
+                  arrIndustries={[]}
+                  getAllLocateCountry={[]}
+                  arrParam={{}}
                   language={language}
                 />
               
@@ -209,16 +205,22 @@ export default function JobsPage({
                               <tr key={job.JOB_ID}>
                                 <td>{index + 1}</td>
                                 <td>
-                                  <a href={`/${siteId}/jobs/${job.JOB_ID}`} className="job-title-link">
+                                  <a href={job.LINK} className="job-title-link">
                                     {job.JOB_TITLE}
                                   </a>
-                                  {job.COMPANY_NAME && (
-                                    <div className="company-name">{job.COMPANY_NAME}</div>
-                                  )}
                                 </td>
-                                <td>{job.LOCATION ? cutLocations(job.LOCATION) : '-'}</td>
-                                <td>{job.SALARY ? formatSalary(job.SALARY) : '-'}</td>
-                                <td>{job.JOB_ACTIVE_DATE ? formatDate(job.JOB_ACTIVE_DATE) : '-'}</td>
+                                <td>{job.JOB_LOCATION_NAME ? cutLocations(job.JOB_LOCATION_NAME) : '-'}</td>
+                                <td>
+                                  {job.JOB_SALARY_MIN && job.JOB_SALARY_MAX 
+                                    ? `${job.JOB_SALARY_MIN} - ${job.JOB_SALARY_MAX} USD`
+                                    : job.JOB_SALARY_MIN 
+                                    ? `From ${job.JOB_SALARY_MIN} USD`
+                                    : job.JOB_SALARY_MAX
+                                    ? `Up to ${job.JOB_SALARY_MAX} USD`
+                                    : 'Negotiable'
+                                  }
+                                </td>
+                                <td>{job.JOB_ACTIVEDATE ? formatDate(job.JOB_ACTIVEDATE) : '-'}</td>
                               </tr>
                             );
                           })}
@@ -233,21 +235,21 @@ export default function JobsPage({
                 </div>
                 
                 {/* Pagination */}
-                {pagination.totalPages > 1 && (
+                {pagination.pageCount > 1 && (
                   <div className="pagination-wrapper">
                     <nav>
                       <ul className="pagination">
-                        <li className={`page-item ${pagination.currentPage === 1 ? 'disabled' : ''}`}>
+                        <li className={`page-item ${pagination.current === 1 ? 'disabled' : ''}`}>
                           <button 
                             className="page-link" 
-                            onClick={() => handlePageChange(pagination.currentPage - 1)}
-                            disabled={pagination.currentPage === 1}
+                            onClick={() => handlePageChange(pagination.current - 1)}
+                            disabled={pagination.current === 1}
                           >
                             Previous
                           </button>
                         </li>
-                        {Array.from({ length: pagination.totalPages }, (_, i) => i + 1).map(page => (
-                          <li key={page} className={`page-item ${pagination.currentPage === page ? 'active' : ''}`}>
+                        {pagination.pagesInRange.map(page => (
+                          <li key={page} className={`page-item ${pagination.current === page ? 'active' : ''}`}>
                             <button 
                               className="page-link" 
                               onClick={() => handlePageChange(page)}
@@ -256,11 +258,11 @@ export default function JobsPage({
                             </button>
                           </li>
                         ))}
-                        <li className={`page-item ${pagination.currentPage === pagination.totalPages ? 'disabled' : ''}`}>
+                        <li className={`page-item ${pagination.current === pagination.pageCount ? 'disabled' : ''}`}>
                           <button 
                             className="page-link" 
-                            onClick={() => handlePageChange(pagination.currentPage + 1)}
-                            disabled={pagination.currentPage === pagination.totalPages}
+                            onClick={() => handlePageChange(pagination.current + 1)}
+                            disabled={pagination.current === pagination.pageCount}
                           >
                             Next
                           </button>
@@ -282,7 +284,7 @@ export default function JobsPage({
       
       <Footer 
         siteId={siteId} 
-        footerMenuCates={[]}
+        arrFooterMenuCates={[]}
         language={language}
       />
     </div>

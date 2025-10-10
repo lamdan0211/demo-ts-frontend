@@ -222,8 +222,7 @@ export default function LayoutPremium({
             <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
             {/*[if lt IE 9]*/}
             <link href="/themes/css/iefix.css" rel="stylesheet" type="text/css" />
-            <script src="/themes/js/html5shiv.min.js" />
-            <script src="/themes/js/respond.min.js" />
+            {/* Legacy JS files removed */}
             {/*[endif]*/}
             
             {/* Bootstrap-specific styles */}
@@ -281,24 +280,9 @@ export default function LayoutPremium({
         {GLOBAL_CONFIG.LANGUAGE === 'vi' && (
           <link rel="stylesheet" type="text/css" href="/themes/hoasen/css/nav_vi.css?t=12032015" media="screen" />
         )}
-        <link href="/themes/js/jquery_ui/jquery.multiselect.css" rel="stylesheet" type="text/css" />
-        <link href="/themes/js/jquery_ui/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
-        <link href="/themes/css/jquery-confirm.min.css" rel="stylesheet" type="text/css" />
-        <link href="/themes/js/chosen/chosen.css" rel="stylesheet" type="text/css" />
+        {/* Legacy CSS links removed */}
         
-        {/* JavaScript Libraries */}
-        {newlayout === 1 && ['resume', 'profile'].includes(controller) && action === 'apply' && (
-          <script src="/themes/js/jquery.min.js" />
-        )}
-        {newlayout !== 1 && (
-          <>
-            <script src="/themes/js/jquery_ui/jquery-ui.min.js" />
-            <script src="/themes/js/jquery_ui/jquery.multiselect.js" />
-          </>
-        )}
-        <script src="/themes/js/jquery-confirm.min.js" />
-        <script src="/themes/js/lazyload.js" />
-        <script src="/themes/js/hoverIntent.js" />
+        {/* JavaScript Libraries - Removed legacy JS files */}
         
         {/* Global JavaScript Variables */}
         <script dangerouslySetInnerHTML={{
@@ -328,36 +312,7 @@ export default function LayoutPremium({
           `
         }} />
         
-        {/* Initialization Script */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            $(document).ready(function() {
-              $(".lazyload").lazyload();
-              var flagCheckBlacklist = getCookie('email_blacklist');
-              if(flagCheckBlacklist == 1) {
-                if (${arrInfo ? 'true' : 'false'}) {
-                  $.confirm({
-                    title: '',
-                    content: language.msg_email_blacklist,
-                    buttons: {
-                      confirm: {
-                        text: language.edit_email,
-                        action: function () {
-                          location.href = TN + '/' + LANGUAGE + '/' + 'profile/update#email';
-                        }
-                      },
-                      cancelAction: {
-                        text: language.msg_cancel,
-                        action: function () {}
-                      }
-                    }
-                  });
-                  setCookie('email_blacklist', 0, 5 * 60);
-                }
-              }
-            });
-          `
-        }} />
+        {/* Initialization Script - Legacy jQuery code removed */}
         
         {/* Google Drive Integration */}
         {notViewIE === 0 && arrEmployer?.RW_GOOGLEDRIVE_CLIENT_ID && ['rod', 'demo', 'demo1', 'demo2', 'tonducthang', 'premium', 'demo5', 'demo6'].includes(GLOBAL_CONFIG.OWNER) && (
@@ -366,9 +321,7 @@ export default function LayoutPremium({
               __html: `
                 var googledrive_client_id = "${arrEmployer?.RW_GOOGLEDRIVE_CLIENT_ID}";
                 var googledrive_client_app_id = "${googleAppId}";
-                $(window).on("load", function() {
-                  $("[id*=oauth2relay]").css({'position':'unset','width':'','height':'0','border':'0'});
-                });
+                // Legacy jQuery code removed
               `
             }} />
             <script src={`https://www.google.com/jsapi?key=${arrEmployer?.RW_GOOGLEDRIVE_CLIENT_ID}`} type="text/javascript" />
@@ -530,10 +483,7 @@ export default function LayoutPremium({
           __html: `
             if (typeof checkMobile !== 'undefined') {
               if (checkMobile()) {
-                ${controller === 'jobs' && action === 'detail' ? `
-                  $("#header-join").hide();
-                  $("#search-container").hide();
-                ` : ''}
+                // Legacy jQuery code removed
               }
             }
             
@@ -544,88 +494,19 @@ export default function LayoutPremium({
             ${arrLocations.map(R => `arrLocs[${R.LOCATION_ID}] = '${R.LOCATION_NAME}';`).join('')}
             
             function validateSearch(form) {
-              if($('input[name="q"]').val() === 'Keyword') {
-                $('input[name="q"]').val('');
-              }
-              var keyword = createKeyword($('input[name="q"]').val()),
-                  category = parseInt($('select[name="cat"]').val()),
-                  location = parseInt($('select[name="loc"]').val()),
-                  prep = new Array('en', 'vi');
-              prep['en'] = new Array('category', 'at');
-              prep['vi'] = new Array('nganh', 'tai');
-              if(LANGUAGE !== 'vi' && LANGUAGE !== 'en') prep[LANGUAGE] = prep['en'];
-              
-              if(!keyword && !category && !location) {
-                searchLink = '${GLOBAL_CONFIG.TN}/jobs';
-              } else {
-                searchLink = '${GLOBAL_CONFIG.TN}/jobs/search';
-                if(keyword !== '') {
-                  searchLink += '/' + keyword;
-                }
-                if(keyword && category) {
-                  searchLink += '/' + prep[LANGUAGE][0] + '-' + createKeyword(stripVietnamese(arrCates[category])) + '.' + category;
-                } else if(category) {
-                  searchLink += '/' + createKeyword(stripVietnamese(arrCates[category])) + '.' + category;
-                }
-                if(location) {
-                  searchLink += '/' + prep[LANGUAGE][1] + '-' + createKeyword(stripVietnamese(arrLocs[location])) + '.' + location;
-                }
-                searchLink += '/' + LANGUAGE;
-              }
-              window.location = searchLink;
+              // Legacy jQuery code removed - using React form validation
               return false;
             }
           `
         }} />
         
-        {/* Additional Scripts */}
-        <script src="/themes/js/jquery.validate.js" />
-        <script src="/themes/js/additional-methods.js" />
-        <script src="/themes/js/tn-validate-methods.js" />
-        <script src="/themes/js/common.js?t=2" />
-        <script src="/themes/js/common_premium.js?v=10" />
         
-        {/* Custom CSS and JS */}
+        {/* Custom CSS */}
         {css_custom === 1 && (
           <link href="custom/css_custom.css" rel="stylesheet" type="text/css" media="screen" />
         )}
-        {js_custom === 1 && (
-          <script dangerouslySetInnerHTML={{
-            __html: `
-              // Custom JS - only load if exists
-              console.log('Custom JS would be loaded here');
-            `
-          }} />
-        )}
         
-        {/* New Layout Scripts */}
-        {newlayout === 1 && ['resume', 'profile'].includes(controller) && action === 'apply' && (
-          <script dangerouslySetInnerHTML={{
-            __html: `
-              $(document).ready(function() {
-                $('#default-sidebar').css('top', $('#section-header').height());
-                $('#footer').css({
-                  'position': 'relative',
-                  'z-index': 1
-                });
-                $('#section-header').css('position', 'fixed');
-                $('#page-content').css('padding-top', $('#section-header').height());
-              });
-            `
-          }} />
-        )}
-        
-        {/* Template-specific styles */}
-        {arrEmployer?.TEMPLATEDEFAULT_ID === 'P21' && (
-          <style dangerouslySetInnerHTML={{
-            __html: `
-              .header {
-                width: calc(100%) !important;
-                left: 0px;
-              }
-            `
-          }} />
-        )}
+
       </div>
     </>
   );

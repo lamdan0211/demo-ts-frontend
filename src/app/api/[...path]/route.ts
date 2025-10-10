@@ -10,15 +10,9 @@ export async function GET(
   try {
     const resolvedParams = await params;
     const filePath = resolvedParams.path.join('/');
-    console.log('🔍 API Route - Requested:', request.url, '| File path:', filePath);
-    
-    // If the request is for themes, we need to handle it specially
-    const isThemesRequest = request.url.includes('/themes/');
-    const actualFilePath = isThemesRequest ? filePath : filePath;
     
     // Try multiple possible paths - prioritize src/themes
     const possiblePaths = [
-      join(process.cwd(), 'src', 'themes', actualFilePath),
       join(process.cwd(), 'src', 'themes', filePath),
       join(process.cwd(), 'public', 'themes', filePath),
       join(process.cwd(), 'src', 'style', filePath), // Fallback for old paths
@@ -35,20 +29,18 @@ export async function GET(
       if (existsSync(path)) {
         fullPath = path;
         pathExists = true;
-        console.log('✅ Found file at:', path);
         break;
       }
     }
     
     if (!pathExists) {
-      console.log('❌ File not found:', filePath);
       return new NextResponse('File not found', { status: 404 });
     }
     
     const fileBuffer = await readFile(fullPath);
     
     // Determine content type based on file extension
-    const ext = actualFilePath.split('.').pop()?.toLowerCase();
+    const ext = filePath.split('.').pop()?.toLowerCase();
     let contentType = 'text/plain';
     
     switch (ext) {
