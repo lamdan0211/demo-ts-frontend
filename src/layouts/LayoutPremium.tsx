@@ -18,8 +18,6 @@ interface LayoutPremiumProps {
     RW_LOGO: string;
     TEMPLATEDEFAULT_ID: string;
     RW_FILETYPE_SUPPORT: string;
-    RW_GOOGLEDRIVE_CLIENT_ID?: string;
-    RW_DROPBOX_KEY?: string;
     RW_GOOGLE_SCRIPT?: string;
     RW_FACEBOOK_SCRIPT?: string;
   };
@@ -58,7 +56,6 @@ interface LayoutPremiumProps {
     height?: number;
   };
   amphtml_url?: string;
-  googleAppId?: string;
   transactionId?: string;
   arrJobInfo?: any;
   hexId?: string;
@@ -128,7 +125,6 @@ export default function LayoutPremium({
   headStyle = null,
   imageShare = {},
   amphtml_url = '',
-  googleAppId = '',
   transactionId = '',
   arrJobInfo = {},
   hexId = '',
@@ -314,26 +310,6 @@ export default function LayoutPremium({
         
         {/* Initialization Script - Legacy jQuery code removed */}
         
-        {/* Google Drive Integration */}
-        {notViewIE === 0 && arrEmployer?.RW_GOOGLEDRIVE_CLIENT_ID && ['rod', 'demo', 'demo1', 'demo2', 'tonducthang', 'premium', 'demo5', 'demo6'].includes(GLOBAL_CONFIG.OWNER) && (
-          <>
-            <script dangerouslySetInnerHTML={{
-              __html: `
-                var googledrive_client_id = "${arrEmployer?.RW_GOOGLEDRIVE_CLIENT_ID}";
-                var googledrive_client_app_id = "${googleAppId}";
-                // Legacy jQuery code removed
-              `
-            }} />
-            <script src={`https://www.google.com/jsapi?key=${arrEmployer?.RW_GOOGLEDRIVE_CLIENT_ID}`} type="text/javascript" />
-            <script src={`${GLOBAL_CONFIG.STATIC_TN}/js/googleresumeapply.js?t=20150806`} type="text/javascript" />
-            <script src="https://apis.google.com/js/client.js?onload=handleClientLoad" type="text/javascript" />
-          </>
-        )}
-        
-        {/* Dropbox Integration */}
-        {notViewIE === 0 && arrEmployer?.RW_DROPBOX_KEY && (
-          <script src="https://www.dropbox.com/static/api/2/dropins.js" data-app-key={arrEmployer?.RW_DROPBOX_KEY} id="dropboxjs" />
-        )}
         
         {/* Google Analytics for Job Apply */}
         {controller === 'jobs' && action === 'apply' && isApplyJob && (

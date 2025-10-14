@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { useModal } from '@/hooks/useModal';
 import { WhyJoinModal } from '@/components/UI';
 
@@ -132,65 +132,13 @@ export default function Header({
   LINK_RW_IMAGES = '/themes/demoa2/images',
   LINK_RESUME = '/demoa2/resume'
 }: HeaderProps) {
+  // State for submenu hover - React way
+  const [hoveredMenuId, setHoveredMenuId] = useState<number | null>(null);
   const { isOpen: isWhyJoinOpen, openModal: openWhyJoin, closeModal: closeWhyJoin } = useModal();
   
   const strLogo = `${LINK_RW_IMAGES}/${arrRwInfo?.RW_LOGO || 'logo.png'}`;
   const otherLanguage = detectOtherLanguage(language);
   const otherLanguageName = detectOtherLanguage(language, true);
-
-  useEffect(() => {
-    // Initialize jQuery hover effects
-    const initHoverEffects = () => {
-      if (typeof window !== 'undefined' && (window as any).$) {
-        const $ = (window as any).$;
-        
-        $('#nav-bar li.parent').hover(
-          function(this: HTMLElement) {
-            $(this).addClass('over');
-            $(this).parents().find('#main-content').addClass('fixdropMenu');
-          },
-          function(this: HTMLElement) {
-            $(this).removeClass('over');
-            $(this).parents().find('#main-content').removeClass('fixdropMenu');
-          }
-        );
-
-        // Menu trigger functionality
-        $('#menu-trigger').toggle(
-          function(this: HTMLElement) {
-            $(this).parents('#container').addClass('collapseContainer');
-            $('#jPanelMenu-menu').addClass('expandMenu');
-          },
-          function(this: HTMLElement) {
-            $(this).parents('#container').removeClass('collapseContainer').addClass('expandContainer');
-            $('#jPanelMenu-menu').removeClass('expandMenu').addClass('collapseMenu');
-          }
-        );
-
-        // Fancybox initialization - check if fancybox exists
-        if (typeof (window as any).$.fn.fancybox !== 'undefined') {
-          $(".showDialog").fancybox();
-          if (!checkMobile()) {
-            if (!(controller === 'index' && action === 'register')) {
-              $(".showDialogD").fancybox();
-            }
-          }
-        }
-      }
-    };
-
-    // Check if jQuery is loaded, if not wait for it
-    if (typeof window !== 'undefined' && (window as any).$) {
-      initHoverEffects();
-    } else {
-      const checkJQuery = setInterval(() => {
-        if (typeof window !== 'undefined' && (window as any).$) {
-          clearInterval(checkJQuery);
-          initHoverEffects();
-        }
-      }, 100);
-    }
-  }, [controller, action]);
 
   // Mobile detection function
   const checkMobile = () => {
@@ -312,7 +260,12 @@ export default function Header({
       <div id="nav-bar">
         <ul>
           {arrMenuCates.map((menuItem, index) => (
-            <li key={menuItem.CATE_ID} className={`parent${index === arrMenuCates.length - 1 ? ' last' : ''}`}>
+            <li 
+              key={menuItem.CATE_ID} 
+              className={`parent${index === arrMenuCates.length - 1 ? ' last' : ''} ${hoveredMenuId === menuItem.CATE_ID ? 'over' : ''}`}
+              onMouseEnter={() => (menuItem.CHILDREN || (menuItem.CATE_TYPE === 4 && listFeatureCareer)) && setHoveredMenuId(menuItem.CATE_ID)}
+              onMouseLeave={() => setHoveredMenuId(null)}
+            >
               <a 
                 href={getMenuLink(menuItem)}
                 className={`link_menu ${isMenuActive(menuItem) ? 'focus' : ''}`}
@@ -323,7 +276,12 @@ export default function Header({
               
               {/* Submenu for children */}
               {menuItem.CHILDREN && menuItem.CHILDREN.length > 0 && (
-                <ul className="submenu">
+                <ul 
+                  className="submenu"
+                  style={{ 
+                    display: hoveredMenuId === menuItem.CATE_ID ? 'block' : 'none'
+                  }}
+                >
                   {menuItem.CHILDREN.map((child: any) => (
                     <li key={child.CATE_ID}>
                       <a 
@@ -340,7 +298,12 @@ export default function Header({
               
               {/* Submenu for feature career */}
               {menuItem.CATE_TYPE === 4 && listFeatureCareer && listFeatureCareer.length > 0 && (
-                <ul className="submenu">
+                <ul 
+                  className="submenu"
+                  style={{ 
+                    display: hoveredMenuId === menuItem.CATE_ID ? 'block' : 'none'
+                  }}
+                >
                   {listFeatureCareer.map((feature: any, featureIndex: number) => (
                     <li key={featureIndex}>
                       <a href={feature.LINK} className="link_menu">

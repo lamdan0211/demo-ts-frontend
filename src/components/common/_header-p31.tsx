@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 // Types
 interface MenuCategory {
@@ -171,6 +171,9 @@ export default function HeaderP31({
   contentWhyJoin = ''
 }: HeaderP31Props) {
   
+  // State for submenu hover - React way
+  const [hoveredMenuId, setHoveredMenuId] = useState<number | null>(null);
+  
   const showDownloadForm = downloadFormLinkHeader && downloadFormLinkHeader !== '_download_form_link_header_';
   const hideLanguage = hideLanguageFrontend && hideLanguageFrontend !== 'hide_language_frontend';
   const shouldShowJoinBottom = showJoinBottom && showJoinBottom !== '_show_join_bottom_';
@@ -219,7 +222,9 @@ export default function HeaderP31({
                 {arrMenuCates.map((category) => (
                   <li 
                     key={category.CATE_ID}
-                    className={`${category.CHILDREN ? 'parent' : ''} ${isMenuActive(category, news, controller, action) ? 'focus' : ''}`}
+                    className={`${category.CHILDREN ? 'parent' : ''} ${isMenuActive(category, news, controller, action) ? 'focus' : ''} ${hoveredMenuId === category.CATE_ID ? 'over' : ''}`}
+                    onMouseEnter={() => category.CHILDREN && setHoveredMenuId(category.CATE_ID)}
+                    onMouseLeave={() => setHoveredMenuId(null)}
                   >
                     <a 
                       href={getMenuLink(category, JSK, TN, LANGUAGE)}
@@ -232,7 +237,12 @@ export default function HeaderP31({
                     
                     {/* Submenu */}
                     {category.CHILDREN && (
-                      <ul className="submenu">
+                      <ul 
+                        className="submenu"
+                        style={{ 
+                          display: hoveredMenuId === category.CATE_ID ? 'block' : 'none'
+                        }}
+                      >
                         {category.CHILDREN.map((subCategory) => (
                           <li key={subCategory.CATE_ID}>
                             <a 

@@ -17,7 +17,9 @@ label.error { float: left }
 .language_top { float: right; padding-bottom: 10px }
 #lang ul.nav { float: right; clear: both }
 #nav-bar { height: 39px; margin-top: 10px }
-#nav-bar ul li { border-right: none; background: url('images/bg_line.png') no-repeat right center }
+/* React hover state - clean CSS */
+
+#nav-bar ul li { border-right: none; background: url('images/bg_line.png') no-repeat right center; position: relative }
 #nav-bar ul li a { font-size: 13px; text-transform: capitalize; border-bottom: 0; padding: 0 30px; height: 39px; line-height: 39px; display: inline-block; color: #8b1409 }
 #nav-bar a:hover { text-decoration: underline }
 #nav-bar a:hover, #nav-bar a.focus { border-bottom: 0 }
@@ -26,12 +28,14 @@ label.error { float: left }
 #nav-bar .download_form { float: right }
 #nav-bar .download_form a { background: url("images/save.png") no-repeat left center; color: #fff; padding: 2px 0 2px 20px; text-transform: none; font-size: 11px; border: 0 }
 #nav-bar .download_form a:hover { text-decoration: underline }
-#nav-bar ul.submenu { top: 39px }
-#nav-bar ul.submenu li { margin-right: 0 }
-#nav-bar ul.submenu a { background-color: #8b1009; color: #fff; border: 0; height: auto; background-image: none; padding-left: 10px; line-height: 22px }
+#nav-bar ul.submenu { top: 39px; position: absolute; left: 0; display: none; z-index: 10000; min-width: 200px }
+#nav-bar ul.submenu li { margin-right: 0; border-right: none; background: none }
+#nav-bar ul.submenu a { background-color: #8b1009; color: #fff; border: 0; height: auto; background-image: none; padding-left: 10px; line-height: 22px; display: block }
 #nav-bar ul.submenu a, #nav-bar ul.submenu a:hover { border-top: 0; border-bottom: 1px solid #198e93 }
 #nav-bar ul.submenu a:hover { color: #ffff00; background-color: #8b1009 }
 #nav-bar ul.submenu a, #nav-bar ul.submenu a:hover { border-bottom: none }
+#nav-bar li.parent:hover ul.submenu { display: block !important }
+#nav-bar li.over ul.submenu { display: block !important }
 .BoxHolder { padding-bottom: 15px }
 .logina { position: absolute; right: 20px; bottom: -44px; font-weight: bold }
 .viewmore { font-weight: bold; padding-top: 5px; display: block }

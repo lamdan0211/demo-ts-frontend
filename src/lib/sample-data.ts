@@ -456,7 +456,37 @@ export const hoasenHeaderData = {
       CATE_NAME: 'Việc làm',
       CATE_LINK: '/hoasen/jobs',
       CATE_TYPE: 1,
-      CATE_LINKTARGET: '_self'
+      CATE_LINKTARGET: '_self',
+      CHILDREN: [
+        {
+          CATE_ID: 21,
+          CATE_NAME: 'Việc làm mới nhất',
+          CATE_LINK: '/hoasen/jobs',
+          CATE_TYPE: 1,
+          CATE_LINKTARGET: '_self'
+        },
+        {
+          CATE_ID: 22,
+          CATE_NAME: 'Tìm kiếm việc làm',
+          CATE_LINK: '/hoasen/jobs/search',
+          CATE_TYPE: 1,
+          CATE_LINKTARGET: '_self'
+        },
+        {
+          CATE_ID: 23,
+          CATE_NAME: 'Việc làm theo ngành',
+          CATE_LINK: '/hoasen/jobs/by-industry',
+          CATE_TYPE: 1,
+          CATE_LINKTARGET: '_self'
+        },
+        {
+          CATE_ID: 24,
+          CATE_NAME: 'Việc làm theo địa điểm',
+          CATE_LINK: '/hoasen/jobs/by-location',
+          CATE_TYPE: 1,
+          CATE_LINKTARGET: '_self'
+        }
+      ]
     },
     {
       CATE_ID: 3,
@@ -467,6 +497,13 @@ export const hoasenHeaderData = {
     },
     {
       CATE_ID: 4,
+      CATE_NAME: 'Về chúng tôi',
+      CATE_LINK: '/hoasen/about',
+      CATE_TYPE: 1,
+      CATE_LINKTARGET: '_self'
+    },
+    {
+      CATE_ID: 5,
       CATE_NAME: 'Liên hệ',
       CATE_LINK: '/hoasen/contact',
       CATE_TYPE: 1,
@@ -476,49 +513,6 @@ export const hoasenHeaderData = {
   listFeatureCareer: [],
   CHANGE_LANG_URL: '/hoasen?lang=en'
 };
-
-export const hoasenFooterData = [
-  {
-    CATE_ID: 1,
-    CATE_NAME: 'Về chúng tôi',
-    CATE_URL: '/hoasen/about',
-    CATE_ACTIVE: false,
-    arrSubMenu: [
-      {
-        SUB_ID: 1,
-        SUB_NAME: 'Giới thiệu',
-        SUB_URL: '/hoasen/about',
-        SUB_ACTIVE: false
-      },
-      {
-        SUB_ID: 2,
-        SUB_NAME: 'Lịch sử phát triển',
-        SUB_URL: '/hoasen/history',
-        SUB_ACTIVE: false
-      }
-    ]
-  },
-  {
-    CATE_ID: 2,
-    CATE_NAME: 'Tuyển dụng',
-    CATE_URL: '/hoasen/jobs',
-    CATE_ACTIVE: false,
-    arrSubMenu: [
-      {
-        SUB_ID: 3,
-        SUB_NAME: 'Việc làm mới nhất',
-        SUB_URL: '/hoasen/jobs',
-        SUB_ACTIVE: false
-      },
-      {
-        SUB_ID: 4,
-        SUB_NAME: 'Tìm kiếm việc làm',
-        SUB_URL: '/hoasen/jobs/search',
-        SUB_ACTIVE: false
-      }
-    ]
-  }
-];
 
 export const hoasenIndexData = {
   arrRwInfo: {
@@ -530,30 +524,58 @@ export const hoasenIndexData = {
   },
   arrIndustries: [
     {
-      IND_ID: 1,
-      IND_NAME: 'Sản xuất thép',
-      IND_URL: '/hoasen/jobs?industry=1',
-      IND_ACTIVE: false
+      INDUSTRY_ID: 1,
+      INDUSTRY_NAME: 'Sản xuất thép',
+      LINK: '/hoasen/jobs?industry=1',
+      JOB_INDUSTRY_NUM: 25
     },
     {
-      IND_ID: 2,
-      IND_NAME: 'Xây dựng',
-      IND_URL: '/hoasen/jobs?industry=2',
-      IND_ACTIVE: false
+      INDUSTRY_ID: 2,
+      INDUSTRY_NAME: 'Xây dựng',
+      LINK: '/hoasen/jobs?industry=2',
+      JOB_INDUSTRY_NUM: 18
+    },
+    {
+      INDUSTRY_ID: 3,
+      INDUSTRY_NAME: 'Cơ khí',
+      LINK: '/hoasen/jobs?industry=3',
+      JOB_INDUSTRY_NUM: 12
+    },
+    {
+      INDUSTRY_ID: 4,
+      INDUSTRY_NAME: 'Điện tử',
+      LINK: '/hoasen/jobs?industry=4',
+      JOB_INDUSTRY_NUM: 8
     }
   ],
   arrLocations: [
     {
-      LOC_ID: 1,
-      LOC_NAME: 'Hồ Chí Minh',
-      LOC_URL: '/hoasen/jobs?location=1',
-      LOC_ACTIVE: false
+      LOCATION_ID: 1,
+      LOCATION_NAME: 'Hồ Chí Minh',
+      LOCATION_CODE: 'HCM',
+      LOCATION_LINK: '/hoasen/jobs?location=1',
+      LOCATION_COUNT: 45
     },
     {
-      LOC_ID: 2,
-      LOC_NAME: 'Hà Nội',
-      LOC_URL: '/hoasen/jobs?location=2',
-      LOC_ACTIVE: false
+      LOCATION_ID: 2,
+      LOCATION_NAME: 'Hà Nội',
+      LOCATION_CODE: 'HN',
+      LOCATION_LINK: '/hoasen/jobs?location=2',
+      LOCATION_COUNT: 32
+    },
+    {
+      LOCATION_ID: 3,
+      LOCATION_NAME: 'Đà Nẵng',
+      LOCATION_CODE: 'DN',
+      LOCATION_LINK: '/hoasen/jobs?location=3',
+      LOCATION_COUNT: 15
+    },
+    {
+      LOCATION_ID: 4,
+      LOCATION_NAME: 'Cần Thơ',
+      LOCATION_CODE: 'CT',
+      LOCATION_LINK: '/hoasen/jobs?location=4',
+      LOCATION_COUNT: 8
     }
   ]
 };

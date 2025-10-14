@@ -2,7 +2,7 @@ import { getSiteConfig } from '@/lib/site-config';
 import Header from '@/app/hoasen/common/_header';
 import Footer from '@/app/hoasen/common/_footer';
 import NewsIndex from './index';
-import { hoasenHeaderData, hoasenFooterData } from '@/lib/sample-data';
+import { hoasenHeaderData } from '@/lib/sample-data';
 
 export default async function HoasenNewsPage() {
   const siteId = 'hoasen';
@@ -35,8 +35,6 @@ export default async function HoasenNewsPage() {
       />
 
       <Footer
-        siteId={siteId}
-        arrFooterMenuCates={hoasenFooterData}
         language={siteConfig?.language || 'vi'}
       />
     </div>

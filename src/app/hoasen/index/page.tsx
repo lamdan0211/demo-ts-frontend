@@ -2,7 +2,7 @@ import { getSiteConfig } from '@/lib/site-config';
 import Header from '@/app/hoasen/common/_header';
 import Footer from '@/app/hoasen/common/_footer';
 import IndexPage from './index';
-import { demoa1HeaderData, demoa1FooterData, demoa1IndexData } from '@/lib/sample-data';
+import { hoasenHeaderData, hoasenIndexData } from '@/lib/sample-data';
 
 export default async function HoasenIndexPage() {
   const siteId = 'hoasen';
@@ -12,27 +12,26 @@ export default async function HoasenIndexPage() {
     <div className="min-h-screen">
       <Header 
         siteId={siteId}
-        arrRwInfo={demoa1HeaderData.arrRwInfo}
-        arrEmployer={demoa1HeaderData.arrEmployer}
+        arrRwInfo={hoasenHeaderData.arrRwInfo}
+        arrEmployer={hoasenHeaderData.arrEmployer}
         controller="index"
         action="index"
-        arrMenuCates={demoa1HeaderData.arrMenuCates}
-        listFeatureCareer={demoa1HeaderData.listFeatureCareer}
+        arrMenuCates={hoasenHeaderData.arrMenuCates}
+        listFeatureCareer={hoasenHeaderData.listFeatureCareer}
         currentUrl="/hoasen"
-        changeLangUrl="/hoasen?lang=en"
+        CHANGE_LANG_URL="/hoasen?lang=en"
+        language={siteConfig?.language || 'vi'}
       />
       
       <IndexPage
         siteId={siteId}
-        arrRwInfo={demoa1IndexData.arrRwInfo}
-        arrIndustries={demoa1IndexData.arrIndustries}
-        arrLocations={demoa1IndexData.arrLocations}
+        arrRwInfo={hoasenIndexData.arrRwInfo}
+        arrIndustries={hoasenIndexData.arrIndustries}
+        arrLocations={hoasenIndexData.arrLocations}
         language={siteConfig?.language || 'vi'}
       />
       
       <Footer 
-        siteId={siteId} 
-        footerMenuCates={demoa1FooterData}
         language={siteConfig?.language || 'vi'}
       />
     </div>

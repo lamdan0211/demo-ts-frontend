@@ -79,20 +79,20 @@ function detectOtherLanguage(lang: string, showText: boolean = false): string {
 // Helper function to check if menu item is active
 function isMenuActive(
   category: MenuCategory, 
-  currentController: string, 
-  currentAction: string, 
+  currentController?: string, 
+  currentAction?: string, 
   newsCateParent?: number
 ): boolean {
   const { CATE_ID, SUBURL_CONTROLLER, SUBURL_ACTION } = category;
   
-  if (newsCateParent && currentController === 'news' && CATE_ID === newsCateParent) {
+  if (newsCateParent !== undefined && currentController === 'news' && CATE_ID === newsCateParent) {
     return true;
   }
   
-  if (currentController === SUBURL_CONTROLLER) {
+  if (currentController && SUBURL_CONTROLLER && currentController === SUBURL_CONTROLLER) {
     if (!SUBURL_ACTION) return true;
-    if (currentAction === SUBURL_ACTION) return true;
-    if (SUBURL_ACTION.includes(',')) {
+    if (currentAction && currentAction === SUBURL_ACTION) return true;
+    if (SUBURL_ACTION.includes(',') && currentAction) {
       const actions = SUBURL_ACTION.split(',');
       return actions.includes(currentAction);
     }
@@ -244,7 +244,12 @@ export default function Header({
                 </a>
                 
                 {category.CHILDREN && category.CHILDREN.length > 0 && (
-                  <ul className="submenu">
+                  <ul 
+                    className="submenu"
+                    style={{ 
+                      display: isHovered === category.CATE_ID.toString() ? 'block' : 'none'
+                    }}
+                  >
                     {category.CHILDREN.map((child) => (
                       <li key={child.CATE_ID}>
                         <a 

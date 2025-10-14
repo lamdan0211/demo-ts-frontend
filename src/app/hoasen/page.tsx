@@ -2,7 +2,7 @@ import { getSiteConfig } from '@/lib/site-config';
 import Header from '@/app/hoasen/common/_header';
 import Footer from '@/app/hoasen/common/_footer';
 import IndexPage from '@/app/hoasen/index/index';
-import { hoasenFooterData, hoasenHeaderData, hoasenIndexData } from '@/lib/sample-data';
+import { hoasenHeaderData, hoasenIndexData } from '@/lib/sample-data';
 
 export default async function HoasenHomePage() {
   const siteId = 'hoasen';
@@ -20,6 +20,7 @@ export default async function HoasenHomePage() {
         listFeatureCareer={hoasenHeaderData.listFeatureCareer}
         currentUrl="/hoasen"
         CHANGE_LANG_URL="/hoasen?lang=en"
+        language={siteConfig?.language || 'vi'}
       />
       
       <IndexPage
@@ -31,8 +32,6 @@ export default async function HoasenHomePage() {
       />
       
       <Footer 
-        siteId={siteId} 
-        arrFooterMenuCates={hoasenFooterData}
         language={siteConfig?.language || 'vi'}
       />
     </div>

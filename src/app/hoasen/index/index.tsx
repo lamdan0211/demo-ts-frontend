@@ -62,8 +62,6 @@ export default function HoasenIndex({
           console.error('jQuery Cycle plugin not available');
           return;
         }
-
-
         // Sliders are now handled by SwiperBanner components
       };
 
@@ -163,10 +161,6 @@ export default function HoasenIndex({
       </div>
       </div>
 
-
-
-
-
       {/* Career Section */}
       <BoxCareerP31
         R={{ CATE_ID: 1 }}
@@ -192,11 +186,6 @@ export default function HoasenIndex({
               INDUSTRY_NAME: 'Quản lý',
               LINK: `/${siteId}/jobs/management`,
               JOB_INDUSTRY_NUM: 6
-            },
-            {
-              INDUSTRY_NAME: 'Bán hàng',
-              LINK: `/${siteId}/jobs/sales`,
-              JOB_INDUSTRY_NUM: 10
             }
           ]
         }}
@@ -207,10 +196,10 @@ export default function HoasenIndex({
       
       {/* Main Banner Slider */}
       <div className="hidden-xs hidden-sm">
-        <div className="ads-pre slidebg">
+        <div className="ads-pre">
           <SwiperBanner
             banners={bannerData}
-            height="400px"
+             height="750px"
             autoplay={true}
             autoplayDelay={5000}
             showPagination={true}
@@ -263,6 +252,13 @@ export default function HoasenIndex({
               NEWS_SUBCONTENT: 'Tập đoàn Hoa Sen công bố gói phúc lợi mới cho nhân viên bao gồm bảo hiểm y tế, nghỉ phép có lương và nhiều chế độ khác.',
               NEWS_PICTURE: 'news5.jpg',
               LINK: `/${siteId}/news/improved-employee-benefits`,
+              NUMROW: 8
+            },
+            {
+              NEWS_TITLE: 'Hoa Sen mở rộng thị trường xuất khẩu',
+              NEWS_SUBCONTENT: 'Tập đoàn Hoa Sen tiếp tục mở rộng thị trường xuất khẩu sang các nước Đông Nam Á và châu Phi với sản phẩm thép chất lượng cao.',
+              NEWS_PICTURE: 'news6.jpg',
+              LINK: `/${siteId}/news/hoasen-export-market-expansion`,
               NUMROW: 8
             }
           ]

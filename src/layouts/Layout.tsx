@@ -17,8 +17,6 @@ interface LayoutProps {
   arrEmployer?: {
     EMP_NAME: string;
     RW_LOGO: string;
-    RW_GOOGLEDRIVE_CLIENT_ID?: string;
-    RW_DROPBOX_KEY?: string;
   } | null;
   arrMetaTag?: {
     title?: string;
