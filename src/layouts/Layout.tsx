@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import Head from 'next/head';
 
 interface LayoutProps {
@@ -81,6 +81,20 @@ export default function Layout({
   const finalKeywords = arrMetaTag?.keywords || keywords;
   const strLogo = `/themes/${siteId}/images/${arrEmployer?.RW_LOGO}`;
 
+  // Memoize className to prevent hydration issues
+  const siteClassName = useMemo(() => `site-${siteId || 'demoa1'}`, [siteId]);
+  
+  // Ensure client-side rendering to prevent hydration issues
+  const [isMounted, setIsMounted] = useState(false);
+  
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <>
       <Head>
@@ -106,7 +120,7 @@ export default function Layout({
       {/* Legacy CSS links removed */}
       
       
-      <div className={`site-${siteId}`} suppressHydrationWarning={true}>
+      <div className={siteClassName} suppressHydrationWarning={true}>
         {/* Header */}
         <div id="section-header">
           <div className="container">
@@ -133,16 +147,6 @@ export default function Layout({
           {children}
         </div>
 
-        {/* Footer */}
-        <div id="footer">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-12">
-                <p>&copy; 2024 {arrEmployer?.EMP_NAME}. All rights reserved.</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       
     </>

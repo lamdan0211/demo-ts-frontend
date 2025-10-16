@@ -66,17 +66,17 @@ export default function LayoutWrapper({
 
   // Render layout based on layoutType
   const renderLayout = () => {
-    const commonProps = {
-      siteId,
-      owner,
-      tempName,
-      layoutType,
-      controller,
-      action,
-      newlayout,
-      arrFunction,
-      arrSupportedLanguages,
-      arrMenuCates,
+  const commonProps = {
+    siteId: siteId || 'demoa1',
+    owner: owner || siteId || 'demoa1',
+    tempName,
+    layoutType,
+    controller,
+    action,
+    newlayout,
+    arrFunction,
+    arrSupportedLanguages,
+    arrMenuCates,
       CHANGE_LANG_URL,
       arrInfo,
       currentUrl,

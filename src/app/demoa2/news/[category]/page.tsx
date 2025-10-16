@@ -74,13 +74,21 @@ export default function NewsCategoryPage({ params }: NewsCategoryPageProps) {
   const articles = getSampleArticles(category);
 
   return (
-    <>
-      <Header 
+    <div className="min-h-screen">
+      <Header
         siteId="demoa2"
-        language="en"
+        arrRwInfo={demoa2HeaderData.arrRwInfo}
+        arrEmployer={{
+          ...demoa2HeaderData.arrEmployer,
+          RW_LOGO: 'logo.png'
+        }}
+        controller="news"
+        action="category"
         arrMenuCates={demoa2HeaderData.arrMenuCates}
-        TN="/demoa2"
-        LANGUAGE="en"
+        listFeatureCareer={demoa2HeaderData.listFeatureCareer}
+        currentUrl={`/demoa2/news/${category}`}
+        CHANGE_LANG_URL={`/demoa2/news/${category}?lang=vi`}
+        language="en"
       />
       <div className="container">
         <div className="row">
@@ -212,13 +220,11 @@ export default function NewsCategoryPage({ params }: NewsCategoryPageProps) {
           </div>
         </div>
       </div>
-      <Footer 
+      <Footer
         siteId="demoa2"
+        arrFooterMenuCates={demoa2FooterData}
         language="en"
-        arrFooterMenuCates={demoa2FooterData.arrMenuCates}
-        TN="/demoa2"
-        LANGUAGE="en"
       />
-    </>
+    </div>
   );
 }

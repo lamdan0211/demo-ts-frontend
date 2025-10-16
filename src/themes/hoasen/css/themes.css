@@ -24,7 +24,7 @@ header h2.section-title { font-size: 35px; margin-bottom: 50px; text-transform: 
 .search-jobs-main .chosen-container { width: 320px!important }
 #photo-area { padding-top: 106px }
 #sliderTopMain { top: 106px }
-#sliderTopMain, #sliderTopMain .bgimage, #bslidehr, #bslidehr .bgimage, .ads-pre.slidebg.sliderSetheight, .newsclass_index #banner-video, .newsclass_detail #banner-video { height: 750px }
+#sliderTopMain, #sliderTopMain .bgimage, #bslidehr, #bslidehr .bgimage, .ads-pre.slidebg.sliderSetheight, .newsclass_index #banner-video, .newsclass_detail #banner-video { height: auto }
 #pagerTopMain, #bpager { bottom: -50px }
 #pagerTopMain_2 { bottom: 10px; position: absolute; z-index: 0; display: none } 
 #pagerTopMain_2 li { float: left; margin-right: 10px }

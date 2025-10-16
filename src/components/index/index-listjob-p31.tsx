@@ -138,8 +138,7 @@ export default function IndexListJobP31({
               <tr>
                 <th className="table-header-1">{t('Job Title')}</th>
                 <th className="table-header-2">{t('Location')}</th>
-                <th className="table-header-3">{t('_Salary_')}</th>
-                <th className="table-header-4">{t('_Job expiredate Date_')}</th>
+                <th className="table-header-3">{t('_Job expiredate Date_')}</th>
               </tr>
             </thead>
             <tbody>
@@ -183,11 +182,6 @@ export default function IndexListJobP31({
                     <td className="table-item item-valign-top">
                       <span>{t('Location')}: </span>
                       {job.JOB_LOCATION_NAME}
-                    </td>
-                    <td className="table-item item-valign-top">
-                      <span>{t('_Salary_')}: </span>
-                      {formatSalary(job.JOB_FROMSALARY, job.JOB_TOSALARY, job.JOB_SALARYUNIT)}
-                      {arrSalaryUnits[job.JOB_SALARYUNIT] && ` ${arrSalaryUnits[job.JOB_SALARYUNIT]}`}
                     </td>
                     <td className="table-item item-valign-top">
                       <span>{t('_Job expiredate Date_')}: </span>

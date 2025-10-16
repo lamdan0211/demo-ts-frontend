@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Types
 interface NewsItem {
@@ -71,7 +71,7 @@ export default function IndexNewsP31({
   indexBackground = 0,
   language = 'vi',
   LANGUAGE = 'vi',
-  IMAGES_TN = '/themes/images/rewrite',
+  IMAGES_TN = '/themes/hoasen/images',
   TN = '/hoasen',
   idNews2 = '2',
   idNews = '1',
@@ -92,11 +92,14 @@ export default function IndexNewsP31({
   const renderNewsItem = (item: NewsItem, index: number, columnClass: string) => {
     return (
       <div key={index} className={columnClass}>
-        <div 
-          className="box bg-size-cover lazyload" 
-          style={{backgroundImage: `url(/static/blank.gif)`}}
-          data-src={`${IMAGES_TN}${item.NEWS_PICTURE}`}
-        >
+        <div className="box bg-size-cover">
+          <img 
+            src={`${IMAGES_TN}/${item.NEWS_PICTURE}`}
+            alt={item.NEWS_TITLE}
+            className="lazyload"
+            loading="lazy"
+            style={{width: '100%', height: '100%', objectFit: 'cover'}}
+          />
           <div className="blurb">
             <p><a href={item.LINK}>{item.NEWS_TITLE}</a></p>
           </div>
@@ -178,11 +181,15 @@ export default function IndexNewsP31({
                 <div className="name-item">
                   <span>{item.NEWS_TITLE}</span>
                 </div>
-                <div 
-                  className="mask-img lazyload" 
-                  style={{backgroundImage: `url(/static/blank.gif)`}}
-                  data-src={`${IMAGES_TN}${item.NEWS_PICTURE}`}
-                ></div>
+                <div className="mask-img">
+                  <img 
+                    src={`${IMAGES_TN}/${item.NEWS_PICTURE}`}
+                    alt={item.NEWS_TITLE}
+                    className="lazyload"
+                    loading="lazy"
+                    style={{width: '100%', height: '100%', objectFit: 'cover'}}
+                  />
+                </div>
                 <div className="mask-hover">
                   <div className="description-item">
                     <a href={item.LINK}>{item.NEWS_SUBCONTENT}</a>

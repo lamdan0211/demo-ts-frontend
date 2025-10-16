@@ -122,14 +122,14 @@ export default function HoasenIndex({
 
       {/* Desktop Slider */}
       <div suppressHydrationWarning={true}>
-        <div className="ads-pre slidebg sliderSetheight">
+        <div className="ads-pre">
           <div className="texton" suppressHydrationWarning={true}>
             <h1>Welcome to Hoasen Job Portal</h1>
             <p>Find your dream job with us!</p>
           </div>
           <SwiperBanner
             banners={bannerData}
-            height="750px"
+            height="auto"
             autoplay={true}
             autoplayDelay={5000}
             showPagination={true}
@@ -156,7 +156,6 @@ export default function HoasenIndex({
           ]}
           language={language as 'vi' | 'en'}
           LINK_JOBS_SEARCH={`/${siteId}/jobs/search`}
-          LANGUAGE={language}
         />
       </div>
       </div>
@@ -165,6 +164,7 @@ export default function HoasenIndex({
       <BoxCareerP31
         R={{ CATE_ID: 1 }}
         k={0}
+        STATIC_TN="/static"
         arrHomeContent={{
           1: [
             {
@@ -181,16 +181,11 @@ export default function HoasenIndex({
               INDUSTRY_NAME: 'Kỹ thuật',
               LINK: `/${siteId}/jobs/engineering`,
               JOB_INDUSTRY_NUM: 12
-            },
-            {
-              INDUSTRY_NAME: 'Quản lý',
-              LINK: `/${siteId}/jobs/management`,
-              JOB_INDUSTRY_NUM: 6
             }
+           
           ]
         }}
         language={language as 'vi' | 'en'}
-        STATIC_TN="/static"
       />
 
       
@@ -199,7 +194,7 @@ export default function HoasenIndex({
         <div className="ads-pre">
           <SwiperBanner
             banners={bannerData}
-             height="750px"
+            height="auto"
             autoplay={true}
             autoplayDelay={5000}
             showPagination={true}
@@ -222,14 +217,14 @@ export default function HoasenIndex({
             {
               NEWS_TITLE: 'Hoa Sen Group mở rộng nhà máy sản xuất thép mới',
               NEWS_SUBCONTENT: 'Tập đoàn Hoa Sen vừa công bố kế hoạch xây dựng nhà máy sản xuất thép mới tại Bình Dương với tổng vốn đầu tư 500 triệu USD.',
-              NEWS_PICTURE: 'news1.jpg',
+              NEWS_PICTURE: 'imagesnews1.jpg',
               LINK: `/${siteId}/news/hoasen-expand-steel-factory`,
               NUMROW: 8
             },
             {
               NEWS_TITLE: 'Chương trình đào tạo nhân viên mới 2024',
               NEWS_SUBCONTENT: 'Hoa Sen Group triển khai chương trình đào tạo toàn diện cho nhân viên mới với các khóa học chuyên sâu về sản xuất thép.',
-              NEWS_PICTURE: 'news2.jpg',
+              NEWS_PICTURE: 'imagesnews2.jpg',
               LINK: `/${siteId}/news/employee-training-program-2024`,
               NUMROW: 8
             },
@@ -265,7 +260,6 @@ export default function HoasenIndex({
         }}
         indexBackground={1}
         language={language as 'vi' | 'en'}
-        LANGUAGE={language}
         IMAGES_TN={`/themes/${siteId}/images`}
         TN={`/${siteId}`}
         idNews2="2"
@@ -279,6 +273,53 @@ export default function HoasenIndex({
       <IndexListJobP31
         indexBackground={2}
         language={language as 'vi' | 'en'}
+        showLogoListJob={true}
+        STATIC_TN="/static"
+        IMAGES_TN="/themes/hoasen/images"
+        arrJobs={[
+          {
+            JOB_TITLE: 'Kỹ sư sản xuất thép',
+            LINK: '/hoasen/jobs/steel-engineer',
+            JOB_LOCATION_NAME: 'Bình Dương',
+            JOB_SALARYUNIT: 'VND',
+            JOB_FROMSALARY: 15000000,
+            JOB_TOSALARY: 25000000,
+            JOB_EXPIREDATE: '2024-12-31',
+            JOB_BENEFITS: '1,2,3',
+            DEP_ID: 1,
+            logo_dep: 'logo-hoasen.png'
+          },
+          {
+            JOB_TITLE: 'Chuyên viên kỹ thuật',
+            LINK: '/hoasen/jobs/technical-specialist',
+            JOB_LOCATION_NAME: 'TP.HCM',
+            JOB_SALARYUNIT: 'VND',
+            JOB_FROMSALARY: 12000000,
+            JOB_TOSALARY: 20000000,
+            JOB_EXPIREDATE: '2024-12-31',
+            JOB_BENEFITS: '1,2,4',
+            DEP_ID: 2,
+            logo_dep: 'logo-hoasen.png'
+          },
+          {
+            JOB_TITLE: 'Quản lý dự án',
+            LINK: '/hoasen/jobs/project-manager',
+            JOB_LOCATION_NAME: 'Hà Nội',
+            JOB_SALARYUNIT: 'VND',
+            JOB_FROMSALARY: 20000000,
+            JOB_TOSALARY: 35000000,
+            JOB_EXPIREDATE: '2024-12-31',
+            JOB_BENEFITS: '1,2,3,4',
+            DEP_ID: 3,
+            logo_dep: 'logo-hoasen.png'
+          }
+        ]}
+        arrLstBenefit={[
+          { BENEFIT_ID: 1, BENEFIT_NAME: 'Bảo hiểm y tế', BENEFIT_ICON: 'fa-heart' },
+          { BENEFIT_ID: 2, BENEFIT_NAME: 'Nghỉ phép có lương', BENEFIT_ICON: 'fa-calendar' },
+          { BENEFIT_ID: 3, BENEFIT_NAME: 'Đào tạo chuyên môn', BENEFIT_ICON: 'fa-graduation-cap' },
+          { BENEFIT_ID: 4, BENEFIT_NAME: 'Thưởng hiệu suất', BENEFIT_ICON: 'fa-trophy' }
+        ]}
       />
 
       {/* Partner Section */}

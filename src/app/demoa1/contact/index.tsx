@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 import { ContactProps, OwnerDetail, MessageType } from '@/lib/types';
-import Header from '../common/_header';
-import Footer from '../common/_footer';
 
 // Translation function (equivalent to PHP |t filter)
 function t(key: string, language: 'vi' | 'en' = 'vi'): string {
@@ -181,15 +179,7 @@ export default function ContactPage({
   };
 
   return (
-    <>
-      <Header 
-        siteId={siteId}
-        arrRwInfo={arrRwInfo}
-        arrEmployer={arrEmployer}
-        arrMenuCates={arrMenuCates}
-        language={language}
-      />
-      <div id="main-content">
+    <div id="main-content">
       {msg && (
         <p className={`boxmsg-${getMessageTypeClass(msgType)}`}>
           {msg}
@@ -338,13 +328,5 @@ export default function ContactPage({
         </form>
         </div>
       </div>
-
-      <Footer 
-        siteId={siteId}
-        arrRwInfo={arrRwInfo}
-        arrEmployer={arrEmployer}
-        language={language}
-      />
-    </>
   );
 }

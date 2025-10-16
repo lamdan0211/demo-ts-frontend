@@ -5,8 +5,6 @@ import { JobsPageProps, Job, PaginationInfo } from '@/lib/types';
 import { getSiteConfig } from '@/lib/site-config';
 import BoxSearch from '@/components/jobs/box_search';
 import Col250Index from './col250/index';
-import Header from '../common/_header';
-import Footer from '../common/_footer';
 
 // Translation function
 function t(key: string, language: 'vi' | 'en' = 'en'): string {
@@ -140,20 +138,7 @@ export default function JobsPage({
   };
 
   return (
-    <div className="min-h-screen">
-      <Header 
-        siteId={siteId}
-        arrRwInfo={arrRwInfo}
-        arrEmployer={arrEmployer ? { ...arrEmployer, RW_LOGO: 'logo.png' } : undefined}
-        controller="jobs"
-        action="index"
-        arrMenuCates={arrMenuCates}
-        currentUrl={`/${siteId}/jobs`}
-        CHANGE_LANG_URL={`/${siteId}/jobs?lang=${language === 'en' ? 'vi' : 'en'}`}
-        language={language}
-      />
-      
-      <div className="main-content">
+    <div className="main-content">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -281,12 +266,5 @@ export default function JobsPage({
           </div>
         </div>
       </div>
-      
-      <Footer 
-        siteId={siteId} 
-        arrFooterMenuCates={[]}
-        language={language}
-      />
-    </div>
   );
 }

@@ -158,7 +158,7 @@ header p.txt_sub, .page-content-pre, .page-contact-pre, .page-forgot-pre, .JoinN
 #slidehr .bgimage img { max-width: 1210px; max-height: var(--HeightMidBanner,500px) }
 #slidehr, #mslidehr, #sliderTopMain, #bslidehr { left: 0; position: absolute; top: 0; z-index: 0; overflow: hidden }
 #slidehr .bgimage, #mslidehr .bgimage, #sliderTopMain .bgimage, #bslidehr .bgimage { width: 100%!important; background-size: cover; background-repeat: no-repeat; background-position: center center }
-#sliderTopMain, #sliderTopMain .bgimage, #bslidehr, #bslidehr .bgimage, .ads-pre.slidebg.sliderSetheight { height: var(--HeightTopBanner,600px) }
+#sliderTopMain, #sliderTopMain .bgimage, #bslidehr, #bslidehr .bgimage { height: var(--HeightTopBanner,600px) }
 #pager, #pagerTopMain, #mpager, #bpager { bottom: 10px; position: absolute; z-index: 0; display: none; } 
 #pager li, #pagerTopMain li, #mpager li, #bpager li { float: left; margin-right: 10px }
 #pager li:last-child, #pagerTopMain li:last-child, #mpager li:last-child, #bpager li:last-child { margin-right: 0 }

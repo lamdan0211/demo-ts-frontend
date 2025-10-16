@@ -5,8 +5,6 @@ import { JobsPageProps, Job, PaginationInfo } from '@/lib/types';
 import { getSiteConfig } from '@/lib/site-config';
 import BoxSearch from '@/components/jobs/box_search';
 import Col250Index from './col250/index';
-import Header from '../common/_header';
-import Footer from '../common/_footer';
 
 // Translation function
 function t(key: string, language: 'vi' | 'en' = 'vi'): string {
@@ -100,15 +98,7 @@ export default function JobsPage({
   const canJoinTalentNetwork = !arrInfo && !arrFunction?.OFF_JOIN_TALENT_NETWORK;
 
   return (
-    <>
-      <Header 
-        siteId={siteId}
-        arrRwInfo={arrRwInfo}
-        arrEmployer={arrEmployer}
-        arrMenuCates={arrMenuCates}
-        language={language}
-      />
-      <div id="main-content">
+    <div id="main-content">
       <BoxSearch
         siteId={siteId}
         arrIndustries={arrIndustries}
@@ -242,13 +232,6 @@ export default function JobsPage({
         currentUrl="/demoa1/jobs"
         language={language}
       />
-      </div>
-      <Footer 
-        siteId={siteId}
-        arrRwInfo={arrRwInfo}
-        arrEmployer={arrEmployer}
-        language={language}
-      />
-    </>
+    </div>
   );
 }

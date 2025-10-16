@@ -3,8 +3,6 @@
 import { useState, useEffect } from 'react';
 import { HeaderProps } from '@/lib/types';
 import { getSiteConfig } from '@/lib/site-config';
-import Header from '../common/_header';
-import Footer from '../common/_footer';
 
 // Translation function
 function t(key: string, language: 'vi' | 'en' = 'vi'): string {
@@ -43,18 +41,7 @@ export default function NewsPage({
   if (!siteConfig) return null;
 
   return (
-    <>
-      <Header 
-        siteId={siteId}
-        arrRwInfo={arrRwInfo}
-        arrEmployer={arrEmployer}
-        arrMenuCates={arrMenuCates}
-        controller={controller}
-        action={action}
-        language={language}
-      />
-      
-      <div id="main">
+    <div id="main">
         <div className="container">
           <div className="row" style={{float: 'none'}}>
             <div className="col-md-12">
@@ -128,13 +115,5 @@ export default function NewsPage({
           </div>
         </div>
       </div>
-      
-      <Footer 
-        siteId={siteId}
-        arrRwInfo={arrRwInfo}
-        arrEmployer={arrEmployer}
-        language={language}
-      />
-    </>
   );
 }

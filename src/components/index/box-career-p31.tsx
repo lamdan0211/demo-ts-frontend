@@ -56,11 +56,7 @@ export default function BoxCareerP31({
   
   // Get column class based on count
   const getColumnClass = () => {
-    if (industryCount === 9) {
-      return 'col-xs-12 col-sm-4 col-md-4 text-center blurb-item';
-    } else {
-      return 'col-xs-6 col-sm-4 col-md-3 text-center blurb-item';
-    }
+    return 'col-xs-12 col-sm-4 col-md-4 text-center blurb-item';
   };
   
   return (
@@ -86,8 +82,8 @@ export default function BoxCareerP31({
                 >
                   <div className="blurb-item--img-wrapper">
                     <img 
-                      src={industryCount === 9 ? `${STATIC_TN}/blank.gif` : `/themes/hoasen/images/image_job_${index + 1}.jpg`}
-                      data-src={industryCount === 9 ? `/themes/hoasen/images/image_job_${index + 1}.jpg` : undefined}
+                      src={industryCount === 9 ? `${STATIC_TN}/blank.gif` : `/themes/hoasen/images/image_job_${index + 1}.png`}
+                      data-src={industryCount === 9 ? `/themes/hoasen/images/image_job_${index + 1}.png` : undefined}
                       className={`blurb-item--img img-responsive wp-post-image ${industryCount === 9 ? 'lazyload' : ''}`}
                       alt="" 
                       width="350" 

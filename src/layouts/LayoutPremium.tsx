@@ -378,10 +378,6 @@ export default function LayoutPremium({
               </div>
             )}
             
-            {/* Footer */}
-            <div id="footer">
-              {/* Footer content would be included here */}
-            </div>
           </>
         ) : (
           <div id="container" className={`${controller === 'news' && action === 'employer' ? 'home_employer' : ''} ${arrFunction.SUPPORT_MOBILE && ['contact', 'jobs', 'news', 'index', 'testimonial', 'hremployer'].includes(controller) ? 'frontmobile' : ''} ${['profile', 'resume'].includes(controller) ? 'fontCoreJobseeker' : ''}`}>
@@ -414,10 +410,6 @@ export default function LayoutPremium({
               </div>
             )}
             
-            {/* Footer */}
-            <div id="footer">
-              {/* Footer content would be included here */}
-            </div>
           </div>
         )}
         

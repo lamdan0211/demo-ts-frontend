@@ -146,9 +146,13 @@ export default async function SiteLayout({ children, params }: SiteLayoutProps) 
             `,
           }}
         />
+        <link href="/themes/css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="/themes/css/general.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/themes/css/FontAwesome.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/themes/css/icons.css" rel="stylesheet" type="text/css" media="screen" />
       </head>
       <body suppressHydrationWarning={true}>
-        <div className={`site-${validSiteId}`}>
+        <div className={`site-${validSiteId}`} suppressHydrationWarning={true}>
           {children}
         </div>
       </body>

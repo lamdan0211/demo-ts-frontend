@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { Job } from '@/lib/types';
-import Header from '../../common/_header';
-import Footer from '../../common/_footer';
 
 interface JobDetailProps {
   siteId: string;
@@ -127,70 +125,32 @@ export default function JobDetail({
 
   if (loading) {
     return (
-      <div className="min-h-screen">
-        <Header 
-          siteId={siteId}
-          arrRwInfo={arrRwInfo}
-          arrEmployer={arrEmployer}
-          controller="jobs"
-          action="detail"
-          arrMenuCates={arrMenuCates}
-          currentUrl={`/${siteId}/jobs/${jobId}`}
-          changeLangUrl={`/${siteId}/jobs/${jobId}?lang=${language === 'en' ? 'vi' : 'en'}`}
-        />
-        <div className="main-content">
-          <div className="container">
-            <div className="loading">Loading job details...</div>
-          </div>
+      <div className="main-content">
+        <div className="container">
+          <div className="loading">Loading job details...</div>
         </div>
-        <Footer siteId={siteId} footerMenuCates={[]} language={language} />
       </div>
     );
   }
 
   if (!job) {
     return (
-      <div className="min-h-screen">
-        <Header 
-          siteId={siteId}
-          arrRwInfo={arrRwInfo}
-          arrEmployer={arrEmployer}
-          controller="jobs"
-          action="detail"
-          arrMenuCates={arrMenuCates}
-          currentUrl={`/${siteId}/jobs/${jobId}`}
-          changeLangUrl={`/${siteId}/jobs/${jobId}?lang=${language === 'en' ? 'vi' : 'en'}`}
-        />
-        <div className="main-content">
-          <div className="container">
-            <div className="error-message">
-              <h1>Job Not Found</h1>
-              <p>The job you are looking for does not exist.</p>
-              <a href={`/${siteId}/jobs`} className="btn btn-primary">
-                {t('back_to_jobs', language)}
-              </a>
-            </div>
+      <div className="main-content">
+        <div className="container">
+          <div className="error-message">
+            <h1>Job Not Found</h1>
+            <p>The job you are looking for does not exist.</p>
+            <a href={`/${siteId}/jobs`} className="btn btn-primary">
+              {t('back_to_jobs', language)}
+            </a>
           </div>
         </div>
-        <Footer siteId={siteId} footerMenuCates={[]} language={language} />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen">
-      <Header 
-        siteId={siteId}
-        arrRwInfo={arrRwInfo}
-        arrEmployer={arrEmployer}
-        controller="jobs"
-        action="detail"
-        arrMenuCates={arrMenuCates}
-        currentUrl={`/${siteId}/jobs/${jobId}`}
-        changeLangUrl={`/${siteId}/jobs/${jobId}?lang=${language === 'en' ? 'vi' : 'en'}`}
-      />
-      
-      <div className="main-content">
+    <div className="main-content">
         <div className="container">
           <div className="row">
             <div className="col-md-8">
@@ -291,8 +251,5 @@ export default function JobDetail({
           </div>
         </div>
       </div>
-      
-      <Footer siteId={siteId} footerMenuCates={[]} language={language} />
-    </div>
   );
 }

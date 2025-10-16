@@ -36,8 +36,8 @@ export default async function Demoa2HomePage() {
       
       <Footer 
         siteId={siteId} 
-        footerMenuCates={demoa2FooterData}
-        language={siteConfig?.language || 'vi'}
+        arrFooterMenuCates={demoa2FooterData}
+        language={siteConfig?.language || 'en'}
       />
     </div>
   );
